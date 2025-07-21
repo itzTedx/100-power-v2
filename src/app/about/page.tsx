@@ -14,10 +14,24 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { WHO_WE_ARE } from "@/data/constants";
 
+export const generateMetadata = () => ({
+  title: "About Us | 100 Power",
+  description:
+    "Learn about 100 Power: our mission, vision, global presence, and commitment to advanced micro-metallurgical additives for machinery and engines worldwide.",
+  openGraph: {
+    title: "About Us | 100 Power",
+    description:
+      "Discover 100 Power's innovation in micro-metallurgical additives, our global reach, and our dedication to performance, reliability, and sustainability.",
+    url: "https://100power.com/about",
+    siteName: "100 Power",
+    type: "website",
+  },
+});
+
 export default function AboutPage() {
   return (
     <main className="container py-12">
-      <section>
+      <header>
         <div className="mx-auto max-w-4xl space-y-5 py-6 text-center">
           <Badge variant="primary">Engineered to Protect</Badge>
 
@@ -30,11 +44,13 @@ export default function AboutPage() {
             protect and enhance machinery across industries worldwide—delivering
             reliability, sustainability, and unmatched quality.
           </p>
-          <Button>
-            Contact us <IconArrowUpRight size={18} />
+          <Button asChild>
+            <a href="/contact" aria-label="Contact 100 Power">
+              Contact us <IconArrowUpRight size={18} />
+            </a>
           </Button>
         </div>
-      </section>
+      </header>
       <section className="space-y-8 py-12">
         <Badge>
           <Dot /> About 100 Power
@@ -70,9 +86,12 @@ export default function AboutPage() {
       </section>
       <Separator />
       <section className="space-y-6 py-12">
-        <h3 className="text-center text-2xl font-bold">Our Mission</h3>
+        <h2 className="text-center text-2xl font-bold">Our Mission</h2>
         <div className="mx-auto grid max-w-3xl grid-cols-2 items-center">
-          <div className="mx-4 aspect-video bg-red-300"></div>
+          <div
+            className="mx-4 aspect-video bg-red-300"
+            aria-hidden="true"
+          ></div>
 
           <div className="flex h-full items-center border-l px-4">
             <p className="font-helvetica text-pretty">
@@ -85,7 +104,7 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-        <h3 className="text-center text-2xl font-bold">Our Mission</h3>
+        <h2 className="text-center text-2xl font-bold">Our Vision</h2>
         <div className="mx-auto grid max-w-3xl grid-cols-2 items-center">
           <div className="flex h-full items-center border-r px-4">
             <p className="font-helvetica text-pretty">
@@ -97,15 +116,18 @@ export default function AboutPage() {
               success.
             </p>
           </div>
-          <div className="mx-4 aspect-video bg-red-300"></div>
+          <div
+            className="mx-4 aspect-video bg-red-300"
+            aria-hidden="true"
+          ></div>
         </div>
-        <h3 className="text-center text-2xl font-bold">Our Mission</h3>
+        <h2 className="text-center text-2xl font-bold">Our Values</h2>
         <div className="grid grid-cols-5 gap-3">
-          <div className="bg-accent h-20"></div>
-          <div className="bg-accent h-20"></div>
-          <div className="bg-accent h-20"></div>
-          <div className="bg-accent h-20"></div>
-          <div className="bg-accent h-20"></div>
+          <div className="bg-accent h-20" aria-hidden="true"></div>
+          <div className="bg-accent h-20" aria-hidden="true"></div>
+          <div className="bg-accent h-20" aria-hidden="true"></div>
+          <div className="bg-accent h-20" aria-hidden="true"></div>
+          <div className="bg-accent h-20" aria-hidden="true"></div>
         </div>
       </section>
       <section className="space-y-8 py-12">
@@ -129,7 +151,10 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent className="mt-12">
                 <div className="group-first: group-first: grid size-20 place-content-center rounded-full border border-[oklch(0.9557_0.1104_102.71)] bg-[oklch(0.9101_0.1105_88.94)] to-[oklch(0.9557_0.1104_102.71)] group-first:bg-gradient-to-t group-first:from-[oklch(0.6519_0.1345_77.03)]/50 group-first:shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset_0px_4px_8px_2to-5%]">
-                  <Icon className="text-primary-foreground" />
+                  <Icon
+                    className="text-primary-foreground"
+                    aria-hidden="true"
+                  />
                 </div>
                 <div className="mt-4 space-y-3">
                   <CardTitle className="font-helvetica text-3xl font-normal">
@@ -167,7 +192,7 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-        <DotMap className="w-full" />
+        <DotMap className="w-full" aria-label="100 Power global presence map" />
       </section>
     </main>
   );
