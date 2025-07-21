@@ -222,3 +222,14 @@ export const FEATURES: Feature[] = [
     ],
   },
 ];
+
+export const INDUSTRIES = [
+  { label: "Automotive", image: "/images/automotive.webp" },
+  { label: "Railways", image: "/images/railway.webp" },
+  { label: "Mining", image: "/images/mining.webp" },
+  { label: "Marine & Shipping", image: "/images/marine.webp" },
+  { label: "Construction", image: "/images/construction.webp" },
+  { label: "Agriculture", image: "/images/agriculture.webp" },
+  { label: "Defense & Military", image: "/images/military.webp" },
+  { label: "Industrial Equipment", image: "/images/industrial.webp" },
+];
