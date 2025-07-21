@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 
 import { helvetica } from "@/assets/fonts";
-import { Navbar } from "@/components/layout/navbar";
+import { Footer, Navbar } from "@/components/layout";
 import { cn } from "@/lib/utils";
 
 import "./globals.css";
@@ -57,6 +57,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
