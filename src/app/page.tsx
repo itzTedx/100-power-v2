@@ -116,9 +116,11 @@ export default function Home() {
           </h2>
           <div>
             <p className="mb-2 text-2xl tracking-tight">
-              Each product is developed with precision and purpose - to enhance
-              durability, reduce wear, and improve performance under extreme
-              conditions.
+              Each product is developed with precision and purpose - to enhance{" "}
+              <span className="text-primary">
+                durability, reduce wear, and improve performance
+              </span>{" "}
+              under extreme conditions.
             </p>
             <Button variant="secondary">
               Explore Products <ArrowUpRight size={18} />
@@ -190,6 +192,28 @@ export default function Home() {
             </div>
           </TabsContent>
         </Tabs>
+      </section>
+      <section className="py-12">
+        <div className="container space-y-6">
+          <Badge>
+            <Dot />
+            Industries we serve
+          </Badge>
+          <Separator />
+          <div className="grid grid-cols-2 gap-4">
+            <h2 className="font-helvetica text-5xl font-bold">
+              Serving Every Sector with Precision
+            </h2>
+            <div>
+              <p className="text-2xl tracking-tight">
+                From{" "}
+                <span className="text-primary">engines to excavation,</span> we
+                power the industries where friction hurts most and performance
+                matters most.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );
