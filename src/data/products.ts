@@ -12,10 +12,10 @@ export const PRODUCTS: ProductType[] = [
   {
     id: 1,
     range: "Premium",
-    title: " Motor Oil",
+    title: "Motor Oil",
     type: "lubrication",
     badge: "5W-30",
-    href: "/",
+    href: "/products/x-power",
     quantity: "1L",
   },
   {
@@ -24,7 +24,7 @@ export const PRODUCTS: ProductType[] = [
     title: "100 Power Booster",
     type: "fuel-system",
     badge: "Advanced Nano Lubricant technology",
-    href: "/",
+    href: "/products/x-power",
     quantity: "4L",
   },
   {
@@ -33,7 +33,7 @@ export const PRODUCTS: ProductType[] = [
     title: "Fuel Conditioner",
     type: "industrial",
     badge: "5W-30",
-    href: "/",
+    href: "/products/x-power",
     quantity: "8L",
   },
   {
@@ -42,7 +42,7 @@ export const PRODUCTS: ProductType[] = [
     title: "TG-10 Critical Maintenance Lubricant",
     type: "engine-additives",
     badge: "5W-30",
-    href: "/",
+    href: "/products/x-power",
     quantity: "208L",
   },
   {
@@ -51,7 +51,7 @@ export const PRODUCTS: ProductType[] = [
     title: "EP-2 Lithium Complex Grease",
     type: "lubrication",
     badge: "5W-30",
-    href: "/",
+    href: "/products/x-power",
     quantity: "2L",
   },
 ];
