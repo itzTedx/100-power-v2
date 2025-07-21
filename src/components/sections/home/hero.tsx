@@ -19,7 +19,7 @@ export const Hero = () => {
           Next-gen lubrication technology to maximize performance, minimize
           friction, and protect the planet.
         </p>
-        <Button>
+        <Button className="shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset,0px_4px_8px_0px_hsla(32,100,43,.25),0px_12px_16px_0px_hsla(32,97,17,.25)]">
           Explore Solutions <IconArrowUpRight size={18} />
         </Button>
       </div>

@@ -89,7 +89,7 @@ export default function ProductSlugPage() {
       </section>
       <div className="mt-8 grid grid-cols-12 gap-4">
         <Tabs defaultValue="core" className="col-span-7 items-start">
-          <TabsList className="text-foreground mb-3 h-auto w-full items-start gap-2 rounded-none border-b bg-transparent px-0 py-1">
+          <TabsList className="text-foreground mb-3 h-auto w-full justify-start gap-2 rounded-none border-b bg-transparent px-0 py-1">
             <TabsTrigger
               value="core"
               className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
@@ -177,7 +177,7 @@ export default function ProductSlugPage() {
           </TabsContent>
         </Tabs>
         <Tabs defaultValue="directions" className="col-span-5 items-start">
-          <TabsList className="text-foreground mb-3 h-auto w-full items-start gap-2 rounded-none border-b bg-transparent px-0 py-1">
+          <TabsList className="text-foreground mb-3 h-auto w-full justify-start gap-2 rounded-none border-b bg-transparent px-0 py-1">
             <TabsTrigger
               value="directions"
               className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
