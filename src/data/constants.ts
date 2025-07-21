@@ -1,3 +1,5 @@
+import type { ElementType } from "react";
+
 import {
   IconBrandFacebook,
   IconBrandInstagram,
@@ -135,7 +137,22 @@ export const SOCIALS = [
   },
 ];
 
-export const FEATURES = [
+interface SubFeature {
+  id: number;
+  title: string;
+  description: string;
+}
+
+export interface Feature {
+  title: string;
+  subtitle: string;
+  description: string;
+  Icon: ElementType;
+  image: string;
+  features: SubFeature[];
+}
+
+export const FEATURES: Feature[] = [
   {
     title: "Micro Metallurgical Process",
     subtitle: "Stronger. Smoother. Smarter Metal.",

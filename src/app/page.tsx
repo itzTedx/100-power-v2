@@ -232,22 +232,36 @@ export default function Home() {
                   <p className="text-2xl tracking-tight">{item.description}</p>
                 </div>
               </div>
-              <div className="grid grid-cols-3 gap-6 py-12">
+              <div className="grid grid-cols-3 gap-9 py-12">
                 <ul className="order-1 col-span-2 grid grid-cols-2 gap-6 group-last:order-2">
                   {item.features.map((feature) => (
-                    <li key={feature.id} className="space-y-6 py-12">
+                    <li key={feature.id} className="space-y-6 py-9">
                       <div className="space-y-4">
-                        <p>0{feature.id}</p>
+                        <p className="text-muted-foreground/80">
+                          0{feature.id}
+                        </p>
                         <Separator />
                         <h3 className="font-helvetica text-3xl">
                           {feature.title}
                         </h3>
                       </div>
-                      <p>{feature.description}</p>
+                      <p className="text-muted-foreground text-xl">
+                        {feature.description}
+                      </p>
                     </li>
                   ))}
                 </ul>
-                <div className="relative order-2 group-last:order-1">
+                {/* <CardFlip data={item} Icon={item.Icon} /> */}
+                <div className="relative order-2 flex items-end overflow-hidden rounded-md group-last:order-1">
+                  <div className="text-accent relative z-10 flex w-full items-center justify-between p-6">
+                    <div>
+                      <h4 className="font-helvetica text-2xl">{item.title}</h4>
+                      <p className="tracking-tight">{item.subtitle}</p>
+                    </div>
+                    <Button size="icon" className="size-12">
+                      <item.Icon className="size-5" />
+                    </Button>
+                  </div>
                   <Image
                     src={item.image}
                     fill
