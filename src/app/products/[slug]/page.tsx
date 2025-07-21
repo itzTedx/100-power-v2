@@ -1,9 +1,15 @@
 import Image from "next/image";
 
+import { Dot } from "lucide-react";
+
 import { IconChart, IconShield } from "@/assets/icons";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { PRODUCTS } from "@/data/products";
+import { ProductCard } from "@/features/products/components/product-card";
 import { cn } from "@/lib/utils";
 
 export default function ProductSlugPage() {
@@ -217,6 +223,19 @@ export default function ProductSlugPage() {
             </ol>
           </TabsContent>
         </Tabs>
+      </div>
+      <div className="space-y-8 py-12">
+        <Badge>
+          <Dot />
+          More Packings
+        </Badge>
+        <Separator />
+        <h2 className="text-3xl font-medium">Available Quantities</h2>
+        <div className="grid grid-cols-6 gap-2">
+          {PRODUCTS.map((product) => (
+            <ProductCard data={product} key={product.id} />
+          ))}
+        </div>
       </div>
     </main>
   );
