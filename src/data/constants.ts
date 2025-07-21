@@ -233,3 +233,27 @@ export const INDUSTRIES = [
   { label: "Defense & Military", image: "/images/military.webp" },
   { label: "Industrial Equipment", image: "/images/industrial.webp" },
 ];
+
+export const COMMITMENT = [
+  {
+    label: "01 / Quality",
+    title: "Engineered to Excel",
+    description:
+      "Every product undergoes rigorous testing to ensure unmatched performance, reliability, and durability in real-world conditions.",
+    Icon: IconDashboard,
+  },
+  {
+    label: "02 / Sustainability",
+    title: "Engineered to Excel",
+    description:
+      "We are committed to reducing environmental impact through efficient manufacturing practices and cleaner, smarter lubricant technologies.",
+    Icon: IconWrench,
+  },
+  {
+    label: "03 / Integrity",
+    title: "Built on Trust",
+    description:
+      "We foster long-term relationships built on transparency, accountability, and a commitment to doing what's right - always.",
+    Icon: IconDashboard,
+  },
+];
