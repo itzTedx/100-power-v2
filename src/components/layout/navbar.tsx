@@ -9,7 +9,7 @@ import { Button } from "../ui/button";
 
 export const Navbar = () => {
   return (
-    <header className="bg-background/80 border-background border-b py-2 backdrop-blur-xl">
+    <header className="bg-background/80 border-background sticky top-0 z-999 border-b py-2 backdrop-blur-xl">
       <nav className="container flex items-center justify-between">
         <Link href="/">
           <Logo />
