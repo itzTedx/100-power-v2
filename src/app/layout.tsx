@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 
 import { helvetica } from "@/assets/fonts";
 import { Footer, Navbar } from "@/components/layout";
+import { Cta } from "@/components/sections/cta";
 import { cn } from "@/lib/utils";
 
 import "./globals.css";
@@ -57,6 +58,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Cta />
         <Footer />
       </body>
     </html>
