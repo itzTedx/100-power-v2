@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { WHO_WE_ARE } from "@/data/constants";
+import { FEATURES, WHO_WE_ARE } from "@/data/constants";
 import { PRODUCTS } from "@/data/products";
 import { ProductCard } from "@/features/products/components/product-card";
 
@@ -213,6 +213,51 @@ export default function Home() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="py-12">
+        <div className="container space-y-12">
+          <Badge>
+            <Dot />
+            Our Core Technologies
+          </Badge>
+          <Separator />
+          {FEATURES.map((item) => (
+            <div key={item.title} className="group">
+              <div className="grid grid-cols-2 items-start gap-9">
+                <h2 className="font-helvetica inline-flex items-center gap-3 text-5xl font-bold">
+                  {item.title}
+                </h2>
+                <div>
+                  <p className="text-2xl tracking-tight">{item.description}</p>
+                </div>
+              </div>
+              <div className="grid grid-cols-3 gap-6 py-12">
+                <ul className="order-1 col-span-2 grid grid-cols-2 gap-6 group-last:order-2">
+                  {item.features.map((feature) => (
+                    <li key={feature.id} className="space-y-6 py-12">
+                      <div className="space-y-4">
+                        <p>0{feature.id}</p>
+                        <Separator />
+                        <h3 className="font-helvetica text-3xl">
+                          {feature.title}
+                        </h3>
+                      </div>
+                      <p>{feature.description}</p>
+                    </li>
+                  ))}
+                </ul>
+                <div className="relative order-2 group-last:order-1">
+                  <Image
+                    src={item.image}
+                    fill
+                    alt=""
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </main>

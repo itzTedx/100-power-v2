@@ -7,7 +7,12 @@ import {
   IconBrandYoutube,
 } from "@tabler/icons-react";
 
-import { IconDashboard, IconWrench } from "@/assets/icons";
+import {
+  IconClogSpin,
+  IconDashboard,
+  IconThunder,
+  IconWrench,
+} from "@/assets/icons";
 
 import { PRODUCTS } from "./products";
 
@@ -127,5 +132,76 @@ export const SOCIALS = [
     id: 6,
     icon: IconBrandFacebook,
     href: "/",
+  },
+];
+
+export const FEATURES = [
+  {
+    title: "Micro Metallurgical Process",
+    subtitle: "Stronger. Smoother. Smarter Metal.",
+    description:
+      "Our proprietary micro-metallurgical process creates ultra-hard, smooth surfaces that reduce wear, extend lifespan, and enhance oil flow by cleaning and polishing engine internals.",
+    Icon: IconThunder,
+    image: "/images/micro-process.webp",
+    features: [
+      {
+        id: 1,
+        title: "Eliminates friction",
+        description:
+          "Effectively reduces friction, ensuring smoother operation, improved efficiency, and reduced engine wear.",
+      },
+      {
+        id: 2,
+        title: "Polishes internal surfaces",
+        description:
+          "Gently polishes internal engine surfaces to restore performance, reduce noise, and extend vehicle life.",
+      },
+      {
+        id: 3,
+        title: "Prevents sludge and build-up",
+        description:
+          "Prevents sludge, deposits, and contaminants, keeping engine parts clean and avoiding blockages.",
+      },
+      {
+        id: 4,
+        title: "Increases durability under stress",
+        description:
+          "Boosts engine part’s strength and resilience to handle high temperatures, heavy loads, and harsh conditions.",
+      },
+    ],
+  },
+  {
+    title: "Anti Friction Technology",
+    subtitle: "Friction - Resistant by Design",
+    description:
+      "Our advanced AFT technology creates a protective micro-layer that reduces wear, noise, and vibration while resisting corrosion for longer, smoother equipment performance.",
+    Icon: IconClogSpin,
+    image: "/images/anti-friction.webp",
+    features: [
+      {
+        id: 1,
+        title: "Reduces metal-to-metal contact",
+        description:
+          "Forms a protective micro-layer that reduces metal contact, lowering friction and preventing wear.",
+      },
+      {
+        id: 2,
+        title: "Minimizes noise and vibration",
+        description:
+          "Dampens harsh engine movement, minimizing noise and vibration for a smoother, quieter drive.",
+      },
+      {
+        id: 3,
+        title: "Resists abrasion and oxidation",
+        description:
+          "Shields components from wear and oxidation damage, preserving surfaces for durability and cleaner operation.",
+      },
+      {
+        id: 4,
+        title: "Optimizes reliability and uptime",
+        description:
+          "Improves engine stability and dependability, reducing breakdown risks and ensuring maximum uptime.",
+      },
+    ],
   },
 ];
