@@ -9,9 +9,12 @@ import { FEATURES } from "@/data/constants";
 
 export const Technologies = () => {
   return (
-    <section className="py-12">
+    <section className="py-12" aria-labelledby="technologies-heading">
       <div className="container max-w-5xl py-20 text-center">
-        <h2 className="font-helvetica text-6xl font-bold text-balance">
+        <h2
+          id="technologies-heading"
+          className="font-helvetica text-6xl font-bold text-balance"
+        >
           Built for <span className="text-primary">Performance.</span> Powered
           by Responsibility
         </h2>
@@ -30,9 +33,9 @@ export const Technologies = () => {
         {FEATURES.map((item) => (
           <div key={item.title} className="group">
             <div className="grid grid-cols-2 items-start gap-9">
-              <h2 className="font-helvetica inline-flex items-center gap-3 text-5xl font-bold">
+              <h3 className="font-helvetica inline-flex items-center gap-3 text-5xl font-bold">
                 {item.title}
-              </h2>
+              </h3>
 
               <p className="text-2xl tracking-tight">{item.description}</p>
             </div>
@@ -43,9 +46,9 @@ export const Technologies = () => {
                     <div className="space-y-4">
                       <p className="text-muted-foreground/80">0{feature.id}</p>
                       <Separator />
-                      <h3 className="font-helvetica text-3xl">
+                      <h4 className="font-helvetica text-3xl">
                         {feature.title}
-                      </h3>
+                      </h4>
                     </div>
                     <p className="text-muted-foreground text-xl">
                       {feature.description}
@@ -57,14 +60,23 @@ export const Technologies = () => {
               <div className="relative order-2 flex items-end overflow-hidden rounded-md group-last:order-1">
                 <div className="text-accent relative z-10 flex w-full items-center justify-between p-6">
                   <div>
-                    <h4 className="font-helvetica text-2xl">{item.title}</h4>
+                    <h5 className="font-helvetica text-2xl">{item.title}</h5>
                     <p className="tracking-tight">{item.subtitle}</p>
                   </div>
-                  <Button size="icon" className="size-12">
+                  <Button
+                    size="icon"
+                    className="size-12"
+                    aria-label={`Learn more about ${item.title}`}
+                  >
                     <item.Icon className="size-5" />
                   </Button>
                 </div>
-                <Image src={item.image} fill alt="" className="object-cover" />
+                <Image
+                  src={item.image}
+                  fill
+                  alt={`Technology: ${item.title}`}
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>

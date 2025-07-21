@@ -16,7 +16,10 @@ const SimpleMarquee = dynamic(() => import("@/components/animated/marquee"), {
 
 export const Industries = () => {
   return (
-    <section className="overflow-hidden py-12">
+    <section
+      className="overflow-hidden py-12"
+      aria-labelledby="industries-heading"
+    >
       <div className="container mb-16 space-y-8">
         <Badge>
           <Dot />
@@ -24,7 +27,10 @@ export const Industries = () => {
         </Badge>
         <Separator />
         <div className="grid grid-cols-2 gap-4">
-          <h2 className="font-helvetica text-5xl font-bold">
+          <h2
+            id="industries-heading"
+            className="font-helvetica text-5xl font-bold"
+          >
             Serving Every Sector with Precision
           </h2>
           <div>
@@ -66,7 +72,7 @@ export const Industries = () => {
 
                 <Image
                   src={item.image}
-                  alt={""}
+                  alt={`Industry: ${item.label}`}
                   className="object-cover"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

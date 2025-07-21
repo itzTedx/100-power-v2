@@ -14,17 +14,19 @@ export const Video = () => {
       <article className="relative flex aspect-4/3 h-full flex-col items-end justify-end gap-4 overflow-hidden rounded-sm bg-gray-200 p-4 sm:aspect-video sm:p-9">
         <button
           className="group hover:text-primary absolute top-1/2 left-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center gap-2 self-end text-base font-semibold tracking-tight text-white transition-colors sm:text-lg"
-          aria-label="Play brand video"
+          aria-label="Play 100 Power brand video"
+          type="button"
         >
           <div
             className={cn(
               buttonVariants(),
               "text-secondary-foreground group-hover:bg-primary grid size-12 place-content-center rounded-full bg-black transition-colors duration-300 sm:size-14"
             )}
+            aria-hidden="true"
           >
             <Play className="size-5 sm:size-6" />
           </div>
-          Play Video
+          <span>Play Video</span>
         </button>
         <div className="relative z-10 mt-auto space-y-2 text-end md:space-y-4">
           <h2
@@ -64,8 +66,9 @@ export const Video = () => {
           className="absolute inset-0 h-full w-full object-cover"
           title="100 Power brand video"
           aria-label="100 Power brand video"
+          poster="/images/video-poster.webp"
         >
-          <source src="/videos/powerx.webm" />
+          <source src="/videos/powerx.webm" type="video/webm" />
           Your browser does not support the video tag. Watch our brand video on
           our{" "}
           <a

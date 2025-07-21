@@ -9,25 +9,35 @@ import { ProductCard } from "@/features/products/components/product-card";
 
 export const Products = () => {
   return (
-    <section className="container space-y-8 py-12">
+    <section
+      className="container space-y-8 py-8 sm:py-12"
+      aria-labelledby="products-heading"
+    >
       <Badge>
         <Dot />
         Flagship Products
       </Badge>
       <Separator />
-      <div className="grid grid-cols-2 gap-4">
-        <h2 className="font-helvetica text-5xl font-bold">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <h2
+          id="products-heading"
+          className="font-helvetica text-2xl font-bold sm:text-4xl md:text-5xl"
+        >
           High-Performance Products for Demanding Machines
         </h2>
         <div>
-          <p className="mb-2 text-2xl tracking-tight">
+          <p className="mb-2 text-base tracking-tight sm:text-xl md:text-2xl">
             Each product is developed with precision and purpose - to enhance{" "}
             <span className="text-primary">
               durability, reduce wear, and improve performance
             </span>{" "}
             under extreme conditions.
           </p>
-          <Button variant="secondary">
+          <Button
+            variant="secondary"
+            aria-label="Explore all products"
+            className="w-full sm:w-auto"
+          >
             Explore Products <ArrowUpRight size={18} />
           </Button>
         </div>
@@ -61,7 +71,7 @@ export const Products = () => {
           </TabsTrigger>
         </TabsList>
         <TabsContent value="lubrication">
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {PRODUCTS.filter((p) => p.type === "lubrication")?.map(
               (product) => (
                 <ProductCard data={product} key={product.id} />
@@ -70,7 +80,7 @@ export const Products = () => {
           </div>
         </TabsContent>
         <TabsContent value="engine-additives">
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {PRODUCTS.filter((p) => p.type === "engine-additives")?.map(
               (product) => (
                 <ProductCard data={product} key={product.id} />
@@ -79,7 +89,7 @@ export const Products = () => {
           </div>
         </TabsContent>
         <TabsContent value="fuel-system">
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {PRODUCTS.filter((p) => p.type === "fuel-system")?.map(
               (product) => (
                 <ProductCard data={product} key={product.id} />
@@ -88,7 +98,7 @@ export const Products = () => {
           </div>
         </TabsContent>
         <TabsContent value="industrial">
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {PRODUCTS.filter((p) => p.type === "industrial")?.map((product) => (
               <ProductCard data={product} key={product.id} />
             ))}

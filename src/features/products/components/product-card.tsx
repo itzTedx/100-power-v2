@@ -75,7 +75,7 @@ export const ProductCard = ({ data }: Props) => {
           <div className="relative aspect-square">
             <Image
               src="/images/xpower.webp"
-              alt=""
+              alt={data.title}
               fill
               className="object-contain"
             />

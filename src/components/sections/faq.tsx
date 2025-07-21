@@ -35,13 +35,18 @@ export const Faqs = () => {
 
   // Remove memoizedBeams, use Suspense for lazy loading
   return (
-    <div className="mt-6 grid w-full gap-4 md:grid-cols-2 md:gap-6">
-      <Accordion type="single" collapsible className="w-full space-y-3">
-        {renderAccordionItems(firstHalf)}
-      </Accordion>
-      <Accordion type="single" collapsible className="w-full space-y-3">
-        {renderAccordionItems(secondHalf)}
-      </Accordion>
-    </div>
+    <section aria-labelledby="faq-heading">
+      <h2 id="faq-heading" className="sr-only">
+        Frequently Asked Questions
+      </h2>
+      <div className="mt-6 grid w-full gap-4 md:grid-cols-2 md:gap-6">
+        <Accordion type="single" collapsible className="w-full space-y-3">
+          {renderAccordionItems(firstHalf)}
+        </Accordion>
+        <Accordion type="single" collapsible className="w-full space-y-3">
+          {renderAccordionItems(secondHalf)}
+        </Accordion>
+      </div>
+    </section>
   );
 };
