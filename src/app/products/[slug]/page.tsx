@@ -29,14 +29,14 @@ export default function ProductSlugPage() {
           </div>
           <div className="space-y-3">
             <h2 className="text-muted-foreground">Product Overview</h2>
-            <p className="text-xl leading-normal tracking-tight">
+            <p className="text-lg leading-normal tracking-tight">
               Experience next-generation engine care with XPower 5W30,
               formulated to meet API SP standards. Designed for modern petrol
               engines, it delivers exceptional wear protection, cleaner
               performance, and extended engine life—whether you're navigating
               city traffic or cruising the highway.
             </p>
-            <p className="text-xl leading-normal tracking-tight">
+            <p className="text-lg leading-normal tracking-tight">
               With Micro-Lubricant Technology, advanced detergency, and superior
               thermal stability, XPower keeps your engine running smoother,
               quieter, and more efficiently every day.
@@ -44,26 +44,24 @@ export default function ProductSlugPage() {
           </div>
           <div className="space-y-3">
             <h2 className="text-muted-foreground">Key Benefits</h2>
-            <ul>
-              <li> Maximize Engine Potential</li>
-              Quieter Engine, Smoother Operation, Enhanced Comfort Unmatched
-              Thermal Stability & Extended Oil Drain Intervals Improves Fuel
-              Efficiency & Reduces Emissions Extended Component Lifespan & Lower
-              Maintenance Costs Protection Against Water Contamination in Engine
-              Oil
+            <ul className="list-disc text-lg">
+              <li className="ml-5"> Maximize Engine Potential</li>
+              <li className="ml-5">
+                Quieter Engine, Smoother Operation, Enhanced Comfort
+              </li>
+              <li className="ml-5">
+                Unmatched Thermal Stability & Extended Oil Drain Intervals
+              </li>
+              <li className="ml-5">
+                Improves Fuel Efficiency & Reduces Emissions
+              </li>
+              <li className="ml-5">
+                Extended Component Lifespan & Lower Maintenance Costs
+              </li>
+              <li className="ml-5">
+                Protection Against Water Contamination in Engine Oil
+              </li>
             </ul>
-            <p className="text-xl leading-normal tracking-tight">
-              Experience next-generation engine care with XPower 5W30,
-              formulated to meet API SP standards. Designed for modern petrol
-              engines, it delivers exceptional wear protection, cleaner
-              performance, and extended engine life—whether you're navigating
-              city traffic or cruising the highway.
-            </p>
-            <p className="text-xl leading-normal tracking-tight">
-              With Micro-Lubricant Technology, advanced detergency, and superior
-              thermal stability, XPower keeps your engine running smoother,
-              quieter, and more efficiently every day.
-            </p>
           </div>
         </div>
       </section>
