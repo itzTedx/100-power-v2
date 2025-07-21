@@ -155,23 +155,38 @@ export default function Home() {
           </TabsList>
           <TabsContent value="lubrication">
             <div className="grid grid-cols-3 gap-4">
-              {PRODUCTS.map((product) => (
-                <ProductCard data={product} key={product.id} />
-              ))}
+              {PRODUCTS.filter((p) => p.type === "lubrication")?.map(
+                (product) => (
+                  <ProductCard data={product} key={product.id} />
+                )
+              )}
             </div>
           </TabsContent>
           <TabsContent value="engine-additives">
             <div className="grid grid-cols-3 gap-4">
-              {PRODUCTS.map((product) => (
-                <ProductCard data={product} key={product.id} />
-              ))}
+              {PRODUCTS.filter((p) => p.type === "engine-additives")?.map(
+                (product) => (
+                  <ProductCard data={product} key={product.id} />
+                )
+              )}
             </div>
           </TabsContent>
           <TabsContent value="fuel-system">
             <div className="grid grid-cols-3 gap-4">
-              {PRODUCTS.map((product) => (
-                <ProductCard data={product} key={product.id} />
-              ))}
+              {PRODUCTS.filter((p) => p.type === "fuel-system")?.map(
+                (product) => (
+                  <ProductCard data={product} key={product.id} />
+                )
+              )}
+            </div>
+          </TabsContent>
+          <TabsContent value="industrial">
+            <div className="grid grid-cols-3 gap-4">
+              {PRODUCTS.filter((p) => p.type === "industrial")?.map(
+                (product) => (
+                  <ProductCard data={product} key={product.id} />
+                )
+              )}
             </div>
           </TabsContent>
         </Tabs>
