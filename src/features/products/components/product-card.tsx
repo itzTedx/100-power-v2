@@ -74,7 +74,7 @@ export const ProductCard = ({ data }: Props) => {
         <CardContent className="relative overflow-hidden">
           <div className="relative aspect-square">
             <Image
-              src="/images/xpower.webp"
+              src="/images/100power.webp"
               alt={data.title}
               fill
               className="object-contain"

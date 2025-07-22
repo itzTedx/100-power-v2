@@ -14,19 +14,19 @@ import { ProductCard } from "@/features/products/components/product-card";
 import { cn } from "@/lib/utils";
 
 export const generateMetadata = async (): Promise<Metadata> => ({
-  title: "XPower 5W30 Petrol Engine Oil (API SP) | 100 Power",
+  title: "100 Power 5W30 Petrol Engine Oil (API SP) | 100 Power",
   description:
-    "XPower 5W30 Petrol Engine Oil (API SP) offers next-generation engine care, superior wear protection, and enhanced efficiency for modern petrol engines.",
+    "100 Power 5W30 Petrol Engine Oil (API SP) offers next-generation engine care, superior wear protection, and enhanced efficiency for modern petrol engines.",
   openGraph: {
-    title: "XPower 5W30 Petrol Engine Oil (API SP)",
+    title: "100 Power 5W30 Petrol Engine Oil (API SP)",
     description:
-      "Experience next-generation engine care with XPower 5W30, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life.",
+      "Experience next-generation engine care with 100 Power 5W30, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life.",
     images: [
       {
-        url: "/images/xpower-hi.webp",
+        url: "/images/100Power-hi.webp",
         width: 800,
         height: 800,
-        alt: "XPower 5W30 Petrol Engine Oil bottle",
+        alt: "100 Power 5W30 Petrol Engine Oil bottle",
       },
     ],
   },
@@ -40,9 +40,9 @@ export default function ProductSlugPage() {
           <Card className="h-fit">
             <CardContent className="relative aspect-square">
               <Image
-                src="/images/xpower-hi.webp"
+                src="/images/100power-hi.webp"
                 fill
-                alt="XPower 5W30 Petrol Engine Oil bottle"
+                alt="100 Power 5W30 Petrol Engine Oil bottle"
                 className="object-contain"
               />
             </CardContent>
@@ -56,7 +56,7 @@ export default function ProductSlugPage() {
                 </span>
               </div>
               <h1 className="font-helvetica text-2xl font-bold sm:text-3xl">
-                XPower 5W30 Petrol Engine Oil (API SP)
+                100 Power 5W30 Petrol Engine Oil (API SP)
               </h1>
             </header>
             <section aria-labelledby="overview-heading">
@@ -67,7 +67,7 @@ export default function ProductSlugPage() {
                 Product Overview
               </h2>
               <p className="mb-3 text-base leading-normal tracking-tight sm:text-lg">
-                Experience next-generation engine care with XPower 5W30,
+                Experience next-generation engine care with 100 Power 5W30,
                 formulated to meet API SP standards. Designed for modern petrol
                 engines, it delivers exceptional wear protection, cleaner
                 performance, and extended engine life—whether you're navigating
@@ -75,7 +75,7 @@ export default function ProductSlugPage() {
               </p>
               <p className="text-base leading-normal tracking-tight sm:text-lg">
                 With Micro-Lubricant Technology, advanced detergency, and
-                superior thermal stability, XPower keeps your engine running
+                superior thermal stability, 100 Power keeps your engine running
                 smoother, quieter, and more efficiently every day.
               </p>
             </section>
@@ -247,7 +247,7 @@ export default function ProductSlugPage() {
                 </li>
                 <li>
                   <strong>Pour the Oil</strong>
-                  <p>Add XPower 5W30 as per the recommended capacity.</p>
+                  <p>Add 100 Power 5W30 as per the recommended capacity.</p>
                 </li>
                 <li>
                   <strong>Check Level</strong>
@@ -305,10 +305,10 @@ export default function ProductSlugPage() {
             __html: JSON.stringify({
               "@context": "https://schema.org/",
               "@type": "Product",
-              name: "XPower 5W30 Petrol Engine Oil (API SP)",
-              image: ["https://yourdomain.com/images/xpower-hi.webp"],
+              name: "100 Power 5W30 Petrol Engine Oil (API SP)",
+              image: ["https://yourdomain.com/images/100 Power-hi.webp"],
               description:
-                "XPower 5W30 Petrol Engine Oil (API SP) offers next-generation engine care, superior wear protection, and enhanced efficiency for modern petrol engines.",
+                "100 Power 5W30 Petrol Engine Oil (API SP) offers next-generation engine care, superior wear protection, and enhanced efficiency for modern petrol engines.",
               brand: {
                 "@type": "Brand",
                 name: "100 Power",
