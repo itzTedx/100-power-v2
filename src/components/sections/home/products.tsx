@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { ArrowUpRight, Dot } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
@@ -38,8 +40,11 @@ export const Products = () => {
             variant="secondary"
             aria-label="Explore all products"
             className="w-full sm:w-auto"
+            asChild
           >
-            Explore Products <ArrowUpRight size={18} />
+            <Link href="/products">
+              Explore Products <ArrowUpRight size={18} />
+            </Link>
           </Button>
         </div>
       </div>

@@ -16,7 +16,7 @@ export default function SolutionsPage() {
       {/* <section className="container py-16">
         <div className="mx-auto max-w-4xl">
           <h2 className="font-helvetica mb-6 text-center text-3xl font-bold md:text-4xl">
-            Why Tirrent Global?
+            Why 100 Power?
           </h2>
           <ul className="mx-auto max-w-xl list-inside list-disc space-y-4 text-lg">
             <li>Years of dedicated R&amp;D</li>
