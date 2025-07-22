@@ -90,4 +90,24 @@ export const PRODUCTS: ProductType[] = [
     ],
     quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
   },
+  {
+    id: 5,
+    range: "Premium",
+    title: "100 Power 10W40",
+    type: "engine-additives",
+    image: "/images/products/10w40.jpg",
+    href: "/products/x-power",
+    overview: `Experience next-generation engine care with 100 Power 10W40, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.
+    \n
+    With Micro-Lubricant Technology, advanced detergency, and superior thermal stability, 100 Power keeps your engine running smoother, quieter, and more efficiently every day.`,
+    benefits: [
+      "Maximize Engine Potential",
+      "Quieter Engine, Smoother Operation, Enhanced Comfort",
+      "Unmatched Thermal Stability & Extended Oil Drain Intervals",
+      "Improves Fuel Efficiency & Reduces Emissions",
+      "Extended Component Lifespan & Lower Maintenance Costs",
+      "Protection Against Water Contamination in Engine Oil",
+    ],
+    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
+  },
 ];
