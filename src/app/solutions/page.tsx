@@ -13,7 +13,7 @@ export default function SolutionsPage() {
       <Benefits />
       <Results />
 
-      <section className="container py-16">
+      {/* <section className="container py-16">
         <div className="mx-auto max-w-4xl">
           <h2 className="font-helvetica mb-6 text-center text-3xl font-bold md:text-4xl">
             Why Tirrent Global?
@@ -25,7 +25,7 @@ export default function SolutionsPage() {
             <li>Proven in heavy-duty applications</li>
           </ul>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }
