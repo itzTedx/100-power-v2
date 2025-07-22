@@ -46,12 +46,20 @@ export default function ProductSlugPage() {
       url: "/images/100power-hi.webp",
     },
     {
-      title: "Headphone 2",
-      url: "https://raw.githubusercontent.com/stackzero-labs/ui/refs/heads/main/public/placeholders/speaker-03.jpg",
+      title: "Speaker 1",
+      url: "/images/100power-hi.webp",
     },
     {
-      title: "Headphone 3",
-      url: "https://raw.githubusercontent.com/stackzero-labs/ui/refs/heads/main/public/placeholders/speaker-04.jpg",
+      title: "Speaker 1",
+      url: "/images/100power-hi.webp",
+    },
+    {
+      title: "Speaker 1",
+      url: "/images/100power-hi.webp",
+    },
+    {
+      title: "Speaker 1",
+      url: "/images/100power-hi.webp",
     },
   ];
   return (

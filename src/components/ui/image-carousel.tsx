@@ -167,9 +167,9 @@ const Thumb: React.FC<ThumbPropType> = (props) => {
     <div
       className={cn(
         "transition-opacity duration-200",
-        selected ? "opacity-100" : "opacity-50 hover:opacity-70",
+
         // Horizontal layout (top/bottom)
-        "group-[.thumbs-horizontal]:min-w-0 group-[.thumbs-horizontal]:flex-[0_0_22%] group-[.thumbs-horizontal]:pl-3 sm:group-[.thumbs-horizontal]:flex-[0_0_15%]",
+        "group-[.thumbs-horizontal]:min-w-0 group-[.thumbs-horizontal]:flex-[0_0_22%] group-[.thumbs-horizontal]:pl-3 sm:group-[.thumbs-horizontal]:flex-[0_0_20%]",
         // Vertical layout (left/right)
         "group-[.thumbs-vertical]:w-full group-[.thumbs-vertical]:pt-3"
       )}
@@ -182,6 +182,7 @@ const Thumb: React.FC<ThumbPropType> = (props) => {
         <div
           className={cn(
             "relative w-full overflow-hidden rounded-lg bg-gray-100",
+            selected ? "border-primary/50 border-2" : "",
             getAspectRatioClass("square")
           )}
         >
