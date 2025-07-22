@@ -46,17 +46,18 @@ export default function ProductsPage() {
           >
             All Products
           </TabsTrigger>
-          <TabsTrigger
-            value="lubrication"
-            className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
-          >
-            Lubrication
-          </TabsTrigger>
+
           <TabsTrigger
             value="engine-additives"
             className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
           >
             Engine Additives
+          </TabsTrigger>
+          <TabsTrigger
+            value="lubrication"
+            className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
+          >
+            Lubrication
           </TabsTrigger>
           <TabsTrigger
             value="fuel-system"
