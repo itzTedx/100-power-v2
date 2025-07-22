@@ -1,5 +1,3 @@
-"use client";
-
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { Suspense } from "react";
@@ -10,9 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { INDUSTRIES } from "@/data/constants";
 
-const SimpleMarquee = dynamic(() => import("@/components/animated/marquee"), {
-  ssr: false,
-});
+const SimpleMarquee = dynamic(() => import("@/components/animated/marquee"));
 
 export const Industries = () => {
   return (

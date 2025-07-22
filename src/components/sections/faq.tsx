@@ -33,7 +33,6 @@ export const Faqs = () => {
       </AccordionItem>
     ));
 
-  // Remove memoizedBeams, use Suspense for lazy loading
   return (
     <section aria-labelledby="faq-heading">
       <h2 id="faq-heading" className="sr-only">

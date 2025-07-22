@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Fragment } from "react";
 
 import { Dot } from "lucide-react";
 
@@ -90,7 +91,14 @@ export const ProductCard = ({ data }: Props) => {
         </CardContent>
         <CardFooter className="flex-col items-start">
           <CardDescription className="flex items-center text-sm font-medium">
-            <p>{data.badge}</p> <Dot /> <p>{data.quantity}</p>
+            {data.quantity.map((q, i) => (
+              <Fragment key={q}>
+                <p>{q}</p>{" "}
+                <Dot
+                  className={cn(data.quantity.length === i + 1 && "hidden")}
+                />
+              </Fragment>
+            ))}
           </CardDescription>
           <CardTitle>{data.title}</CardTitle>
         </CardFooter>

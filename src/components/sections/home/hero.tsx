@@ -7,15 +7,16 @@ import { Button } from "@/components/ui/button";
 
 export const Hero = () => {
   return (
-    <section className="container py-8 sm:py-12" aria-labelledby="hero-heading">
-      <div className="space-y-5 py-6 text-center">
+    <section className="container py-9 md:py-12" aria-labelledby="hero-heading">
+      <div className="space-y-5 text-center max-md:pb-6 md:py-6">
         <Badge variant="primary">Engineered to Protect</Badge>
 
         <h1
           id="hero-heading"
-          className="font-helvetica text-3xl font-bold tracking-wide sm:text-5xl md:text-6xl"
+          className="font-helvetica text-4xl font-bold tracking-wide sm:text-5xl md:text-6xl"
         >
-          Advanced Additives for Peak <br /> Performance and Lasting{" "}
+          Advanced Additives for Peak <br className="hidden md:block" />{" "}
+          Performance and Lasting{" "}
           <span className="text-primary">Protection.</span>
         </h1>
         <p className="text-base sm:text-lg md:text-xl">
@@ -29,7 +30,7 @@ export const Hero = () => {
           Explore Solutions <IconArrowUpRight size={18} />
         </Button>
       </div>
-      <div className="relative h-60 w-full sm:h-72 md:h-[22rem] lg:h-[36rem]">
+      <div className="relative h-48 w-full sm:h-72 md:h-[22rem] lg:h-[36rem]">
         <Image
           src="/images/hero.webp"
           fill

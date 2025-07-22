@@ -83,7 +83,13 @@ export default function ProductSlugPage() {
       </Breadcrumb>
       <article>
         <section className="grid grid-cols-1 gap-8 pt-4 md:grid-cols-2 md:gap-12">
-          <ImageCarousel images={images} imageFit="contain" aspectRatio="5/4" />
+          <div className="sticky top-[14svh] h-fit">
+            <ImageCarousel
+              images={images}
+              imageFit="contain"
+              aspectRatio="5/4"
+            />
+          </div>
 
           <div className="space-y-6 py-4">
             <header>
@@ -129,18 +135,40 @@ export default function ProductSlugPage() {
                 <li>Protection Against Water Contamination in Engine Oil</li>
               </ul>
             </section>
+            <section aria-labelledby="quantities-heading">
+              <h2
+                id="quantities-heading"
+                className="text-muted-foreground mb-1"
+              >
+                Available Packings
+              </h2>
+              <ul className="font-helvetica flex gap-4 text-base font-medium sm:text-lg">
+                <li className="border-primary/50 bg-primary/5 rounded-sm border px-2.5 py-1">
+                  1 Litre
+                </li>
+                <li className="border-primary/50 bg-primary/5 rounded-sm border px-2.5 py-1">
+                  4 Litre
+                </li>
+                <li className="border-primary/50 bg-primary/5 rounded-sm border px-2.5 py-1">
+                  5 Litre
+                </li>
+                <li className="border-primary/50 bg-primary/5 rounded-sm border px-2.5 py-1">
+                  208 Litre
+                </li>
+              </ul>
+            </section>
             <section aria-labelledby="datasheet-heading">
               <h2 id="datasheet-heading" className="text-muted-foreground mb-1">
-                Datasheet Downloads
+                Data Sheet Downloads
               </h2>
               <div className="flex flex-col gap-2 space-x-0 sm:flex-row sm:gap-0 sm:space-x-3">
                 <Button variant="secondary">
                   <IconShield />
-                  Material Safety Datasheet
+                  Material Safety Data Sheet
                 </Button>
                 <Button variant="secondary">
                   <IconChart />
-                  Technical Datasheet
+                  Technical Data Sheet
                 </Button>
               </div>
             </section>

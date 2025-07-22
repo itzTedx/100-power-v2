@@ -7,9 +7,12 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60,
   },
 
+  allowedDevOrigins: ["192.168.1.158", "localhost:3000"],
+
   experimental: {
     optimizePackageImports: ["lucide-react"],
   },
+
   typescript: {
     ignoreBuildErrors: true,
   },

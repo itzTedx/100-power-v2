@@ -16,7 +16,7 @@ import { WHO_WE_ARE } from "@/data/constants";
 export const About = () => {
   return (
     <section
-      className="container space-y-8 pb-8 sm:pb-12"
+      className="container space-y-6 pb-8 sm:pb-12 md:space-y-8"
       aria-labelledby="about-heading"
     >
       <Badge>
