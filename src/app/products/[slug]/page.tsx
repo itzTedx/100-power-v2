@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 import { Dot } from "lucide-react";
 
@@ -39,11 +40,17 @@ export const generateMetadata = async (): Promise<Metadata> => ({
   },
 });
 
-export default function ProductSlugPage() {
+type Params = Promise<{ slug: string }>;
+
+export default async function ProductSlugPage({ params }: { params: Params }) {
+  const { slug } = await params;
+  const product = PRODUCTS.find((p) => p.href === `/products/${slug}`);
+  if (!product) return notFound();
+
   const images: CarouselImages = [
     {
       title: "Speaker 1",
-      url: "/images/100power-hi.webp",
+      url: product.image,
     },
     {
       title: "Speaker 1",

@@ -75,10 +75,10 @@ export const ProductCard = ({ data }: Props) => {
         <CardContent className="relative overflow-hidden">
           <div className="relative aspect-square">
             <Image
-              src="/images/100power.webp"
+              src={data.image}
               alt={data.title}
               fill
-              className="object-contain"
+              className="object-cover"
             />
           </div>
           <div className="absolute inset-0 z-10 flex items-end justify-center p-4 opacity-0 transition-opacity group-hover:opacity-100">
