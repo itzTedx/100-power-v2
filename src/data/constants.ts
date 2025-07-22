@@ -90,7 +90,7 @@ export const FOOTER = [
       {
         id: 1,
         title:
-          "Al Moosa Tower 2 - 2403, 24th Floor, Sheikh Zayed Rd, near Emirates Tower Metro, Dubai, United Arab Emirates",
+          "Plot No-4, Block 5, Umm Al Thuoob, New Industrial Area, Umm Al Quwain, United Arab Emirates, PO BOX 1171",
       },
       {
         id: 2,
