@@ -12,7 +12,9 @@ export function Footer() {
       <div className="container">
         <div className="grid grid-cols-1 gap-8 py-8 sm:grid-cols-2 md:grid-cols-4 md:py-12">
           <address className="col-span-1 space-y-3 not-italic md:col-span-1">
-            <h3 className="font-aloevera text-primary font-bold">100 Power</h3>
+            <h3 className="font-aloevera text-primary font-bold">
+              100 Power Trading LLC
+            </h3>
             <p>
               Powering industries with advanced lubrication technology to reduce
               friction, extend machinery life, and protect the planet.

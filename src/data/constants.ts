@@ -85,7 +85,7 @@ export const FOOTER = [
   },
   {
     id: 3,
-    heading: "Contact",
+    heading: "Factory Address",
     items: [
       {
         id: 1,
@@ -94,12 +94,12 @@ export const FOOTER = [
       },
       {
         id: 2,
-        title: "support@tirrentglobal.com",
+        title: "info@100-power.com",
       },
-      {
-        id: 3,
-        title: "+971 4 557 9964",
-      },
+      // {
+      //   id: 3,
+      //   title: "+971 4 557 9964",
+      // },
     ],
   },
 ];
