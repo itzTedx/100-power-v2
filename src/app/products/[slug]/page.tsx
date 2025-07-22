@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Image from "next/image";
 
 import { Dot } from "lucide-react";
 
@@ -14,7 +13,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import ImageCarousel, { CarouselImages } from "@/components/ui/image-carousel";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PRODUCTS } from "@/data/products";
@@ -41,6 +40,20 @@ export const generateMetadata = async (): Promise<Metadata> => ({
 });
 
 export default function ProductSlugPage() {
+  const images: CarouselImages = [
+    {
+      title: "Speaker 1",
+      url: "/images/100power-hi.webp",
+    },
+    {
+      title: "Headphone 2",
+      url: "https://raw.githubusercontent.com/stackzero-labs/ui/refs/heads/main/public/placeholders/speaker-03.jpg",
+    },
+    {
+      title: "Headphone 3",
+      url: "https://raw.githubusercontent.com/stackzero-labs/ui/refs/heads/main/public/placeholders/speaker-04.jpg",
+    },
+  ];
   return (
     <main className="container py-4">
       <Breadcrumb>
@@ -61,23 +74,10 @@ export default function ProductSlugPage() {
         </BreadcrumbList>
       </Breadcrumb>
       <article>
-        <section className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
-          <div className="space-y-4">
-            <Card className="h-fit">
-              <CardContent className="relative aspect-5/4">
-                <Image
-                  src="/images/100power-hi.webp"
-                  fill
-                  alt="100 Power 5W30 Petrol Engine Oil bottle"
-                  className="object-contain"
-                />
-              </CardContent>
-            </Card>
-            <div className="grid grid-cols-5 gap-2">
-              <div className="bg-muted-foreground aspect-square"></div>
-            </div>
-          </div>
-          <div className="space-y-6 py-4 md:space-y-8">
+        <section className="grid grid-cols-1 gap-8 pt-4 md:grid-cols-2 md:gap-12">
+          <ImageCarousel images={images} imageFit="contain" aspectRatio="5/4" />
+
+          <div className="space-y-6 py-4">
             <header>
               <div className="flex shrink-0 items-center gap-2">
                 <div className={cn("size-3 rounded-full", "bg-primary")} />
@@ -281,7 +281,7 @@ export default function ProductSlugPage() {
             </TabsContent>
           </Tabs>
         </section>
-        <section className="space-y-6 py-8 sm:py-12">
+        {/* <section className="space-y-6 py-8 sm:py-12">
           <Badge>
             <Dot />
             More Packings
@@ -295,7 +295,7 @@ export default function ProductSlugPage() {
               <ProductCard data={product} key={product.id} />
             ))}
           </div>
-        </section>
+        </section> */}
         <section className="space-y-6 pt-8 sm:pt-12">
           <Badge>
             <Dot />
