@@ -93,9 +93,9 @@ export const PRODUCTS: ProductType[] = [
   {
     id: 5,
     range: "Premium",
-    title: "100 Power 10W40",
-    type: "engine-additives",
-    image: "/images/products/10w40.jpg",
+    title: "Fuel Conditioner",
+    type: "fuel-system",
+    image: "/images/products/conditioner.jpg",
     href: "/products/x-power",
     overview: `Experience next-generation engine care with 100 Power 10W40, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.
     \n
