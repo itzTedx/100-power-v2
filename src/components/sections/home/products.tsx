@@ -74,15 +74,6 @@ export const Products = () => {
           </TabsList>
           <ScrollBar orientation="horizontal" />
         </ScrollArea>
-        <TabsContent value="lubrication">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {PRODUCTS.filter((p) => p.type === "lubrication")?.map(
-              (product) => (
-                <ProductCard data={product} key={product.id} />
-              )
-            )}
-          </div>
-        </TabsContent>
         <TabsContent value="engine-additives">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {PRODUCTS.filter((p) => p.type === "engine-additives")?.map(
@@ -92,6 +83,16 @@ export const Products = () => {
             )}
           </div>
         </TabsContent>
+        <TabsContent value="lubrication">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {PRODUCTS.filter((p) => p.type === "lubrication")?.map(
+              (product) => (
+                <ProductCard data={product} key={product.id} />
+              )
+            )}
+          </div>
+        </TabsContent>
+
         <TabsContent value="fuel-system">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {PRODUCTS.filter((p) => p.type === "fuel-system")?.map(

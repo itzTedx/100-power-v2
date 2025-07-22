@@ -18,9 +18,8 @@ export const PRODUCTS: ProductType[] = [
     title: "100 Power 5W30",
     image: "/images/products/5w30.jpg",
     type: "engine-additives",
-    overview: `Experience next-generation engine care with 100 Power 5W30, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.
-    \n
-    With Micro-Lubricant Technology, advanced detergency, and superior thermal stability, 100 Power keeps your engine running smoother, quieter, and more efficiently every day.`,
+    overview:
+      "Experience next-generation engine care with 100 Power 5W30, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.\n\n    With Micro-Lubricant Technology, advanced detergency, and superior thermal stability, 100 Power keeps your engine running smoother, quieter, and more efficiently every day.",
     benefits: [
       "Maximize Engine Potential",
       "Quieter Engine, Smoother Operation, Enhanced Comfort",
@@ -29,13 +28,13 @@ export const PRODUCTS: ProductType[] = [
       "Extended Component Lifespan & Lower Maintenance Costs",
       "Protection Against Water Contamination in Engine Oil",
     ],
-    quantity: ["1L", "4L", "5L", "208L"],
+    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
   },
   {
     id: 2,
     range: "Premium",
     title: "100 Power 5W40",
-    type: "fuel-system",
+    type: "engine-additives",
     image: "/images/products/5w40.jpg",
     href: "/products/x-power",
     overview: `Experience next-generation engine care with 100 Power 5W40, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.
@@ -49,16 +48,16 @@ export const PRODUCTS: ProductType[] = [
       "Extended Component Lifespan & Lower Maintenance Costs",
       "Protection Against Water Contamination in Engine Oil",
     ],
-    quantity: ["1L", "4L", "5L", "208L"],
+    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
   },
   {
-    id: 2,
+    id: 3,
     range: "Premium",
     title: "100 Power 10W30",
-    type: "fuel-system",
-    image: "/images/products/5w40.jpg",
+    type: "engine-additives",
+    image: "/images/products/10w30.jpg",
     href: "/products/x-power",
-    overview: `Experience next-generation engine care with 100 Power 5W40, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.
+    overview: `Experience next-generation engine care with 100 Power 10W30, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.
     \n
     With Micro-Lubricant Technology, advanced detergency, and superior thermal stability, 100 Power keeps your engine running smoother, quieter, and more efficiently every day.`,
     benefits: [
@@ -69,6 +68,26 @@ export const PRODUCTS: ProductType[] = [
       "Extended Component Lifespan & Lower Maintenance Costs",
       "Protection Against Water Contamination in Engine Oil",
     ],
-    quantity: ["1L", "4L", "5L", "208L"],
+    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
+  },
+  {
+    id: 4,
+    range: "Premium",
+    title: "100 Power 10W40",
+    type: "engine-additives",
+    image: "/images/products/10w40.jpg",
+    href: "/products/x-power",
+    overview: `Experience next-generation engine care with 100 Power 10W40, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.
+    \n
+    With Micro-Lubricant Technology, advanced detergency, and superior thermal stability, 100 Power keeps your engine running smoother, quieter, and more efficiently every day.`,
+    benefits: [
+      "Maximize Engine Potential",
+      "Quieter Engine, Smoother Operation, Enhanced Comfort",
+      "Unmatched Thermal Stability & Extended Oil Drain Intervals",
+      "Improves Fuel Efficiency & Reduces Emissions",
+      "Extended Component Lifespan & Lower Maintenance Costs",
+      "Protection Against Water Contamination in Engine Oil",
+    ],
+    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
   },
 ];

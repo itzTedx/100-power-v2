@@ -68,7 +68,7 @@ export const Video = () => {
           aria-label="100 Power brand video"
           poster="/images/video-poster.webp"
         >
-          <source src="/videos/powerx.webm" type="video/webm" />
+          <source src="/videos/100-Power-Info.webm" type="video/webm" />
           Your browser does not support the video tag. Watch our brand video on
           our{" "}
           <a

@@ -21,7 +21,13 @@ import { PRODUCTS } from "@/data/products";
 import { ProductCard } from "@/features/products/components/product-card";
 import { cn } from "@/lib/utils";
 
-export const generateMetadata = async (): Promise<Metadata> => ({
+type Params = Promise<{ slug: string }>;
+
+export const generateMetadata = async ({
+  params,
+}: {
+  params: Params;
+}): Promise<Metadata> => ({
   title: "100 Power 5W30 Petrol Engine Oil (API SP) | 100 Power",
   description:
     "100 Power 5W30 Petrol Engine Oil (API SP) offers next-generation engine care, superior wear protection, and enhanced efficiency for modern petrol engines.",
@@ -39,8 +45,6 @@ export const generateMetadata = async (): Promise<Metadata> => ({
     ],
   },
 });
-
-type Params = Promise<{ slug: string }>;
 
 export default async function ProductSlugPage({ params }: { params: Params }) {
   const { slug } = await params;
@@ -82,9 +86,13 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
           </BreadcrumbItem>
           <BreadcrumbSeparator>/</BreadcrumbSeparator>
           <BreadcrumbItem>
-            <BreadcrumbPage>
-              100 Power 5W30 Petrol Engine Oil (API SP)
-            </BreadcrumbPage>
+            <BreadcrumbLink href="/products" className="capitalize">
+              {product.type.replace(/-/g, " ")}
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator>/</BreadcrumbSeparator>
+          <BreadcrumbItem>
+            <BreadcrumbPage>{product.title}</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
@@ -103,28 +111,19 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
               <div className="flex shrink-0 items-center gap-2">
                 <div className={cn("size-3 rounded-full", "bg-primary")} />
                 <span className="text-base font-medium sm:text-lg">
-                  Premium
+                  {product.range}
                 </span>
               </div>
               <h1 className="font-helvetica text-2xl font-bold sm:text-3xl">
-                100 Power 5W30 Petrol Engine Oil (API SP)
+                {product.title}
               </h1>
             </header>
             <section aria-labelledby="overview-heading">
               <h2 id="overview-heading" className="text-muted-foreground mb-1">
                 Product Overview
               </h2>
-              <p className="mb-3 text-base leading-normal tracking-tight sm:text-lg">
-                Experience next-generation engine care with 100 Power 5W30,
-                formulated to meet API SP standards. Designed for modern petrol
-                engines, it delivers exceptional wear protection, cleaner
-                performance, and extended engine life—whether you're navigating
-                city traffic or cruising the highway.
-              </p>
               <p className="text-base leading-normal tracking-tight sm:text-lg">
-                With Micro-Lubricant Technology, advanced detergency, and
-                superior thermal stability, 100 Power keeps your engine running
-                smoother, quieter, and more efficiently every day.
+                {product.overview}
               </p>
             </section>
             <section aria-labelledby="benefits-heading">
@@ -132,14 +131,9 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
                 Key Benefits
               </h2>
               <ul className="list-inside list-disc space-y-2 text-base sm:text-lg">
-                <li> Maximize Engine Potential</li>
-                <li>Quieter Engine, Smoother Operation, Enhanced Comfort</li>
-                <li>
-                  Unmatched Thermal Stability & Extended Oil Drain Intervals
-                </li>
-                <li>Improves Fuel Efficiency & Reduces Emissions</li>
-                <li>Extended Component Lifespan & Lower Maintenance Costs</li>
-                <li>Protection Against Water Contamination in Engine Oil</li>
+                {product.benefits.map((benefit) => (
+                  <li key={benefit}>{benefit}</li>
+                ))}
               </ul>
             </section>
             <section aria-labelledby="quantities-heading">
@@ -150,18 +144,14 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
                 Available Packings
               </h2>
               <ul className="font-helvetica flex gap-4 text-base font-medium sm:text-lg">
-                <li className="border-primary/50 bg-primary/5 rounded-sm border px-2.5 py-1">
-                  1 Litre
-                </li>
-                <li className="border-primary/50 bg-primary/5 rounded-sm border px-2.5 py-1">
-                  4 Litre
-                </li>
-                <li className="border-primary/50 bg-primary/5 rounded-sm border px-2.5 py-1">
-                  5 Litre
-                </li>
-                <li className="border-primary/50 bg-primary/5 rounded-sm border px-2.5 py-1">
-                  208 Litre
-                </li>
+                {product.quantity.map((q) => (
+                  <li
+                    className="border-primary/50 bg-primary/5 rounded-sm border px-2.5 py-1"
+                    key={q}
+                  >
+                    {q}
+                  </li>
+                ))}
               </ul>
             </section>
             <section aria-labelledby="datasheet-heading">
@@ -324,21 +314,7 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
             </TabsContent>
           </Tabs>
         </section>
-        {/* <section className="space-y-6 py-8 sm:py-12">
-          <Badge>
-            <Dot />
-            More Packings
-          </Badge>
-          <Separator />
-          <h2 className="text-2xl font-medium sm:text-3xl">
-            Available Quantities
-          </h2>
-          <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-6">
-            {PRODUCTS.map((product) => (
-              <ProductCard data={product} key={product.id} />
-            ))}
-          </div>
-        </section> */}
+
         <section className="space-y-6 pt-8 sm:pt-12">
           <Badge>
             <Dot />
@@ -349,7 +325,7 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
             Other Products Related to Lubricants
           </h2>
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
-            {PRODUCTS.map((product) => (
+            {PRODUCTS.filter((f) => f.type === product.type).map((product) => (
               <ProductCard data={product} key={product.id} />
             ))}
           </div>
