@@ -71,18 +71,7 @@ export default function ProductsPage() {
             Industrial Application
           </TabsTrigger>
         </TabsList>
-        <TabsContent value="lubrication">
-          <section
-            className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
-            aria-label="Lubrication Products"
-          >
-            {PRODUCTS.filter((p) => p.type === "lubrication")?.map(
-              (product) => (
-                <ProductCard data={product} key={product.id} />
-              )
-            )}
-          </section>
-        </TabsContent>
+
         <TabsContent value="all">
           <section
             className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
@@ -93,12 +82,25 @@ export default function ProductsPage() {
             ))}
           </section>
         </TabsContent>
+
         <TabsContent value="engine-additives">
           <section
             className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
             aria-label="Engine Additives"
           >
             {PRODUCTS.filter((p) => p.type === "engine-additives")?.map(
+              (product) => (
+                <ProductCard data={product} key={product.id} />
+              )
+            )}
+          </section>
+        </TabsContent>
+        <TabsContent value="lubrication">
+          <section
+            className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+            aria-label="Lubrication Products"
+          >
+            {PRODUCTS.filter((p) => p.type === "lubrication")?.map(
               (product) => (
                 <ProductCard data={product} key={product.id} />
               )

@@ -36,7 +36,7 @@ export const PRODUCTS: ProductType[] = [
     title: "100 Power 5W40",
     type: "engine-additives",
     image: "/images/products/5w40.jpg",
-    href: "/products/x-power",
+    href: "/products/100-power-5w40",
     overview: `Experience next-generation engine care with 100 Power 5W40, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.
     \n
     With Micro-Lubricant Technology, advanced detergency, and superior thermal stability, 100 Power keeps your engine running smoother, quieter, and more efficiently every day.`,
@@ -56,7 +56,7 @@ export const PRODUCTS: ProductType[] = [
     title: "100 Power 10W30",
     type: "engine-additives",
     image: "/images/products/10w30.jpg",
-    href: "/products/x-power",
+    href: "/products/100-power-10w30",
     overview: `Experience next-generation engine care with 100 Power 10W30, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.
     \n
     With Micro-Lubricant Technology, advanced detergency, and superior thermal stability, 100 Power keeps your engine running smoother, quieter, and more efficiently every day.`,
@@ -76,7 +76,7 @@ export const PRODUCTS: ProductType[] = [
     title: "100 Power 10W40",
     type: "engine-additives",
     image: "/images/products/10w40.jpg",
-    href: "/products/x-power",
+    href: "/products/100-power-10w40",
     overview: `Experience next-generation engine care with 100 Power 10W40, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.
     \n
     With Micro-Lubricant Technology, advanced detergency, and superior thermal stability, 100 Power keeps your engine running smoother, quieter, and more efficiently every day.`,
@@ -96,12 +96,10 @@ export const PRODUCTS: ProductType[] = [
     title: "Fuel Conditioner",
     type: "fuel-system",
     image: "/images/products/conditioner.jpg",
-    href: "/products/x-power",
-    overview: `Experience next-generation engine care with 100 Power 10W40, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.
-    \n
-    With Micro-Lubricant Technology, advanced detergency, and superior thermal stability, 100 Power keeps your engine running smoother, quieter, and more efficiently every day.`,
+    href: "/products/fuel-conditioner",
+    overview: `100 PowerFuel Conditioner is a scientifically formulated additive designed to optimize fuel efficiency and protect engine components. Suitable for both gasoline and diesel engines, it improves combustion, cleans critical parts of the fuel system, and extends the life of stored fuel. This advanced formula removes carbon deposits, lubricates internal components, enhances cold-weather performance, and helps engines run smoother, longer, and more efficiently.`,
     benefits: [
-      "Maximize Engine Potential",
+      "Increases fuel economy by up to 20%",
       "Quieter Engine, Smoother Operation, Enhanced Comfort",
       "Unmatched Thermal Stability & Extended Oil Drain Intervals",
       "Improves Fuel Efficiency & Reduces Emissions",

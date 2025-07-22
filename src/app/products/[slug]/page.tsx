@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { Dot } from "lucide-react";
@@ -23,33 +22,36 @@ import { cn } from "@/lib/utils";
 
 type Params = Promise<{ slug: string }>;
 
-export const generateMetadata = async ({
-  params,
-}: {
-  params: Params;
-}): Promise<Metadata> => ({
-  title: "100 Power 5W30 Petrol Engine Oil (API SP) | 100 Power",
-  description:
-    "100 Power 5W30 Petrol Engine Oil (API SP) offers next-generation engine care, superior wear protection, and enhanced efficiency for modern petrol engines.",
-  openGraph: {
-    title: "100 Power 5W30 Petrol Engine Oil (API SP)",
-    description:
-      "Experience next-generation engine care with 100 Power 5W30, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life.",
-    images: [
-      {
-        url: "/images/100Power-hi.webp",
-        width: 800,
-        height: 800,
-        alt: "100 Power 5W30 Petrol Engine Oil bottle",
-      },
-    ],
-  },
-});
+// export const generateMetadata = async ({
+//   params,
+// }: {
+//   params: Params;
+// }): Promise<Metadata> => ({
+//   title: "100 Power 5W30 Petrol Engine Oil (API SP) | 100 Power",
+//   description:
+//     "100 Power 5W30 Petrol Engine Oil (API SP) offers next-generation engine care, superior wear protection, and enhanced efficiency for modern petrol engines.",
+//   openGraph: {
+//     title: "100 Power 5W30 Petrol Engine Oil (API SP)",
+//     description:
+//       "Experience next-generation engine care with 100 Power 5W30, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life.",
+//     images: [
+//       {
+//         url: "/images/100Power-hi.webp",
+//         width: 800,
+//         height: 800,
+//         alt: "100 Power 5W30 Petrol Engine Oil bottle",
+//       },
+//     ],
+//   },
+// });
 
 export default async function ProductSlugPage({ params }: { params: Params }) {
   const { slug } = await params;
   const product = PRODUCTS.find((p) => p.href === `/products/${slug}`);
   if (!product) return notFound();
+
+  console.log("Product data:", product);
+  console.log("Params", slug);
 
   const images: CarouselImages = [
     {
