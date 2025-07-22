@@ -5,6 +5,14 @@ import { Dot } from "lucide-react";
 
 import { IconChart, IconShield } from "@/assets/icons";
 import { Badge } from "@/components/ui/badge";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -34,19 +42,41 @@ export const generateMetadata = async (): Promise<Metadata> => ({
 
 export default function ProductSlugPage() {
   return (
-    <main className="container px-2 py-8 sm:px-4">
+    <main className="container py-4">
+      <Breadcrumb>
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/">Home</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator>/</BreadcrumbSeparator>
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/products">Products</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator>/</BreadcrumbSeparator>
+          <BreadcrumbItem>
+            <BreadcrumbPage>
+              100 Power 5W30 Petrol Engine Oil (API SP)
+            </BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
       <article>
         <section className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
-          <Card className="h-fit">
-            <CardContent className="relative aspect-square">
-              <Image
-                src="/images/100power-hi.webp"
-                fill
-                alt="100 Power 5W30 Petrol Engine Oil bottle"
-                className="object-contain"
-              />
-            </CardContent>
-          </Card>
+          <div className="space-y-4">
+            <Card className="h-fit">
+              <CardContent className="relative aspect-5/4">
+                <Image
+                  src="/images/100power-hi.webp"
+                  fill
+                  alt="100 Power 5W30 Petrol Engine Oil bottle"
+                  className="object-contain"
+                />
+              </CardContent>
+            </Card>
+            <div className="grid grid-cols-5 gap-2">
+              <div className="bg-muted-foreground aspect-square"></div>
+            </div>
+          </div>
           <div className="space-y-6 py-4 md:space-y-8">
             <header>
               <div className="flex shrink-0 items-center gap-2">
@@ -60,10 +90,7 @@ export default function ProductSlugPage() {
               </h1>
             </header>
             <section aria-labelledby="overview-heading">
-              <h2
-                id="overview-heading"
-                className="text-muted-foreground mb-1 text-lg sm:text-xl"
-              >
+              <h2 id="overview-heading" className="text-muted-foreground mb-1">
                 Product Overview
               </h2>
               <p className="mb-3 text-base leading-normal tracking-tight sm:text-lg">
@@ -80,36 +107,22 @@ export default function ProductSlugPage() {
               </p>
             </section>
             <section aria-labelledby="benefits-heading">
-              <h2
-                id="benefits-heading"
-                className="text-muted-foreground mb-1 text-lg sm:text-xl"
-              >
+              <h2 id="benefits-heading" className="text-muted-foreground mb-1">
                 Key Benefits
               </h2>
-              <ul className="list-disc space-y-2 text-base sm:text-lg">
-                <li className="ml-5"> Maximize Engine Potential</li>
-                <li className="ml-5">
-                  Quieter Engine, Smoother Operation, Enhanced Comfort
-                </li>
-                <li className="ml-5">
+              <ul className="list-inside list-disc space-y-2 text-base sm:text-lg">
+                <li> Maximize Engine Potential</li>
+                <li>Quieter Engine, Smoother Operation, Enhanced Comfort</li>
+                <li>
                   Unmatched Thermal Stability & Extended Oil Drain Intervals
                 </li>
-                <li className="ml-5">
-                  Improves Fuel Efficiency & Reduces Emissions
-                </li>
-                <li className="ml-5">
-                  Extended Component Lifespan & Lower Maintenance Costs
-                </li>
-                <li className="ml-5">
-                  Protection Against Water Contamination in Engine Oil
-                </li>
+                <li>Improves Fuel Efficiency & Reduces Emissions</li>
+                <li>Extended Component Lifespan & Lower Maintenance Costs</li>
+                <li>Protection Against Water Contamination in Engine Oil</li>
               </ul>
             </section>
             <section aria-labelledby="datasheet-heading">
-              <h2
-                id="datasheet-heading"
-                className="text-muted-foreground mb-1 text-lg sm:text-xl"
-              >
+              <h2 id="datasheet-heading" className="text-muted-foreground mb-1">
                 Datasheet Downloads
               </h2>
               <div className="flex flex-col gap-2 space-x-0 sm:flex-row sm:gap-0 sm:space-x-3">

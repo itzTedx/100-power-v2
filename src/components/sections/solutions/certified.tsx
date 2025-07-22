@@ -24,7 +24,7 @@ export const Certified = () => {
             badge represents our commitment to world-class performance and
             engineering excellence in lubrication science.
           </p>
-          <ul className="ml-5 list-disc space-y-3 text-xl leading-normal font-light tracking-tight">
+          <ul className="list-inside list-disc space-y-3 text-xl leading-normal font-light tracking-tight">
             <li> Certified Micro-Metallurgical Process</li>
             <li>Made to U.S. Standards</li>
             <li>Trusted in Industrial & Military Applications</li>
