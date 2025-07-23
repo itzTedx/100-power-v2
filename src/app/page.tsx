@@ -4,6 +4,7 @@ import { IconUserQuestion } from "@/assets/icons";
 import { Faqs } from "@/components/sections/faq";
 import { About } from "@/components/sections/home/about";
 import { Hero } from "@/components/sections/home/hero";
+import { Industries } from "@/components/sections/home/industries";
 import { Products } from "@/components/sections/home/products";
 import { Technologies } from "@/components/sections/home/technologies";
 import { Video } from "@/components/sections/home/video";
@@ -18,7 +19,7 @@ export default function Home() {
       <About />
       <Video />
       <Products />
-      {/* <Industries /> */}
+      <Industries />
       <Technologies />
 
       <section className="container space-y-6 py-8 md:space-y-8 md:py-12">
