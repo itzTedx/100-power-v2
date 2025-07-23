@@ -29,7 +29,7 @@ interface Props {
 
 export const ProductCard = ({ data }: Props) => {
   return (
-    <Link href={data.href}>
+    <Link href={`/products/${data.href}`}>
       <Card className="group overflow-hidden">
         <CardHeader className="relative flex items-start justify-between">
           <div className="flex shrink-0 items-center gap-2">
