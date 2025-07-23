@@ -2,6 +2,7 @@ import { IconArrowUpRight } from "@tabler/icons-react";
 import { Dot } from "lucide-react";
 
 import { DotMap } from "@/assets/dot-map";
+import { Values } from "@/components/sections/solutions/values";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -61,25 +62,26 @@ export default function AboutPage() {
             Engineering Excellence. Powering Performance.
           </h2>
           <article className="font-helvetica col-span-2 space-y-4 text-base leading-relaxed sm:text-xl md:text-2xl">
+            <h3 className="text-xl font-medium md:text-3xl">
+              Since 2017 - Headquartered in the UAE
+            </h3>
             <p>
-              100 Power is an innovation-driven company headquartered in the
-              USA, with state-of-the-art manufacturing facilities in California
-              and the UAE. We specialize in advanced micro-metallurgical
-              additive technology designed to dramatically enhance the
-              performance, reliability, and lifespan of engines and machinery
-              across industries.
+              100 Power is an innovation-led company with advanced manufacturing
+              facilities in the UAE and California, USA. We specialize in
+              cutting-edge micro-metallurgical additive technology engineered to
+              significantly boost the performance, durability, and reliability
+              of engines and industrial machinery.
             </p>
             <p>
-              Built on decades of military-grade R&D, our solutions create a
-              durable, polished-like microlayer that reduces friction, resists
-              extreme temperatures and pressure, and protects against wear.
-              Today, our technologies serve sectors ranging from defense to
-              automotive, construction, marine, mining, and agriculture.
+              Backed by decades of military-grade R&D, our products form a
+              polished-like microlayer that reduces friction, withstands extreme
+              temperatures and pressure, and protects against wear.
             </p>
             <p>
-              Our global footprint spans the USA, India, and UAE—delivering
-              excellence through cutting-edge lubricant products and a
-              commitment to sustainability and performance.
+              All ingredients are exclusively sourced from the USA, ensuring
+              unmatched quality and performance. Today, our technologies power
+              sectors such as defense, automotive, construction, marine, mining,
+              and agriculture.
             </p>
           </article>
         </div>
@@ -128,28 +130,7 @@ export default function AboutPage() {
         <h2 className="text-center text-xl font-bold sm:text-2xl">
           Our Values
         </h2>
-        <div className="grid grid-cols-3 gap-2 md:grid-cols-5 md:gap-3">
-          <div
-            className="bg-accent h-12 rounded md:h-20"
-            aria-hidden="true"
-          ></div>
-          <div
-            className="bg-accent h-12 rounded md:h-20"
-            aria-hidden="true"
-          ></div>
-          <div
-            className="bg-accent h-12 rounded md:h-20"
-            aria-hidden="true"
-          ></div>
-          <div
-            className="bg-accent h-12 rounded md:h-20"
-            aria-hidden="true"
-          ></div>
-          <div
-            className="bg-accent h-12 rounded md:h-20"
-            aria-hidden="true"
-          ></div>
-        </div>
+        <Values />
       </section>
       <section className="space-y-8 py-8 md:py-12">
         <Badge>
