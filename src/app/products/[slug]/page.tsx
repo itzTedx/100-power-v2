@@ -88,7 +88,10 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
           </BreadcrumbItem>
           <BreadcrumbSeparator>/</BreadcrumbSeparator>
           <BreadcrumbItem>
-            <BreadcrumbLink href="/products" className="capitalize">
+            <BreadcrumbLink
+              href={`/products?category=${product.type}`}
+              className="capitalize"
+            >
               {product.type.replace(/-/g, " ")}
             </BreadcrumbLink>
           </BreadcrumbItem>
@@ -317,14 +320,17 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
           </Tabs>
         </section>
 
-        <section className="space-y-6 pt-8 sm:pt-12">
+        <section className="space-y-4 pt-8 sm:pt-12 md:space-y-6">
           <Badge>
             <Dot />
             Related Products
           </Badge>
           <Separator />
-          <h2 className="text-2xl font-medium sm:text-3xl">
-            Other Products Related to Lubricants
+          <h2 className="text-xl font-medium sm:text-3xl">
+            Other products related to{" "}
+            <span className="capitalize">
+              {product.type.replace(/-/g, " ")}
+            </span>
           </h2>
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
             {PRODUCTS.filter((f) => f.type === product.type).map((product) => (

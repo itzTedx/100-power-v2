@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 
+import { NuqsAdapter } from "nuqs/adapters/next/app";
+
 import { helvetica } from "@/assets/fonts";
 import { Footer, Navbar } from "@/components/layout";
 import { Cta } from "@/components/sections/cta";
@@ -56,10 +58,12 @@ export default function RootLayout({
       <body
         className={cn("antialiased", geistSans.className, helvetica.variable)}
       >
-        <Navbar />
-        {children}
-        <Cta />
-        <Footer />
+        <NuqsAdapter>
+          <Navbar />
+          {children}
+          <Cta />
+          <Footer />
+        </NuqsAdapter>
       </body>
     </html>
   );
