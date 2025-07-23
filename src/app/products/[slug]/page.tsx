@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { Dot } from "lucide-react";
@@ -22,36 +23,41 @@ import { cn } from "@/lib/utils";
 
 type Params = Promise<{ slug: string }>;
 
-// export const generateMetadata = async ({
-//   params,
-// }: {
-//   params: Params;
-// }): Promise<Metadata> => ({
-//   title: "100 Power 5W30 Petrol Engine Oil (API SP) | 100 Power",
-//   description:
-//     "100 Power 5W30 Petrol Engine Oil (API SP) offers next-generation engine care, superior wear protection, and enhanced efficiency for modern petrol engines.",
-//   openGraph: {
-//     title: "100 Power 5W30 Petrol Engine Oil (API SP)",
-//     description:
-//       "Experience next-generation engine care with 100 Power 5W30, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life.",
-//     images: [
-//       {
-//         url: "/images/100Power-hi.webp",
-//         width: 800,
-//         height: 800,
-//         alt: "100 Power 5W30 Petrol Engine Oil bottle",
-//       },
-//     ],
-//   },
-// });
+export async function generateStaticParams() {
+  return PRODUCTS.map((post) => ({
+    slug: post.href,
+  }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Params;
+}): Promise<Metadata> {
+  // read route params
+  const { slug } = await params;
+
+  // fetch data
+  const product = PRODUCTS.find((p) => p.href === slug);
+  if (!product)
+    return {
+      title: "Product not Available",
+    };
+
+  return {
+    title: product.title,
+    description: product.overview,
+
+    openGraph: {
+      images: product.images,
+    },
+  };
+}
 
 export default async function ProductSlugPage({ params }: { params: Params }) {
   const { slug } = await params;
-  const product = PRODUCTS.find((p) => p.href === `/products/${slug}`);
+  const product = PRODUCTS.find((p) => p.href === slug);
   if (!product) return notFound();
-
-  console.log("Product data:", product);
-  console.log("Params", slug);
 
   const images: CarouselImages = product.images.map((img) => ({ url: img }));
 
@@ -312,7 +318,7 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
               {product.type.replace(/-/g, " ")}
             </span>
           </h2>
-          <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-2 lg:grid-cols-3 xl:grid-cols-4">
             {PRODUCTS.filter((f) => f.type === product.type).map((product) => (
               <ProductCard data={product} key={product.id} />
             ))}
@@ -325,19 +331,12 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
             __html: JSON.stringify({
               "@context": "https://schema.org/",
               "@type": "Product",
-              name: "100 Power 5W30 Petrol Engine Oil (API SP)",
-              image: ["https://yourdomain.com/images/100 Power-hi.webp"],
-              description:
-                "100 Power 5W30 Petrol Engine Oil (API SP) offers next-generation engine care, superior wear protection, and enhanced efficiency for modern petrol engines.",
+              name: product.title,
+              image: [product.images],
+              description: product.overview,
               brand: {
                 "@type": "Brand",
                 name: "100 Power",
-              },
-              offers: {
-                "@type": "Offer",
-                priceCurrency: "INR",
-                price: "0.00",
-                availability: "https://schema.org/InStock",
               },
             }),
           }}

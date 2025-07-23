@@ -13,7 +13,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 py-8 sm:grid-cols-2 md:grid-cols-4 md:py-12">
           <address className="col-span-1 space-y-3 not-italic md:col-span-1">
             <h3 className="font-aloevera text-primary font-bold">
-              100 Power Trading LLC
+              Hundred Power Trading LLC
             </h3>
             <p>
               Powering industries with advanced lubrication technology to reduce
@@ -35,7 +35,7 @@ export function Footer() {
                   <li key={link.id}>
                     {"href" in link ? (
                       <Link
-                        href={link.href}
+                        href={link.href!}
                         title={link.title}
                         prefetch={false}
                       >
@@ -94,11 +94,11 @@ export function Footer() {
             </li>
           </ul>
           <p className="text-center md:text-left">
-            ©{new Date().getFullYear()} 100 Power LLC, All rights reserved
+            ©{new Date().getFullYear()} Hundred Power LLC, All rights reserved
           </p>
           <Link
             href="https://www.zironmedia.com"
-            className="text-muted-foreground text-center text-xs tracking-tight md:text-right"
+            className="text-muted/80 text-center text-sm tracking-tight md:text-right"
             target="_blank"
             rel="noopener noreferrer"
             title="Ziron Media Website"

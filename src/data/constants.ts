@@ -16,8 +16,6 @@ import {
   IconWrench,
 } from "@/assets/icons";
 
-import { PRODUCTS } from "./products";
-
 export const NAV_LINKS = [
   {
     id: 1,
@@ -70,18 +68,39 @@ export const FOOTER = [
     id: 1,
     heading: "Quick Links",
     items: [
-      ...NAV_LINKS.slice(0, 3),
+      ...NAV_LINKS,
       {
-        id: 4,
+        id: 5,
         title: "Contact",
-        href: "/",
+        href: "/contact",
       },
     ],
   },
   {
     id: 2,
     heading: "Products",
-    items: [...PRODUCTS],
+    items: [
+      {
+        id: 1,
+        title: "Engine Additives",
+        href: "/products?category=engine-additives",
+      },
+      {
+        id: 2,
+        title: "Lubrication",
+        href: "/products?category=lubrication",
+      },
+      {
+        id: 3,
+        title: "Fuel System",
+        href: "/products?category=fuel-system",
+      },
+      {
+        id: 4,
+        title: "Industrial Application",
+        href: "/products?category=industrial",
+      },
+    ],
   },
   {
     id: 3,

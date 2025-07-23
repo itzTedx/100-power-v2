@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 
 import { TabsContent } from "@/components/ui/tabs";
 import { PRODUCTS } from "@/data/products";
@@ -35,66 +36,69 @@ export default function ProductsPage() {
           </p>
         </div>
       </header>
+      <Suspense fallback={"Loading..."}>
+        <Tablist>
+          <TabsContent value="all">
+            <section
+              className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+              aria-label="All Products"
+            >
+              {PRODUCTS.map((product) => (
+                <ProductCard data={product} key={product.id} />
+              ))}
+            </section>
+          </TabsContent>
 
-      <Tablist>
-        <TabsContent value="all">
-          <section
-            className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
-            aria-label="All Products"
-          >
-            {PRODUCTS.map((product) => (
-              <ProductCard data={product} key={product.id} />
-            ))}
-          </section>
-        </TabsContent>
-
-        <TabsContent value="engine-additives">
-          <section
-            className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
-            aria-label="Engine Additives"
-          >
-            {PRODUCTS.filter((p) => p.type === "engine-additives")?.map(
-              (product) => (
-                <ProductCard data={product} key={product.id} />
-              )
-            )}
-          </section>
-        </TabsContent>
-        <TabsContent value="lubrication">
-          <section
-            className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
-            aria-label="Lubrication Products"
-          >
-            {PRODUCTS.filter((p) => p.type === "lubrication")?.map(
-              (product) => (
-                <ProductCard data={product} key={product.id} />
-              )
-            )}
-          </section>
-        </TabsContent>
-        <TabsContent value="fuel-system">
-          <section
-            className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
-            aria-label="Fuel System Products"
-          >
-            {PRODUCTS.filter((p) => p.type === "fuel-system")?.map(
-              (product) => (
-                <ProductCard data={product} key={product.id} />
-              )
-            )}
-          </section>
-        </TabsContent>
-        <TabsContent value="industrial">
-          <section
-            className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
-            aria-label="Industrial Application Products"
-          >
-            {PRODUCTS.filter((p) => p.type === "industrial")?.map((product) => (
-              <ProductCard data={product} key={product.id} />
-            ))}
-          </section>
-        </TabsContent>
-      </Tablist>
+          <TabsContent value="engine-additives">
+            <section
+              className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+              aria-label="Engine Additives"
+            >
+              {PRODUCTS.filter((p) => p.type === "engine-additives")?.map(
+                (product) => (
+                  <ProductCard data={product} key={product.id} />
+                )
+              )}
+            </section>
+          </TabsContent>
+          <TabsContent value="lubrication">
+            <section
+              className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+              aria-label="Lubrication Products"
+            >
+              {PRODUCTS.filter((p) => p.type === "lubrication")?.map(
+                (product) => (
+                  <ProductCard data={product} key={product.id} />
+                )
+              )}
+            </section>
+          </TabsContent>
+          <TabsContent value="fuel-system">
+            <section
+              className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+              aria-label="Fuel System Products"
+            >
+              {PRODUCTS.filter((p) => p.type === "fuel-system")?.map(
+                (product) => (
+                  <ProductCard data={product} key={product.id} />
+                )
+              )}
+            </section>
+          </TabsContent>
+          <TabsContent value="industrial">
+            <section
+              className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+              aria-label="Industrial Application Products"
+            >
+              {PRODUCTS.filter((p) => p.type === "industrial")?.map(
+                (product) => (
+                  <ProductCard data={product} key={product.id} />
+                )
+              )}
+            </section>
+          </TabsContent>
+        </Tablist>
+      </Suspense>
     </main>
   );
 }
