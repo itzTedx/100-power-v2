@@ -3,7 +3,7 @@ export interface ProductType {
   range: "Premium" | "Regular";
   title: string;
   href: string;
-  image: string;
+  images: string[];
   type: "lubrication" | "engine-additives" | "fuel-system" | "industrial";
   quantity: string[];
   overview: string;
@@ -16,7 +16,7 @@ export const PRODUCTS: ProductType[] = [
     range: "Premium",
     href: "/products/100-power-5w30",
     title: "100 Power 5W30",
-    image: "/images/products/5w30.jpg",
+    images: ["/images/products/5w30.jpg"],
     type: "engine-additives",
     overview:
       "Experience next-generation engine care with 100 Power 5W30, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.\n\n    With Micro-Lubricant Technology, advanced detergency, and superior thermal stability, 100 Power keeps your engine running smoother, quieter, and more efficiently every day.",
@@ -35,7 +35,7 @@ export const PRODUCTS: ProductType[] = [
     range: "Premium",
     title: "100 Power 5W40",
     type: "engine-additives",
-    image: "/images/products/5w40.jpg",
+    images: ["/images/products/5w40.jpg"],
     href: "/products/100-power-5w40",
     overview: `Experience next-generation engine care with 100 Power 5W40, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.
     \n
@@ -55,7 +55,7 @@ export const PRODUCTS: ProductType[] = [
     range: "Premium",
     title: "100 Power 10W30",
     type: "engine-additives",
-    image: "/images/products/10w30.jpg",
+    images: ["/images/products/10w30.jpg"],
     href: "/products/100-power-10w30",
     overview: `Experience next-generation engine care with 100 Power 10W30, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.
     \n
@@ -75,7 +75,7 @@ export const PRODUCTS: ProductType[] = [
     range: "Premium",
     title: "100 Power 10W40",
     type: "engine-additives",
-    image: "/images/products/10w40.jpg",
+    images: ["/images/products/10w40.jpg"],
     href: "/products/100-power-10w40",
     overview: `Experience next-generation engine care with 100 Power 10W40, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.
     \n
@@ -95,7 +95,7 @@ export const PRODUCTS: ProductType[] = [
     range: "Premium",
     title: "Fuel Conditioner",
     type: "fuel-system",
-    image: "/images/products/conditioner.jpg",
+    images: ["/images/products/conditioner.jpg"],
     href: "/products/fuel-conditioner",
     overview: `100 Power's Fuel Conditioner is a scientifically formulated additive designed to optimize fuel efficiency and protect engine components. Suitable for both gasoline and diesel engines, it improves combustion, cleans critical parts of the fuel system, and extends the life of stored fuel. This advanced formula removes carbon deposits, lubricates internal components, enhances cold-weather performance, and helps engines run smoother, longer, and more efficiently.`,
     benefits: [
@@ -117,7 +117,7 @@ export const PRODUCTS: ProductType[] = [
     range: "Premium",
     title: "PG-10 Critical Maintenance Lubricant",
     type: "lubrication",
-    image: "/images/products/power-10.jpg",
+    images: ["/images/products/power-10.jpg"],
     href: "/products/pg-10",
     overview: `PG-10 is a high-performance maintenance lubricant spray, engineered with nano-penetrating technology and powered by Tirrent Booster. It penetrates deep to eliminate rust, corrosion, and friction at the micro level—making it up to 20 times stronger than traditional sprays. Ideal for both industrial and household use, PG-10 dramatically extends the life and reliability of metal parts, tools, and electrical components—even in extreme conditions.`,
     benefits: [

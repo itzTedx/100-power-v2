@@ -53,28 +53,8 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
   console.log("Product data:", product);
   console.log("Params", slug);
 
-  const images: CarouselImages = [
-    {
-      title: "Speaker 1",
-      url: product.image,
-    },
-    {
-      title: "Speaker 1",
-      url: "/images/100power-hi.webp",
-    },
-    {
-      title: "Speaker 1",
-      url: "/images/100power-hi.webp",
-    },
-    {
-      title: "Speaker 1",
-      url: "/images/100power-hi.webp",
-    },
-    {
-      title: "Speaker 1",
-      url: "/images/100power-hi.webp",
-    },
-  ];
+  const images: CarouselImages = product.images.map((img) => ({ url: img }));
+
   return (
     <main className="container py-4">
       <Breadcrumb>

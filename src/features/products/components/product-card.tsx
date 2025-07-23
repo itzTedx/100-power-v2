@@ -75,7 +75,7 @@ export const ProductCard = ({ data }: Props) => {
         <CardContent className="relative overflow-hidden">
           <div className="relative aspect-square">
             <Image
-              src={data.image}
+              src={data.images[0]}
               alt={data.title}
               fill
               className="object-cover"
