@@ -90,12 +90,15 @@ export const ProductCard = ({ data }: Props) => {
           </div>
         </CardContent>
         <CardFooter className="flex-col items-start">
-          <CardDescription className="flex items-center text-sm font-medium">
+          <CardDescription className="flex flex-wrap items-center text-[10px] tracking-tighter sm:text-sm md:font-medium">
             {data.quantity.map((q, i) => (
               <Fragment key={q}>
                 <p>{q}</p>{" "}
                 <Dot
-                  className={cn(data.quantity.length === i + 1 && "hidden")}
+                  className={cn(
+                    "size-3 md:size-4",
+                    data.quantity.length === i + 1 && "hidden"
+                  )}
                 />
               </Fragment>
             ))}

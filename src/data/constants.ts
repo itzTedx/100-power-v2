@@ -91,15 +91,18 @@ export const FOOTER = [
         id: 1,
         title:
           "Plot No-4, Block 5, Umm Al Thuoob, New Industrial Area, Umm Al Quwain, United Arab Emirates, PO BOX 1171",
+        // href: "/",
       },
       {
         id: 2,
         title: "info@100-power.com",
+        href: "mailto:info@100-power.com",
       },
-      // {
-      //   id: 3,
-      //   title: "+971 4 557 9964",
-      // },
+      {
+        id: 3,
+        title: "+971 52 786 2528",
+        href: "tel:+971527862528",
+      },
     ],
   },
 ];

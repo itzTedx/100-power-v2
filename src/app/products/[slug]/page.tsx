@@ -100,7 +100,7 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
       </Breadcrumb>
       <article>
         <section className="grid grid-cols-1 gap-8 pt-4 md:grid-cols-2 md:gap-12">
-          <div className="sticky top-[14svh] h-fit">
+          <div className="h-fit md:sticky md:top-[14svh]">
             <ImageCarousel
               images={images}
               imageFit="contain"
@@ -141,7 +141,7 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
             <section aria-labelledby="quantities-heading">
               <h2
                 id="quantities-heading"
-                className="text-muted-foreground mb-1"
+                className="mb-1 font-semibold tracking-tight"
               >
                 Available Packings
               </h2>
