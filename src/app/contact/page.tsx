@@ -1,5 +1,4 @@
-"use client";
-
+import { Metadata } from "next";
 import Link from "next/link";
 
 import { IconArrowUpRight } from "@tabler/icons-react";
@@ -22,7 +21,7 @@ import { CONTACT } from "@/data/constants";
 import { ContactForm } from "@/features/contact/components/contact-form";
 import { cn } from "@/lib/utils";
 
-export const generateMetadata = () => ({
+export const metadata: Metadata = {
   title: "Contact us | 100 Power",
   description:
     "Learn about 100 Power: our mission, vision, global presence, and commitment to advanced micro-metallurgical additives for machinery and engines worldwide.",
@@ -34,7 +33,7 @@ export const generateMetadata = () => ({
     siteName: "100 Power",
     type: "website",
   },
-});
+};
 
 const steps = [
   {

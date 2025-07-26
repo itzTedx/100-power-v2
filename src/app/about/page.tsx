@@ -1,3 +1,5 @@
+import { Metadata } from "next";
+
 import { IconArrowUpRight } from "@tabler/icons-react";
 import { Dot } from "lucide-react";
 
@@ -15,7 +17,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { WHO_WE_ARE } from "@/data/constants";
 
-export const generateMetadata = () => ({
+export const metadata: Metadata = {
   title: "About Us | 100 Power",
   description:
     "Learn about 100 Power: our mission, vision, global presence, and commitment to advanced micro-metallurgical additives for machinery and engines worldwide.",
@@ -27,7 +29,7 @@ export const generateMetadata = () => ({
     siteName: "100 Power",
     type: "website",
   },
-});
+};
 
 export default function AboutPage() {
   return (
@@ -66,22 +68,23 @@ export default function AboutPage() {
               Since 2017 - Headquartered in the UAE
             </h3>
             <p>
-              100 Power is an innovation-led company with advanced manufacturing
-              facilities in the UAE and California, USA. We specialize in
-              cutting-edge micro-metallurgical additive technology engineered to
-              significantly boost the performance, durability, and reliability
-              of engines and industrial machinery.
+              100 Power is an innovation-led company specializing in advanced
+              micro-metallurgical additive technologies that enhance the
+              performance, durability, and efficiency of engines and industrial
+              machinery.
+            </p>
+
+            <p>
+              Manufactured in the UAE using premium ingredients exclusively
+              sourced from the USA, our products are built on decades of
+              military-grade research. They create a durable, polished-like
+              microlayer that minimizes friction, withstands extreme pressure
+              and temperature, and protects against wear.
             </p>
             <p>
-              Backed by decades of military-grade R&D, our products form a
-              polished-like microlayer that reduces friction, withstands extreme
-              temperatures and pressure, and protects against wear.
-            </p>
-            <p>
-              All ingredients are exclusively sourced from the USA, ensuring
-              unmatched quality and performance. Today, our technologies power
-              sectors such as defense, automotive, construction, marine, mining,
-              and agriculture.
+              Trusted across demanding industries—including defense, automotive,
+              construction, marine, mining, and agriculture—100 Power delivers
+              unmatched reliability where it matters most.
             </p>
           </article>
         </div>
@@ -91,7 +94,7 @@ export default function AboutPage() {
         <h2 className="text-center text-xl font-bold sm:text-2xl">
           Our Mission
         </h2>
-        <div className="mx-auto grid max-w-3xl grid-cols-1 items-center gap-6 md:grid-cols-2">
+        <div className="mx-auto grid max-w-4xl grid-cols-1 items-center gap-6 md:grid-cols-2">
           <div
             className="mx-0 aspect-video w-full rounded-lg bg-red-300 md:mx-4"
             aria-hidden="true"
@@ -111,7 +114,7 @@ export default function AboutPage() {
         <h2 className="text-center text-xl font-bold sm:text-2xl">
           Our Vision
         </h2>
-        <div className="mx-auto grid max-w-3xl grid-cols-1 items-center gap-6 md:grid-cols-2">
+        <div className="mx-auto grid max-w-4xl grid-cols-1 items-center gap-6 md:grid-cols-2">
           <div className="flex h-full items-center border-b px-2 pb-4 md:border-r md:border-b-0 md:px-4 md:pb-0">
             <p className="font-helvetica text-base text-pretty sm:text-lg md:text-xl">
               Our vision is to be the most trusted global provider of advanced
@@ -182,17 +185,18 @@ export default function AboutPage() {
           <h2 className="font-helvetica text-center text-3xl font-bold sm:text-4xl md:text-left md:text-5xl">
             Reaching Every Corner of the Globe
           </h2>
-          <div>
-            <p className="text-base sm:text-xl md:text-2xl">
-              With manufacturing plants in California and the UAE, and sales and
-              support offices in the USA, India, and UAE, 100 Power operates on
-              a truly global scale. Our extensive distribution network ensures
-              our products are accessible to customers around the world.{" "}
-            </p>{" "}
-            <p className="text-base sm:text-xl md:text-2xl">
-              We proudly serve markets in North America, the Middle East,
-              Europe, Asia, and beyond, adapting to diverse regulatory
-              requirements and customer needs with localized expertise.
+          <div className="space-y-4">
+            <p className="text-base tracking-tight sm:text-xl md:text-2xl">
+              With manufacturing rooted in the UAE and sales and support
+              operations extending across the USA, and the GCC, 100 Power serves
+              a growing international market with precision and purpose.
+            </p>
+            <p className="text-base tracking-tight sm:text-xl md:text-2xl">
+              Our distribution network spans the Americas, Europe, Africa, the
+              Middle East, and the GCC—ensuring fast access, localized support,
+              and compliance with regional standards. From the UAE to the USA,
+              Mexico to Europe, and across Africa, our technologies are trusted
+              by industries that demand performance without compromise.
             </p>
           </div>
         </div>
