@@ -30,6 +30,7 @@ jobs:
         run: |
           ssh $VPS_USER@$VPS_IP << 'EOF'
             cd htdocs/www.100poweruae.com
+            pm2 stop 0
             git pull origin master
             rm -rf .next
             source /home/power/.bashrc
