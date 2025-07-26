@@ -244,4 +244,92 @@ export const PRODUCTS: ProductType[] = [
     ],
     quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
   },
+  {
+    range: "Premium",
+    title: "POWER BOOSTER Advanced Nano Lubricant",
+    type: "lubrication",
+    images: ["/images/products/power-10.jpg"],
+    href: "power-booster",
+    overview: `POWER Booster is a cutting-edge engine oil additive designed to enhance engine efficiency, dramatically reduce metal wear, and extend engine life. Utilizing advanced Tirrent NanoParticle Technology, it forms a friction-reducing protective layer on metal surfaces—lowering heat, noise, and emissions while improving fuel combustion.
+
+Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combines nano-lubrication with a micro-metallurgical process that creates a new, hardened metal layer up to 15 times more wear-resistant than the original. This innovative technology ensures exceptional durability and superior performance across a wide range of industries.`,
+    benefits: [
+      "Significantly Reduces Metal Wear and Friction",
+      "Extends Engine and Machine Life up to 7 Times",
+      "Improves Fuel Combustion and Engine Efficiency",
+      "Lowers Heat, Noise, and Harmful Emissions",
+      "Creates a Durable, Hardened Protective Metal Layer",
+      "Protects Engine During Oil or Coolant Loss",
+      "Increases Service Intervals up to 3 Times",
+    ],
+    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
+  },
+
+  {
+    range: "Premium",
+    title: "POWER Hydraulic ISO 68",
+    type: "industrial",
+    images: ["/images/products/hydraulic-iso-68.jpg"],
+    href: "power-booster",
+    overview: `POWER Hydraulic ISO 68 is a premium anti-wear hydraulic oil engineered for modern hydraulic systems requiring reliable performance and protection. Formulated to meet the latest AW (anti-wear) standards, it ensures smooth cold starts, exceptional thermal stability, and superior wear protection—whether in industrial machinery or heavy-duty equipment operating under demanding conditions.
+
+    Enhanced with Micro-Lubricant Technology and high-performance detergents, POWER Hydraulic ISO 68 keeps systems cleaner, reduces sludge and deposits, and helps improve operational efficiency. Its robust formulation offers consistent, long-lasting performance while minimizing maintenance needs and extending equipment life.`,
+    benefits: [
+      "Maximizes Hydraulic System Efficiency and Longevity",
+      "Smooth Operation and Quieter Equipment Performance",
+      "Outstanding Thermal Stability and Oxidation Resistance",
+      "Improves Fuel Efficiency and Operating Precision",
+      "Reduces Exhaust Emissions and Environmental Impact",
+      "Protects Against Wear, Corrosion, and Metal Fatigue",
+      "Extended Oil Drain Intervals and Lower Maintenance Costs",
+      "Strong Resistance to Water Contamination in Hydraulic Systems",
+    ],
+    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
+  },
+
+  {
+    range: "Premium",
+    title: "ATF DEX III - Automatic Transmission Fluid",
+    type: "engine-additives",
+    images: ["/images/products/atf-dex-iii.jpg"],
+    href: "atf-dex-iii",
+    overview: `POWER ATF DEX III is a high-performance automatic transmission fluid designed to meet the requirements of Dexron III and other major OEM specifications. It delivers smooth gear shifting, enhanced transmission protection, and reliable performance in a wide range of automatic transmissions, power steering systems, and hydraulic applications.
+
+    Formulated with premium base oils, anti-wear additives, and oxidation stabilizers, POWER ATF DEX III ensures long service life, thermal stability, and protection against deposit formation. Whether in daily driving or heavy-duty commercial use, it provides consistent operation, reduces friction and wear, and helps prevent overheating—even in extreme conditions.`,
+    benefits: [
+      "Ensures Smooth and Consistent Gear Shifting",
+      "Protects Transmission Against Wear and Oxidation",
+      "Maintains Viscosity and Stability in Extreme Temperatures",
+      "Reduces Friction and Improves Power Transfer Efficiency",
+      "Prevents Sludge and Varnish Buildup for Cleaner Operation",
+      "Supports Longer Transmission Life and Lower Maintenance Costs",
+      "Compatible with a Wide Range of Automatic Transmissions and Power Steering Systems",
+      "Resists Foaming and Fluid Breakdown Under High Stress",
+    ],
+    quantity: ["1 Litre", "4 Litre"],
+  },
+  {
+    range: "Premium",
+    title: "ATF DEX IV - Automatic Transmission Fluid",
+    type: "engine-additives",
+    images: [
+      "/images/products/atf-dex-iv.jpg",
+      "/images/products/atf-dex-iv.jpg",
+    ],
+    href: "atf-dex-iv",
+    overview: `POWER ATF DEX IV is a high-performance automatic transmission fluid designed to meet the requirements of Dexron IV and other major OEM specifications. It delivers smooth gear shifting, enhanced transmission protection, and reliable performance in a wide range of automatic transmissions, power steering systems, and hydraulic applications.
+
+    Formulated with premium base oils, anti-wear additives, and oxidation stabilizers, POWER ATF DEX IV ensures long service life, thermal stability, and protection against deposit formation. Whether in daily driving or heavy-duty commercial use, it provides consistent operation, reduces friction and wear, and helps prevent overheating—even in extreme conditions.`,
+    benefits: [
+      "Ensures Smooth and Consistent Gear Shifting",
+      "Protects Transmission Against Wear and Oxidation",
+      "Maintains Viscosity and Stability in Extreme Temperatures",
+      "Reduces Friction and Improves Power Transfer Efficiency",
+      "Prevents Sludge and Varnish Buildup for Cleaner Operation",
+      "Supports Longer Transmission Life and Lower Maintenance Costs",
+      "Compatible with a Wide Range of Automatic Transmissions and Power Steering Systems",
+      "Resists Foaming and Fluid Breakdown Under High Stress",
+    ],
+    quantity: ["1 Litre", "4 Litre"],
+  },
 ];

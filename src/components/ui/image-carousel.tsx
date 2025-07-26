@@ -2,16 +2,6 @@
 
 import React, { useCallback, useEffect, useState } from "react";
 
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogOverlay,
-  DialogPortal,
-  DialogTitle,
-  DialogTrigger,
-} from "@radix-ui/react-dialog";
 import { type EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import {
@@ -25,6 +15,15 @@ import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogTitle,
+  DialogTrigger,
+} from "./dialog";
 
 type ThumbPropType = {
   selected: boolean;
@@ -94,67 +93,64 @@ const ImageContainer: React.FC<{
           </div>
         </DialogTrigger>
 
-        <DialogPortal>
-          <DialogOverlay className="fixed inset-0 z-50 bg-black/80" />
-          <DialogContent className="bg-background fixed inset-0 z-50 flex flex-col items-center justify-center p-0">
-            <DialogTitle className="sr-only">
-              {image.title || "Image"}
-            </DialogTitle>
-            <DialogDescription className="sr-only">
-              {image.title || "Image"}
-            </DialogDescription>
+        <DialogContent className="lg:max-w-fit" showCloseButton={false}>
+          <DialogTitle className="sr-only">
+            {image.title || "Image"}
+          </DialogTitle>
+          <DialogDescription className="sr-only">
+            {image.title || "Image"}
+          </DialogDescription>
 
-            <div className="relative flex h-screen w-screen items-center justify-center">
-              <TransformWrapper
-                initialScale={1}
-                initialPositionX={0}
-                initialPositionY={0}
+          <div>
+            <TransformWrapper
+              initialScale={1}
+              initialPositionX={0}
+              initialPositionY={0}
+            >
+              {({ zoomIn, zoomOut }) => (
+                <>
+                  <TransformComponent>
+                    {/* You can swap this with your preferred image optization technique, like using  next/image */}
+                    <img
+                      src={image.url}
+                      alt={image.title || "Full size"}
+                      className={cn(
+                        "max-h-[90vh] max-w-[90vw] object-contain",
+                        classNameImage
+                      )}
+                    />
+                  </TransformComponent>
+                  {showImageControls && (
+                    <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-2">
+                      <button
+                        onClick={() => zoomOut()}
+                        className="cursor-pointer rounded-full bg-black/50 p-2 text-white transition-colors hover:bg-black/70"
+                        aria-label="Zoom out"
+                      >
+                        <MinusCircle className="size-6" />
+                      </button>
+                      <button
+                        onClick={() => zoomIn()}
+                        className="cursor-pointer rounded-full bg-black/50 p-2 text-white transition-colors hover:bg-black/70"
+                        aria-label="Zoom in"
+                      >
+                        <PlusCircle className="size-6" />
+                      </button>
+                    </div>
+                  )}
+                </>
+              )}
+            </TransformWrapper>
+            <DialogClose asChild>
+              <button
+                className="absolute top-4 right-4 z-10 cursor-pointer rounded-full border bg-black/50 p-2 text-white transition-colors hover:bg-black/70"
+                aria-label="Close"
               >
-                {({ zoomIn, zoomOut }) => (
-                  <>
-                    <TransformComponent>
-                      {/* You can swap this with your preferred image optization technique, like using  next/image */}
-                      <img
-                        src={image.url}
-                        alt={image.title || "Full size"}
-                        className={cn(
-                          "max-h-[90vh] max-w-[90vw] object-contain",
-                          classNameImage
-                        )}
-                      />
-                    </TransformComponent>
-                    {showImageControls && (
-                      <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-2">
-                        <button
-                          onClick={() => zoomOut()}
-                          className="cursor-pointer rounded-full bg-black/50 p-2 text-white transition-colors hover:bg-black/70"
-                          aria-label="Zoom out"
-                        >
-                          <MinusCircle className="size-6" />
-                        </button>
-                        <button
-                          onClick={() => zoomIn()}
-                          className="cursor-pointer rounded-full bg-black/50 p-2 text-white transition-colors hover:bg-black/70"
-                          aria-label="Zoom in"
-                        >
-                          <PlusCircle className="size-6" />
-                        </button>
-                      </div>
-                    )}
-                  </>
-                )}
-              </TransformWrapper>
-              <DialogClose asChild>
-                <button
-                  className="absolute top-4 right-4 z-10 cursor-pointer rounded-full border bg-black/50 p-2 text-white transition-colors hover:bg-black/70"
-                  aria-label="Close"
-                >
-                  <X className="size-6" />
-                </button>
-              </DialogClose>
-            </div>
-          </DialogContent>
-        </DialogPortal>
+                <X className="size-6" />
+              </button>
+            </DialogClose>
+          </div>
+        </DialogContent>
       </Dialog>
     </div>
   );

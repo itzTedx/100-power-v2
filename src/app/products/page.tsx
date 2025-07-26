@@ -44,7 +44,7 @@ export default function ProductsPage() {
               aria-label="All Products"
             >
               {PRODUCTS.map((product, id) => (
-                <ProductCard data={product} key={id} />
+                <ProductCard data={product} key={`${id}-${product.title}`} />
               ))}
             </section>
           </TabsContent>
@@ -56,7 +56,7 @@ export default function ProductsPage() {
             >
               {PRODUCTS.filter((p) => p.type === "engine-additives")?.map(
                 (product, id) => (
-                  <ProductCard data={product} key={id} />
+                  <ProductCard data={product} key={`${id}-${product.title}`} />
                 )
               )}
             </section>
@@ -68,7 +68,7 @@ export default function ProductsPage() {
             >
               {PRODUCTS.filter((p) => p.type === "lubrication")?.map(
                 (product, id) => (
-                  <ProductCard data={product} key={id} />
+                  <ProductCard data={product} key={`${id}-${product.title}`} />
                 )
               )}
             </section>
@@ -80,7 +80,7 @@ export default function ProductsPage() {
             >
               {PRODUCTS.filter((p) => p.type === "fuel-system")?.map(
                 (product, id) => (
-                  <ProductCard data={product} key={id} />
+                  <ProductCard data={product} key={`${id}-${product.title}`} />
                 )
               )}
             </section>
@@ -92,7 +92,7 @@ export default function ProductsPage() {
             >
               {PRODUCTS.filter((p) => p.type === "industrial")?.map(
                 (product, id) => (
-                  <ProductCard data={product} key={id} />
+                  <ProductCard data={product} key={`${id}-${product.title}`} />
                 )
               )}
             </section>

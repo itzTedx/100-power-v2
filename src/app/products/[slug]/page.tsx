@@ -94,6 +94,8 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
               images={images}
               imageFit="contain"
               aspectRatio="5/4"
+              showThumbs={images.length > 1}
+              showCarouselControls={images.length > 1}
             />
           </div>
 
