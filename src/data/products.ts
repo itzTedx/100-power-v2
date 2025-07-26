@@ -71,7 +71,7 @@ export const PRODUCTS: ProductType[] = [
     title: "POWER 10W30",
     type: "engine-additives",
     images: ["/images/products/10w30.jpg"],
-    href: "100-power-10w30",
+    href: "power-10w30",
     overview: `Experience next-generation engine care with POWER 10W30, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.
     \n
     With Micro-Lubricant Technology, advanced detergency, and superior thermal stability, POWER keeps your engine running smoother, quieter, and more efficiently every day.`,
@@ -90,7 +90,7 @@ export const PRODUCTS: ProductType[] = [
     title: "POWER 10W40",
     type: "engine-additives",
     images: ["/images/products/10w40.jpg"],
-    href: "100-power-10w40",
+    href: "power-10w40",
     overview: `Experience next-generation engine care with POWER 10W40, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.
     \n
     With Micro-Lubricant Technology, advanced detergency, and superior thermal stability, POWER keeps your engine running smoother, quieter, and more efficiently every day.`,
@@ -108,8 +108,8 @@ export const PRODUCTS: ProductType[] = [
     range: "Premium",
     title: "POWER 75W90",
     type: "engine-additives",
-    images: ["/images/products/75w90.jpg"],
-    href: "100-power-75w90",
+    images: ["/images/products/75W90.jpg"],
+    href: "power-75w90",
     overview: `Formulated for high-performance manual transmissions and differentials, this fully synthetic gear oil offers outstanding load-bearing capability, smooth shifting, and long-lasting protection in extreme conditions.
 
     With advanced friction modifiers and thermal stability, POWER 75W90 reduces wear, resists breakdown, and maintains optimal performance—whether you're tackling tough terrain or highway cruising. Engineered to meet or exceed industry specifications, it's the smart choice for durability and drivetrain efficiency.`,
@@ -128,7 +128,7 @@ export const PRODUCTS: ProductType[] = [
     title: "POWER 85W90",
     type: "engine-additives",
     images: ["/images/products/85W90.jpg"],
-    href: "100-power-85w90",
+    href: "power-85w90",
     overview: `POWER 85W90 is a high-performance mineral-based gear oil designed for manual transmissions, axles, and differentials in commercial and passenger vehicles. Formulated with extreme pressure (EP) additives, it provides excellent protection against gear wear, corrosion, and oxidation—even under high torque and load conditions.
 
     Whether you're hauling heavy loads or navigating daily commutes, POWER 85W90 ensures consistent gear performance, long service life, and reliable protection across a wide range of operating conditions.`,
