@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       "100 Power | Next-Gen Lubrication Technology for Maximum Performance",
     description:
       "100 Power is a UAE-based brand delivering American innovation in lubrication. Maximize performance, minimize friction, and protect the planet with our military-grade, eco-conscious solutions.",
-    url: "https://100power.com/",
+    url: "https://www.100poweruae.com/",
     siteName: "100 Power",
     images: [
       {
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   verification: {
     google: "EAeAjAM1Zm9ATZQk-J_R5sAmYeRcFbxyhFJ9fJrOJvk",
   },
-  metadataBase: new URL("https://www.100power.com"),
+  metadataBase: new URL("https://www.100poweruae.com"),
 };
 export default function RootLayout({
   children,

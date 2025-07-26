@@ -23,7 +23,7 @@ export const generateMetadata = () => ({
     title: "About Us | 100 Power",
     description:
       "Discover 100 Power's innovation in micro-metallurgical additives, our global reach, and our dedication to performance, reliability, and sustainability.",
-    url: "https://100power.com/about",
+    url: "https://www.100poweruae.com/about",
     siteName: "100 Power",
     type: "website",
   },

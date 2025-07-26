@@ -22,6 +22,20 @@ import { CONTACT } from "@/data/constants";
 import { ContactForm } from "@/features/contact/components/contact-form";
 import { cn } from "@/lib/utils";
 
+export const generateMetadata = () => ({
+  title: "Contact us | 100 Power",
+  description:
+    "Learn about 100 Power: our mission, vision, global presence, and commitment to advanced micro-metallurgical additives for machinery and engines worldwide.",
+  openGraph: {
+    title: "AContact | 100 Power",
+    description:
+      "Discover 100 Power's innovation in micro-metallurgical additives, our global reach, and our dedication to performance, reliability, and sustainability.",
+    url: "https://www.100poweruae.com/contact",
+    siteName: "100 Power",
+    type: "website",
+  },
+});
+
 const steps = [
   {
     title: "We'll prepare a proposal",

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "High-Performance Products | 100 Power",
     description:
       "Explore high-performance lubrication, engine additives, and industrial products engineered for durability, reduced wear, and optimal machine performance under extreme conditions.",
-    url: "/products",
+    url: "https://www.100poweruae.com/products",
     type: "website",
   },
 };
