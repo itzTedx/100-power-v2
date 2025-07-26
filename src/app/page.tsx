@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { IconArrowUpRight } from "@tabler/icons-react";
 
 import { IconUserQuestion } from "@/assets/icons";
@@ -33,8 +35,10 @@ export default function Home() {
             Have any questions?
           </h2>
 
-          <Button className="w-fit" variant="secondary">
-            Ask as anything <IconArrowUpRight />
+          <Button className="w-fit" variant="secondary" asChild>
+            <Link href="/contact">
+              Ask as anything <IconArrowUpRight />
+            </Link>
           </Button>
         </div>
         <Faqs />
