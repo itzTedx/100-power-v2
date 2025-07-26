@@ -139,7 +139,7 @@ export const PRODUCTS: ProductType[] = [
     id: 7,
     range: "Premium",
     title: "PG-10 Critical Maintenance Lubricant",
-    type: "lubrication",
+    type: "industrial",
     images: ["/images/products/power-10.jpg"],
     href: "pg-10",
     overview: `PG-10 is a high-performance maintenance lubricant spray, engineered with nano-penetrating technology and powered by Tirrent Booster. It penetrates deep to eliminate rust, corrosion, and friction at the micro level—making it up to 20 times stronger than traditional sprays. Ideal for both industrial and household use, PG-10 dramatically extends the life and reliability of metal parts, tools, and electrical components—even in extreme conditions.`,
