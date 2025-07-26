@@ -16,9 +16,9 @@ export const PRODUCTS: ProductType[] = [
     type: "engine-additives",
     images: ["/images/products/5w20.jpg"],
     href: "100-power-5w20",
-    overview: `Experience next-generation engine care with 100 Power 5W40, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.
-    \n
-    With Micro-Lubricant Technology, advanced detergency, and superior thermal stability, 100 Power keeps your engine running smoother, quieter, and more efficiently every day.`,
+    overview: `Engineered to meet the latest API SP standards, this advanced motor oil is tailored for modern petrol engines—offering outstanding wear protection, cleaner operation, and longer engine life whether you're stuck in city traffic or driving long highway stretches.
+
+    Powered by Micro-Lubricant Technology, enhanced detergents, and superior thermal stability, 100 Power 5W20 ensures your engine runs smoother, quieter, and more efficiently—every mile, every day.`,
     benefits: [
       "Maximize Engine Potential",
       "Quieter Engine, Smoother Operation, Enhanced Comfort",
@@ -103,6 +103,44 @@ export const PRODUCTS: ProductType[] = [
       "Protection Against Water Contamination in Engine Oil",
     ],
     quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
+  },
+  {
+    range: "Premium",
+    title: "100 Power 75W90",
+    type: "engine-additives",
+    images: ["/images/products/75w90.jpg"],
+    href: "100-power-75w90",
+    overview: `Formulated for high-performance manual transmissions and differentials, this fully synthetic gear oil offers outstanding load-bearing capability, smooth shifting, and long-lasting protection in extreme conditions.
+
+    With advanced friction modifiers and thermal stability, 100 Power 75W90 reduces wear, resists breakdown, and maintains optimal performance—whether you're tackling tough terrain or highway cruising. Engineered to meet or exceed industry specifications, it's the smart choice for durability and drivetrain efficiency.`,
+    benefits: [
+      "Superior Gear Protection Under High Loads",
+      "Smooth Shifting in Both Cold and Hot Conditions",
+      "Exceptional Thermal Stability & Oxidation Resistance",
+      "Extended Drain Intervals for Reduced Maintenance",
+      "Reduces Friction, Enhancing Drivetrain Efficiency",
+      "Prevents Rust, Corrosion & Wear in Critical Components",
+    ],
+    quantity: ["1 Litre", "4 Litre"],
+  },
+  {
+    range: "Premium",
+    title: "100 Power 85W90",
+    type: "engine-additives",
+    images: ["/images/products/85w90.jpg"],
+    href: "100-power-85w90",
+    overview: `100 Power 85W90 is a high-performance mineral-based gear oil designed for manual transmissions, axles, and differentials in commercial and passenger vehicles. Formulated with extreme pressure (EP) additives, it provides excellent protection against gear wear, corrosion, and oxidation—even under high torque and load conditions.
+
+    Whether you're hauling heavy loads or navigating daily commutes, 100 Power 85W90 ensures consistent gear performance, long service life, and reliable protection across a wide range of operating conditions.`,
+    benefits: [
+      "Reliable Gear Protection Under High Load & Torque",
+      "Smooth Operation for Manual Transmissions & Differentials",
+      "Strong Resistance to Oxidation & Oil Degradation",
+      "Protects Against Rust, Corrosion & Metal Fatigue",
+      "Maintains Viscosity Stability Across Temperature Swings",
+      "Extended Gear Life & Reduced Maintenance Costs",
+    ],
+    quantity: ["1 Litre", "4 Litre"],
   },
 
   {
