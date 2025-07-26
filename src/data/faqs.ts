@@ -8,7 +8,7 @@ export const FAQS = [
   },
   {
     id: 2,
-    title: "What makes PG-10 effective for equipment maintenance?",
+    title: "What makes Power-10 effective for equipment maintenance?",
     content: `The engine is the heart of an automobile. It is a device that is made of metal that converts the chemical energy of fuel into mechanical energy which is used to drive the vehicle. It is basically a device that produces power. The rotating parts of an engine produce energy from the consumption of fuel and provide energy to the vehicle.`,
   },
   {
@@ -18,12 +18,12 @@ export const FAQS = [
   },
   {
     id: 4,
-    title: "Is TG-10 safe to use on sensitive parts?",
+    title: "Is Power-10 safe to use on sensitive parts?",
     content: `The engine is the heart of an automobile. It is a device that is made of metal that converts the chemical energy of fuel into mechanical energy which is used to drive the vehicle. It is basically a device that produces power. The rotating parts of an engine produce energy from the consumption of fuel and provide energy to the vehicle.`,
   },
   {
     id: 5,
-    title: "What is PG-10, and where and when should I use it?",
+    title: "What is Power-10, and where and when should I use it?",
     content: `The engine is the heart of an automobile. It is a device that is made of metal that converts the chemical energy of fuel into mechanical energy which is used to drive the vehicle. It is basically a device that produces power. The rotating parts of an engine produce energy from the consumption of fuel and provide energy to the vehicle.`,
   },
   {
