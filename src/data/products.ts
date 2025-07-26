@@ -312,10 +312,7 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
     range: "Premium",
     title: "ATF DEX IV - Automatic Transmission Fluid",
     type: "engine-additives",
-    images: [
-      "/images/products/atf-dex-iv.jpg",
-      "/images/products/atf-dex-iv.jpg",
-    ],
+    images: ["/images/products/atf-dex-iv.jpg"],
     href: "atf-dex-iv",
     overview: `POWER ATF DEX IV is a high-performance automatic transmission fluid designed to meet the requirements of Dexron IV and other major OEM specifications. It delivers smooth gear shifting, enhanced transmission protection, and reliable performance in a wide range of automatic transmissions, power steering systems, and hydraulic applications.
 
@@ -329,6 +326,27 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
       "Supports Longer Transmission Life and Lower Maintenance Costs",
       "Compatible with a Wide Range of Automatic Transmissions and Power Steering Systems",
       "Resists Foaming and Fluid Breakdown Under High Stress",
+    ],
+    quantity: ["1 Litre", "4 Litre"],
+  },
+  {
+    range: "Premium",
+    title: "ATF WS - Automatic Transmission Fluid",
+    type: "engine-additives",
+    images: ["/images/products/atf-ws.jpg"],
+    href: "atf-iv",
+    overview: `POWER ATF WS is a fully synthetic, low-viscosity automatic transmission fluid formulated to meet the stringent requirements of Toyota WS (World Standard) and other modern automatic transmission systems. It offers exceptional thermal and oxidative stability, friction durability, and precise shifting performance—making it ideal for high-efficiency, electronically controlled transmissions.
+
+    Engineered with advanced friction modifiers, anti-wear agents, and long-life additives, POWER ATF WS enhances fuel economy, extends transmission service life, and maintains smooth operation under both normal and extreme conditions. Its low-viscosity formula ensures rapid fluid flow at cold start and stable performance at high temperatures.`,
+    benefits: [
+      "Smooth, Precise Shifting with Minimal Shudder",
+      "Formulated for Modern Low-Viscosity Transmission Systems",
+      "Outstanding Oxidation and Thermal Stability",
+      "Improves Fuel Efficiency and Reduces Power Loss",
+      "Superior Protection Against Wear and Friction",
+      "Prevents Varnish and Sludge Formation for Cleaner Operation",
+      "Extended Fluid Life and Longer Drain Intervals",
+      "Fully Compatible with Toyota WS and Equivalent ATF Systems",
     ],
     quantity: ["1 Litre", "4 Litre"],
   },
