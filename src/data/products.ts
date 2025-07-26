@@ -127,7 +127,7 @@ export const PRODUCTS: ProductType[] = [
     range: "Premium",
     title: "100 Power 85W90",
     type: "engine-additives",
-    images: ["/images/products/85w90.jpg"],
+    images: ["/images/products/85W90.jpg"],
     href: "100-power-85w90",
     overview: `100 Power 85W90 is a high-performance mineral-based gear oil designed for manual transmissions, axles, and differentials in commercial and passenger vehicles. Formulated with extreme pressure (EP) additives, it provides excellent protection against gear wear, corrosion, and oxidation—even under high torque and load conditions.
 
