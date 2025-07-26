@@ -350,4 +350,25 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
     ],
     quantity: ["1 Litre", "4 Litre"],
   },
+  {
+    range: "Regular",
+    title: "EP-2 Lithium Complex Grease",
+    type: "engine-additives",
+    images: ["/images/products/ep-2.jpg"],
+    href: "ep-2",
+    overview: `POWER EP-2 Lithium Complex Grease is a high-performance, multi-purpose lubricant designed for heavy-duty industrial, automotive, and construction applications. Formulated with lithium complex thickener, premium base oils, and extreme pressure (EP) additives, it delivers superior protection under high load, high temperature, and harsh environmental conditions.
+
+    Ideal for bearings, chassis points, and other critical components, POWER EP-2 offers outstanding water resistance, oxidation stability, and mechanical shear stability—ensuring extended service life and reduced maintenance downtime in even the most demanding operations.`,
+    benefits: [
+      "Exceptional Load-Carrying Capacity and EP Protection",
+      "Withstands High Temperatures Without Melting or Breaking Down",
+      "Excellent Water Resistance for Wet and Humid Environments",
+      "Protects Against Rust, Corrosion, and Oxidation",
+      "Outstanding Mechanical Stability Under Vibration and Shock",
+      "Reduces Wear and Extends Equipment Life",
+      "Suitable for High-Speed and Heavy-Duty Applications",
+      "Long Service Intervals and Reduced Re-Greasing Frequency",
+    ],
+    quantity: ["1 Litre", "4 Litre"],
+  },
 ];

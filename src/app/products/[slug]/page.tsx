@@ -99,10 +99,17 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
             />
           </div>
 
-          <div className="space-y-6 py-4">
+          <div className="space-y-6 py-2">
             <header>
               <div className="flex shrink-0 items-center gap-2">
-                <div className={cn("size-3 rounded-full", "bg-primary")} />
+                <div
+                  className={cn(
+                    "size-3 rounded-full",
+                    product.range === "Premium"
+                      ? "bg-primary"
+                      : "bg-muted-foreground/80"
+                  )}
+                />
                 <span className="text-base font-medium sm:text-lg">
                   {product.range}
                 </span>
