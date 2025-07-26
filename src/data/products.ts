@@ -351,7 +351,7 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
     quantity: ["1 Litre", "4 Litre"],
   },
   {
-    range: "Regular",
+    range: "Premium",
     title: "EP-2 Lithium Complex Grease",
     type: "engine-additives",
     images: ["/images/products/ep-2.jpg"],
