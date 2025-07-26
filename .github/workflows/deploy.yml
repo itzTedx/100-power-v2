@@ -1,0 +1,32 @@
+name: 🚀 Git Pull & Restart on VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Pull & Restart on VPS
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🔐 Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
+
+      - name: 🚀 Pull latest code & rebuild
+        run: |
+          ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
+            cd ${{ secrets.VPS_DEPLOY_PATH }}
+            git reset --hard
+            git pull origin main
+            rm -rf .next
+            export NODE_ENV=production
+            pnpm install
+            pnpm run build
+            pm2 restart next-app
+          EOF
