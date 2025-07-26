@@ -27,10 +27,9 @@ jobs:
         env:
           VPS_USER: ${{ secrets.VPS_USER }}
           VPS_IP: ${{ secrets.VPS_HOST }}
-          DEPLOY_PATH: ${{ secrets.VPS_DEPLOY_PATH }}
         run: |
           ssh $VPS_USER@$VPS_IP << 'EOF'
-            cd $DEPLOY_PATH
+            cd htdocs/www.100poweruae.com
             git pull origin master
             rm -rf .next
             source /home/power/.bashrc
