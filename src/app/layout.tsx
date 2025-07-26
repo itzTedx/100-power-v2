@@ -46,6 +46,9 @@ export const metadata: Metadata = {
     images: ["/images/hero-oil.webp"],
     site: "@100poweruae",
   },
+  verification: {
+    google: "EAeAjAM1Zm9ATZQk-J_R5sAmYeRcFbxyhFJ9fJrOJvk",
+  },
   metadataBase: new URL("https://www.100power.com"),
 };
 export default function RootLayout({
