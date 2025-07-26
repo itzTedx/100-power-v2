@@ -142,6 +142,63 @@ export const PRODUCTS: ProductType[] = [
     ],
     quantity: ["1 Litre", "4 Litre"],
   },
+  {
+    range: "Premium",
+    title: "POWER 0W20",
+    type: "engine-additives",
+    images: ["/images/products/0w20.jpg"],
+    href: "power-0w20",
+    overview: `POWER 0W20 is a high-performance mineral-based gear oil designed for manual transmissions, axles, and differentials in commercial and passenger vehicles. Formulated with extreme pressure (EP) additives, it provides excellent protection against gear wear, corrosion, and oxidation—even under high torque and load conditions.
+
+    Whether you're hauling heavy loads or navigating daily commutes, POWER 0W20 ensures consistent gear performance, long service life, and reliable protection across a wide range of operating conditions.`,
+    benefits: [
+      "Reliable Gear Protection Under High Load & Torque",
+      "Smooth Operation for Manual Transmissions & Differentials",
+      "Strong Resistance to Oxidation & Oil Degradation",
+      "Protects Against Rust, Corrosion & Metal Fatigue",
+      "Maintains Viscosity Stability Across Temperature Swings",
+      "Extended Gear Life & Reduced Maintenance Costs",
+    ],
+    quantity: ["1 Litre", "4 Litres", "5 Litres", "208 Litres"],
+  },
+  {
+    range: "Premium",
+    title: "POWER 0W30",
+    type: "engine-additives",
+    images: ["/images/products/0w30.jpg"],
+    href: "power-0w30",
+    overview: `POWER 0W30 is a high-performance mineral-based gear oil designed for manual transmissions, axles, and differentials in commercial and passenger vehicles. Formulated with extreme pressure (EP) additives, it provides excellent protection against gear wear, corrosion, and oxidation—even under high torque and load conditions.
+
+    Whether you're hauling heavy loads or navigating daily commutes, POWER 0W30 ensures consistent gear performance, long service life, and reliable protection across a wide range of operating conditions.`,
+    benefits: [
+      "Reliable Gear Protection Under High Load & Torque",
+      "Smooth Operation for Manual Transmissions & Differentials",
+      "Strong Resistance to Oxidation & Oil Degradation",
+      "Protects Against Rust, Corrosion & Metal Fatigue",
+      "Maintains Viscosity Stability Across Temperature Swings",
+      "Extended Gear Life & Reduced Maintenance Costs",
+    ],
+    quantity: ["1 Litre", "4 Litres", "5 Litres", "208 Litres"],
+  },
+  {
+    range: "Premium",
+    title: "POWER 20W40",
+    type: "engine-additives",
+    images: ["/images/products/20w40.jpg"],
+    href: "power-20w40",
+    overview: `POWER 20W40 is a high-performance mineral-based gear oil designed for manual transmissions, axles, and differentials in commercial and passenger vehicles. Formulated with extreme pressure (EP) additives, it provides excellent protection against gear wear, corrosion, and oxidation—even under high torque and load conditions.
+
+    Whether you're hauling heavy loads or navigating daily commutes, POWER 20W40 ensures consistent gear performance, long service life, and reliable protection across a wide range of operating conditions.`,
+    benefits: [
+      "Reliable Gear Protection Under High Load & Torque",
+      "Smooth Operation for Manual Transmissions & Differentials",
+      "Strong Resistance to Oxidation & Oil Degradation",
+      "Protects Against Rust, Corrosion & Metal Fatigue",
+      "Maintains Viscosity Stability Across Temperature Swings",
+      "Extended Gear Life & Reduced Maintenance Costs",
+    ],
+    quantity: ["1 Litre", "4 Litres", "5 Litres", "208 Litres"],
+  },
 
   {
     range: "Premium",
@@ -167,7 +224,7 @@ export const PRODUCTS: ProductType[] = [
 
   {
     range: "Premium",
-    title: "Power-10 Critical Maintenance Lubricant",
+    title: "POWER-10 Critical Maintenance Lubricant",
     type: "lubrication",
     images: ["/images/products/power-10.jpg"],
     href: "power-10",
