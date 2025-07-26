@@ -7,7 +7,10 @@ import {
   IconBrandTelegram,
   IconBrandX,
   IconBrandYoutube,
+  IconMail,
+  IconPhoneCall,
 } from "@tabler/icons-react";
+import { Building2 } from "lucide-react";
 
 import {
   IconClogSpin,
@@ -277,5 +280,29 @@ export const COMMITMENT = [
     description:
       "We foster long-term relationships built on transparency, accountability, and a commitment to doing what's right - always.",
     Icon: IconDashboard,
+  },
+];
+
+export const CONTACT = [
+  {
+    label: "We're here to help",
+    title: "Email",
+    description: "info@100-power.com",
+    href: "mailto:info@100-power.com",
+    Icon: IconMail,
+  },
+  {
+    label: "Call us",
+    title: "Phone",
+    description: "+971 52 786 2528",
+    href: "tel:+971527862528",
+    Icon: IconPhoneCall,
+  },
+  {
+    label: "Visit our office HQ",
+    title: "Office",
+    description: "View on Google Map",
+    href: "https://share.google/NGaslvCPA7JsjTjKo",
+    Icon: Building2,
   },
 ];

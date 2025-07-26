@@ -65,7 +65,7 @@ export function ContactForm() {
               <FormItem>
                 <FormLabel required>Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="Name" {...field} />
+                  <Input placeholder="Name" autoFocus {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
