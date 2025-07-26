@@ -319,9 +319,11 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
             </span>
           </h2>
           <div className="grid grid-cols-2 gap-2 lg:grid-cols-3 xl:grid-cols-4">
-            {PRODUCTS.filter((f) => f.type === product.type).map((product) => (
-              <ProductCard data={product} key={product.id} />
-            ))}
+            {PRODUCTS.filter((f) => f.type === product.type && f.href !== slug)
+              .splice(0, 4)
+              .map((product, id) => (
+                <ProductCard data={product} key={id} />
+              ))}
           </div>
         </section>
         {/* Product JSON-LD Structured Data */}

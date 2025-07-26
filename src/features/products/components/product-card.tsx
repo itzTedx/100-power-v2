@@ -30,7 +30,7 @@ interface Props {
 export const ProductCard = ({ data }: Props) => {
   return (
     <Link href={`/products/${data.href}`}>
-      <Card className="group overflow-hidden">
+      <Card className="group group overflow-hidden">
         <CardHeader className="relative flex items-start justify-between">
           <div className="flex shrink-0 items-center gap-2">
             <div
@@ -78,7 +78,7 @@ export const ProductCard = ({ data }: Props) => {
               src={data.images[0]}
               alt={data.title}
               fill
-              className="object-cover"
+              className="object-cover transition-transform group-hover:scale-110"
             />
           </div>
           <div className="absolute inset-0 z-10 flex items-end justify-center p-4 opacity-0 transition-opacity group-hover:opacity-100">

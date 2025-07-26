@@ -82,8 +82,8 @@ export const Products = () => {
         <TabsContent value="engine-additives">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {PRODUCTS.filter((p) => p.type === "engine-additives")?.map(
-              (product) => (
-                <ProductCard data={product} key={product.id} />
+              (product, id) => (
+                <ProductCard data={product} key={id} />
               )
             )}
           </div>
@@ -91,8 +91,8 @@ export const Products = () => {
         <TabsContent value="lubrication">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {PRODUCTS.filter((p) => p.type === "lubrication")?.map(
-              (product) => (
-                <ProductCard data={product} key={product.id} />
+              (product, id) => (
+                <ProductCard data={product} key={id} />
               )
             )}
           </div>
@@ -101,17 +101,19 @@ export const Products = () => {
         <TabsContent value="fuel-system">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {PRODUCTS.filter((p) => p.type === "fuel-system")?.map(
-              (product) => (
-                <ProductCard data={product} key={product.id} />
+              (product, id) => (
+                <ProductCard data={product} key={id} />
               )
             )}
           </div>
         </TabsContent>
         <TabsContent value="industrial">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {PRODUCTS.filter((p) => p.type === "industrial")?.map((product) => (
-              <ProductCard data={product} key={product.id} />
-            ))}
+            {PRODUCTS.filter((p) => p.type === "industrial")?.map(
+              (product, id) => (
+                <ProductCard data={product} key={id} />
+              )
+            )}
           </div>
         </TabsContent>
       </Tabs>

@@ -43,8 +43,8 @@ export default function ProductsPage() {
               className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
               aria-label="All Products"
             >
-              {PRODUCTS.map((product) => (
-                <ProductCard data={product} key={product.id} />
+              {PRODUCTS.map((product, id) => (
+                <ProductCard data={product} key={id} />
               ))}
             </section>
           </TabsContent>
@@ -55,8 +55,8 @@ export default function ProductsPage() {
               aria-label="Engine Additives"
             >
               {PRODUCTS.filter((p) => p.type === "engine-additives")?.map(
-                (product) => (
-                  <ProductCard data={product} key={product.id} />
+                (product, id) => (
+                  <ProductCard data={product} key={id} />
                 )
               )}
             </section>
@@ -67,8 +67,8 @@ export default function ProductsPage() {
               aria-label="Lubrication Products"
             >
               {PRODUCTS.filter((p) => p.type === "lubrication")?.map(
-                (product) => (
-                  <ProductCard data={product} key={product.id} />
+                (product, id) => (
+                  <ProductCard data={product} key={id} />
                 )
               )}
             </section>
@@ -79,8 +79,8 @@ export default function ProductsPage() {
               aria-label="Fuel System Products"
             >
               {PRODUCTS.filter((p) => p.type === "fuel-system")?.map(
-                (product) => (
-                  <ProductCard data={product} key={product.id} />
+                (product, id) => (
+                  <ProductCard data={product} key={id} />
                 )
               )}
             </section>
@@ -91,8 +91,8 @@ export default function ProductsPage() {
               aria-label="Industrial Application Products"
             >
               {PRODUCTS.filter((p) => p.type === "industrial")?.map(
-                (product) => (
-                  <ProductCard data={product} key={product.id} />
+                (product, id) => (
+                  <ProductCard data={product} key={id} />
                 )
               )}
             </section>
