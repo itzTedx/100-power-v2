@@ -119,7 +119,7 @@ export const PRODUCTS: ProductType[] = [
       "Exceptional Thermal Stability & Oxidation Resistance",
       "Extended Drain Intervals for Reduced Maintenance",
       "Reduces Friction, Enhancing Drivetrain Efficiency",
-      "Prevents Rust, Corrosion & Wear in Critical Components.",
+      "Prevents Rust, Corrosion & Wear in Critical Components",
     ],
     quantity: ["1 Litre", "4 Litre"],
   },

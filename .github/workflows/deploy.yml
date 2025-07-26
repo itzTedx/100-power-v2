@@ -2,8 +2,7 @@ name: 🚀 Git Pull & Restart on VPS
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
 
 jobs:
   deploy:
