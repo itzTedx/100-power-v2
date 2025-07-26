@@ -15,19 +15,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up pnpm
+      - name: 📦 Set up pnpm
         uses: pnpm/action-setup@v2
         with:
           version: 10.12.4 # or your preferred pnpm version
 
-      - name: Install Dependencies
+      - name: 🔗 Install Dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Run formatter
         run: pnpm format
 
   deploy:
-    name: Pull & Restart on VPS
+    name: 🧲 Pull & Restart on VPS
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -43,7 +43,7 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H $VPS_IP >> ~/.ssh/known_hosts
 
-      - name: Pull latest code & rebuild
+      - name: 🏗️ Pull latest code & rebuild
         env:
           VPS_USER: ${{ secrets.VPS_USER }}
           VPS_IP: ${{ secrets.VPS_HOST }}

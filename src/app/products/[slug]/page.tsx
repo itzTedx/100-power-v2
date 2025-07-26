@@ -45,8 +45,8 @@ export async function generateMetadata({
     };
 
   return {
-    title: product.title,
-    description: product.overview,
+    title: `${product.title} - Hundred Power`,
+    description: product.overview.slice(0, 240),
 
     openGraph: {
       images: product.images,
@@ -171,7 +171,7 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
             </section>
           </div>
         </section>
-        <section className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-4">
+        <section className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-12">
           <Tabs
             defaultValue="core"
             className="col-span-12 items-start md:col-span-7"
@@ -189,79 +189,45 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
               >
                 Usages
               </TabsTrigger>
-              <TabsTrigger
+              {/* <TabsTrigger
                 value="application"
                 className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
               >
                 Application
-              </TabsTrigger>
+              </TabsTrigger> */}
             </TabsList>
             <TabsContent value="core">
               <ul className="ml-5 list-disc space-y-3">
-                <li>
-                  <h3 className="text-xl">
-                    <strong>Superior Wear Protection</strong>
-                  </h3>
-                  <p>
-                    Forms a micro-layer on engine parts to reduce friction and
-                    metal-to-metal contact, extending life and ensuring smoother
-                    operation—especially in cold starts and high-load scenarios.
-                  </p>
-                </li>
-                <li>
-                  <h3 className="text-xl">
-                    <strong>Enhanced Engine Efficiency</strong>
-                  </h3>
-                  <p>
-                    Minimizes internal drag, improving fuel economy,
-                    acceleration, and engine responsiveness.
-                  </p>
-                </li>
-                <li>
-                  <h3 className="text-xl">
-                    <strong>Exceptional Cleanliness</strong>
-                  </h3>
-                  <p>
-                    Advanced detergents remove sludge, varnish, and deposits to
-                    keep your engine running at its peak.
-                  </p>
-                </li>
-                <li>
-                  <h3 className="text-xl">
-                    <strong>Reliable Cold Start Protection</strong>
-                  </h3>
-                  <p>
-                    Instant lubrication at startup reduces early-stage wear and
-                    enhances overall reliability.
-                  </p>
-                </li>
-                <li>
-                  <h3 className="text-xl">
-                    <strong>Cooler Operating Temperatures</strong>
-                  </h3>
-                  <p>
-                    Reduces friction heat, allowing your engine to perform
-                    consistently under harsh conditions.
-                  </p>
-                </li>
+                {product.advantages.map((ad, i) => (
+                  <li key={`${i}-${ad.title}`}>
+                    <h3 className="text-xl">
+                      <strong>{ad.title}</strong>
+                    </h3>
+                    <p>{ad.description}</p>
+                  </li>
+                ))}
               </ul>
             </TabsContent>
             <TabsContent value="usages">
+              <ul className="ml-5 list-disc space-y-3">
+                {product.usages.map((usage, i) => (
+                  <li key={`${i}-${usage.title}`}>
+                    <h3 className="text-xl">
+                      <strong>{usage.title}</strong>
+                    </h3>
+                    <p>{usage.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </TabsContent>
+            {/* <TabsContent value="application">
               <div className="grid gap-4">
                 Superior Wear ProtectionForms a micro-layer on engine parts to
                 reduce friction and metal-to-metal contact, extending life and
                 ensuring smoother operation—especially in cold starts and
                 high-load scenarios.
               </div>
-            </TabsContent>
-            <TabsContent value="application">
-              <div className="grid gap-4">
-                Superior Wear ProtectionForms a micro-layer on engine parts to
-                reduce friction and metal-to-metal contact, extending life and
-                ensuring smoother operation—especially in cold starts and
-                high-load scenarios.
-              </div>
-            </TabsContent>
+            </TabsContent> */}
           </Tabs>
           <Tabs
             defaultValue="directions"
@@ -277,39 +243,12 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
             </TabsList>
             <TabsContent value="directions">
               <ol className="ml-5 list-decimal space-y-3">
-                <li>
-                  <strong>Check Compatibility</strong>
-                  <p>Refer to your vehicle’s manual to confirm suitability.</p>
-                </li>
-                <li>
-                  <strong>Drain Old Oil</strong>
-                  <p>Ensure complete drainage to avoid contamination.</p>
-                </li>
-                <li>
-                  <strong>Replace Oil Filter</strong>
-                  <p>
-                    Always install a new filter to maximize oil effectiveness.
-                  </p>
-                </li>
-                <li>
-                  <strong>Pour the Oil</strong>
-                  <p>Add 100 Power 5W30 as per the recommended capacity.</p>
-                </li>
-                <li>
-                  <strong>Check Level</strong>
-                  <p>Use a dipstick and top up if required.</p>
-                </li>
-                <li>
-                  <strong>Start Engine & Inspect</strong>
-                  <p>Let it run for a few minutes. Check for any leaks.</p>
-                </li>
-                <li>
-                  <strong>Regular Maintenance</strong>
-                  <p>
-                    Monitor levels periodically and follow recommended change
-                    intervals.
-                  </p>
-                </li>
+                {product.direction.map((dir, i) => (
+                  <li key={`${i}-${dir.title}`}>
+                    <strong>{dir.title}</strong>
+                    <p>{dir.description}</p>
+                  </li>
+                ))}
               </ol>
             </TabsContent>
           </Tabs>
