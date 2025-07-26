@@ -41,5 +41,5 @@ yarn-error.log*
 next-env.d.ts
 
 
-github-ci-key
-github-ci-key.pub
+github_ci_key
+github_ci_key.pub
