@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 🔋 About 100 Power
 
-## Getting Started
+**100 Power** is a performance-focused technology brand specializing in **micro-metallurgical lubricant additive solutions**. Our products are engineered to reduce friction, minimize wear, and extend the lifespan of engines and machinery in **military, industrial, and commercial applications**.
 
-First, run the development server:
+This project powers the **digital ecosystem of 100 Power**, providing a scalable and modern platform to:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Showcase our innovative oil additive technologies  
+- Educate customers and partners about micro-metallurgical advancements  
+- Facilitate product inquiries and B2B engagements  
+- Integrate with our logistics system for global product distribution
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🌍 Built for Global Impact
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+With manufacturing operations in the **USA and UAE**, 100 Power aims to set a new standard in lubrication technology across international markets.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧰 Tech Stack
 
-## Learn More
+This project is built with a modern and performant frontend stack designed for scalability, maintainability, and smooth DX (Developer Experience).
 
-To learn more about Next.js, take a look at the following resources:
+### 🚀 Core Framework
+- **Next.js 15** with **Turbopack** — Lightning-fast bundler and React framework
+- **React 19** — Modern React with concurrent rendering and use hooks
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🎨 Styling & UI
+- **Tailwind CSS v4** — Utility-first CSS framework
+- **Radix UI** — Accessible low-level UI primitives
+- **Lucide React** / **Tabler Icons** — Icon libraries
+- **Embla Carousel** — Smooth and extensible carousels
+- **tw-animate-css** — Tailwind-compatible animations
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 📦 Forms & Validation
+- **React Hook Form** — Performance-focused form management
+- **Zod** — Schema validation
+- **@hookform/resolvers** — Integration between Zod and RHF
 
-## Deploy on Vercel
+### 📧 Communication
+- **Nodemailer** — Email delivery
+- **@react-email/components** — Email templating components
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🧠 State, Animations & Utils
+- **nuqs** — Query string state management
+- **motion** — Animation library for React
+- **clsx**, **tailwind-merge**, **class-variance-authority** — Utility class management
+- **react-zoom-pan-pinch** — Interactive zoom/pan for product media
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🛠️ Developer Experience
+- **TypeScript** — Type safety and autocompletion
+- **Biome** — Unified linting and formatting
+- **Turbopack** — Next-gen bundler replacing Webpack
