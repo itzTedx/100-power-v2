@@ -1,9 +1,8 @@
-import Image from "next/image";
+import { IconCertificate } from '@tabler/icons-react'
+import Image from 'next/image'
 
-import { IconCertificate } from "@tabler/icons-react";
-
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
+import { Badge } from '@/components/ui/badge'
+import { Separator } from '@/components/ui/separator'
 
 export const Certified = () => {
   return (
@@ -13,7 +12,7 @@ export const Certified = () => {
         USA-Certified
       </Badge>
       <Separator />
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid  md:grid-cols-3 gap-6">
         <div className="col-span-2 space-y-6">
           <h2 className="font-helvetica text-4xl font-bold">
             Engineered with Certified U.S. Technology
@@ -42,5 +41,5 @@ export const Certified = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
