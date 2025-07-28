@@ -1,14 +1,13 @@
-import Link from "next/link";
+import { ArrowUpRight, Dot } from 'lucide-react'
+import Link from 'next/link'
 
-import { ArrowUpRight, Dot } from "lucide-react";
-
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { Separator } from "@/components/ui/separator";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { PRODUCTS } from "@/data/products";
-import { ProductCard } from "@/features/products/components/product-card";
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
+import { Separator } from '@/components/ui/separator'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { PRODUCTS } from '@/data/products'
+import { ProductCard } from '@/features/products/components/product-card'
 
 export const Products = () => {
   return (
@@ -30,10 +29,10 @@ export const Products = () => {
         </h2>
         <div>
           <p className="mb-2 text-base tracking-tight sm:text-xl md:text-2xl">
-            Each product is developed with precision and purpose - to enhance{" "}
+            Each product is developed with precision and purpose - to enhance{' '}
             <span className="text-primary">
               durability, reduce wear, and improve performance
-            </span>{" "}
+            </span>{' '}
             under extreme conditions.
           </p>
           <Button
@@ -49,9 +48,9 @@ export const Products = () => {
         </div>
       </div>
 
-      <Tabs defaultValue="engine-additives" className="items-center">
+      <Tabs defaultValue="engine-additives">
         <ScrollArea>
-          <TabsList className="text-foreground mb-6 h-auto w-full gap-2 rounded-none border-b bg-transparent px-0 py-1">
+          <TabsList className="text-foreground mb-4 h-auto w-full gap-2 rounded-none border-b bg-transparent px-0 py-1">
             <TabsTrigger
               value="engine-additives"
               className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
@@ -81,7 +80,7 @@ export const Products = () => {
         </ScrollArea>
         <TabsContent value="engine-additives">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {PRODUCTS.filter((p) => p.type === "engine-additives")?.map(
+            {PRODUCTS.filter((p) => p.type === 'engine-additives')?.map(
               (product, id) => (
                 <ProductCard data={product} key={id} />
               )
@@ -90,7 +89,7 @@ export const Products = () => {
         </TabsContent>
         <TabsContent value="lubrication">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {PRODUCTS.filter((p) => p.type === "lubrication")?.map(
+            {PRODUCTS.filter((p) => p.type === 'lubrication')?.map(
               (product, id) => (
                 <ProductCard data={product} key={id} />
               )
@@ -100,7 +99,7 @@ export const Products = () => {
 
         <TabsContent value="fuel-system">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {PRODUCTS.filter((p) => p.type === "fuel-system")?.map(
+            {PRODUCTS.filter((p) => p.type === 'fuel-system')?.map(
               (product, id) => (
                 <ProductCard data={product} key={id} />
               )
@@ -109,7 +108,7 @@ export const Products = () => {
         </TabsContent>
         <TabsContent value="industrial">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {PRODUCTS.filter((p) => p.type === "industrial")?.map(
+            {PRODUCTS.filter((p) => p.type === 'industrial')?.map(
               (product, id) => (
                 <ProductCard data={product} key={id} />
               )
@@ -118,5 +117,5 @@ export const Products = () => {
         </TabsContent>
       </Tabs>
     </section>
-  );
-};
+  )
+}

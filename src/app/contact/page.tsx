@@ -1,56 +1,55 @@
-import { Metadata } from "next";
-import Link from "next/link";
+import { IconArrowUpRight } from '@tabler/icons-react'
+import { ArrowUpRight, CheckIcon } from 'lucide-react'
+import { Metadata } from 'next'
+import Link from 'next/link'
 
-import { IconArrowUpRight } from "@tabler/icons-react";
-import { ArrowUpRight, CheckIcon } from "lucide-react";
-
-import { IconUserQuestion } from "@/assets/icons";
-import { IconLogo } from "@/assets/logo";
-import { Faqs } from "@/components/sections/faq";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { IconUserQuestion } from '@/assets/icons'
+import { IconLogo } from '@/assets/logo'
+import { Faqs } from '@/components/sections/faq'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { CONTACT } from "@/data/constants";
-import { ContactForm } from "@/features/contact/components/contact-form";
-import { cn } from "@/lib/utils";
+} from '@/components/ui/card'
+import { Separator } from '@/components/ui/separator'
+import { CONTACT } from '@/data/constants'
+import { ContactForm } from '@/features/contact/components/contact-form'
+import { cn } from '@/lib/utils'
 
 export const metadata: Metadata = {
-  title: "Contact us | 100 Power",
+  title: 'Contact us | 100 Power',
   description:
-    "Learn about 100 Power: our mission, vision, global presence, and commitment to advanced micro-metallurgical additives for machinery and engines worldwide.",
+    'Learn about 100 Power: our mission, vision, global presence, and commitment to advanced micro-metallurgical additives for machinery and engines worldwide.',
   openGraph: {
-    title: "AContact | 100 Power",
+    title: 'AContact | 100 Power',
     description:
       "Discover 100 Power's innovation in micro-metallurgical additives, our global reach, and our dedication to performance, reliability, and sustainability.",
-    url: "https://www.100poweruae.com/contact",
-    siteName: "100 Power",
-    type: "website",
+    url: 'https://www.100poweruae.com/contact',
+    siteName: '100 Power',
+    type: 'website',
   },
-};
+}
 
 const steps = [
   {
     title: "We'll prepare a proposal",
-    description: "Required scope, timeline and aprox. price will be included",
+    description: 'Required scope, timeline and aprox. price will be included',
   },
   {
-    title: "Together we discuss it",
+    title: 'Together we discuss it',
     description:
       "Let's get acquainted and discuss all the possible variants and options.",
   },
   {
     title: "Let's start building",
     description:
-      "When the contract is signed and all goals are set we can start the first sprint.",
+      'When the contract is signed and all goals are set we can start the first sprint.',
   },
-];
+]
 
 export default function ContactPage() {
   return (
@@ -152,14 +151,14 @@ export default function ContactPage() {
               return (
                 <li
                   key={index}
-                  className={cn("mb-4 flex gap-2 text-left")}
+                  className={cn('mb-4 flex gap-2 text-left')}
                   role="listitem"
                 >
                   <div>
                     <CheckIcon className="text-primary" />
                   </div>
                   <div>
-                    <h3 className={cn("text-primary text-lg font-medium")}>
+                    <h3 className={cn('text-primary text-lg font-medium')}>
                       {index + 1} {step.title}
                     </h3>
 
@@ -168,11 +167,11 @@ export default function ContactPage() {
                     </p>
                   </div>
                 </li>
-              );
+              )
             })}
           </ul>
         </div>
-        <div className="col-span-2 mx-20">
+        <div className="md:col-span-2 md:mx-20">
           <Card>
             <CardHeader>
               <CardTitle>Send us a Message</CardTitle>
@@ -207,5 +206,5 @@ export default function ContactPage() {
         <Faqs />
       </section>
     </main>
-  );
+  )
 }
