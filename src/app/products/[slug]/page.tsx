@@ -1,7 +1,6 @@
+import { Dot } from "lucide-react";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-
-import { Dot } from "lucide-react";
 
 import { IconChart, IconShield } from "@/assets/icons";
 import { Badge } from "@/components/ui/badge";
