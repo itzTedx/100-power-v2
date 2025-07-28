@@ -3122,4 +3122,714 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
       },
     ],
   },
+  {
+    range: "Regular",
+    title: "Power 75W90",
+    type: "engine-additives",
+    images: ["/images/products/regular/75w90-regular.jpg"],
+    href: "power-75w90-regular",
+    overview: `Power 75W90 is a high-performance gear oil designed for everyday applications in manual transmissions, differentials, and axle systems. Offering reliable protection under standard driving conditions, this GL-5 rated lubricant delivers smooth gear shifting, reduces wear, and ensures stable performance in both high-load and varying temperature environments.
+  
+  Blended with anti-wear and EP (extreme pressure) additives, Power 75W90 helps prevent scuffing, gear pitting, and breakdowns in conventional gear systems, making it ideal for regular use in passenger vehicles, light trucks, and commercial fleets.`,
+    benefits: [
+      "Smooth Gear Shifting and Reduced Friction",
+      "Protects Gears Against Wear and Pitting",
+      "Maintains Performance in High and Low Temperatures",
+      "Compatible with Most Manual Transmissions and Differentials",
+      "Prevents Foaming and Ensures Stable Lubrication",
+      "Excellent Thermal and Oxidation Stability",
+      "Minimizes Gear Noise and Vibration",
+      "Extends Service Life of Transmission Components",
+    ],
+    quantity: ["1 L", "4 L"],
+    advantages: [
+      {
+        title: "Reliable EP Protection",
+        description:
+          "Enhanced with Extreme Pressure additives to prevent surface fatigue and wear in heavily loaded gear teeth.",
+      },
+      {
+        title: "Temperature Stability",
+        description:
+          "Maintains consistent viscosity in both hot and cold climates for year-round use.",
+      },
+      {
+        title: "Corrosion and Rust Prevention",
+        description:
+          "Forms a protective barrier that shields metal surfaces from oxidation and moisture-related damage.",
+      },
+      {
+        title: "Reduced Gear Noise",
+        description:
+          "Smoothens metal interaction to reduce whining or grinding sounds in gear systems.",
+      },
+      {
+        title: "Longer Drain Intervals",
+        description:
+          "Maintains oil integrity over time, reducing the frequency of gear oil changes in normal conditions.",
+      },
+      {
+        title: "Anti-Foaming Properties",
+        description:
+          "Prevents oil aeration and ensures complete gear coverage during high-speed rotation.",
+      },
+      {
+        title: "Friction Control",
+        description:
+          "Lowers internal drag and improves transmission response and fuel economy.",
+      },
+      {
+        title: "Multi-Vehicle Compatibility",
+        description:
+          "Formulated for a wide range of vehicles requiring GL-5 level protection in gear applications.",
+      },
+    ],
+    usages: [
+      {
+        title: "Manual Transmissions",
+        description:
+          "Ideal for vehicles with manual gearboxes requiring smooth shifts and durability under load.",
+      },
+      {
+        title: "Differentials & Axles",
+        description:
+          "Provides strong protection and lubrication for rear axles and limited-slip differentials.",
+      },
+      {
+        title: "Light Trucks & Pickups",
+        description:
+          "Ensures quiet and reliable operation under city and utility driving cycles.",
+      },
+      {
+        title: "Commercial & Fleet Vehicles",
+        description:
+          "Supports long-term operation with reduced wear and extended oil life in transmission systems.",
+      },
+      {
+        title: "Off-Road & Utility Equipment",
+        description:
+          "Resists breakdown and maintains gear performance in rugged environments and high torque conditions.",
+      },
+      {
+        title: "Cold Weather Conditions",
+        description:
+          "Remains fluid at low temperatures for reliable cold starts and uninterrupted gear protection.",
+      },
+    ],
+    direction: [
+      {
+        title: "Check Compatibility",
+        description:
+          "Refer to your vehicle or equipment manual to verify GL-5 and 75W90 compatibility before use.",
+      },
+      {
+        title: "Drain Old Gear Oil",
+        description:
+          "Completely remove old gear oil to prevent contamination and ensure fresh performance.",
+      },
+      {
+        title: "Inspect Drain Plug",
+        description:
+          "Clean magnetic drain plugs of any metal particles or debris before reinstalling.",
+      },
+      {
+        title: "Add Power 75W90",
+        description:
+          "Use a pump or squeeze bottle to fill the gearbox or differential with the recommended amount of Power 75W90.",
+      },
+      {
+        title: "Fill to Level Plug",
+        description:
+          "Stop filling when the oil reaches the bottom edge of the level plug hole unless otherwise specified.",
+      },
+      {
+        title: "Seal and Run",
+        description:
+          "Tighten all plugs securely and run the system briefly to circulate oil—then recheck levels.",
+      },
+      {
+        title: "Regular Monitoring",
+        description:
+          "Periodically check oil condition and level, especially before long trips or heavy usage cycles.",
+      },
+    ],
+  },
+  {
+    range: "Regular",
+    title: "Power 85W90",
+    type: "engine-additives",
+    images: ["/images/products/regular/85w90-regular.jpg"],
+    href: "power-85w90-regular",
+    overview: `Power 85W90 is a heavy-duty gear oil formulated for use in manual transmissions, differentials, and axle assemblies operating under moderate to severe load conditions. It provides strong film strength, excellent load-carrying capabilities, and long-lasting protection against wear, oxidation, and corrosion.
+  
+  Designed to meet the needs of both commercial and passenger vehicles, this GL-5 rated oil ensures consistent performance and thermal stability, even in high-stress or fluctuating temperature environments. Power 85W90 helps reduce maintenance costs while maximizing gear and bearing life.`,
+    benefits: [
+      "Excellent Load-Bearing and Shock Protection",
+      "Reduces Wear on Gears, Bearings, and Shafts",
+      "Resists Thermal Breakdown and Oxidation",
+      "Minimizes Gear Whine and Vibration",
+      "Protects Against Rust, Corrosion, and Sludge Formation",
+      "Stable Lubrication in Wide Temperature Ranges",
+      "Ensures Long Oil and Component Life",
+      "Works with Most Gear Systems Requiring GL-5",
+    ],
+    quantity: ["1 L", "4 L"],
+    advantages: [
+      {
+        title: "Robust Gear Protection",
+        description:
+          "Formulated with anti-wear and EP (Extreme Pressure) additives to guard against metal-to-metal contact under load.",
+      },
+      {
+        title: "Oxidation Resistance",
+        description:
+          "Slows oil thickening and sludge buildup, maintaining clean and efficient system operation.",
+      },
+      {
+        title: "Wide Temperature Operating Range",
+        description:
+          "Performs reliably in both hot and cold conditions, maintaining fluidity and protection.",
+      },
+      {
+        title: "Corrosion Inhibition",
+        description:
+          "Prevents rust and corrosion of internal gear components during extended service intervals.",
+      },
+      {
+        title: "Reduced Gear Noise",
+        description:
+          "Cushions gear contact to minimize noise and harshness, especially in commercial applications.",
+      },
+      {
+        title: "Anti-Foaming Additives",
+        description:
+          "Prevents aeration and ensures full gear coverage even under high agitation or rotation.",
+      },
+      {
+        title: "Long-Lasting Lubrication",
+        description:
+          "Extends drain intervals and reduces downtime, especially for fleet and utility vehicles.",
+      },
+      {
+        title: "High Compatibility",
+        description:
+          "Compatible with most hypoid, spiral-bevel, and worm gear differentials used in trucks and machinery.",
+      },
+    ],
+    usages: [
+      {
+        title: "Differentials & Axles",
+        description:
+          "Designed for use in hypoid and spiral bevel gear axles requiring GL-5 grade oil.",
+      },
+      {
+        title: "Manual Gearboxes",
+        description:
+          "Delivers smooth shifting and protection for transmissions operating under load.",
+      },
+      {
+        title: "Heavy-Duty Vehicles",
+        description:
+          "Ideal for trucks, buses, and off-road equipment exposed to high torque and load conditions.",
+      },
+      {
+        title: "Agricultural & Construction Equipment",
+        description:
+          "Withstands dirt, moisture, and harsh environments in tractors, loaders, and excavators.",
+      },
+      {
+        title: "Passenger & Utility Vehicles",
+        description:
+          "Protects drive systems in everyday vehicles requiring 85W90 GL-5 gear oil.",
+      },
+      {
+        title: "Mixed Fleet Operations",
+        description:
+          "Simplifies lubrication management across a variety of vehicles and equipment types.",
+      },
+    ],
+    direction: [
+      {
+        title: "Confirm Oil Spec",
+        description:
+          "Refer to your owner’s manual to confirm that 85W90 GL-5 gear oil is recommended.",
+      },
+      {
+        title: "Drain Existing Oil",
+        description:
+          "Remove the old oil completely and inspect for any signs of contamination or metal particles.",
+      },
+      {
+        title: "Clean Fill & Drain Points",
+        description:
+          "Wipe down fittings and remove any buildup before introducing fresh oil.",
+      },
+      {
+        title: "Add Power 85W90",
+        description:
+          "Pour in the required amount until the oil reaches the level plug, using a pump if necessary.",
+      },
+      {
+        title: "Recheck After Operation",
+        description:
+          "Run the system briefly and check for leaks or drops in fluid level after initial use.",
+      },
+      {
+        title: "Top Off as Needed",
+        description:
+          "If fluid levels are low after settling, top off to ensure full lubrication coverage.",
+      },
+      {
+        title: "Inspect Periodically",
+        description:
+          "Regularly monitor fluid condition and top off or change oil at manufacturer-recommended intervals.",
+      },
+    ],
+  },
+  {
+    range: "Regular",
+    title: "Power ATF DEX III",
+    type: "engine-additives",
+    images: ["/images/products/regular/atf-dex-iii-regular.jpg"],
+    href: "power-atf-dex-iii-regular",
+    overview: `Power ATF DEX III is a high-performance automatic transmission fluid formulated to meet the requirements of General Motors DEXRON®-III and other manufacturer specifications. It delivers reliable performance, smooth shifting, and robust wear protection in automatic transmissions, power steering systems, and certain hydraulic applications.
+  
+  Engineered with premium base oils and advanced additives, Power ATF DEX III ensures thermal stability, resistance to oxidation, and excellent shear stability for extended service life. Ideal for use in both older and modern automatic transmissions, it provides consistent performance in a wide range of operating conditions.`,
+    benefits: [
+      "Ensures Smooth Gear Shifting and Clutch Operation",
+      "Excellent Oxidation and Thermal Stability",
+      "Reduces Wear and Extends Transmission Life",
+      "Maintains Fluid Viscosity Under Heat and Stress",
+      "Protects Against Rust, Corrosion, and Foam Formation",
+      "Compatible with Most Seals and Gaskets",
+      "Provides Consistent Frictional Properties",
+      "Suitable for Power Steering and Hydraulic Systems",
+    ],
+    quantity: ["1 L", "4 L"],
+    advantages: [
+      {
+        title: "Smooth Transmission Operation",
+        description:
+          "Delivers consistent shift performance and reduces shudder and slip in automatic transmissions.",
+      },
+      {
+        title: "Thermal and Oxidation Stability",
+        description:
+          "Maintains performance under high-temperature operation, extending drain intervals and protecting components.",
+      },
+      {
+        title: "Superior Anti-Wear Protection",
+        description:
+          "Guards internal transmission parts against wear, scoring, and deposit buildup.",
+      },
+      {
+        title: "Seal Compatibility",
+        description:
+          "Helps condition seals to prevent leaks and maintain long-term reliability.",
+      },
+      {
+        title: "Multi-System Use",
+        description:
+          "Suitable for power steering units and some hydraulic systems requiring DEXRON®-III specification.",
+      },
+      {
+        title: "Low Temperature Fluidity",
+        description:
+          "Ensures responsive cold-weather performance and reliable start-up protection.",
+      },
+      {
+        title: "Friction Stability",
+        description:
+          "Provides consistent frictional characteristics over the fluid’s lifetime for smooth engagement.",
+      },
+      {
+        title: "Extended Service Life",
+        description:
+          "Engineered for long drain intervals, reducing service frequency and operational costs.",
+      },
+    ],
+    usages: [
+      {
+        title: "Automatic Transmissions",
+        description:
+          "Designed for use in vehicles requiring DEXRON®-III or earlier fluids for smooth gear shifts and durability.",
+      },
+      {
+        title: "Power Steering Systems",
+        description:
+          "Ensures smooth and quiet operation in compatible power steering setups.",
+      },
+      {
+        title: "Hydraulic Systems",
+        description:
+          "Applicable in certain hydraulic systems where an ATF DEX III fluid is recommended.",
+      },
+      {
+        title: "Passenger and Commercial Vehicles",
+        description:
+          "Suitable for a wide range of vehicles including sedans, vans, SUVs, and light trucks.",
+      },
+      {
+        title: "Off-Highway Equipment",
+        description:
+          "Can be used in construction and agricultural machinery requiring DEX III performance.",
+      },
+      {
+        title: "Industrial Machinery",
+        description:
+          "Recommended for certain light-duty industrial and mobile hydraulic systems compatible with DEX III fluids.",
+      },
+    ],
+    direction: [
+      {
+        title: "Check Manufacturer's Spec",
+        description:
+          "Verify that your vehicle or equipment requires DEXRON®-III or compatible ATF fluid before use.",
+      },
+      {
+        title: "Drain Old Fluid",
+        description:
+          "Safely remove the existing fluid from the transmission, power steering, or hydraulic reservoir.",
+      },
+      {
+        title: "Inspect for Debris",
+        description:
+          "Check for metal shavings, discoloration, or signs of fluid contamination.",
+      },
+      {
+        title: "Refill with Power ATF DEX III",
+        description:
+          "Add the appropriate quantity using the manufacturer’s fill port and recommended level check method.",
+      },
+      {
+        title: "Run the System",
+        description:
+          "Operate the vehicle or system briefly to circulate new fluid and check for proper operation.",
+      },
+      {
+        title: "Recheck Levels",
+        description:
+          "After initial circulation, check the fluid level again and top up if needed.",
+      },
+      {
+        title: "Regular Monitoring",
+        description:
+          "Inspect the fluid periodically for condition and top off or replace at scheduled intervals.",
+      },
+    ],
+  },
+  {
+    range: "Regular",
+    title: "ATF DEX IV Regular",
+    type: "engine-additives",
+    images: ["/images/products/regular/atf-dex-iv-regular.jpg"],
+    href: "atf-dex-iv-regular",
+    overview: `ATF DEX IV Regular is a premium automatic transmission fluid specially formulated 
+    to meet the performance requirements of modern automatic transmissions. It ensures smooth 
+    shifting, superior oxidation resistance, and excellent wear protection, helping prolong transmission life.`,
+    benefits: [
+      "Provides smooth and consistent gear shifting",
+      "Protects against wear, corrosion, and sludge buildup",
+      "Maintains fluid stability under high temperature and pressure",
+      "Enhances transmission durability and performance",
+      "Compatible with a wide range of automatic transmissions requiring DEX fluids",
+    ],
+    quantity: ["1 L", "4 L"],
+    advantages: [
+      {
+        title: "Advanced Wear Protection",
+        description:
+          "Formulated with high-performance additives to minimize wear and extend transmission life.",
+      },
+      {
+        title: "Thermal and Oxidation Stability",
+        description:
+          "Resists fluid breakdown and sludge formation at elevated temperatures, ensuring consistent performance.",
+      },
+      {
+        title: "Smooth Shifting Performance",
+        description:
+          "Enhances transmission responsiveness and reduces gear shift shock for a comfortable drive.",
+      },
+      {
+        title: "Corrosion and Rust Inhibition",
+        description:
+          "Protects internal transmission components from corrosion and rust during extended use.",
+      },
+      {
+        title: "Wide Application Range",
+        description:
+          "Suitable for many automatic transmissions specifying DEX IV or earlier standards.",
+      },
+      {
+        title: "Extended Service Intervals",
+        description:
+          "Maintains fluid integrity over long drain intervals, reducing maintenance frequency.",
+      },
+    ],
+    usages: [
+      {
+        title: "Automatic Transmissions",
+        description:
+          "Ideal for passenger cars and light trucks equipped with automatic transmissions requiring DEX IV or III fluids.",
+      },
+      {
+        title: "Power Steering Systems",
+        description:
+          "Can be used in power steering systems where the manufacturer recommends DEX-type fluids.",
+      },
+      {
+        title: "Hydraulic Systems",
+        description:
+          "Applicable for certain hydraulic systems compatible with automatic transmission fluids.",
+      },
+    ],
+    direction: [
+      {
+        title: "Verify Compatibility",
+        description:
+          "Always check the vehicle owner's manual to confirm the recommended transmission fluid type.",
+      },
+      {
+        title: "Drain Old Fluid",
+        description:
+          "Completely drain the existing transmission fluid before refilling to avoid contamination.",
+      },
+      {
+        title: "Clean Transmission System",
+        description:
+          "Ensure the transmission system is clean and free from dirt or debris before adding new fluid.",
+      },
+      {
+        title: "Add ATF DEX IV Regular",
+        description:
+          "Pour the fluid slowly to the correct level as specified by the vehicle manufacturer.",
+      },
+      {
+        title: "Check Fluid Level",
+        description:
+          "After refilling, check and adjust the fluid level according to the transmission specifications.",
+      },
+      {
+        title: "Monitor for Leaks",
+        description:
+          "Inspect for leaks or abnormal operation during initial use and after regular intervals.",
+      },
+      {
+        title: "Routine Maintenance",
+        description:
+          "Replace transmission fluid at intervals recommended by the vehicle manufacturer for optimal performance.",
+      },
+    ],
+  },
+  {
+    range: "Regular",
+    title: "ATF WS Regular",
+    type: "engine-additives",
+    images: ["/images/products/regular/atf-ws-regular.jpg"],
+    href: "atf-ws-regular",
+    overview: `ATF WS Regular is a specialized automatic transmission fluid formulated to meet the stringent 
+    requirements of modern vehicles equipped with Toyota WS (World Standard) transmissions. It delivers 
+    excellent friction stability, smooth shifting, and reliable protection against wear and oxidation.`,
+    benefits: [
+      "Meets Toyota WS specification for automatic transmissions",
+      "Ensures smooth and precise gear shifts",
+      "Provides superior wear and corrosion protection",
+      "Maintains fluid stability under high thermal and mechanical stress",
+      "Enhances transmission durability and fuel efficiency",
+      "Compatible with vehicles requiring Toyota WS ATF",
+    ],
+    quantity: ["1 L", "4 L"],
+    advantages: [
+      {
+        title: "Optimized Friction Characteristics",
+        description:
+          "Delivers stable friction performance to prevent shudder and ensure smooth gear engagement.",
+      },
+      {
+        title: "Thermal and Oxidation Resistance",
+        description:
+          "Formulated to resist thermal degradation and oxidation, prolonging fluid life and transmission health.",
+      },
+      {
+        title: "Wear and Corrosion Protection",
+        description:
+          "Protects transmission components against wear, rust, and corrosion for extended service intervals.",
+      },
+      {
+        title: "Fuel Efficiency Enhancement",
+        description:
+          "Designed to reduce frictional losses, contributing to improved fuel economy.",
+      },
+      {
+        title: "Wide Temperature Range Performance",
+        description:
+          "Maintains fluidity and protective properties in both hot and cold operating conditions.",
+      },
+      {
+        title: "Extended Fluid Life",
+        description:
+          "Supports longer drain intervals without compromising transmission performance or protection.",
+      },
+    ],
+    usages: [
+      {
+        title: "Toyota WS Transmission Models",
+        description:
+          "Specifically designed for use in Toyota automatic transmissions requiring WS specification fluids.",
+      },
+      {
+        title: "Power Steering Systems",
+        description:
+          "Suitable for power steering systems where WS fluid compatibility is specified.",
+      },
+      {
+        title: "Other Compatible Transmissions",
+        description:
+          "Can be used in other automatic transmissions recommending WS or equivalent fluids.",
+      },
+    ],
+    direction: [
+      {
+        title: "Confirm Fluid Specification",
+        description:
+          "Refer to the vehicle’s owner manual to verify the requirement for Toyota WS transmission fluid.",
+      },
+      {
+        title: "Drain Old Transmission Fluid",
+        description:
+          "Completely remove the existing fluid before refilling to prevent mixing incompatible fluids.",
+      },
+      {
+        title: "Clean Transmission System",
+        description:
+          "Ensure the transmission system is clean and free from contaminants prior to refilling.",
+      },
+      {
+        title: "Refill with ATF WS Regular",
+        description:
+          "Add the specified quantity of ATF WS fluid to the transmission as per manufacturer guidelines.",
+      },
+      {
+        title: "Check and Adjust Fluid Level",
+        description:
+          "Verify and adjust the fluid level after refilling to ensure optimal transmission performance.",
+      },
+      {
+        title: "Inspect for Leaks and Performance",
+        description:
+          "Monitor transmission operation for leaks or irregular shifting after fluid replacement.",
+      },
+      {
+        title: "Routine Fluid Maintenance",
+        description:
+          "Follow recommended service intervals for fluid changes to maintain transmission longevity.",
+      },
+    ],
+  },
+  {
+    range: "Regular",
+    title: "Hydraulic ISO 68 Regular",
+    type: "industrial",
+    images: ["/images/products/regular/hydraulic-iso-68-regular.jpg"],
+    href: "hydraulic-iso-68-regular",
+    overview: `Hydraulic ISO 68 Regular is a high-performance hydraulic oil formulated to provide excellent 
+    lubrication and protection for hydraulic systems operating under moderate to severe conditions. 
+    It offers superior anti-wear, oxidation stability, and corrosion resistance, ensuring smooth system operation.`,
+    benefits: [
+      "Excellent anti-wear and load-carrying capabilities",
+      "Protects against rust, corrosion, and foam formation",
+      "Maintains viscosity and lubrication under high pressure and temperature",
+      "Superior oxidation stability for extended oil life",
+      "Ensures smooth and efficient hydraulic system performance",
+      "Compatible with a wide range of hydraulic pumps and components",
+    ],
+    quantity: ["1 L", "5 L", "20 L", "200 L"],
+    advantages: [
+      {
+        title: "Anti-Wear Protection",
+        description:
+          "Formulated with advanced additives to minimize wear on hydraulic components, prolonging system life.",
+      },
+      {
+        title: "Oxidation and Thermal Stability",
+        description:
+          "Resists breakdown under high temperature conditions, reducing sludge and deposits formation.",
+      },
+      {
+        title: "Corrosion and Rust Inhibition",
+        description:
+          "Prevents corrosion of metal surfaces, protecting system components during operation and downtime.",
+      },
+      {
+        title: "Foam Suppression",
+        description:
+          "Minimizes foam formation to maintain consistent hydraulic pressure and system responsiveness.",
+      },
+      {
+        title: "Wide Temperature Performance",
+        description:
+          "Maintains optimal viscosity for smooth operation across a broad temperature range.",
+      },
+      {
+        title: "Excellent Water Separation",
+        description:
+          "Quickly separates from water contamination, preserving oil performance and system reliability.",
+      },
+    ],
+    usages: [
+      {
+        title: "Industrial Hydraulic Systems",
+        description:
+          "Ideal for use in hydraulic equipment in manufacturing plants and heavy machinery.",
+      },
+      {
+        title: "Mobile Hydraulic Equipment",
+        description:
+          "Suitable for construction, agricultural, and mining equipment operating in demanding conditions.",
+      },
+      {
+        title: "Hydraulic Pumps and Valves",
+        description:
+          "Protects pumps, valves, and cylinders by providing stable lubrication and reducing wear.",
+      },
+      {
+        title: "Presses and Injection Molding Machines",
+        description:
+          "Ensures consistent performance in high-pressure hydraulic applications.",
+      },
+    ],
+    direction: [
+      {
+        title: "Check Equipment Specifications",
+        description:
+          "Confirm that ISO 68 hydraulic oil is recommended for your system before use.",
+      },
+      {
+        title: "Drain Existing Fluid",
+        description:
+          "Completely drain the old hydraulic oil and inspect the system for contamination or wear.",
+      },
+      {
+        title: "Clean Reservoir and Components",
+        description:
+          "Ensure the hydraulic reservoir and components are clean prior to refilling with new oil.",
+      },
+      {
+        title: "Refill with Hydraulic ISO 68 Regular",
+        description:
+          "Pour in the recommended quantity of oil, ensuring proper filtration during filling.",
+      },
+      {
+        title: "Monitor Fluid Level and Condition",
+        description:
+          "Regularly check oil levels and condition, topping off or changing oil as needed.",
+      },
+      {
+        title: "Routine System Maintenance",
+        description:
+          "Follow manufacturer-recommended intervals for hydraulic oil changes to maintain optimal system health.",
+      },
+    ],
+  },
 ];
