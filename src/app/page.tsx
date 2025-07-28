@@ -23,7 +23,7 @@ export default function Home() {
       <Industries />
       <Technologies />
 
-      <section className="container space-y-6 py-8 md:space-y-8 md:py-12">
+      <section className="container max-w-7xl space-y-6 py-8 md:space-y-8 md:py-12">
         <Badge>
           <IconUserQuestion />
           Frequently Asked Questions
