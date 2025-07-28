@@ -2201,7 +2201,7 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
     range: "Regular",
     title: "Power 0W30",
     type: "engine-additives",
-    images: ["/images/products/regular/0w30-regular.jpg"],
+    images: ["/images/products/regular/0w30-Regular.jpg"],
     href: "power-0w30-regular",
     overview: `Power 0W30 is a reliable synthetic engine oil formulated for consistent protection and performance in everyday driving. Designed for modern petrol engines, it ensures efficient cold starts, stable thermal performance, and reduced wear under normal driving loads.
   
