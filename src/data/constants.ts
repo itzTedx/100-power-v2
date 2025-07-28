@@ -1,5 +1,3 @@
-import type { ElementType } from "react";
-
 import {
   IconBrandFacebook,
   IconBrandInstagram,
@@ -11,6 +9,7 @@ import {
   IconPhoneCall,
 } from "@tabler/icons-react";
 import { Building2 } from "lucide-react";
+import type { ElementType } from "react";
 
 import {
   IconClogSpin,
@@ -66,6 +65,29 @@ export const WHO_WE_ARE = [
   },
 ];
 
+export const CATEGORIES = [
+  {
+    id: 1,
+    title: "Engine Additives",
+    href: "/products?category=engine-additives",
+  },
+  {
+    id: 2,
+    title: "Lubrication",
+    href: "/products?category=lubrication",
+  },
+  {
+    id: 3,
+    title: "Fuel System",
+    href: "/products?category=fuel-system",
+  },
+  {
+    id: 4,
+    title: "Industrial Application",
+    href: "/products?category=industrial",
+  },
+];
+
 export const FOOTER = [
   {
     id: 1,
@@ -82,28 +104,7 @@ export const FOOTER = [
   {
     id: 2,
     heading: "Products",
-    items: [
-      {
-        id: 1,
-        title: "Engine Additives",
-        href: "/products?category=engine-additives",
-      },
-      {
-        id: 2,
-        title: "Lubrication",
-        href: "/products?category=lubrication",
-      },
-      {
-        id: 3,
-        title: "Fuel System",
-        href: "/products?category=fuel-system",
-      },
-      {
-        id: 4,
-        title: "Industrial Application",
-        href: "/products?category=industrial",
-      },
-    ],
+    items: CATEGORIES,
   },
   {
     id: 3,
@@ -117,8 +118,8 @@ export const FOOTER = [
       },
       {
         id: 2,
-        title: "info@100-power.com",
-        href: "mailto:info@100-power.com",
+        title: "info@100poweruae.com",
+        href: "mailto:info@100poweruae.com",
       },
       {
         id: 3,

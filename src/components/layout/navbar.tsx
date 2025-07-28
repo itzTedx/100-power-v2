@@ -1,9 +1,8 @@
-import Link from "next/link";
+import { IconArrowUpRight } from '@tabler/icons-react'
+import { ArrowUpRight, Menu } from 'lucide-react'
+import Link from 'next/link'
 
-import { IconArrowUpRight } from "@tabler/icons-react";
-import { ArrowUpRight, Menu } from "lucide-react";
-
-import { Logo } from "@/assets/logo";
+import { Logo } from '@/assets/logo'
 import {
   Sheet,
   SheetContent,
@@ -11,11 +10,10 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
-import { NAV_LINKS } from "@/data/constants";
-import { PRODUCTS } from "@/data/products";
+} from '@/components/ui/sheet'
+import { CATEGORIES, NAV_LINKS } from '@/data/constants'
 
-import { Button } from "../ui/button";
+import { Button } from '../ui/button'
 
 export const Navbar = () => {
   return (
@@ -77,10 +75,10 @@ export const Navbar = () => {
                       </Link>
                     </li>
                   ))}
-                  <li className="ml-5 border-l pl-2">
+                  <li className="ml-5 border-l p  l-2">
                     <ul className="space-y-2">
-                      {PRODUCTS.map((prod) => (
-                        <li key={prod.id}>
+                      {CATEGORIES.map((prod, i) => (
+                        <li key={i}>
                           <Link
                             href={prod.href}
                             className="hover:text-primary-foreground hover:bg-accent inline-flex w-full items-center justify-between rounded-sm py-2 pr-3 pl-2 tracking-tight transition-colors"
@@ -108,5 +106,5 @@ export const Navbar = () => {
         </div>
       </nav>
     </header>
-  );
-};
+  )
+}
