@@ -3009,7 +3009,7 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
       "Supports High-Load and High-Mileage Operation",
       "Helps Prevent Wear in Heavily Used Engines",
     ],
-    quantity: ["1 L", "4 L", "5 L", "208 L"],
+    quantity: ["1 L", "4 L", "20 L", "208 L"],
     advantages: [
       {
         title: "Heavy-Duty Wear Resistance",
