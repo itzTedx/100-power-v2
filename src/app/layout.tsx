@@ -9,6 +9,7 @@ import { Cta } from '@/components/sections/cta'
 import { cn } from '@/lib/utils'
 
 import './globals.css'
+import Providers from '@/components/providers'
 import { Toaster } from '@/components/ui/sonner'
 
 const geistSans = Geist({
@@ -66,13 +67,15 @@ export default function RootLayout({
           helvetica.variable
         )}
       >
-        <NuqsAdapter>
-          <Navbar />
-          {children}
-          <Cta />
-          <Footer />
-          <Toaster richColors />
-        </NuqsAdapter>
+        <Providers>
+          <NuqsAdapter>
+            <Navbar />
+            {children}
+            <Cta />
+            <Footer />
+            <Toaster richColors />
+          </NuqsAdapter>
+        </Providers>
       </body>
     </html>
   )

@@ -10,6 +10,7 @@
     "format": "biome format --write ."
   },
   "dependencies": {
+    "@bprogress/next": "^3.2.12",
     "@hookform/resolvers": "^5.2.0",
     "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-label": "^2.1.7",

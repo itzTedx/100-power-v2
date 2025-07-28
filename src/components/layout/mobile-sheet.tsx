@@ -56,7 +56,7 @@ export const MobileSheet = () => {
                 </Link>
               </li>
             ))}
-            <li className="ml-5 border-l p  l-2">
+            <li className="ml-5 border-l pl-2">
               <ul className="space-y-2">
                 {CATEGORIES.map((prod, i) => (
                   <li key={i} onClick={() => setIsOpen(false)}>
