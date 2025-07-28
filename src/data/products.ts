@@ -2065,4 +2065,138 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
       },
     ],
   },
+  {
+    range: "Regular",
+    title: "Power 0W20",
+    type: "engine-additives",
+    images: ["/images/products/regular/0w20-regular.jpg"],
+    href: "power-0w20-regular",
+    overview: `POWER 0W20 is a high-performance, multi-purpose lubricant designed for heavy-duty industrial, automotive, and construction applications. Formulated with lithium complex thickener, premium base oils, and extreme pressure (EP) additives, it delivers superior protection under high load, high temperature, and harsh environmental conditions.
+
+    Ideal for bearings, chassis points, and other critical components, POWER EP-2 offers outstanding water resistance, oxidation stability, and mechanical shear stability—ensuring extended service life and reduced maintenance downtime in even the most demanding operations.`,
+    benefits: [
+      "Exceptional Load-Carrying Capacity and EP Protection",
+      "Withstands High Temperatures Without Melting or Breaking Down",
+      "Excellent Water Resistance for Wet and Humid Environments",
+      "Protects Against Rust, Corrosion, and Oxidation",
+      "Outstanding Mechanical Stability Under Vibration and Shock",
+      "Reduces Wear and Extends Equipment Life",
+      "Suitable for High-Speed and Heavy-Duty Applications",
+      "Long Service Intervals and Reduced Re-Greasing Frequency",
+    ],
+    quantity: ["500 G", "1 KG", "16 KG", "208 KG"],
+    advantages: [
+      {
+        title: "Superior Wear Protection",
+        description:
+          "Forms a micro-layer on engine components to reduce friction and metal contact, providing lasting protection during cold starts and high-stress driving.",
+      },
+      {
+        title: "Enhanced Engine Efficiency",
+        description:
+          "Reduces internal drag for improved fuel economy, smoother acceleration, and optimal power delivery.",
+      },
+      {
+        title: "Prolonged Engine Life",
+        description:
+          "Minimizes wear and maintains component integrity, extending the lifespan of the engine even under demanding conditions.",
+      },
+      {
+        title: "Exceptional Cleanliness",
+        description:
+          "Advanced detergents break down sludge and deposits, keeping the engine clean and performing at its best.",
+      },
+      {
+        title: "Cooler Operating Temperatures",
+        description:
+          "Reduces friction-generated heat, helping the engine run cooler and preventing thermal breakdown.",
+      },
+      {
+        title: "Reliable Cold Start Protection",
+        description:
+          "Instant lubrication at startup ensures critical parts are protected during the most vulnerable moments.",
+      },
+      {
+        title: "Lower Emissions",
+        description:
+          "Cleaner combustion and reduced sludge formation help minimize exhaust emissions for a more eco-friendly drive.",
+      },
+      {
+        title: "Water Contamination Resistance",
+        description:
+          "Protects the engine against performance loss caused by water ingress or condensation in the oil.",
+      },
+    ],
+
+    usages: [
+      {
+        title: "Passenger Cars & SUVs",
+        description:
+          "Enhances fuel efficiency, performance, and engine longevity in daily-use vehicles.",
+      },
+      {
+        title: "Commercial Vehicles & Trucks",
+        description:
+          "Withstands high-load operations and supports longer oil drain intervals for better uptime.",
+      },
+      {
+        title: "Motorcycles & Scooters",
+        description:
+          "Reduces friction and noise while improving responsiveness in smaller engines.",
+      },
+      {
+        title: "Heavy Machinery & Equipment",
+        description:
+          "Ensures durability and performance under extreme heat and pressure in construction and industrial settings.",
+      },
+      {
+        title: "High-Performance & Racing Vehicles",
+        description:
+          "Delivers stable lubrication and power output at high RPMs and elevated temperatures.",
+      },
+      {
+        title: "Extreme Weather Conditions",
+        description:
+          "Maintains optimal viscosity and protection in both hot and cold environments.",
+      },
+    ],
+
+    direction: [
+      {
+        title: "Check Compatibility",
+        description:
+          "Refer to your vehicle's manual to ensure Power 5W30 API SP meets the recommended specifications.",
+      },
+      {
+        title: "Drain Old Oil",
+        description:
+          "Completely remove the old engine oil to prevent contamination and maintain optimal performance.",
+      },
+      {
+        title: "Replace Oil Filter",
+        description:
+          "Always install a new oil filter before adding fresh oil for best results.",
+      },
+      {
+        title: "Add Power Oil",
+        description:
+          "Pour the recommended quantity of Power 5W30 into the engine through the filler cap.",
+      },
+      {
+        title: "Check Oil Level",
+        description:
+          "Use the dipstick to verify oil level and adjust as necessary before starting the engine.",
+      },
+      {
+        title: "Run & Inspect",
+        description:
+          "Start the engine and let it idle briefly to circulate the oil, then check for leaks.",
+      },
+      {
+        title: "Monitor Regularly",
+        description:
+          "Check oil levels periodically and top up if needed. Follow scheduled oil change intervals for extended engine life.",
+      },
+    ],
+  },
 ];
