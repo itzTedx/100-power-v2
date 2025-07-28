@@ -39,7 +39,7 @@ export const PRODUCTS: ProductType[] = [
       "Extended Component Lifespan & Lower Maintenance Costs",
       "Protection Against Water Contamination in Engine Oil",
     ],
-    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
+    quantity: ["1 L", "4 L", "5 L", "208 L"],
     advantages: [
       {
         title: "Superior Wear Protection",
@@ -170,7 +170,7 @@ export const PRODUCTS: ProductType[] = [
       "Extended Component Lifespan & Lower Maintenance Costs",
       "Protection Against Water Contamination in Engine Oil",
     ],
-    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
+    quantity: ["1 L", "4 L", "5 L", "208 L"],
     advantages: [
       {
         title: "Advanced Friction Reduction",
@@ -267,7 +267,7 @@ export const PRODUCTS: ProductType[] = [
       "Extended Component Lifespan & Lower Maintenance Costs",
       "Protection Against Water Contamination in Engine Oil",
     ],
-    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
+    quantity: ["1 L", "4 L", "5 L", "208 L"],
     advantages: [
       {
         title: "Superior Wear Protection",
@@ -399,7 +399,7 @@ export const PRODUCTS: ProductType[] = [
       "Extended Component Lifespan & Lower Maintenance Costs",
       "Protection Against Water Contamination in Engine Oil",
     ],
-    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
+    quantity: ["1 L", "4 L", "5 L", "208 L"],
     advantages: [
       {
         title: "Superior Wear Protection",
@@ -531,7 +531,7 @@ export const PRODUCTS: ProductType[] = [
       "Extended Component Lifespan & Lower Maintenance Costs",
       "Protection Against Water Contamination in Engine Oil",
     ],
-    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
+    quantity: ["1 L", "4 L", "5 L", "208 L"],
     advantages: [
       {
         title: "Superior Wear Protection",
@@ -663,7 +663,7 @@ export const PRODUCTS: ProductType[] = [
       "Reduces Friction, Enhancing Drivetrain Efficiency",
       "Prevents Rust, Corrosion & Wear in Critical Components",
     ],
-    quantity: ["1 Litre", "4 Litre"],
+    quantity: ["1 L", "4 L"],
     advantages: [
       {
         title: "Extreme Pressure Protection",
@@ -765,7 +765,7 @@ export const PRODUCTS: ProductType[] = [
       "Maintains Viscosity Stability Across Temperature Swings",
       "Extended Gear Life & Reduced Maintenance Costs",
     ],
-    quantity: ["1 Litre", "4 Litre"],
+    quantity: ["1 L", "4 L"],
     advantages: [
       {
         title: "Extreme Pressure Protection",
@@ -867,7 +867,7 @@ export const PRODUCTS: ProductType[] = [
       "Maintains Viscosity Stability Across Temperature Swings",
       "Extended Gear Life & Reduced Maintenance Costs",
     ],
-    quantity: ["1 Litre", "4 Litres", "5 Litres", "208 Litres"],
+    quantity: ["1 L", "4 L", "5 L", "208 L"],
     advantages: [
       {
         title: "Ultimate Fuel Economy",
@@ -969,7 +969,7 @@ export const PRODUCTS: ProductType[] = [
       "Maintains Viscosity Stability Across Temperature Swings",
       "Extended Gear Life & Reduced Maintenance Costs",
     ],
-    quantity: ["1 Litre", "4 Litres", "5 Litres", "208 Litres"],
+    quantity: ["1 L", "4 L", "5 L", "208 L"],
     advantages: [
       {
         title: "Ultimate Fuel Economy",
@@ -1071,7 +1071,7 @@ export const PRODUCTS: ProductType[] = [
       "Maintains Viscosity Stability Across Temperature Swings",
       "Extended Gear Life & Reduced Maintenance Costs",
     ],
-    quantity: ["1 Litre", "4 Litres", "20 Litres", "208 Litres"],
+    quantity: ["1 L", "4 L", "20 L", "208 L"],
     advantages: [
       {
         title: "Balanced Viscosity for All Conditions",
@@ -1282,7 +1282,7 @@ export const PRODUCTS: ProductType[] = [
       "Keeps mechanisms clean and free from deposits",
       "20x more effective than conventional lubricants",
     ],
-    quantity: ["300 ML", "1 L", "5 L", "16 Litre", "208 Litre"],
+    quantity: ["300 ML", "1 L", "5 L", "16 L", "208 L"],
     advantages: [
       {
         title: "Breaks Rust Instantly",
@@ -1499,7 +1499,7 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
       "Extended Oil Drain Intervals and Lower Maintenance Costs",
       "Strong Resistance to Water Contamination in Hydraulic Systems",
     ],
-    quantity: ["1 Litre", "5 Litres", "20 Litres", "208 Litres"],
+    quantity: ["1 L", "5 L", "20 L", "208 L"],
     advantages: [
       {
         title: "Superior Wear Protection",
@@ -1624,7 +1624,7 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
       "Compatible with a Wide Range of Automatic Transmissions and Power Steering Systems",
       "Resists Foaming and Fluid Breakdown Under High Stress",
     ],
-    quantity: ["1 Litre", "4 Litre"],
+    quantity: ["1 L", "4 L"],
     advantages: [
       {
         title: "Enhanced Wear Protection",
@@ -1733,7 +1733,7 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
       "Compatible with a Wide Range of Automatic Transmissions and Power Steering Systems",
       "Resists Foaming and Fluid Breakdown Under High Stress",
     ],
-    quantity: ["1 Litre", "4 Litre"],
+    quantity: ["1 L", "4 L"],
     advantages: [
       {
         title: "Enhanced Wear Protection",
@@ -1841,7 +1841,7 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
       "Extended Fluid Life and Longer Drain Intervals",
       "Fully Compatible with Toyota WS and Equivalent ATF Systems",
     ],
-    quantity: ["1 Litre", "4 Litre"],
+    quantity: ["1 L", "4 L"],
     advantages: [
       {
         title: "Fuel-Efficient Low Viscosity Formula",
@@ -3744,7 +3744,7 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
       "Ensures smooth and efficient hydraulic system performance",
       "Compatible with a wide range of hydraulic pumps and components",
     ],
-    quantity: ["1 Litre", "5 Litres", "20 Litres", "208 Litres"],
+    quantity: ["1 L", "5 L", "20 L", "208 L"],
     advantages: [
       {
         title: "Anti-Wear Protection",
