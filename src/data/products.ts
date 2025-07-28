@@ -120,7 +120,7 @@ export const PRODUCTS: ProductType[] = [
       {
         title: "Check Compatibility",
         description:
-          "Refer to your vehicle's manual to ensure X Power 5W30 API SP meets the recommended specifications.",
+          "Refer to your vehicle's manual to ensure Power 5W30 API SP meets the recommended specifications.",
       },
       {
         title: "Drain Old Oil",
@@ -133,9 +133,9 @@ export const PRODUCTS: ProductType[] = [
           "Always install a new oil filter before adding fresh oil for best results.",
       },
       {
-        title: "Add X Power Oil",
+        title: "Add Power Oil",
         description:
-          "Pour the recommended quantity of X Power 5W30 into the engine through the filler cap.",
+          "Pour the recommended quantity of Power 5W30 into the engine through the filler cap.",
       },
       {
         title: "Check Oil Level",
@@ -348,7 +348,7 @@ export const PRODUCTS: ProductType[] = [
       {
         title: "Check Compatibility",
         description:
-          "Refer to your vehicle's manual to ensure X Power 5W30 API SP meets the recommended specifications.",
+          "Refer to your vehicle's manual to ensure Power 5W30 API SP meets the recommended specifications.",
       },
       {
         title: "Drain Old Oil",
@@ -361,9 +361,9 @@ export const PRODUCTS: ProductType[] = [
           "Always install a new oil filter before adding fresh oil for best results.",
       },
       {
-        title: "Add X Power Oil",
+        title: "Add Power Oil",
         description:
-          "Pour the recommended quantity of X Power 5W30 into the engine through the filler cap.",
+          "Pour the recommended quantity of Power 5W30 into the engine through the filler cap.",
       },
       {
         title: "Check Oil Level",
@@ -480,7 +480,7 @@ export const PRODUCTS: ProductType[] = [
       {
         title: "Check Compatibility",
         description:
-          "Refer to your vehicle's manual to ensure X Power 5W30 API SP meets the recommended specifications.",
+          "Refer to your vehicle's manual to ensure Power 5W30 API SP meets the recommended specifications.",
       },
       {
         title: "Drain Old Oil",
@@ -493,9 +493,9 @@ export const PRODUCTS: ProductType[] = [
           "Always install a new oil filter before adding fresh oil for best results.",
       },
       {
-        title: "Add X Power Oil",
+        title: "Add Power Oil",
         description:
-          "Pour the recommended quantity of X Power 5W30 into the engine through the filler cap.",
+          "Pour the recommended quantity of Power 5W30 into the engine through the filler cap.",
       },
       {
         title: "Check Oil Level",
@@ -612,7 +612,7 @@ export const PRODUCTS: ProductType[] = [
       {
         title: "Check Compatibility",
         description:
-          "Refer to your vehicle's manual to ensure X Power 5W30 API SP meets the recommended specifications.",
+          "Refer to your vehicle's manual to ensure Power 5W30 API SP meets the recommended specifications.",
       },
       {
         title: "Drain Old Oil",
@@ -625,9 +625,9 @@ export const PRODUCTS: ProductType[] = [
           "Always install a new oil filter before adding fresh oil for best results.",
       },
       {
-        title: "Add X Power Oil",
+        title: "Add Power Oil",
         description:
-          "Pour the recommended quantity of X Power 5W30 into the engine through the filler cap.",
+          "Pour the recommended quantity of Power 5W30 into the engine through the filler cap.",
       },
       {
         title: "Check Oil Level",
@@ -2031,7 +2031,7 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
       {
         title: "Check Compatibility",
         description:
-          "Refer to your vehicle's manual to ensure X Power 5W30 API SP meets the recommended specifications.",
+          "Refer to your vehicle's manual to ensure Power 5W30 API SP meets the recommended specifications.",
       },
       {
         title: "Drain Old Oil",
@@ -2044,9 +2044,9 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
           "Always install a new oil filter before adding fresh oil for best results.",
       },
       {
-        title: "Add X Power Oil",
+        title: "Add Power Oil",
         description:
-          "Pour the recommended quantity of X Power 5W30 into the engine through the filler cap.",
+          "Pour the recommended quantity of Power 5W30 into the engine through the filler cap.",
       },
       {
         title: "Check Oil Level",

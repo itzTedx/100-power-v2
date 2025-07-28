@@ -1,4 +1,4 @@
-name: Format code
+name: Check code
 
 on:
   pull_request:
@@ -6,6 +6,25 @@ on:
       - master
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    container:
+      image: node:20
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 10.12.4 # or your preferred pnpm version
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run lint
+        run: pnpm lint
   format:
     runs-on: ubuntu-latest
     container:
@@ -23,5 +42,5 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Run formatter
+      - name: Run lint
         run: pnpm format

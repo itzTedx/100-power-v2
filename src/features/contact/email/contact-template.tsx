@@ -119,8 +119,7 @@ export default function ContactFormSubmission(props: Props) {
               </Link>
             </Text>
             <Text style={footerText}>
-              ©{new Date().getFullYear()} Hundred Power LLC, All rights
-              reserved
+              ©{new Date().getFullYear()} Hundred Power LLC, All rights reserved
             </Text>
           </Section>
         </Container>
