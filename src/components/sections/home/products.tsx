@@ -80,11 +80,11 @@ export const Products = () => {
         </ScrollArea>
         <TabsContent value="engine-additives">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {PRODUCTS.filter((p) => p.type === 'engine-additives')?.map(
-              (product, id) => (
+            {PRODUCTS.filter((p) => p.type === 'engine-additives')
+              ?.slice(0, 9)
+              .map((product, id) => (
                 <ProductCard data={product} key={id} />
-              )
-            )}
+              ))}
           </div>
         </TabsContent>
         <TabsContent value="lubrication">
@@ -115,6 +115,11 @@ export const Products = () => {
             )}
           </div>
         </TabsContent>
+        <div className="w-fit mx-auto mt-4">
+          <Button variant="secondary">
+            <Link href="/products">Load More</Link>
+          </Button>
+        </div>
       </Tabs>
     </section>
   )
