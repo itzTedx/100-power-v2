@@ -188,12 +188,7 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
               >
                 Usages
               </TabsTrigger>
-              {/* <TabsTrigger
-                value="application"
-                className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
-              >
-                Application
-              </TabsTrigger> */}
+             
             </TabsList>
             <TabsContent value="core">
               <ul className="ml-5 list-disc space-y-3">
@@ -219,14 +214,7 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
                 ))}
               </ul>
             </TabsContent>
-            {/* <TabsContent value="application">
-              <div className="grid gap-4">
-                Superior Wear ProtectionForms a micro-layer on engine parts to
-                reduce friction and metal-to-metal contact, extending life and
-                ensuring smoother operation—especially in cold starts and
-                high-load scenarios.
-              </div>
-            </TabsContent> */}
+            
           </Tabs>
           <Tabs
             defaultValue="directions"

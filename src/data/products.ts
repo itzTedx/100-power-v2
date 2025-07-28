@@ -39,7 +39,7 @@ export const PRODUCTS: ProductType[] = [
       "Extended Component Lifespan & Lower Maintenance Costs",
       "Protection Against Water Contamination in Engine Oil",
     ],
-    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
+    quantity: ["1 L", "4 L", "5 L", "208 L"],
     advantages: [
       {
         title: "Superior Wear Protection",
@@ -170,7 +170,7 @@ export const PRODUCTS: ProductType[] = [
       "Extended Component Lifespan & Lower Maintenance Costs",
       "Protection Against Water Contamination in Engine Oil",
     ],
-    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
+    quantity: ["1 L", "4 L", "5 L", "208 L"],
     advantages: [
       {
         title: "Advanced Friction Reduction",
@@ -267,7 +267,7 @@ export const PRODUCTS: ProductType[] = [
       "Extended Component Lifespan & Lower Maintenance Costs",
       "Protection Against Water Contamination in Engine Oil",
     ],
-    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
+    quantity: ["1 L", "4 L", "5 L", "208 L"],
     advantages: [
       {
         title: "Superior Wear Protection",
@@ -399,7 +399,7 @@ export const PRODUCTS: ProductType[] = [
       "Extended Component Lifespan & Lower Maintenance Costs",
       "Protection Against Water Contamination in Engine Oil",
     ],
-    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
+    quantity: ["1 L", "4 L", "5 L", "208 L"],
     advantages: [
       {
         title: "Superior Wear Protection",
@@ -531,7 +531,7 @@ export const PRODUCTS: ProductType[] = [
       "Extended Component Lifespan & Lower Maintenance Costs",
       "Protection Against Water Contamination in Engine Oil",
     ],
-    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
+    quantity: ["1 L", "4 L", "5 L", "208 L"],
     advantages: [
       {
         title: "Superior Wear Protection",
@@ -663,7 +663,7 @@ export const PRODUCTS: ProductType[] = [
       "Reduces Friction, Enhancing Drivetrain Efficiency",
       "Prevents Rust, Corrosion & Wear in Critical Components",
     ],
-    quantity: ["1 Litre", "4 Litre"],
+    quantity: ["1 L", "4 L"],
     advantages: [
       {
         title: "Extreme Pressure Protection",
@@ -765,7 +765,7 @@ export const PRODUCTS: ProductType[] = [
       "Maintains Viscosity Stability Across Temperature Swings",
       "Extended Gear Life & Reduced Maintenance Costs",
     ],
-    quantity: ["1 Litre", "4 Litre"],
+    quantity: ["1 L", "4 L"],
     advantages: [
       {
         title: "Extreme Pressure Protection",
@@ -867,7 +867,7 @@ export const PRODUCTS: ProductType[] = [
       "Maintains Viscosity Stability Across Temperature Swings",
       "Extended Gear Life & Reduced Maintenance Costs",
     ],
-    quantity: ["1 Litre", "4 Litres", "5 Litres", "208 Litres"],
+    quantity: ["1 L", "4 L", "5 L", "208 L"],
     advantages: [
       {
         title: "Ultimate Fuel Economy",
@@ -969,7 +969,7 @@ export const PRODUCTS: ProductType[] = [
       "Maintains Viscosity Stability Across Temperature Swings",
       "Extended Gear Life & Reduced Maintenance Costs",
     ],
-    quantity: ["1 Litre", "4 Litres", "5 Litres", "208 Litres"],
+    quantity: ["1 L", "4 L", "5 L", "208 L"],
     advantages: [
       {
         title: "Ultimate Fuel Economy",
@@ -1071,7 +1071,7 @@ export const PRODUCTS: ProductType[] = [
       "Maintains Viscosity Stability Across Temperature Swings",
       "Extended Gear Life & Reduced Maintenance Costs",
     ],
-    quantity: ["1 Litre", "4 Litres", "5 Litres", "208 Litres"],
+    quantity: ["1 L", "4 L", "20 L", "208 L"],
     advantages: [
       {
         title: "Balanced Viscosity for All Conditions",
@@ -1176,7 +1176,7 @@ export const PRODUCTS: ProductType[] = [
       "Extends the life of stored fuel",
       "Maintains effectiveness for up to 1000–1200 km per application",
     ],
-    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
+    quantity: ["350 ML", "1 L", "5 L", "20 L", "208 L"],
     advantages: [
       {
         title: "Improves Fuel Efficiency",
@@ -1268,7 +1268,7 @@ export const PRODUCTS: ProductType[] = [
     type: "lubrication",
     images: ["/images/products/power-10.jpg"],
     href: "power-10",
-    overview: `Power-10 is a high-performance maintenance lubricant spray, engineered with nano-penetrating technology and powered by Tirrent Booster. It penetrates deep to eliminate rust, corrosion, and friction at the micro level—making it up to 20 times stronger than traditional sprays. Ideal for both industrial and household use, Power-10 dramatically extends the life and reliability of metal parts, tools, and electrical components—even in extreme conditions.`,
+    overview: `Power-10 is a high-performance maintenance lubricant spray, engineered with nano-penetrating technology and powered by Power Booster. It penetrates deep to eliminate rust, corrosion, and friction at the micro level—making it up to 20 times stronger than traditional sprays. Ideal for both industrial and household use, Power-10 dramatically extends the life and reliability of metal parts, tools, and electrical components—even in extreme conditions.`,
     benefits: [
       "Fast & Deep Penetration into metal surfaces",
       "Breaks down rust and corrosion efficiently",
@@ -1282,7 +1282,7 @@ export const PRODUCTS: ProductType[] = [
       "Keeps mechanisms clean and free from deposits",
       "20x more effective than conventional lubricants",
     ],
-    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
+    quantity: ["300 ML", "1 L", "5 L", "16 L", "208 L"],
     advantages: [
       {
         title: "Breaks Rust Instantly",
@@ -1362,7 +1362,7 @@ export const PRODUCTS: ProductType[] = [
     type: "lubrication",
     images: ["/images/products/power-10.jpg"],
     href: "power-booster",
-    overview: `POWER Booster is a cutting-edge engine oil additive designed to enhance engine efficiency, dramatically reduce metal wear, and extend engine life. Utilizing advanced Tirrent NanoParticle Technology, it forms a friction-reducing protective layer on metal surfaces—lowering heat, noise, and emissions while improving fuel combustion.
+    overview: `POWER Booster is a cutting-edge engine oil additive designed to enhance engine efficiency, dramatically reduce metal wear, and extend engine life. Utilizing advanced Power NanoParticle Technology, it forms a friction-reducing protective layer on metal surfaces—lowering heat, noise, and emissions while improving fuel combustion.
 
 Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combines nano-lubrication with a micro-metallurgical process that creates a new, hardened metal layer up to 15 times more wear-resistant than the original. This innovative technology ensures exceptional durability and superior performance across a wide range of industries.`,
     benefits: [
@@ -1374,7 +1374,7 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
       "Protects Engine During Oil or Coolant Loss",
       "Increases Service Intervals up to 3 Times",
     ],
-    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
+    quantity: ["350 ML", "1 L", "5 L", "16 L", "208 L"],
     advantages: [
       {
         title: "Micro-Metallic Surface Protection",
@@ -1499,7 +1499,7 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
       "Extended Oil Drain Intervals and Lower Maintenance Costs",
       "Strong Resistance to Water Contamination in Hydraulic Systems",
     ],
-    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
+    quantity: ["1 L", "5 L", "20 L", "208 L"],
     advantages: [
       {
         title: "Superior Wear Protection",
@@ -1624,7 +1624,7 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
       "Compatible with a Wide Range of Automatic Transmissions and Power Steering Systems",
       "Resists Foaming and Fluid Breakdown Under High Stress",
     ],
-    quantity: ["1 Litre", "4 Litre"],
+    quantity: ["1 L", "4 L"],
     advantages: [
       {
         title: "Enhanced Wear Protection",
@@ -1733,7 +1733,7 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
       "Compatible with a Wide Range of Automatic Transmissions and Power Steering Systems",
       "Resists Foaming and Fluid Breakdown Under High Stress",
     ],
-    quantity: ["1 Litre", "4 Litre"],
+    quantity: ["1 L", "4 L"],
     advantages: [
       {
         title: "Enhanced Wear Protection",
@@ -1841,7 +1841,7 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
       "Extended Fluid Life and Longer Drain Intervals",
       "Fully Compatible with Toyota WS and Equivalent ATF Systems",
     ],
-    quantity: ["1 Litre", "4 Litre"],
+    quantity: ["1 L", "4 L"],
     advantages: [
       {
         title: "Fuel-Efficient Low Viscosity Formula",
@@ -2029,39 +2029,1806 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
 
     direction: [
       {
+        title: "Select Proper Equipment",
+        description:
+          "Use a clean grease gun or lubrication fitting compatible with the application point.",
+      },
+      {
+        title: "Clean Application Area",
+        description:
+          "Remove old grease and clean the fitting or bearing housing to prevent contamination.",
+      },
+      {
+        title: "Apply Grease",
+        description:
+          "Pump grease slowly until clean grease appears or reaches specified quantity per manufacturer guidelines.",
+      },
+      {
+        title: "Distribute Evenly",
+        description:
+          "Operate equipment briefly to distribute grease evenly across bearing surfaces.",
+      },
+      {
+        title: "Wipe Excess",
+        description:
+          "Remove excess grease from fittings to prevent dirt accumulation and contamination.",
+      },
+      {
+        title: "Monitor Performance",
+        description:
+          "Check for proper lubrication and re-grease according to maintenance schedule.",
+      },
+      {
+        title: "Follow Service Intervals",
+        description:
+          "Adhere to manufacturer's greasing intervals based on operating conditions and equipment usage.",
+      },
+    ],
+  },
+  {
+    range: "Regular",
+    title: "Power 0W20",
+    type: "engine-additives",
+    images: ["/images/products/regular/0w20-regular.jpg"],
+    href: "power-0w20-regular",
+    overview: `Power 0W20 is a reliable engine oil engineered to deliver consistent performance for daily drivers. Developed to meet SP standards, this lubricant ensures smoother cold starts, steady protection against wear, and improved cleanliness for petrol engines in routine operating conditions.
+  
+  With optimized thermal stability and enhanced detergents, it helps maintain engine efficiency, reduces buildup of deposits, and provides dependable lubrication across varying temperatures. Ideal for city commutes, light-duty vehicles, and standard driving cycles.`,
+    benefits: [
+      "Reliable Cold Start Performance",
+      "Improved Fuel Efficiency for Daily Use",
+      "Reduces Friction and Enhances Engine Smoothness",
+      "Protects Against Sludge and Varnish Formation",
+      "Keeps Engine Clean for Optimal Performance",
+      "Helps Minimize Exhaust Emissions",
+      "Steady Lubrication in Normal Driving Conditions",
+      "Supports Extended Oil Drain Intervals with Regular Use",
+    ],
+    quantity: ["1 L", "4 L", "5 L", "20 L", "208 L"],
+    advantages: [
+      {
+        title: "Superior Wear Protection",
+        description:
+          "Forms a protective micro-layer that reduces metal-to-metal contact during daily use, helping extend engine life and reduce maintenance.",
+      },
+      {
+        title: "Enhanced Engine Efficiency",
+        description:
+          "Minimizes internal friction for smoother acceleration and consistent fuel economy during regular driving.",
+      },
+      {
+        title: "Prolonged Engine Life",
+        description:
+          "Offers stable lubrication and protection across standard operating conditions, ensuring your engine lasts longer.",
+      },
+      {
+        title: "Exceptional Cleanliness",
+        description:
+          "Helps prevent sludge and carbon buildup with effective detergent additives that keep the engine cleaner.",
+      },
+      {
+        title: "Cooler Operation",
+        description:
+          "Reduces internal friction to lower engine temperature and prevent premature breakdown of oil.",
+      },
+      {
+        title: "Reliable Cold Start Protection",
+        description:
+          "Ensures quick oil circulation at startup, reducing engine wear in the most vulnerable phase.",
+      },
+      {
+        title: "Lower Emissions",
+        description:
+          "Cleaner burn and fewer residues help reduce harmful exhaust emissions.",
+      },
+      {
+        title: "Water Contamination Resistance",
+        description:
+          "Helps protect against the effects of moisture and condensation buildup inside the engine.",
+      },
+    ],
+    usages: [
+      {
+        title: "Passenger Cars & SUVs",
+        description:
+          "Ideal for everyday driving, supporting clean engine operation and fuel savings.",
+      },
+      {
+        title: "Commercial Vehicles & Trucks",
+        description:
+          "Delivers stable performance for light-duty commercial use and urban logistics fleets.",
+      },
+      {
+        title: "Motorcycles & Scooters",
+        description:
+          "Provides smooth operation and reduced engine noise in compact two-wheeler engines.",
+      },
+      {
+        title: "Heavy Machinery & Equipment",
+        description:
+          "Suitable for general-purpose machinery operating under moderate load conditions.",
+      },
+      {
+        title: "High-Performance & Racing Vehicles",
+        description:
+          "While designed for regular use, it offers dependable lubrication in warm-up and normal speed ranges.",
+      },
+      {
+        title: "Extreme Weather Conditions",
+        description:
+          "Maintains performance across temperature fluctuations common in daily driving environments.",
+      },
+    ],
+    direction: [
+      {
         title: "Check Compatibility",
         description:
-          "Refer to your vehicle's manual to ensure Power 5W30 API SP meets the recommended specifications.",
+          "Refer to your vehicle's manual to confirm Power 0W20 meets the required specifications.",
       },
       {
         title: "Drain Old Oil",
         description:
-          "Completely remove the old engine oil to prevent contamination and maintain optimal performance.",
+          "Fully remove the used oil to prevent contamination and maximize new oil performance.",
       },
       {
         title: "Replace Oil Filter",
         description:
-          "Always install a new oil filter before adding fresh oil for best results.",
+          "Install a new oil filter to maintain engine cleanliness and protection.",
       },
       {
         title: "Add Power Oil",
         description:
-          "Pour the recommended quantity of Power 5W30 into the engine through the filler cap.",
+          "Pour the appropriate amount of Power 0W20 into the engine following your vehicle's oil capacity guidelines.",
       },
       {
         title: "Check Oil Level",
         description:
-          "Use the dipstick to verify oil level and adjust as necessary before starting the engine.",
+          "Use the dipstick to verify correct oil level after filling, and adjust if needed.",
       },
       {
         title: "Run & Inspect",
         description:
-          "Start the engine and let it idle briefly to circulate the oil, then check for leaks.",
+          "Start the engine and allow it to idle to circulate the oil. Inspect for leaks before driving.",
       },
       {
         title: "Monitor Regularly",
         description:
-          "Check oil levels periodically and top up if needed. Follow scheduled oil change intervals for extended engine life.",
+          "Regularly check oil levels and follow recommended oil change intervals to ensure consistent performance.",
+      },
+    ],
+  },
+  {
+    range: "Regular",
+    title: "Power 0W30",
+    type: "engine-additives",
+    images: ["/images/products/regular/0w30-regular.jpg"],
+    href: "power-0w30-regular",
+    overview: `Power 0W30 is a reliable synthetic engine oil formulated for consistent protection and performance in everyday driving. Designed for modern petrol engines, it ensures efficient cold starts, stable thermal performance, and reduced wear under normal driving loads.
+  
+  Built with detergent additives and smooth-flow technology, Power 0W30 helps maintain engine cleanliness and fuel economy, making it an ideal choice for drivers seeking affordable and effective lubrication for regular urban and highway use.`,
+    benefits: [
+      "Smooth and Quick Cold Start Lubrication",
+      "Efficient Performance in Daily City and Highway Driving",
+      "Improves Fuel Economy Under Normal Conditions",
+      "Protects Engine Against Sludge, Varnish, and Deposits",
+      "Maintains Engine Cleanliness Over Time",
+      "Reduces Friction and Minimizes Component Wear",
+      "Stable Viscosity for Year-Round Use",
+      "Extended Oil Drain Intervals for Standard Vehicles",
+    ],
+    quantity: ["1 L", "4 L", "5 L", "20 L", "208 L"],
+    advantages: [
+      {
+        title: "Reliable Wear Protection",
+        description:
+          "Provides a protective layer that minimizes friction between engine parts, reducing long-term wear during normal driving conditions.",
+      },
+      {
+        title: "Fuel Efficiency Boost",
+        description:
+          "Helps lower internal resistance, improving fuel economy and enabling smoother performance over time.",
+      },
+      {
+        title: "Longer Engine Life",
+        description:
+          "Keeps internal parts protected and free from buildup, contributing to longer operational lifespan.",
+      },
+      {
+        title: "Clean Engine Technology",
+        description:
+          "Special detergents help reduce carbon buildup, keeping the engine cleaner and enhancing combustion performance.",
+      },
+      {
+        title: "Heat Control",
+        description:
+          "Supports consistent operating temperatures and resists oil thickening in moderate to high-heat environments.",
+      },
+      {
+        title: "Cold Weather Start-Up",
+        description:
+          "Maintains fluidity at low temperatures for quick circulation and immediate protection after ignition.",
+      },
+      {
+        title: "Eco-Conscious Performance",
+        description:
+          "Helps reduce emissions by maintaining cleaner combustion and reducing sludge formation.",
+      },
+      {
+        title: "Moisture Resistance",
+        description:
+          "Protects against performance loss due to condensation or water intrusion into the oil system.",
+      },
+    ],
+    usages: [
+      {
+        title: "Passenger Cars & SUVs",
+        description:
+          "Ideal for modern engines requiring smooth daily driving and dependable cold start performance.",
+      },
+      {
+        title: "Commercial Vehicles & Trucks",
+        description:
+          "Supports light commercial use with dependable lubrication and extended service life.",
+      },
+      {
+        title: "Motorcycles & Scooters",
+        description:
+          "Delivers responsive engine feel and quieter operation in two-wheelers using compatible engines.",
+      },
+      {
+        title: "Heavy Machinery & Equipment",
+        description:
+          "Applicable for general machinery operating under light to moderate industrial conditions.",
+      },
+      {
+        title: "High-Performance & Racing Vehicles",
+        description:
+          "Supports warm-up cycles and light-duty performance usage—not intended for full track conditions.",
+      },
+      {
+        title: "Extreme Weather Conditions",
+        description:
+          "Performs reliably in both hot summers and cool winter mornings with stable viscosity control.",
+      },
+    ],
+    direction: [
+      {
+        title: "Check Compatibility",
+        description:
+          "Verify Power 0W30 meets your vehicle's oil specification using the owner's manual.",
+      },
+      {
+        title: "Drain Old Oil",
+        description:
+          "Completely remove old oil before pouring new oil to avoid cross-contamination.",
+      },
+      {
+        title: "Replace Oil Filter",
+        description:
+          "Use a fresh oil filter to improve filtration efficiency and engine cleanliness.",
+      },
+      {
+        title: "Add Power Oil",
+        description:
+          "Carefully add the correct amount of Power 0W30 engine oil through the oil filler cap.",
+      },
+      {
+        title: "Check Oil Level",
+        description:
+          "Use the dipstick to measure oil level and adjust as necessary before starting the engine.",
+      },
+      {
+        title: "Run & Inspect",
+        description:
+          "Start the engine and allow it to idle to ensure oil circulates fully—check for leaks.",
+      },
+      {
+        title: "Monitor Regularly",
+        description:
+          "Inspect oil levels periodically and follow recommended intervals for oil replacement.",
+      },
+    ],
+  },
+  {
+    range: "Regular",
+    title: "Power 5W20",
+    type: "engine-additives",
+    images: ["/images/products/regular/5w20-regular.jpg"],
+    href: "power-5w20-regular",
+    overview: `Power 5W20 is a reliable engine oil engineered to deliver consistent performance for daily drivers. Developed to meet SP standards, this lubricant ensures smoother cold starts, steady protection against wear, and improved cleanliness for petrol engines in routine operating conditions.
+  
+  With optimized thermal stability and enhanced detergents, it helps maintain engine efficiency, reduces buildup of deposits, and provides dependable lubrication across varying temperatures. Ideal for city commutes, light-duty vehicles, and standard driving cycles.`,
+    benefits: [
+      "Reliable Cold Start Performance",
+      "Improved Fuel Efficiency for Daily Use",
+      "Reduces Friction and Enhances Engine Smoothness",
+      "Protects Against Sludge and Varnish Formation",
+      "Keeps Engine Clean for Optimal Performance",
+      "Helps Minimize Exhaust Emissions",
+      "Steady Lubrication in Normal Driving Conditions",
+      "Supports Extended Oil Drain Intervals with Regular Use",
+    ],
+    quantity: ["1 L", "4 L", "5 L", "20 L", "208 L"],
+    advantages: [
+      {
+        title: "Superior Wear Protection",
+        description:
+          "Forms a protective micro-layer that reduces metal-to-metal contact during daily use, helping extend engine life and reduce maintenance.",
+      },
+      {
+        title: "Enhanced Engine Efficiency",
+        description:
+          "Minimizes internal friction for smoother acceleration and consistent fuel economy during regular driving.",
+      },
+      {
+        title: "Prolonged Engine Life",
+        description:
+          "Offers stable lubrication and protection across standard operating conditions, ensuring your engine lasts longer.",
+      },
+      {
+        title: "Exceptional Cleanliness",
+        description:
+          "Helps prevent sludge and carbon buildup with effective detergent additives that keep the engine cleaner.",
+      },
+      {
+        title: "Cooler Operation",
+        description:
+          "Reduces internal friction to lower engine temperature and prevent premature breakdown of oil.",
+      },
+      {
+        title: "Reliable Cold Start Protection",
+        description:
+          "Ensures quick oil circulation at startup, reducing engine wear in the most vulnerable phase.",
+      },
+      {
+        title: "Lower Emissions",
+        description:
+          "Cleaner burn and fewer residues help reduce harmful exhaust emissions.",
+      },
+      {
+        title: "Water Contamination Resistance",
+        description:
+          "Helps protect against the effects of moisture and condensation buildup inside the engine.",
+      },
+    ],
+    usages: [
+      {
+        title: "Passenger Cars & SUVs",
+        description:
+          "Ideal for everyday driving, supporting clean engine operation and fuel savings.",
+      },
+      {
+        title: "Commercial Vehicles & Trucks",
+        description:
+          "Delivers stable performance for light-duty commercial use and urban logistics fleets.",
+      },
+      {
+        title: "Motorcycles & Scooters",
+        description:
+          "Provides smooth operation and reduced engine noise in compact two-wheeler engines.",
+      },
+      {
+        title: "Heavy Machinery & Equipment",
+        description:
+          "Suitable for general-purpose machinery operating under moderate load conditions.",
+      },
+      {
+        title: "High-Performance & Racing Vehicles",
+        description:
+          "While designed for regular use, it offers dependable lubrication in warm-up and normal speed ranges.",
+      },
+      {
+        title: "Extreme Weather Conditions",
+        description:
+          "Maintains performance across temperature fluctuations common in daily driving environments.",
+      },
+    ],
+    direction: [
+      {
+        title: "Check Compatibility",
+        description:
+          "Refer to your vehicle's manual to confirm Power 5W20 meets the required specifications.",
+      },
+      {
+        title: "Drain Old Oil",
+        description:
+          "Fully remove the used oil to prevent contamination and maximize new oil performance.",
+      },
+      {
+        title: "Replace Oil Filter",
+        description:
+          "Install a new oil filter to maintain engine cleanliness and protection.",
+      },
+      {
+        title: "Add Power Oil",
+        description:
+          "Pour the appropriate amount of Power 5W20 into the engine following your vehicle's oil capacity guidelines.",
+      },
+      {
+        title: "Check Oil Level",
+        description:
+          "Use the dipstick to verify correct oil level after filling, and adjust if needed.",
+      },
+      {
+        title: "Run & Inspect",
+        description:
+          "Start the engine and allow it to idle to circulate the oil. Inspect for leaks before driving.",
+      },
+      {
+        title: "Monitor Regularly",
+        description:
+          "Regularly check oil levels and follow recommended oil change intervals to ensure consistent performance.",
+      },
+    ],
+  },
+  {
+    range: "Regular",
+    title: "Power 5W30",
+    type: "engine-additives",
+    images: ["/images/products/regular/5w30-regular.jpg"],
+    href: "power-5w30-regular",
+    overview: `Power 5W30 is a reliable synthetic engine oil formulated for consistent protection and performance in everyday driving. Designed for modern petrol engines, it ensures efficient cold starts, stable thermal performance, and reduced wear under normal driving loads.
+  
+  Built with detergent additives and smooth-flow technology, Power 5W30 helps maintain engine cleanliness and fuel economy, making it an ideal choice for drivers seeking affordable and effective lubrication for regular urban and highway use.`,
+    benefits: [
+      "Smooth and Quick Cold Start Lubrication",
+      "Efficient Performance in Daily City and Highway Driving",
+      "Improves Fuel Economy Under Normal Conditions",
+      "Protects Engine Against Sludge, Varnish, and Deposits",
+      "Maintains Engine Cleanliness Over Time",
+      "Reduces Friction and Minimizes Component Wear",
+      "Stable Viscosity for Year-Round Use",
+      "Extended Oil Drain Intervals for Standard Vehicles",
+    ],
+    quantity: ["1 L", "4 L", "5 L", "20 L", "208 L"],
+    advantages: [
+      {
+        title: "Reliable Wear Protection",
+        description:
+          "Provides a protective layer that minimizes friction between engine parts, reducing long-term wear during normal driving conditions.",
+      },
+      {
+        title: "Fuel Efficiency Boost",
+        description:
+          "Helps lower internal resistance, improving fuel economy and enabling smoother performance over time.",
+      },
+      {
+        title: "Longer Engine Life",
+        description:
+          "Keeps internal parts protected and free from buildup, contributing to longer operational lifespan.",
+      },
+      {
+        title: "Clean Engine Technology",
+        description:
+          "Special detergents help reduce carbon buildup, keeping the engine cleaner and enhancing combustion performance.",
+      },
+      {
+        title: "Heat Control",
+        description:
+          "Supports consistent operating temperatures and resists oil thickening in moderate to high-heat environments.",
+      },
+      {
+        title: "Cold Weather Start-Up",
+        description:
+          "Maintains fluidity at low temperatures for quick circulation and immediate protection after ignition.",
+      },
+      {
+        title: "Eco-Conscious Performance",
+        description:
+          "Helps reduce emissions by maintaining cleaner combustion and reducing sludge formation.",
+      },
+      {
+        title: "Moisture Resistance",
+        description:
+          "Protects against performance loss due to condensation or water intrusion into the oil system.",
+      },
+    ],
+    usages: [
+      {
+        title: "Passenger Cars & SUVs",
+        description:
+          "Ideal for modern engines requiring smooth daily driving and dependable cold start performance.",
+      },
+      {
+        title: "Commercial Vehicles & Trucks",
+        description:
+          "Supports light commercial use with dependable lubrication and extended service life.",
+      },
+      {
+        title: "Motorcycles & Scooters",
+        description:
+          "Delivers responsive engine feel and quieter operation in two-wheelers using compatible engines.",
+      },
+      {
+        title: "Heavy Machinery & Equipment",
+        description:
+          "Applicable for general machinery operating under light to moderate industrial conditions.",
+      },
+      {
+        title: "High-Performance & Racing Vehicles",
+        description:
+          "Supports warm-up cycles and light-duty performance usage—not intended for full track conditions.",
+      },
+      {
+        title: "Extreme Weather Conditions",
+        description:
+          "Performs reliably in both hot summers and cool winter mornings with stable viscosity control.",
+      },
+    ],
+    direction: [
+      {
+        title: "Check Compatibility",
+        description:
+          "Verify Power 5W30 meets your vehicle's oil specification using the owner's manual.",
+      },
+      {
+        title: "Drain Old Oil",
+        description:
+          "Completely remove old oil before pouring new oil to avoid cross-contamination.",
+      },
+      {
+        title: "Replace Oil Filter",
+        description:
+          "Use a fresh oil filter to improve filtration efficiency and engine cleanliness.",
+      },
+      {
+        title: "Add Power Oil",
+        description:
+          "Carefully add the correct amount of Power 5W30 engine oil through the oil filler cap.",
+      },
+      {
+        title: "Check Oil Level",
+        description:
+          "Use the dipstick to measure oil level and adjust as necessary before starting the engine.",
+      },
+      {
+        title: "Run & Inspect",
+        description:
+          "Start the engine and allow it to idle to ensure oil circulates fully—check for leaks.",
+      },
+      {
+        title: "Monitor Regularly",
+        description:
+          "Inspect oil levels periodically and follow recommended intervals for oil replacement.",
+      },
+    ],
+  },
+
+  {
+    range: "Regular",
+    title: "Power 10W30",
+    type: "engine-additives",
+    images: ["/images/products/regular/10w30-regular.jpg"],
+    href: "power-10w30-regular",
+    overview: `Power 10W30 is a reliable engine oil engineered to deliver consistent performance for daily drivers. Developed to meet SP standards, this lubricant ensures smoother cold starts, steady protection against wear, and improved cleanliness for petrol engines in routine operating conditions.
+  
+  With optimized thermal stability and enhanced detergents, it helps maintain engine efficiency, reduces buildup of deposits, and provides dependable lubrication across varying temperatures. Ideal for city commutes, light-duty vehicles, and standard driving cycles.`,
+    benefits: [
+      "Reliable Cold Start Performance",
+      "Improved Fuel Efficiency for Daily Use",
+      "Reduces Friction and Enhances Engine Smoothness",
+      "Protects Against Sludge and Varnish Formation",
+      "Keeps Engine Clean for Optimal Performance",
+      "Helps Minimize Exhaust Emissions",
+      "Steady Lubrication in Normal Driving Conditions",
+      "Supports Extended Oil Drain Intervals with Regular Use",
+    ],
+    quantity: ["1 L", "4 L", "5 L", "20 L", "208 L"],
+    advantages: [
+      {
+        title: "Superior Wear Protection",
+        description:
+          "Forms a protective micro-layer that reduces metal-to-metal contact during daily use, helping extend engine life and reduce maintenance.",
+      },
+      {
+        title: "Enhanced Engine Efficiency",
+        description:
+          "Minimizes internal friction for smoother acceleration and consistent fuel economy during regular driving.",
+      },
+      {
+        title: "Prolonged Engine Life",
+        description:
+          "Offers stable lubrication and protection across standard operating conditions, ensuring your engine lasts longer.",
+      },
+      {
+        title: "Exceptional Cleanliness",
+        description:
+          "Helps prevent sludge and carbon buildup with effective detergent additives that keep the engine cleaner.",
+      },
+      {
+        title: "Cooler Operation",
+        description:
+          "Reduces internal friction to lower engine temperature and prevent premature breakdown of oil.",
+      },
+      {
+        title: "Reliable Cold Start Protection",
+        description:
+          "Ensures quick oil circulation at startup, reducing engine wear in the most vulnerable phase.",
+      },
+      {
+        title: "Lower Emissions",
+        description:
+          "Cleaner burn and fewer residues help reduce harmful exhaust emissions.",
+      },
+      {
+        title: "Water Contamination Resistance",
+        description:
+          "Helps protect against the effects of moisture and condensation buildup inside the engine.",
+      },
+    ],
+    usages: [
+      {
+        title: "Passenger Cars & SUVs",
+        description:
+          "Ideal for everyday driving, supporting clean engine operation and fuel savings.",
+      },
+      {
+        title: "Commercial Vehicles & Trucks",
+        description:
+          "Delivers stable performance for light-duty commercial use and urban logistics fleets.",
+      },
+      {
+        title: "Motorcycles & Scooters",
+        description:
+          "Provides smooth operation and reduced engine noise in compact two-wheeler engines.",
+      },
+      {
+        title: "Heavy Machinery & Equipment",
+        description:
+          "Suitable for general-purpose machinery operating under moderate load conditions.",
+      },
+      {
+        title: "High-Performance & Racing Vehicles",
+        description:
+          "While designed for regular use, it offers dependable lubrication in warm-up and normal speed ranges.",
+      },
+      {
+        title: "Extreme Weather Conditions",
+        description:
+          "Maintains performance across temperature fluctuations common in daily driving environments.",
+      },
+    ],
+    direction: [
+      {
+        title: "Check Compatibility",
+        description:
+          "Refer to your vehicle's manual to confirm Power 10W30 meets the required specifications.",
+      },
+      {
+        title: "Drain Old Oil",
+        description:
+          "Fully remove the used oil to prevent contamination and maximize new oil performance.",
+      },
+      {
+        title: "Replace Oil Filter",
+        description:
+          "Install a new oil filter to maintain engine cleanliness and protection.",
+      },
+      {
+        title: "Add Power Oil",
+        description:
+          "Pour the appropriate amount of Power 10W30 into the engine following your vehicle's oil capacity guidelines.",
+      },
+      {
+        title: "Check Oil Level",
+        description:
+          "Use the dipstick to verify correct oil level after filling, and adjust if needed.",
+      },
+      {
+        title: "Run & Inspect",
+        description:
+          "Start the engine and allow it to idle to circulate the oil. Inspect for leaks before driving.",
+      },
+      {
+        title: "Monitor Regularly",
+        description:
+          "Regularly check oil levels and follow recommended oil change intervals to ensure consistent performance.",
+      },
+    ],
+  },
+  {
+    range: "Regular",
+    title: "Power 10W40",
+    type: "engine-additives",
+    images: ["/images/products/regular/10w40-regular.jpg"],
+    href: "power-10w40-regular",
+    overview: `Power 10W40 is a reliable synthetic engine oil formulated for consistent protection and performance in everyday driving. Designed for modern petrol engines, it ensures efficient cold starts, stable thermal performance, and reduced wear under normal driving loads.
+  
+  Built with detergent additives and smooth-flow technology, Power 10W40 helps maintain engine cleanliness and fuel economy, making it an ideal choice for drivers seeking affordable and effective lubrication for regular urban and highway use.`,
+    benefits: [
+      "Smooth and Quick Cold Start Lubrication",
+      "Efficient Performance in Daily City and Highway Driving",
+      "Improves Fuel Economy Under Normal Conditions",
+      "Protects Engine Against Sludge, Varnish, and Deposits",
+      "Maintains Engine Cleanliness Over Time",
+      "Reduces Friction and Minimizes Component Wear",
+      "Stable Viscosity for Year-Round Use",
+      "Extended Oil Drain Intervals for Standard Vehicles",
+    ],
+    quantity: ["1 L", "4 L", "5 L", "208 L"],
+    advantages: [
+      {
+        title: "Reliable Wear Protection",
+        description:
+          "Provides a protective layer that minimizes friction between engine parts, reducing long-term wear during normal driving conditions.",
+      },
+      {
+        title: "Fuel Efficiency Boost",
+        description:
+          "Helps lower internal resistance, improving fuel economy and enabling smoother performance over time.",
+      },
+      {
+        title: "Longer Engine Life",
+        description:
+          "Keeps internal parts protected and free from buildup, contributing to longer operational lifespan.",
+      },
+      {
+        title: "Clean Engine Technology",
+        description:
+          "Special detergents help reduce carbon buildup, keeping the engine cleaner and enhancing combustion performance.",
+      },
+      {
+        title: "Heat Control",
+        description:
+          "Supports consistent operating temperatures and resists oil thickening in moderate to high-heat environments.",
+      },
+      {
+        title: "Cold Weather Start-Up",
+        description:
+          "Maintains fluidity at low temperatures for quick circulation and immediate protection after ignition.",
+      },
+      {
+        title: "Eco-Conscious Performance",
+        description:
+          "Helps reduce emissions by maintaining cleaner combustion and reducing sludge formation.",
+      },
+      {
+        title: "Moisture Resistance",
+        description:
+          "Protects against performance loss due to condensation or water intrusion into the oil system.",
+      },
+    ],
+    usages: [
+      {
+        title: "Passenger Cars & SUVs",
+        description:
+          "Ideal for modern engines requiring smooth daily driving and dependable cold start performance.",
+      },
+      {
+        title: "Commercial Vehicles & Trucks",
+        description:
+          "Supports light commercial use with dependable lubrication and extended service life.",
+      },
+      {
+        title: "Motorcycles & Scooters",
+        description:
+          "Delivers responsive engine feel and quieter operation in two-wheelers using compatible engines.",
+      },
+      {
+        title: "Heavy Machinery & Equipment",
+        description:
+          "Applicable for general machinery operating under light to moderate industrial conditions.",
+      },
+      {
+        title: "High-Performance & Racing Vehicles",
+        description:
+          "Supports warm-up cycles and light-duty performance usage—not intended for full track conditions.",
+      },
+      {
+        title: "Extreme Weather Conditions",
+        description:
+          "Performs reliably in both hot summers and cool winter mornings with stable viscosity control.",
+      },
+    ],
+    direction: [
+      {
+        title: "Check Compatibility",
+        description:
+          "Verify Power 10W40 meets your vehicle's oil specification using the owner's manual.",
+      },
+      {
+        title: "Drain Old Oil",
+        description:
+          "Completely remove old oil before pouring new oil to avoid cross-contamination.",
+      },
+      {
+        title: "Replace Oil Filter",
+        description:
+          "Use a fresh oil filter to improve filtration efficiency and engine cleanliness.",
+      },
+      {
+        title: "Add Power Oil",
+        description:
+          "Carefully add the correct amount of Power 10W40 engine oil through the oil filler cap.",
+      },
+      {
+        title: "Check Oil Level",
+        description:
+          "Use the dipstick to measure oil level and adjust as necessary before starting the engine.",
+      },
+      {
+        title: "Run & Inspect",
+        description:
+          "Start the engine and allow it to idle to ensure oil circulates fully—check for leaks.",
+      },
+      {
+        title: "Monitor Regularly",
+        description:
+          "Inspect oil levels periodically and follow recommended intervals for oil replacement.",
+      },
+    ],
+  },
+  {
+    range: "Regular",
+    title: "Power 20W40",
+    type: "engine-additives",
+    images: ["/images/products/regular/20w40-regular.jpg"],
+    href: "power-20w40-regular",
+    overview: `Power 20W40 is a dependable regular-grade engine oil formulated for everyday petrol and light‑duty diesel engines. Featuring Micro‑Lubricant Technology and meeting industry-standard specifications, it provides consistent cold start performance, excellent wear protection, and thermal stability under standard driving conditions.
+  
+  Enhanced with detergent additives, Power 20W40 helps reduce sludge and deposit build‑up, supports fuel efficiency, and ensures smooth operation in urban miles and moderate highway use.`,
+    benefits: [
+      "Smooth Cold Start Lubrication",
+      "Effective Wear Protection in Daily Use",
+      "Protects Against Sludge, Deposits, and Carbon Build‑Up",
+      "Ensures Stable Viscosity in Normal Operating Temperatures",
+      "Improves Fuel Economy under Regular Driving Cycles",
+      "Supports Longer Drain Intervals with Routine Use",
+      "Resists Oxidation and Thermal Breakdown",
+      "Helps Minimize Exhaust Emissions",
+    ],
+    quantity: ["1 L", "4 L", "20 L", "208 L"],
+    advantages: [
+      {
+        title: "Consistent Wear Protection",
+        description:
+          "Forms a protective micro‑film on engine components to reduce friction and minimize engine wear during standard driving.",
+      },
+      {
+        title: "Enhanced Efficiency",
+        description:
+          "Reduces internal drag by maintaining smooth oil flow, promoting smoother operation and fuel savings even in stop‑and‑go traffic.",
+      },
+      {
+        title: "Extended Engine Longevity",
+        description:
+          "Prevents buildup and reduced wear contribute to longer service life under normal use.",
+      },
+      {
+        title: "Engine Cleanliness",
+        description:
+          "Incorporates advanced detergents that break down sludge and residue, keeping engine internals clean and efficient.",
+      },
+      {
+        title: "Thermal Stability",
+        description:
+          "Maintains oil performance and viscosity under typical engine operating temperatures.",
+      },
+      {
+        title: "Reliable Cold Weather Performance",
+        description:
+          "Remains fluid enough in cooler temperatures to ensure immediate protection on startup.",
+      },
+      {
+        title: "Reduced Emissions",
+        description:
+          "Cleaner combustion and lower deposits help limit harmful exhaust emissions.",
+      },
+      {
+        title: "Moisture Resistance",
+        description:
+          "Helps prevent performance degradation from condensation or minor water ingress into the oil system.",
+      },
+    ],
+    usages: [
+      {
+        title: "Passenger Cars & SUVs",
+        description:
+          "Ideal for daily‑use petrol and light diesel engines, offering dependable protection and smooth performance.",
+      },
+      {
+        title: "Commercial Vehicles & Light Trucks",
+        description:
+          "Suited for light-duty fleet and delivery vehicles operating under moderate conditions.",
+      },
+      {
+        title: "Motorcycles & Scooters (where applicable)",
+        description:
+          "Provides smooth operation and reduced noise, when compatible with engine design.",
+      },
+      {
+        title: "Heavy Machinery & Equipment",
+        description:
+          "Fit for general-purpose equipment in moderate industrial use.",
+      },
+      {
+        title: "High‑Performance & Racing Vehicles (light use)",
+        description:
+          "Not designed for extreme track conditions, but offers reliable warm‑up lubrication and standard performance.",
+      },
+      {
+        title: "Extreme Weather Conditions",
+        description:
+          "Maintains consistent viscosity in both hot summer drives and cooler weather start‑ups.",
+      },
+    ],
+    direction: [
+      {
+        title: "Check Compatibility",
+        description:
+          "Refer to your owner’s manual to confirm Power 20W40 meets recommended oil grade specifications.",
+      },
+      {
+        title: "Drain Old Oil",
+        description:
+          "Completely remove the used oil to avoid contamination before filling with new oil.",
+      },
+      {
+        title: "Replace Oil Filter",
+        description:
+          "Always install a new filter to maintain filtration efficiency and engine cleanliness.",
+      },
+      {
+        title: "Add Power Oil",
+        description:
+          "Pour the correct amount of Power 20W40 into the engine as per manufacturer’s oil capacity.",
+      },
+      {
+        title: "Check Oil Level",
+        description:
+          "After filling, use the dipstick to verify and adjust the oil level before starting the engine.",
+      },
+      {
+        title: "Run & Inspect",
+        description:
+          "Start the engine and allow it to idle briefly to ensure full oil circulation—then check for any leaks.",
+      },
+      {
+        title: "Monitor Regularly",
+        description:
+          "Check oil levels periodically and adhere to recommended service intervals for consistent protection.",
+      },
+    ],
+  },
+  {
+    range: "Regular",
+    title: "Power 20W50",
+    type: "engine-additives",
+    images: ["/images/products/regular/20w50-regular.jpg"],
+    href: "power-20w50-regular",
+    overview: `Power 20W50 is a durable, multi-grade engine oil crafted for consistent protection in older engines, light diesel vehicles, and machines operating under moderate to heavy loads. Its thicker viscosity ensures solid film strength at higher temperatures, while additives provide effective wear resistance and cleanliness over time.
+  
+  Engineered for dependable performance, Power 20W50 minimizes friction, supports smoother operation, and reduces engine noise—making it ideal for vehicles that require stable lubrication in hot climates or under higher stress conditions.`,
+    benefits: [
+      "Enhanced Protection for Older Engines",
+      "Stable Viscosity at High Operating Temperatures",
+      "Improves Seal Conditioning and Reduces Oil Consumption",
+      "Resists Oxidation, Sludge, and Thermal Breakdown",
+      "Reduces Engine Noise and Improves Smoothness",
+      "Maintains Cleanliness for Longer Engine Life",
+      "Supports High-Load and High-Mileage Operation",
+      "Helps Prevent Wear in Heavily Used Engines",
+    ],
+    quantity: ["1 L", "4 L", "20 L", "208 L"],
+    advantages: [
+      {
+        title: "Heavy-Duty Wear Resistance",
+        description:
+          "Provides a thicker oil film that protects older engine parts and prevents metal-to-metal contact under heavy loads.",
+      },
+      {
+        title: "Heat-Endurance Formula",
+        description:
+          "Maintains stability and resists thinning even in hot environments, ideal for longer drives or warmer climates.",
+      },
+      {
+        title: "Optimized for Aging Engines",
+        description:
+          "Fills larger tolerances in worn-out engines and helps reduce oil burn-off and leaks.",
+      },
+      {
+        title: "Engine Cleanliness Support",
+        description:
+          "Formulated with cleaning agents that reduce sludge formation and maintain internal engine hygiene.",
+      },
+      {
+        title: "Noise and Vibration Reduction",
+        description:
+          "Thicker oil layer helps dampen engine noise and reduce harshness during operation.",
+      },
+      {
+        title: "Cold Start Reliability",
+        description:
+          "Though thicker, it retains good pumpability for effective lubrication during startup in moderate climates.",
+      },
+      {
+        title: "Low Emission Contribution",
+        description:
+          "Supports better combustion in older engines by minimizing oil breakdown and reducing deposits.",
+      },
+      {
+        title: "Moisture Barrier",
+        description:
+          "Guards against corrosion caused by condensation, especially in engines with irregular use.",
+      },
+    ],
+    usages: [
+      {
+        title: "Older Passenger Vehicles",
+        description:
+          "Recommended for high-mileage engines that need thicker protection and oil consumption control.",
+      },
+      {
+        title: "Light Trucks & Pickups",
+        description:
+          "Handles everyday hauling and commercial use with reliable thermal resistance.",
+      },
+      {
+        title: "Motorcycles with Compatible Engines",
+        description:
+          "Provides smooth performance and reduced friction in compatible air-cooled engines.",
+      },
+      {
+        title: "Heavy Machinery & Generators",
+        description:
+          "Suitable for equipment that operates in hot environments and under constant load.",
+      },
+      {
+        title: "Off-Road & Utility Vehicles",
+        description:
+          "Withstands dust, heat, and tough terrain while maintaining lubrication integrity.",
+      },
+      {
+        title: "Hot Climates",
+        description:
+          "Performs well in regions with consistently high ambient temperatures.",
+      },
+    ],
+    direction: [
+      {
+        title: "Check Compatibility",
+        description:
+          "Ensure Power 20W50 is the correct grade for your engine by checking the vehicle's service manual.",
+      },
+      {
+        title: "Drain Old Oil",
+        description:
+          "Thoroughly drain used oil before filling to maintain proper performance of the new oil.",
+      },
+      {
+        title: "Replace Oil Filter",
+        description:
+          "Install a new filter to ensure debris-free circulation and improved engine longevity.",
+      },
+      {
+        title: "Add Power Oil",
+        description:
+          "Pour Power 20W50 slowly through the filler cap, following manufacturer-recommended capacity.",
+      },
+      {
+        title: "Check Oil Level",
+        description:
+          "After filling, confirm oil level using the dipstick and adjust if needed.",
+      },
+      {
+        title: "Run & Inspect",
+        description:
+          "Start the engine and let it idle briefly. Watch for leaks and confirm proper oil pressure.",
+      },
+      {
+        title: "Monitor Regularly",
+        description:
+          "Check oil levels periodically and top up as necessary. Follow service intervals for optimal results.",
+      },
+    ],
+  },
+  {
+    range: "Regular",
+    title: "Power 75W90",
+    type: "engine-additives",
+    images: ["/images/products/regular/75w90-regular.jpg"],
+    href: "power-75w90-regular",
+    overview: `Power 75W90 is a high-performance gear oil designed for everyday applications in manual transmissions, differentials, and axle systems. Offering reliable protection under standard driving conditions, this GL-5 rated lubricant delivers smooth gear shifting, reduces wear, and ensures stable performance in both high-load and varying temperature environments.
+  
+  Blended with anti-wear and EP (extreme pressure) additives, Power 75W90 helps prevent scuffing, gear pitting, and breakdowns in conventional gear systems, making it ideal for regular use in passenger vehicles, light trucks, and commercial fleets.`,
+    benefits: [
+      "Smooth Gear Shifting and Reduced Friction",
+      "Protects Gears Against Wear and Pitting",
+      "Maintains Performance in High and Low Temperatures",
+      "Compatible with Most Manual Transmissions and Differentials",
+      "Prevents Foaming and Ensures Stable Lubrication",
+      "Excellent Thermal and Oxidation Stability",
+      "Minimizes Gear Noise and Vibration",
+      "Extends Service Life of Transmission Components",
+    ],
+    quantity: ["1 L", "4 L"],
+    advantages: [
+      {
+        title: "Reliable EP Protection",
+        description:
+          "Enhanced with Extreme Pressure additives to prevent surface fatigue and wear in heavily loaded gear teeth.",
+      },
+      {
+        title: "Temperature Stability",
+        description:
+          "Maintains consistent viscosity in both hot and cold climates for year-round use.",
+      },
+      {
+        title: "Corrosion and Rust Prevention",
+        description:
+          "Forms a protective barrier that shields metal surfaces from oxidation and moisture-related damage.",
+      },
+      {
+        title: "Reduced Gear Noise",
+        description:
+          "Smoothens metal interaction to reduce whining or grinding sounds in gear systems.",
+      },
+      {
+        title: "Longer Drain Intervals",
+        description:
+          "Maintains oil integrity over time, reducing the frequency of gear oil changes in normal conditions.",
+      },
+      {
+        title: "Anti-Foaming Properties",
+        description:
+          "Prevents oil aeration and ensures complete gear coverage during high-speed rotation.",
+      },
+      {
+        title: "Friction Control",
+        description:
+          "Lowers internal drag and improves transmission response and fuel economy.",
+      },
+      {
+        title: "Multi-Vehicle Compatibility",
+        description:
+          "Formulated for a wide range of vehicles requiring GL-5 level protection in gear applications.",
+      },
+    ],
+    usages: [
+      {
+        title: "Manual Transmissions",
+        description:
+          "Ideal for vehicles with manual gearboxes requiring smooth shifts and durability under load.",
+      },
+      {
+        title: "Differentials & Axles",
+        description:
+          "Provides strong protection and lubrication for rear axles and limited-slip differentials.",
+      },
+      {
+        title: "Light Trucks & Pickups",
+        description:
+          "Ensures quiet and reliable operation under city and utility driving cycles.",
+      },
+      {
+        title: "Commercial & Fleet Vehicles",
+        description:
+          "Supports long-term operation with reduced wear and extended oil life in transmission systems.",
+      },
+      {
+        title: "Off-Road & Utility Equipment",
+        description:
+          "Resists breakdown and maintains gear performance in rugged environments and high torque conditions.",
+      },
+      {
+        title: "Cold Weather Conditions",
+        description:
+          "Remains fluid at low temperatures for reliable cold starts and uninterrupted gear protection.",
+      },
+    ],
+    direction: [
+      {
+        title: "Check Compatibility",
+        description:
+          "Refer to your vehicle or equipment manual to verify GL-5 and 75W90 compatibility before use.",
+      },
+      {
+        title: "Drain Old Gear Oil",
+        description:
+          "Completely remove old gear oil to prevent contamination and ensure fresh performance.",
+      },
+      {
+        title: "Inspect Drain Plug",
+        description:
+          "Clean magnetic drain plugs of any metal particles or debris before reinstalling.",
+      },
+      {
+        title: "Add Power 75W90",
+        description:
+          "Use a pump or squeeze bottle to fill the gearbox or differential with the recommended amount of Power 75W90.",
+      },
+      {
+        title: "Fill to Level Plug",
+        description:
+          "Stop filling when the oil reaches the bottom edge of the level plug hole unless otherwise specified.",
+      },
+      {
+        title: "Seal and Run",
+        description:
+          "Tighten all plugs securely and run the system briefly to circulate oil—then recheck levels.",
+      },
+      {
+        title: "Regular Monitoring",
+        description:
+          "Periodically check oil condition and level, especially before long trips or heavy usage cycles.",
+      },
+    ],
+  },
+  {
+    range: "Regular",
+    title: "Power 85W90",
+    type: "engine-additives",
+    images: ["/images/products/regular/85w90-regular.jpg"],
+    href: "power-85w90-regular",
+    overview: `Power 85W90 is a heavy-duty gear oil formulated for use in manual transmissions, differentials, and axle assemblies operating under moderate to severe load conditions. It provides strong film strength, excellent load-carrying capabilities, and long-lasting protection against wear, oxidation, and corrosion.
+  
+  Designed to meet the needs of both commercial and passenger vehicles, this GL-5 rated oil ensures consistent performance and thermal stability, even in high-stress or fluctuating temperature environments. Power 85W90 helps reduce maintenance costs while maximizing gear and bearing life.`,
+    benefits: [
+      "Excellent Load-Bearing and Shock Protection",
+      "Reduces Wear on Gears, Bearings, and Shafts",
+      "Resists Thermal Breakdown and Oxidation",
+      "Minimizes Gear Whine and Vibration",
+      "Protects Against Rust, Corrosion, and Sludge Formation",
+      "Stable Lubrication in Wide Temperature Ranges",
+      "Ensures Long Oil and Component Life",
+      "Works with Most Gear Systems Requiring GL-5",
+    ],
+    quantity: ["1 L", "4 L"],
+    advantages: [
+      {
+        title: "Robust Gear Protection",
+        description:
+          "Formulated with anti-wear and EP (Extreme Pressure) additives to guard against metal-to-metal contact under load.",
+      },
+      {
+        title: "Oxidation Resistance",
+        description:
+          "Slows oil thickening and sludge buildup, maintaining clean and efficient system operation.",
+      },
+      {
+        title: "Wide Temperature Operating Range",
+        description:
+          "Performs reliably in both hot and cold conditions, maintaining fluidity and protection.",
+      },
+      {
+        title: "Corrosion Inhibition",
+        description:
+          "Prevents rust and corrosion of internal gear components during extended service intervals.",
+      },
+      {
+        title: "Reduced Gear Noise",
+        description:
+          "Cushions gear contact to minimize noise and harshness, especially in commercial applications.",
+      },
+      {
+        title: "Anti-Foaming Additives",
+        description:
+          "Prevents aeration and ensures full gear coverage even under high agitation or rotation.",
+      },
+      {
+        title: "Long-Lasting Lubrication",
+        description:
+          "Extends drain intervals and reduces downtime, especially for fleet and utility vehicles.",
+      },
+      {
+        title: "High Compatibility",
+        description:
+          "Compatible with most hypoid, spiral-bevel, and worm gear differentials used in trucks and machinery.",
+      },
+    ],
+    usages: [
+      {
+        title: "Differentials & Axles",
+        description:
+          "Designed for use in hypoid and spiral bevel gear axles requiring GL-5 grade oil.",
+      },
+      {
+        title: "Manual Gearboxes",
+        description:
+          "Delivers smooth shifting and protection for transmissions operating under load.",
+      },
+      {
+        title: "Heavy-Duty Vehicles",
+        description:
+          "Ideal for trucks, buses, and off-road equipment exposed to high torque and load conditions.",
+      },
+      {
+        title: "Agricultural & Construction Equipment",
+        description:
+          "Withstands dirt, moisture, and harsh environments in tractors, loaders, and excavators.",
+      },
+      {
+        title: "Passenger & Utility Vehicles",
+        description:
+          "Protects drive systems in everyday vehicles requiring 85W90 GL-5 gear oil.",
+      },
+      {
+        title: "Mixed Fleet Operations",
+        description:
+          "Simplifies lubrication management across a variety of vehicles and equipment types.",
+      },
+    ],
+    direction: [
+      {
+        title: "Confirm Oil Spec",
+        description:
+          "Refer to your owner’s manual to confirm that 85W90 GL-5 gear oil is recommended.",
+      },
+      {
+        title: "Drain Existing Oil",
+        description:
+          "Remove the old oil completely and inspect for any signs of contamination or metal particles.",
+      },
+      {
+        title: "Clean Fill & Drain Points",
+        description:
+          "Wipe down fittings and remove any buildup before introducing fresh oil.",
+      },
+      {
+        title: "Add Power 85W90",
+        description:
+          "Pour in the required amount until the oil reaches the level plug, using a pump if necessary.",
+      },
+      {
+        title: "Recheck After Operation",
+        description:
+          "Run the system briefly and check for leaks or drops in fluid level after initial use.",
+      },
+      {
+        title: "Top Off as Needed",
+        description:
+          "If fluid levels are low after settling, top off to ensure full lubrication coverage.",
+      },
+      {
+        title: "Inspect Periodically",
+        description:
+          "Regularly monitor fluid condition and top off or change oil at manufacturer-recommended intervals.",
+      },
+    ],
+  },
+  {
+    range: "Regular",
+    title: "Power ATF DEX III",
+    type: "engine-additives",
+    images: ["/images/products/regular/atf-dex-iii-regular.jpg"],
+    href: "power-atf-dex-iii-regular",
+    overview: `Power ATF DEX III is a high-performance automatic transmission fluid formulated to meet the requirements of General Motors DEXRON®-III and other manufacturer specifications. It delivers reliable performance, smooth shifting, and robust wear protection in automatic transmissions, power steering systems, and certain hydraulic applications.
+  
+  Engineered with premium base oils and advanced additives, Power ATF DEX III ensures thermal stability, resistance to oxidation, and excellent shear stability for extended service life. Ideal for use in both older and modern automatic transmissions, it provides consistent performance in a wide range of operating conditions.`,
+    benefits: [
+      "Ensures Smooth Gear Shifting and Clutch Operation",
+      "Excellent Oxidation and Thermal Stability",
+      "Reduces Wear and Extends Transmission Life",
+      "Maintains Fluid Viscosity Under Heat and Stress",
+      "Protects Against Rust, Corrosion, and Foam Formation",
+      "Compatible with Most Seals and Gaskets",
+      "Provides Consistent Frictional Properties",
+      "Suitable for Power Steering and Hydraulic Systems",
+    ],
+    quantity: ["1 L", "4 L"],
+    advantages: [
+      {
+        title: "Smooth Transmission Operation",
+        description:
+          "Delivers consistent shift performance and reduces shudder and slip in automatic transmissions.",
+      },
+      {
+        title: "Thermal and Oxidation Stability",
+        description:
+          "Maintains performance under high-temperature operation, extending drain intervals and protecting components.",
+      },
+      {
+        title: "Superior Anti-Wear Protection",
+        description:
+          "Guards internal transmission parts against wear, scoring, and deposit buildup.",
+      },
+      {
+        title: "Seal Compatibility",
+        description:
+          "Helps condition seals to prevent leaks and maintain long-term reliability.",
+      },
+      {
+        title: "Multi-System Use",
+        description:
+          "Suitable for power steering units and some hydraulic systems requiring DEXRON®-III specification.",
+      },
+      {
+        title: "Low Temperature Fluidity",
+        description:
+          "Ensures responsive cold-weather performance and reliable start-up protection.",
+      },
+      {
+        title: "Friction Stability",
+        description:
+          "Provides consistent frictional characteristics over the fluid’s lifetime for smooth engagement.",
+      },
+      {
+        title: "Extended Service Life",
+        description:
+          "Engineered for long drain intervals, reducing service frequency and operational costs.",
+      },
+    ],
+    usages: [
+      {
+        title: "Automatic Transmissions",
+        description:
+          "Designed for use in vehicles requiring DEXRON®-III or earlier fluids for smooth gear shifts and durability.",
+      },
+      {
+        title: "Power Steering Systems",
+        description:
+          "Ensures smooth and quiet operation in compatible power steering setups.",
+      },
+      {
+        title: "Hydraulic Systems",
+        description:
+          "Applicable in certain hydraulic systems where an ATF DEX III fluid is recommended.",
+      },
+      {
+        title: "Passenger and Commercial Vehicles",
+        description:
+          "Suitable for a wide range of vehicles including sedans, vans, SUVs, and light trucks.",
+      },
+      {
+        title: "Off-Highway Equipment",
+        description:
+          "Can be used in construction and agricultural machinery requiring DEX III performance.",
+      },
+      {
+        title: "Industrial Machinery",
+        description:
+          "Recommended for certain light-duty industrial and mobile hydraulic systems compatible with DEX III fluids.",
+      },
+    ],
+    direction: [
+      {
+        title: "Check Manufacturer's Spec",
+        description:
+          "Verify that your vehicle or equipment requires DEXRON®-III or compatible ATF fluid before use.",
+      },
+      {
+        title: "Drain Old Fluid",
+        description:
+          "Safely remove the existing fluid from the transmission, power steering, or hydraulic reservoir.",
+      },
+      {
+        title: "Inspect for Debris",
+        description:
+          "Check for metal shavings, discoloration, or signs of fluid contamination.",
+      },
+      {
+        title: "Refill with Power ATF DEX III",
+        description:
+          "Add the appropriate quantity using the manufacturer’s fill port and recommended level check method.",
+      },
+      {
+        title: "Run the System",
+        description:
+          "Operate the vehicle or system briefly to circulate new fluid and check for proper operation.",
+      },
+      {
+        title: "Recheck Levels",
+        description:
+          "After initial circulation, check the fluid level again and top up if needed.",
+      },
+      {
+        title: "Regular Monitoring",
+        description:
+          "Inspect the fluid periodically for condition and top off or replace at scheduled intervals.",
+      },
+    ],
+  },
+  {
+    range: "Regular",
+    title: "ATF DEX IV Regular",
+    type: "engine-additives",
+    images: ["/images/products/regular/atf-dex-iv-regular.jpg"],
+    href: "atf-dex-iv-regular",
+    overview: `ATF DEX IV Regular is a premium automatic transmission fluid specially formulated 
+    to meet the performance requirements of modern automatic transmissions. It ensures smooth 
+    shifting, superior oxidation resistance, and excellent wear protection, helping prolong transmission life.`,
+    benefits: [
+      "Provides smooth and consistent gear shifting",
+      "Protects against wear, corrosion, and sludge buildup",
+      "Maintains fluid stability under high temperature and pressure",
+      "Enhances transmission durability and performance",
+      "Compatible with a wide range of automatic transmissions requiring DEX fluids",
+    ],
+    quantity: ["1 L", "4 L"],
+    advantages: [
+      {
+        title: "Advanced Wear Protection",
+        description:
+          "Formulated with high-performance additives to minimize wear and extend transmission life.",
+      },
+      {
+        title: "Thermal and Oxidation Stability",
+        description:
+          "Resists fluid breakdown and sludge formation at elevated temperatures, ensuring consistent performance.",
+      },
+      {
+        title: "Smooth Shifting Performance",
+        description:
+          "Enhances transmission responsiveness and reduces gear shift shock for a comfortable drive.",
+      },
+      {
+        title: "Corrosion and Rust Inhibition",
+        description:
+          "Protects internal transmission components from corrosion and rust during extended use.",
+      },
+      {
+        title: "Wide Application Range",
+        description:
+          "Suitable for many automatic transmissions specifying DEX IV or earlier standards.",
+      },
+      {
+        title: "Extended Service Intervals",
+        description:
+          "Maintains fluid integrity over long drain intervals, reducing maintenance frequency.",
+      },
+    ],
+    usages: [
+      {
+        title: "Automatic Transmissions",
+        description:
+          "Ideal for passenger cars and light trucks equipped with automatic transmissions requiring DEX IV or III fluids.",
+      },
+      {
+        title: "Power Steering Systems",
+        description:
+          "Can be used in power steering systems where the manufacturer recommends DEX-type fluids.",
+      },
+      {
+        title: "Hydraulic Systems",
+        description:
+          "Applicable for certain hydraulic systems compatible with automatic transmission fluids.",
+      },
+    ],
+    direction: [
+      {
+        title: "Verify Compatibility",
+        description:
+          "Always check the vehicle owner's manual to confirm the recommended transmission fluid type.",
+      },
+      {
+        title: "Drain Old Fluid",
+        description:
+          "Completely drain the existing transmission fluid before refilling to avoid contamination.",
+      },
+      {
+        title: "Clean Transmission System",
+        description:
+          "Ensure the transmission system is clean and free from dirt or debris before adding new fluid.",
+      },
+      {
+        title: "Add ATF DEX IV Regular",
+        description:
+          "Pour the fluid slowly to the correct level as specified by the vehicle manufacturer.",
+      },
+      {
+        title: "Check Fluid Level",
+        description:
+          "After refilling, check and adjust the fluid level according to the transmission specifications.",
+      },
+      {
+        title: "Monitor for Leaks",
+        description:
+          "Inspect for leaks or abnormal operation during initial use and after regular intervals.",
+      },
+      {
+        title: "Routine Maintenance",
+        description:
+          "Replace transmission fluid at intervals recommended by the vehicle manufacturer for optimal performance.",
+      },
+    ],
+  },
+  {
+    range: "Regular",
+    title: "ATF WS Regular",
+    type: "engine-additives",
+    images: ["/images/products/regular/atf-ws-regular.jpg"],
+    href: "atf-ws-regular",
+    overview: `ATF WS Regular is a specialized automatic transmission fluid formulated to meet the stringent 
+    requirements of modern vehicles equipped with Toyota WS (World Standard) transmissions. It delivers 
+    excellent friction stability, smooth shifting, and reliable protection against wear and oxidation.`,
+    benefits: [
+      "Meets Toyota WS specification for automatic transmissions",
+      "Ensures smooth and precise gear shifts",
+      "Provides superior wear and corrosion protection",
+      "Maintains fluid stability under high thermal and mechanical stress",
+      "Enhances transmission durability and fuel efficiency",
+      "Compatible with vehicles requiring Toyota WS ATF",
+    ],
+    quantity: ["1 L", "4 L"],
+    advantages: [
+      {
+        title: "Optimized Friction Characteristics",
+        description:
+          "Delivers stable friction performance to prevent shudder and ensure smooth gear engagement.",
+      },
+      {
+        title: "Thermal and Oxidation Resistance",
+        description:
+          "Formulated to resist thermal degradation and oxidation, prolonging fluid life and transmission health.",
+      },
+      {
+        title: "Wear and Corrosion Protection",
+        description:
+          "Protects transmission components against wear, rust, and corrosion for extended service intervals.",
+      },
+      {
+        title: "Fuel Efficiency Enhancement",
+        description:
+          "Designed to reduce frictional losses, contributing to improved fuel economy.",
+      },
+      {
+        title: "Wide Temperature Range Performance",
+        description:
+          "Maintains fluidity and protective properties in both hot and cold operating conditions.",
+      },
+      {
+        title: "Extended Fluid Life",
+        description:
+          "Supports longer drain intervals without compromising transmission performance or protection.",
+      },
+    ],
+    usages: [
+      {
+        title: "Toyota WS Transmission Models",
+        description:
+          "Specifically designed for use in Toyota automatic transmissions requiring WS specification fluids.",
+      },
+      {
+        title: "Power Steering Systems",
+        description:
+          "Suitable for power steering systems where WS fluid compatibility is specified.",
+      },
+      {
+        title: "Other Compatible Transmissions",
+        description:
+          "Can be used in other automatic transmissions recommending WS or equivalent fluids.",
+      },
+    ],
+    direction: [
+      {
+        title: "Confirm Fluid Specification",
+        description:
+          "Refer to the vehicle’s owner manual to verify the requirement for Toyota WS transmission fluid.",
+      },
+      {
+        title: "Drain Old Transmission Fluid",
+        description:
+          "Completely remove the existing fluid before refilling to prevent mixing incompatible fluids.",
+      },
+      {
+        title: "Clean Transmission System",
+        description:
+          "Ensure the transmission system is clean and free from contaminants prior to refilling.",
+      },
+      {
+        title: "Refill with ATF WS Regular",
+        description:
+          "Add the specified quantity of ATF WS fluid to the transmission as per manufacturer guidelines.",
+      },
+      {
+        title: "Check and Adjust Fluid Level",
+        description:
+          "Verify and adjust the fluid level after refilling to ensure optimal transmission performance.",
+      },
+      {
+        title: "Inspect for Leaks and Performance",
+        description:
+          "Monitor transmission operation for leaks or irregular shifting after fluid replacement.",
+      },
+      {
+        title: "Routine Fluid Maintenance",
+        description:
+          "Follow recommended service intervals for fluid changes to maintain transmission longevity.",
+      },
+    ],
+  },
+  {
+    range: "Regular",
+    title: "Hydraulic ISO 68 Regular",
+    type: "industrial",
+    images: ["/images/products/regular/hydraulic-iso-68-regular.jpg"],
+    href: "hydraulic-iso-68-regular",
+    overview: `Hydraulic ISO 68 Regular is a high-performance hydraulic oil formulated to provide excellent 
+    lubrication and protection for hydraulic systems operating under moderate to severe conditions. 
+    It offers superior anti-wear, oxidation stability, and corrosion resistance, ensuring smooth system operation.`,
+    benefits: [
+      "Excellent anti-wear and load-carrying capabilities",
+      "Protects against rust, corrosion, and foam formation",
+      "Maintains viscosity and lubrication under high pressure and temperature",
+      "Superior oxidation stability for extended oil life",
+      "Ensures smooth and efficient hydraulic system performance",
+      "Compatible with a wide range of hydraulic pumps and components",
+    ],
+    quantity: ["1 L", "5 L", "20 L", "208 L"],
+    advantages: [
+      {
+        title: "Anti-Wear Protection",
+        description:
+          "Formulated with advanced additives to minimize wear on hydraulic components, prolonging system life.",
+      },
+      {
+        title: "Oxidation and Thermal Stability",
+        description:
+          "Resists breakdown under high temperature conditions, reducing sludge and deposits formation.",
+      },
+      {
+        title: "Corrosion and Rust Inhibition",
+        description:
+          "Prevents corrosion of metal surfaces, protecting system components during operation and downtime.",
+      },
+      {
+        title: "Foam Suppression",
+        description:
+          "Minimizes foam formation to maintain consistent hydraulic pressure and system responsiveness.",
+      },
+      {
+        title: "Wide Temperature Performance",
+        description:
+          "Maintains optimal viscosity for smooth operation across a broad temperature range.",
+      },
+      {
+        title: "Excellent Water Separation",
+        description:
+          "Quickly separates from water contamination, preserving oil performance and system reliability.",
+      },
+    ],
+    usages: [
+      {
+        title: "Industrial Hydraulic Systems",
+        description:
+          "Ideal for use in hydraulic equipment in manufacturing plants and heavy machinery.",
+      },
+      {
+        title: "Mobile Hydraulic Equipment",
+        description:
+          "Suitable for construction, agricultural, and mining equipment operating in demanding conditions.",
+      },
+      {
+        title: "Hydraulic Pumps and Valves",
+        description:
+          "Protects pumps, valves, and cylinders by providing stable lubrication and reducing wear.",
+      },
+      {
+        title: "Presses and Injection Molding Machines",
+        description:
+          "Ensures consistent performance in high-pressure hydraulic applications.",
+      },
+    ],
+    direction: [
+      {
+        title: "Check Equipment Specifications",
+        description:
+          "Confirm that ISO 68 hydraulic oil is recommended for your system before use.",
+      },
+      {
+        title: "Drain Existing Fluid",
+        description:
+          "Completely drain the old hydraulic oil and inspect the system for contamination or wear.",
+      },
+      {
+        title: "Clean Reservoir and Components",
+        description:
+          "Ensure the hydraulic reservoir and components are clean prior to refilling with new oil.",
+      },
+      {
+        title: "Refill with Hydraulic ISO 68 Regular",
+        description:
+          "Pour in the recommended quantity of oil, ensuring proper filtration during filling.",
+      },
+      {
+        title: "Monitor Fluid Level and Condition",
+        description:
+          "Regularly check oil levels and condition, topping off or changing oil as needed.",
+      },
+      {
+        title: "Routine System Maintenance",
+        description:
+          "Follow manufacturer-recommended intervals for hydraulic oil changes to maintain optimal system health.",
       },
     ],
   },
