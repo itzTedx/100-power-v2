@@ -2858,4 +2858,268 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
       },
     ],
   },
+  {
+    range: "Regular",
+    title: "Power 20W40",
+    type: "engine-additives",
+    images: ["/images/products/regular/20w40-regular.jpg"],
+    href: "power-20w40-regular",
+    overview: `Power 20W40 is a dependable regular-grade engine oil formulated for everyday petrol and light‑duty diesel engines. Featuring Micro‑Lubricant Technology and meeting industry-standard specifications, it provides consistent cold start performance, excellent wear protection, and thermal stability under standard driving conditions.
+  
+  Enhanced with detergent additives, Power 20W40 helps reduce sludge and deposit build‑up, supports fuel efficiency, and ensures smooth operation in urban miles and moderate highway use.`,
+    benefits: [
+      "Smooth Cold Start Lubrication",
+      "Effective Wear Protection in Daily Use",
+      "Protects Against Sludge, Deposits, and Carbon Build‑Up",
+      "Ensures Stable Viscosity in Normal Operating Temperatures",
+      "Improves Fuel Economy under Regular Driving Cycles",
+      "Supports Longer Drain Intervals with Routine Use",
+      "Resists Oxidation and Thermal Breakdown",
+      "Helps Minimize Exhaust Emissions",
+    ],
+    quantity: ["1 L", "4 L", "5 L", "20 L", "208 L"],
+    advantages: [
+      {
+        title: "Consistent Wear Protection",
+        description:
+          "Forms a protective micro‑film on engine components to reduce friction and minimize engine wear during standard driving.",
+      },
+      {
+        title: "Enhanced Efficiency",
+        description:
+          "Reduces internal drag by maintaining smooth oil flow, promoting smoother operation and fuel savings even in stop‑and‑go traffic.",
+      },
+      {
+        title: "Extended Engine Longevity",
+        description:
+          "Prevents buildup and reduced wear contribute to longer service life under normal use.",
+      },
+      {
+        title: "Engine Cleanliness",
+        description:
+          "Incorporates advanced detergents that break down sludge and residue, keeping engine internals clean and efficient.",
+      },
+      {
+        title: "Thermal Stability",
+        description:
+          "Maintains oil performance and viscosity under typical engine operating temperatures.",
+      },
+      {
+        title: "Reliable Cold Weather Performance",
+        description:
+          "Remains fluid enough in cooler temperatures to ensure immediate protection on startup.",
+      },
+      {
+        title: "Reduced Emissions",
+        description:
+          "Cleaner combustion and lower deposits help limit harmful exhaust emissions.",
+      },
+      {
+        title: "Moisture Resistance",
+        description:
+          "Helps prevent performance degradation from condensation or minor water ingress into the oil system.",
+      },
+    ],
+    usages: [
+      {
+        title: "Passenger Cars & SUVs",
+        description:
+          "Ideal for daily‑use petrol and light diesel engines, offering dependable protection and smooth performance.",
+      },
+      {
+        title: "Commercial Vehicles & Light Trucks",
+        description:
+          "Suited for light-duty fleet and delivery vehicles operating under moderate conditions.",
+      },
+      {
+        title: "Motorcycles & Scooters (where applicable)",
+        description:
+          "Provides smooth operation and reduced noise, when compatible with engine design.",
+      },
+      {
+        title: "Heavy Machinery & Equipment",
+        description:
+          "Fit for general-purpose equipment in moderate industrial use.",
+      },
+      {
+        title: "High‑Performance & Racing Vehicles (light use)",
+        description:
+          "Not designed for extreme track conditions, but offers reliable warm‑up lubrication and standard performance.",
+      },
+      {
+        title: "Extreme Weather Conditions",
+        description:
+          "Maintains consistent viscosity in both hot summer drives and cooler weather start‑ups.",
+      },
+    ],
+    direction: [
+      {
+        title: "Check Compatibility",
+        description:
+          "Refer to your owner’s manual to confirm Power 20W40 meets recommended oil grade specifications.",
+      },
+      {
+        title: "Drain Old Oil",
+        description:
+          "Completely remove the used oil to avoid contamination before filling with new oil.",
+      },
+      {
+        title: "Replace Oil Filter",
+        description:
+          "Always install a new filter to maintain filtration efficiency and engine cleanliness.",
+      },
+      {
+        title: "Add Power Oil",
+        description:
+          "Pour the correct amount of Power 20W40 into the engine as per manufacturer’s oil capacity.",
+      },
+      {
+        title: "Check Oil Level",
+        description:
+          "After filling, use the dipstick to verify and adjust the oil level before starting the engine.",
+      },
+      {
+        title: "Run & Inspect",
+        description:
+          "Start the engine and allow it to idle briefly to ensure full oil circulation—then check for any leaks.",
+      },
+      {
+        title: "Monitor Regularly",
+        description:
+          "Check oil levels periodically and adhere to recommended service intervals for consistent protection.",
+      },
+    ],
+  },
+  {
+    range: "Regular",
+    title: "Power 20W50",
+    type: "engine-additives",
+    images: ["/images/products/regular/20w50-regular.jpg"],
+    href: "power-20w50-regular",
+    overview: `Power 20W50 is a durable, multi-grade engine oil crafted for consistent protection in older engines, light diesel vehicles, and machines operating under moderate to heavy loads. Its thicker viscosity ensures solid film strength at higher temperatures, while additives provide effective wear resistance and cleanliness over time.
+  
+  Engineered for dependable performance, Power 20W50 minimizes friction, supports smoother operation, and reduces engine noise—making it ideal for vehicles that require stable lubrication in hot climates or under higher stress conditions.`,
+    benefits: [
+      "Enhanced Protection for Older Engines",
+      "Stable Viscosity at High Operating Temperatures",
+      "Improves Seal Conditioning and Reduces Oil Consumption",
+      "Resists Oxidation, Sludge, and Thermal Breakdown",
+      "Reduces Engine Noise and Improves Smoothness",
+      "Maintains Cleanliness for Longer Engine Life",
+      "Supports High-Load and High-Mileage Operation",
+      "Helps Prevent Wear in Heavily Used Engines",
+    ],
+    quantity: ["1 L", "4 L", "5 L", "20 L", "208 L"],
+    advantages: [
+      {
+        title: "Heavy-Duty Wear Resistance",
+        description:
+          "Provides a thicker oil film that protects older engine parts and prevents metal-to-metal contact under heavy loads.",
+      },
+      {
+        title: "Heat-Endurance Formula",
+        description:
+          "Maintains stability and resists thinning even in hot environments, ideal for longer drives or warmer climates.",
+      },
+      {
+        title: "Optimized for Aging Engines",
+        description:
+          "Fills larger tolerances in worn-out engines and helps reduce oil burn-off and leaks.",
+      },
+      {
+        title: "Engine Cleanliness Support",
+        description:
+          "Formulated with cleaning agents that reduce sludge formation and maintain internal engine hygiene.",
+      },
+      {
+        title: "Noise and Vibration Reduction",
+        description:
+          "Thicker oil layer helps dampen engine noise and reduce harshness during operation.",
+      },
+      {
+        title: "Cold Start Reliability",
+        description:
+          "Though thicker, it retains good pumpability for effective lubrication during startup in moderate climates.",
+      },
+      {
+        title: "Low Emission Contribution",
+        description:
+          "Supports better combustion in older engines by minimizing oil breakdown and reducing deposits.",
+      },
+      {
+        title: "Moisture Barrier",
+        description:
+          "Guards against corrosion caused by condensation, especially in engines with irregular use.",
+      },
+    ],
+    usages: [
+      {
+        title: "Older Passenger Vehicles",
+        description:
+          "Recommended for high-mileage engines that need thicker protection and oil consumption control.",
+      },
+      {
+        title: "Light Trucks & Pickups",
+        description:
+          "Handles everyday hauling and commercial use with reliable thermal resistance.",
+      },
+      {
+        title: "Motorcycles with Compatible Engines",
+        description:
+          "Provides smooth performance and reduced friction in compatible air-cooled engines.",
+      },
+      {
+        title: "Heavy Machinery & Generators",
+        description:
+          "Suitable for equipment that operates in hot environments and under constant load.",
+      },
+      {
+        title: "Off-Road & Utility Vehicles",
+        description:
+          "Withstands dust, heat, and tough terrain while maintaining lubrication integrity.",
+      },
+      {
+        title: "Hot Climates",
+        description:
+          "Performs well in regions with consistently high ambient temperatures.",
+      },
+    ],
+    direction: [
+      {
+        title: "Check Compatibility",
+        description:
+          "Ensure Power 20W50 is the correct grade for your engine by checking the vehicle's service manual.",
+      },
+      {
+        title: "Drain Old Oil",
+        description:
+          "Thoroughly drain used oil before filling to maintain proper performance of the new oil.",
+      },
+      {
+        title: "Replace Oil Filter",
+        description:
+          "Install a new filter to ensure debris-free circulation and improved engine longevity.",
+      },
+      {
+        title: "Add Power Oil",
+        description:
+          "Pour Power 20W50 slowly through the filler cap, following manufacturer-recommended capacity.",
+      },
+      {
+        title: "Check Oil Level",
+        description:
+          "After filling, confirm oil level using the dipstick and adjust if needed.",
+      },
+      {
+        title: "Run & Inspect",
+        description:
+          "Start the engine and let it idle briefly. Watch for leaks and confirm proper oil pressure.",
+      },
+      {
+        title: "Monitor Regularly",
+        description:
+          "Check oil levels periodically and top up as necessary. Follow service intervals for optimal results.",
+      },
+    ],
+  },
 ];
