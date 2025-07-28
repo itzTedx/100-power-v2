@@ -13,6 +13,8 @@ This project powers the **digital ecosystem of 100 Power**, providing a scalable
 
 With manufacturing operations in the **USA and UAE**, 100 Power aims to set a new standard in lubrication technology across international markets.
 
+---
+
 ## 🧰 Tech Stack
 
 This project is built with a modern and performant frontend stack designed for scalability, maintainability, and smooth DX (Developer Experience).
@@ -47,3 +49,10 @@ This project is built with a modern and performant frontend stack designed for s
 - **TypeScript** — Type safety and autocompletion
 - **Biome** — Unified linting and formatting
 - **Turbopack** — Next-gen bundler replacing Webpack
+
+---
+
+## ✨ Developed & Designed by [Ziron Media](https://zironmedia.com)
+
+Crafted with precision and performance in mind.  
+For branding, development, or product experience services, reach out to us at **Ziron Media**.
