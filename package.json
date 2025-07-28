@@ -6,8 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "next lint",
-    "format": "prettier --check . --ignore-path .gitignore --write"
+    "lint": "biome lint . --error-on-warnings",
+    "format": "biome format --write ."
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.0",
