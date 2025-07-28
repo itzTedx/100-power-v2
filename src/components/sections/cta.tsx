@@ -1,14 +1,13 @@
-import Image from "next/image";
+import { IconArrowUpRight } from '@tabler/icons-react'
+import Image from 'next/image'
 
-import { IconArrowUpRight } from "@tabler/icons-react";
-
-import { Button } from "../ui/button";
+import { Button } from '../ui/button'
 
 export const Cta = () => {
   return (
     <section className="container py-8 md:py-12" aria-labelledby="cta-heading">
       <div className="text-secondary-foreground bg-secondary relative grid grid-cols-1 overflow-hidden rounded-sm px-4 md:grid-cols-2 md:px-12">
-        <div className="relative z-10 px-3 py-6 sm:pt-12 md:px-6 md:pt-28">
+        <div className="relative z-10 px-3 py-6 sm:pt-12 md:px-6 md:pb-12 md:pt-20">
           <h3
             id="cta-heading"
             className="font-helvetica mb-2 text-3xl leading-tight font-bold text-balance sm:text-4xl md:text-6xl md:leading-[1.1]"
@@ -25,7 +24,7 @@ export const Cta = () => {
         </div>
         <div className="relative z-10">
           <Image
-            src="/images/power-products.webp"
+            src="/images/cta-products.webp"
             alt="100 Power branding illustration"
             fill
             className="object-contain"
@@ -43,5 +42,5 @@ export const Cta = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

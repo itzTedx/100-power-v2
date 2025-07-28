@@ -1,9 +1,8 @@
-import Image from "next/image";
+import { IconArrowUpRight } from '@tabler/icons-react'
+import Image from 'next/image'
 
-import { IconArrowUpRight } from "@tabler/icons-react";
-
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
 
 export const Hero = () => {
   return (
@@ -15,8 +14,8 @@ export const Hero = () => {
           id="hero-heading"
           className="font-helvetica text-4xl font-bold tracking-wide sm:text-5xl md:text-6xl"
         >
-          Advanced Additives for Peak <br className="hidden md:block" />{" "}
-          Performance and Lasting{" "}
+          Advanced Additives for Peak <br className="hidden md:block" />{' '}
+          Performance and Lasting{' '}
           <span className="text-primary">Protection.</span>
         </h1>
         <p className="text-base sm:text-lg md:text-xl">
@@ -32,7 +31,7 @@ export const Hero = () => {
       </div>
       <div className="relative h-48 w-full sm:h-72 md:h-[22rem] lg:h-[36rem]">
         <Image
-          src="/images/hero.webp"
+          src="/images/hero-products.webp"
           fill
           alt="High-performance lubrication technology - 100 Power hero image"
           className="object-contain"
@@ -42,5 +41,5 @@ export const Hero = () => {
         />
       </div>
     </section>
-  );
-};
+  )
+}
