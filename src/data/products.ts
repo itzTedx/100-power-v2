@@ -1071,7 +1071,7 @@ export const PRODUCTS: ProductType[] = [
       "Maintains Viscosity Stability Across Temperature Swings",
       "Extended Gear Life & Reduced Maintenance Costs",
     ],
-    quantity: ["1 Litre", "4 Litres", "5 Litres", "208 Litres"],
+    quantity: ["1 Litre", "4 Litres", "20 Litres", "208 Litres"],
     advantages: [
       {
         title: "Balanced Viscosity for All Conditions",
@@ -1176,7 +1176,7 @@ export const PRODUCTS: ProductType[] = [
       "Extends the life of stored fuel",
       "Maintains effectiveness for up to 1000–1200 km per application",
     ],
-    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
+    quantity: ["350 ML", "1 L", "5 L", "20 L", "208 L"],
     advantages: [
       {
         title: "Improves Fuel Efficiency",
@@ -1268,7 +1268,7 @@ export const PRODUCTS: ProductType[] = [
     type: "lubrication",
     images: ["/images/products/power-10.jpg"],
     href: "power-10",
-    overview: `Power-10 is a high-performance maintenance lubricant spray, engineered with nano-penetrating technology and powered by Tirrent Booster. It penetrates deep to eliminate rust, corrosion, and friction at the micro level—making it up to 20 times stronger than traditional sprays. Ideal for both industrial and household use, Power-10 dramatically extends the life and reliability of metal parts, tools, and electrical components—even in extreme conditions.`,
+    overview: `Power-10 is a high-performance maintenance lubricant spray, engineered with nano-penetrating technology and powered by Power Booster. It penetrates deep to eliminate rust, corrosion, and friction at the micro level—making it up to 20 times stronger than traditional sprays. Ideal for both industrial and household use, Power-10 dramatically extends the life and reliability of metal parts, tools, and electrical components—even in extreme conditions.`,
     benefits: [
       "Fast & Deep Penetration into metal surfaces",
       "Breaks down rust and corrosion efficiently",
@@ -1282,7 +1282,7 @@ export const PRODUCTS: ProductType[] = [
       "Keeps mechanisms clean and free from deposits",
       "20x more effective than conventional lubricants",
     ],
-    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
+    quantity: ["300 ML", "1 L", "5 L", "16 Litre", "208 Litre"],
     advantages: [
       {
         title: "Breaks Rust Instantly",
@@ -1362,7 +1362,7 @@ export const PRODUCTS: ProductType[] = [
     type: "lubrication",
     images: ["/images/products/power-10.jpg"],
     href: "power-booster",
-    overview: `POWER Booster is a cutting-edge engine oil additive designed to enhance engine efficiency, dramatically reduce metal wear, and extend engine life. Utilizing advanced Tirrent NanoParticle Technology, it forms a friction-reducing protective layer on metal surfaces—lowering heat, noise, and emissions while improving fuel combustion.
+    overview: `POWER Booster is a cutting-edge engine oil additive designed to enhance engine efficiency, dramatically reduce metal wear, and extend engine life. Utilizing advanced Power NanoParticle Technology, it forms a friction-reducing protective layer on metal surfaces—lowering heat, noise, and emissions while improving fuel combustion.
 
 Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combines nano-lubrication with a micro-metallurgical process that creates a new, hardened metal layer up to 15 times more wear-resistant than the original. This innovative technology ensures exceptional durability and superior performance across a wide range of industries.`,
     benefits: [
@@ -1374,7 +1374,7 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
       "Protects Engine During Oil or Coolant Loss",
       "Increases Service Intervals up to 3 Times",
     ],
-    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
+    quantity: ["350 ML", "1 L", "5 L", "16 L", "208 L"],
     advantages: [
       {
         title: "Micro-Metallic Surface Protection",
@@ -1499,7 +1499,7 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
       "Extended Oil Drain Intervals and Lower Maintenance Costs",
       "Strong Resistance to Water Contamination in Hydraulic Systems",
     ],
-    quantity: ["1 Litre", "4 Litre", "5 Litre", "208 Litre"],
+    quantity: ["1 Litre", "5 Litres", "20 Litres", "208 Litres"],
     advantages: [
       {
         title: "Superior Wear Protection",
@@ -2745,7 +2745,7 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
       "Stable Viscosity for Year-Round Use",
       "Extended Oil Drain Intervals for Standard Vehicles",
     ],
-    quantity: ["1 L", "4 L", "5 L", "20 L", "208 L"],
+    quantity: ["1 L", "4 L", "5 L", "208 L"],
     advantages: [
       {
         title: "Reliable Wear Protection",
@@ -2877,7 +2877,7 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
       "Resists Oxidation and Thermal Breakdown",
       "Helps Minimize Exhaust Emissions",
     ],
-    quantity: ["1 L", "4 L", "5 L", "20 L", "208 L"],
+    quantity: ["1 L", "4 L", "20 L", "208 L"],
     advantages: [
       {
         title: "Consistent Wear Protection",
@@ -3009,7 +3009,7 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
       "Supports High-Load and High-Mileage Operation",
       "Helps Prevent Wear in Heavily Used Engines",
     ],
-    quantity: ["1 L", "4 L", "5 L", "20 L", "208 L"],
+    quantity: ["1 L", "4 L", "5 L", "208 L"],
     advantages: [
       {
         title: "Heavy-Duty Wear Resistance",
@@ -3744,7 +3744,7 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
       "Ensures smooth and efficient hydraulic system performance",
       "Compatible with a wide range of hydraulic pumps and components",
     ],
-    quantity: ["1 L", "5 L", "20 L", "200 L"],
+    quantity: ["1 Litre", "5 Litres", "20 Litres", "208 Litres"],
     advantages: [
       {
         title: "Anti-Wear Protection",
