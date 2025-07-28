@@ -53,6 +53,7 @@ export const Tablist = ({ children }: { children: ReactNode }) => {
           >
             Industrial Application
           </TabsTrigger>
+          <div className="absolute bg-red-200 inset-0" />
         </TabsList>
         <ScrollBar orientation="horizontal" />
       </ScrollArea>

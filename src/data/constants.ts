@@ -288,8 +288,8 @@ export const CONTACT = [
   {
     label: "We're here to help",
     title: "Email",
-    description: "info@100-power.com",
-    href: "mailto:info@100-power.com",
+    description: "info@100poweruae.com",
+    href: "mailto:info@100poweruae.com",
     Icon: IconMail,
   },
   {

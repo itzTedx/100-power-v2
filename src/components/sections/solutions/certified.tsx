@@ -12,7 +12,7 @@ export const Certified = () => {
         USA-Certified
       </Badge>
       <Separator />
-      <div className="grid  md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-3 gap-6">
         <div className="col-span-2 space-y-6">
           <h2 className="font-helvetica text-4xl font-bold">
             Engineered with Certified U.S. Technology
@@ -29,7 +29,7 @@ export const Certified = () => {
             <li>Trusted in Industrial & Military Applications</li>
           </ul>
         </div>
-        <div className="flex h-full w-full items-center justify-center">
+        <div className="flex size-56 md:h-full md:w-full items-center justify-center">
           <div className="relative aspect-square h-full shrink-0">
             <Image
               src="/images/usa-certificate.png"
