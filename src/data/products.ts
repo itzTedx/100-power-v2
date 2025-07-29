@@ -1156,6 +1156,108 @@ export const PRODUCTS: ProductType[] = [
       },
     ],
   },
+  {
+    range: "Premium",
+    title: "POWER 20W50",
+    type: "engine-additives",
+    images: ["/images/products/20w50.jpg"],
+    href: "power-20w50",
+    overview: `POWER 20W50 is a high-performance mineral-based gear oil designed for manual transmissions, axles, and differentials in commercial and passenger vehicles. Formulated with extreme pressure (EP) additives, it provides excellent protection against gear wear, corrosion, and oxidation—even under high torque and load conditions.
+
+    Whether you're hauling heavy loads or navigating daily commutes, POWER 20W50 ensures consistent gear performance, long service life, and reliable protection across a wide range of operating conditions.`,
+    benefits: [
+      "Reliable Gear Protection Under High Load & Torque",
+      "Smooth Operation for Manual Transmissions & Differentials",
+      "Strong Resistance to Oxidation & Oil Degradation",
+      "Protects Against Rust, Corrosion & Metal Fatigue",
+      "Maintains Viscosity Stability Across Temperature Swings",
+      "Extended Gear Life & Reduced Maintenance Costs",
+    ],
+    quantity: ["1 L", "4 L", "20 L", "208 L"],
+    advantages: [
+      {
+        title: "Balanced Viscosity for All Conditions",
+        description:
+          "Maintains optimal flow and film strength across a wide temperature range, ensuring consistent performance in both hot and cold climates.",
+      },
+      {
+        title: "Enhanced Engine Cleanliness",
+        description:
+          "Detergent and dispersant additives help prevent the buildup of sludge and deposits, keeping the engine running smoother for longer.",
+      },
+      {
+        title: "Extended Engine Life",
+        description:
+          "Provides robust protection against wear and corrosion, even in older engines or under high-load operations.",
+      },
+      {
+        title: "Thermal Stability",
+        description:
+          "Resists oxidation and breakdown at high temperatures, maintaining oil integrity during long drives and heavy-duty use.",
+      },
+      {
+        title: "Reduced Oil Consumption",
+        description:
+          "Formulated to minimize evaporation loss and reduce oil top-ups, contributing to longer maintenance intervals.",
+      },
+    ],
+
+    usages: [
+      {
+        title: "Light and Medium-Duty Vehicles",
+        description:
+          "Ideal for cars, vans, and pickups requiring 20W50 multigrade oil for balanced lubrication and protection.",
+      },
+      {
+        title: "Older Model Engines",
+        description:
+          "Well-suited for engines with higher mileage that benefit from slightly thicker oil to maintain compression and reduce leaks.",
+      },
+      {
+        title: "Hot Weather Conditions",
+        description:
+          "Performs effectively in tropical or high-temperature environments without thinning or breaking down.",
+      },
+      {
+        title: "Motorcycles and 3-Wheelers",
+        description:
+          "Compatible with 4-stroke engines, offering strong shear stability and clutch protection where applicable.",
+      },
+      {
+        title: "Stop-and-Go City Driving",
+        description:
+          "Delivers reliable wear protection and cooling in urban traffic with frequent acceleration and deceleration.",
+      },
+    ],
+
+    direction: [
+      {
+        title: "Consult Owner’s Manual",
+        description:
+          "Ensure POWER 20W50 is recommended for your engine before use. Follow manufacturer’s specifications and intervals.",
+      },
+      {
+        title: "Drain Used Oil Completely",
+        description:
+          "Warm engine slightly and drain all old oil. Replace oil filter to prevent contamination of fresh oil.",
+      },
+      {
+        title: "Fill with Recommended Quantity",
+        description:
+          "Use a funnel to pour in POWER 20W50 carefully. Do not overfill—check dipstick levels as you go.",
+      },
+      {
+        title: "Run Engine Briefly",
+        description:
+          "Start the engine and let it idle for a few minutes. Check for leaks and recheck oil levels once the engine cools.",
+      },
+      {
+        title: "Dispose Responsibly",
+        description:
+          "Recycle used oil and filters at designated collection centers to protect the environment and comply with regulations.",
+      },
+    ],
+  },
 
   {
     range: "Premium",
