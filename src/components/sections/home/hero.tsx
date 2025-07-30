@@ -35,7 +35,7 @@ export const Hero = () => {
           fill
           alt="High-performance lubrication technology - 100 Power hero image"
           className="object-contain"
-          quality={100}
+          quality={80}
           priority
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 1600px"
         />
