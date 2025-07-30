@@ -100,7 +100,7 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
-        <article className="prose max-w-none prose-h2:text-muted-foreground prose-h2:mb-1 prose-h2:text-base prose-h2:font-normal prose-p:text-base prose-p:leading-normal prose-p:tracking-tight sm:prose-p:text-lg prose-li:text-base prose-h3:text-xl prose-ul:mt-0 prose-ol:mt-0 prose-h3:mt-4 prose-table:mt-0 prose-table:prose-p:mt-0 prose-table:prose-p:mb-0">
+        <article className="prose max-w-none prose-h2:text-muted-foreground prose-h2:mb-1 prose-h2:text-base prose-h2:font-normal prose-p:text-base prose-p:leading-normal prose-p:tracking-tight sm:prose-p:text-lg prose-li:prose-p:text-base prose-li:text-base prose-h3:text-xl prose-ul:mt-0 prose-ol:mt-0 prose-h3:mt-4 prose-h3:mb-2 prose-table:mt-0 prose-table:prose-p:mt-0 prose-table:prose-p:mb-0">
           <MDXContent
             source={content}
             components={{

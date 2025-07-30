@@ -16,10 +16,3 @@ export type ProductMetadata = {
   safetyDs?: string;
   technicalDs?: string;
 };
-
-const ProductMetadataSchema = z.object({
-  id: z.string(),
-  title: z.string(),
-  images: z.array(z.string()),
-  quantities: z.array(z.string()),
-});
