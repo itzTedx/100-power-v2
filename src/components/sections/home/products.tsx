@@ -1,15 +1,17 @@
-import { ArrowUpRight, Dot } from 'lucide-react'
-import Link from 'next/link'
+import { ArrowUpRight, Dot } from "lucide-react";
+import Link from "next/link";
 
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
-import { Separator } from '@/components/ui/separator'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { PRODUCTS } from '@/data/products'
-import { ProductCard } from '@/features/products/components/product-card'
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { Separator } from "@/components/ui/separator";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { PRODUCTS } from "@/data/products";
+import { getProducts } from "@/features/products/actions";
+import { ProductCard } from "@/features/products/components/product-card";
 
-export const Products = () => {
+export const Products = async () => {
+  const products = await getProducts();
   return (
     <section
       className="container space-y-8 py-8 sm:py-12"
@@ -29,10 +31,10 @@ export const Products = () => {
         </h2>
         <div>
           <p className="mb-2 text-base tracking-tight sm:text-xl md:text-2xl">
-            Each product is developed with precision and purpose - to enhance{' '}
+            Each product is developed with precision and purpose - to enhance{" "}
             <span className="text-primary">
               durability, reduce wear, and improve performance
-            </span>{' '}
+            </span>{" "}
             under extreme conditions.
           </p>
           <Button
@@ -80,7 +82,7 @@ export const Products = () => {
         </ScrollArea>
         <TabsContent value="engine-additives">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {PRODUCTS.filter((p) => p.type === 'engine-additives')
+            {products.filter((p) => p.category === "engine-additives")
               ?.slice(0, 9)
               .map((product, id) => (
                 <ProductCard data={product} key={id} />
@@ -89,7 +91,7 @@ export const Products = () => {
         </TabsContent>
         <TabsContent value="lubrication">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {PRODUCTS.filter((p) => p.type === 'lubrication')?.map(
+            {products.filter((p) => p.category === "lubrication")?.map(
               (product, id) => (
                 <ProductCard data={product} key={id} />
               )
@@ -99,7 +101,7 @@ export const Products = () => {
 
         <TabsContent value="fuel-system">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {PRODUCTS.filter((p) => p.type === 'fuel-system')?.map(
+            {products.filter((p) => p.category === "fuel-system")?.map(
               (product, id) => (
                 <ProductCard data={product} key={id} />
               )
@@ -108,7 +110,7 @@ export const Products = () => {
         </TabsContent>
         <TabsContent value="industrial">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {PRODUCTS.filter((p) => p.type === 'industrial')?.map(
+            {products.filter((p) => p.category === "industrial")?.map(
               (product, id) => (
                 <ProductCard data={product} key={id} />
               )
@@ -122,5 +124,5 @@ export const Products = () => {
         </div>
       </Tabs>
     </section>
-  )
-}
+  );
+};
