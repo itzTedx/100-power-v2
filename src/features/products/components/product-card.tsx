@@ -1,8 +1,7 @@
+import { Dot } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
-
-import { Dot } from "lucide-react";
 
 import { IconChart, IconShield } from "@/assets/icons";
 import { Button } from "@/components/ui/button";
@@ -22,6 +21,7 @@ import {
 } from "@/components/ui/tooltip";
 import { ProductType } from "@/data/products";
 import { cn } from "@/lib/utils";
+import { DatasheetButton } from "./datasheet-button";
 
 interface Props {
   data: ProductType;
@@ -29,8 +29,8 @@ interface Props {
 
 export const ProductCard = ({ data }: Props) => {
   return (
-    <Card className="group group relative overflow-hidden">
-      <Link href={`/products/${data.href}`}>
+    <Card className="group relative overflow-hidden">
+      <Link href={`/products/${data.href}`}  className="absolute inset-0 z-40" />
         <CardHeader className="relative flex items-start justify-between">
           <div className="flex shrink-0 items-center gap-2">
             <div
@@ -44,33 +44,14 @@ export const ProductCard = ({ data }: Props) => {
             <p className="font-medium">{data.range}</p>
           </div>
           <TooltipProvider>
-            <div className="absolute right-5 z-20 flex flex-col space-y-1.5 opacity-0 transition-[opacity_translate] duration-100 ease-in group-hover:opacity-100">
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Button size="icon" variant="secondary">
-                    <IconShield className="size-5" />
-                  </Button>
-                </TooltipTrigger>
-                <TooltipContent
-                  className="pointer-events-none select-none"
-                  sideOffset={-3}
-                >
-                  Material Safety Data Sheet
-                </TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Button size="icon" variant="secondary">
-                    <IconChart className="size-5" />
-                  </Button>
-                </TooltipTrigger>
-                <TooltipContent
-                  className="pointer-events-none select-none"
-                  sideOffset={-3}
-                >
-                  Technical Data sheet
-                </TooltipContent>
-              </Tooltip>
+            <div className="absolute right-5 z-50 flex flex-col space-y-1.5 opacity-0 transition-[opacity_translate] duration-100 ease-in group-hover:opacity-100">
+              {data.safetyDs && (
+                <DatasheetButton type="safetyDs" datasheet={data.safetyDs}/>
+              )}
+              {data.technicalDs && (
+                <DatasheetButton type="technicalDs" datasheet={data.technicalDs}/>
+              )}
+              
             </div>
           </TooltipProvider>
         </CardHeader>
@@ -107,7 +88,7 @@ export const ProductCard = ({ data }: Props) => {
           </CardDescription>
           <CardTitle className="mt-1">{data.title}</CardTitle>
         </CardFooter>
-      </Link>
+      
     </Card>
   );
 };

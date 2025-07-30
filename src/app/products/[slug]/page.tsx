@@ -1,7 +1,7 @@
 import { Dot } from "lucide-react";
 import { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
-
 import { IconChart, IconShield } from "@/assets/icons";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -153,21 +153,35 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
                 ))}
               </ul>
             </section>
-            <section aria-labelledby="datasheet-heading">
-              <h2 id="datasheet-heading" className="text-muted-foreground mb-1">
-                Data Sheet Downloads
-              </h2>
-              <div className="flex flex-col gap-2 space-x-0 sm:flex-row sm:gap-0 sm:space-x-3">
-                <Button variant="secondary">
-                  <IconShield />
-                  Material Safety Data Sheet
-                </Button>
-                <Button variant="secondary">
-                  <IconChart />
-                  Technical Data Sheet
-                </Button>
-              </div>
-            </section>
+            {(product.safetyDs || product.technicalDs) && (
+              <section aria-labelledby="datasheet-heading">
+                <h2
+                  id="datasheet-heading"
+                  className="text-muted-foreground mb-1"
+                >
+                  Data Sheet Downloads
+                </h2>
+                <div className="flex flex-col gap-2 space-x-0 sm:flex-row sm:gap-0 sm:space-x-3">
+                  {product.safetyDs && (
+                    <Button variant="secondary" asChild>
+                      <Link href={product.safetyDs} target="_blank">
+                        <IconShield />
+                        Material Safety Data Sheet
+                      </Link>
+                    </Button>
+                  )}
+                  {product.technicalDs  && (
+                    <Button variant="secondary" asChild>
+                      <Link href={product.technicalDs} target="_blank">
+                        <IconChart />
+                        Technical Data Sheet
+                      </Link>
+                    </Button>
+                  )}
+                 
+                </div>
+              </section>
+            )}
           </div>
         </section>
         <section className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-12">
@@ -188,7 +202,6 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
               >
                 Usages
               </TabsTrigger>
-             
             </TabsList>
             <TabsContent value="core">
               <ul className="ml-5 list-disc space-y-3">
@@ -214,7 +227,6 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
                 ))}
               </ul>
             </TabsContent>
-            
           </Tabs>
           <Tabs
             defaultValue="directions"

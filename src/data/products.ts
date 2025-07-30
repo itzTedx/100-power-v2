@@ -7,6 +7,8 @@ export interface ProductType {
   quantity: string[];
   overview: string;
   benefits: string[];
+  safetyDs?: string;
+  technicalDs?: string;
   advantages: {
     title: string;
     description: string;
@@ -520,6 +522,7 @@ export const PRODUCTS: ProductType[] = [
     type: "engine-additives",
     images: ["/images/products/10w40.jpg"],
     href: "power-10w40",
+    safetyDs: "/datasheet/MSDS-10W40.pdf",
     overview: `Experience next-generation engine care with POWER 10W40, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.
     \n
     With Micro-Lubricant Technology, advanced detergency, and superior thermal stability, POWER keeps your engine running smoother, quieter, and more efficiently every day.`,
@@ -856,6 +859,7 @@ export const PRODUCTS: ProductType[] = [
     type: "engine-additives",
     images: ["/images/products/0w20.jpg"],
     href: "power-0w20",
+    safetyDs: "/datasheet/MSDS-OW20.pdf",
     overview: `POWER 0W20 is a high-performance mineral-based gear oil designed for manual transmissions, axles, and differentials in commercial and passenger vehicles. Formulated with extreme pressure (EP) additives, it provides excellent protection against gear wear, corrosion, and oxidation—even under high torque and load conditions.
 
     Whether you're hauling heavy loads or navigating daily commutes, POWER 0W20 ensures consistent gear performance, long service life, and reliable protection across a wide range of operating conditions.`,
@@ -1462,19 +1466,27 @@ export const PRODUCTS: ProductType[] = [
     range: "Premium",
     title: "POWER BOOSTER Advanced Nano Lubricant",
     type: "lubrication",
-    images: ["/images/products/power-10.jpg"],
+    images: ["/images/products/power-booster.jpg"],
     href: "power-booster",
-    overview: `POWER Booster is a cutting-edge engine oil additive designed to enhance engine efficiency, dramatically reduce metal wear, and extend engine life. Utilizing advanced Power NanoParticle Technology, it forms a friction-reducing protective layer on metal surfaces—lowering heat, noise, and emissions while improving fuel combustion.
-
-Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combines nano-lubrication with a micro-metallurgical process that creates a new, hardened metal layer up to 15 times more wear-resistant than the original. This innovative technology ensures exceptional durability and superior performance across a wide range of industries.`,
+    overview: `POWER Booster is a complementary additive package that, through a micro-metallurgical
+      process, forms (from the original metal) a durable, polished-like micro-layer of metal that
+      dramatically resists wear, extreme pressure, and excessive temperature. Metal surfaces
+      remain treated at all times, which provides for immediate start-up lubrication. Friction is
+      reduced by up to 95% and wear by up to 96%, which results in an estimated extension of
+      the engine’s equipment's life of up to 10 times and an oil service life of up to 2-3 times,
+      plus a major improvement in performance and fuel economy.
+    `,
     benefits: [
-      "Significantly Reduces Metal Wear and Friction",
-      "Extends Engine and Machine Life up to 7 Times",
-      "Improves Fuel Combustion and Engine Efficiency",
-      "Lowers Heat, Noise, and Harmful Emissions",
-      "Creates a Durable, Hardened Protective Metal Layer",
-      "Protects Engine During Oil or Coolant Loss",
-      "Increases Service Intervals up to 3 Times",
+      "Fuel Consumption: Reduces fuel usage by 15-25%",
+      "Wear Reduction: Decreases wear by over 96%",
+      "Extended Oil Change Intervals: Increases intervals by 2-3 times",
+      "Longer Equipment Life: Extends the service life by 5-8 times",
+      "Reduced Friction: Reduces metal-to-metal friction by up to 95%",
+      "Operational Cost Reduction: Cuts maintenance costs by up to 65%",
+      "Increased Productivity: Reduces downtime by up to 90%",
+      "Cleaner Emissions: Significant reduction in pollutant emissions",
+      "Reduced Waste Oil: Minimizes waste oil volumes",
+      "Less Replacement Parts: Considerably reduces the need for equipment replacements",
     ],
     quantity: ["350 ML", "1 L", "5 L", "16 L", "208 L"],
     advantages: [
@@ -1517,34 +1529,28 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
 
     usages: [
       {
-        title: "Gasoline & Diesel Engines",
-        description:
-          "Protects and boosts performance in all passenger cars, SUVs, light trucks, and diesel engines.",
+        title: "Diesel & Gasoline Engines",
+        description: "Add 5% of total engine oil capacity.",
       },
       {
-        title: "Commercial Vehicles & Fleets",
+        title: "Post-Service Application",
         description:
-          "Extends service life and reduces downtime in trucks, buses, and logistics vehicles under heavy-duty cycles.",
+          "Mix directly with engine oil after servicing for best performance.",
       },
       {
-        title: "Construction & Agricultural Machinery",
+        title: "Industrial Equipment",
         description:
-          "Delivers outstanding wear resistance and lubrication under extreme load and operating conditions.",
+          "Use 5–10% by volume in tractors, pumps, and construction machines.",
       },
       {
-        title: "Generators & Stationary Engines",
+        title: "Oil Tank Application",
         description:
-          "Improves efficiency and ensures continuous operation for generators and fixed industrial motors.",
+          "Add directly to the oil tank before operation to boost efficiency and protection.",
       },
       {
-        title: "Hydraulic & Industrial Systems",
+        title: "Challenging Environments",
         description:
-          "Enhances load-bearing capacity and reduces mechanical wear in manufacturing and hydraulic equipment.",
-      },
-      {
-        title: "Motorcycles & Small Engines",
-        description:
-          "Improves gear smoothness, reduces noise, and protects smaller engines from premature wear.",
+          "Helps during cold starts, high-stress workloads, and extreme temperature environments.",
       },
     ],
 
@@ -2036,96 +2042,66 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
   {
     range: "Premium",
     title: "EP-2 Lithium Complex Grease",
-    type: "engine-additives",
+    type: "lubrication",
     images: ["/images/products/ep-2.jpg"],
     href: "ep-2",
-    overview: `POWER EP-2 Lithium Complex Grease is a high-performance, multi-purpose lubricant designed for heavy-duty industrial, automotive, and construction applications. Formulated with lithium complex thickener, premium base oils, and extreme pressure (EP) additives, it delivers superior protection under high load, high temperature, and harsh environmental conditions.
-
-    Ideal for bearings, chassis points, and other critical components, POWER EP-2 offers outstanding water resistance, oxidation stability, and mechanical shear stability—ensuring extended service life and reduced maintenance downtime in even the most demanding operations.`,
+    overview: `POWER EP-2 Lithium Complex Grease, a high-performance solution for machinery
+      operating under extreme pressure. Engineered for superior protection against dust, dirt,
+      sludge, water, and extreme temperatures in high temperatures. A Military-grade grease
+      built to last in heat, dust and pressure to ensure long-lasting reliability and durability. Ep-2
+      grease is specially designed for mining, industrial, construction and automotive
+      applications that deliver unmatched resilience and performance. The ultimate protection
+      against dust and contamination which reduces your bearing failures due to dust
+      contamination and extends the bearing life up to 3 times.`,
     benefits: [
-      "Exceptional Load-Carrying Capacity and EP Protection",
-      "Withstands High Temperatures Without Melting or Breaking Down",
-      "Excellent Water Resistance for Wet and Humid Environments",
-      "Protects Against Rust, Corrosion, and Oxidation",
-      "Outstanding Mechanical Stability Under Vibration and Shock",
-      "Reduces Wear and Extends Equipment Life",
-      "Suitable for High-Speed and Heavy-Duty Applications",
-      "Long Service Intervals and Reduced Re-Greasing Frequency",
+      "Extended Maintenance Intervals: Reduces maintenance frequency and downtime by up to 3-5 times, significantly lowering costs",
+      "Enhanced Equipment Protection: Minimizes wear and tear, ensuring smoother operation and extended service life for bearings, gears, and moving parts",
+      "Energy Efficiency: Reduces equipment temperature, vibration, and noise levels, leading to more efficient operations",
+      "Durability in Extreme Conditions: Performs exceptionally in environments with high pressure, moisture, dust, and high temperatures",
     ],
     quantity: ["500 G", "1 KG", "16 KG", "208 KG"],
     advantages: [
       {
-        title: "Superior Wear Protection",
+        title: "Military-Grade Durability",
         description:
-          "Forms a micro-layer on engine components to reduce friction and metal contact, providing lasting protection during cold starts and high-stress driving.",
+          "Engineered to withstand extreme heat, pressure, and dust, ensuring long-lasting performance in demanding environments.",
       },
       {
-        title: "Enhanced Engine Efficiency",
+        title: "Contaminant Resistance",
         description:
-          "Reduces internal drag for improved fuel economy, smoother acceleration, and optimal power delivery.",
+          "Protects against dust, dirt, sludge, and water, reducing bearing failures caused by environmental contaminants.",
       },
       {
-        title: "Prolonged Engine Life",
+        title: "Extended Bearing Life",
         description:
-          "Minimizes wear and maintains component integrity, extending the lifespan of the engine even under demanding conditions.",
+          "Extends the lifespan of bearings up to 3 times by minimizing wear and providing consistent lubrication.",
       },
       {
-        title: "Exceptional Cleanliness",
+        title: "High-Pressure Performance",
         description:
-          "Advanced detergents break down sludge and deposits, keeping the engine clean and performing at its best.",
+          "Delivers exceptional protection and stability for equipment operating under extreme pressure conditions.",
       },
       {
-        title: "Cooler Operating Temperatures",
+        title: "Reduced Maintenance Downtime",
         description:
-          "Reduces friction-generated heat, helping the engine run cooler and preventing thermal breakdown.",
-      },
-      {
-        title: "Reliable Cold Start Protection",
-        description:
-          "Instant lubrication at startup ensures critical parts are protected during the most vulnerable moments.",
-      },
-      {
-        title: "Lower Emissions",
-        description:
-          "Cleaner combustion and reduced sludge formation help minimize exhaust emissions for a more eco-friendly drive.",
-      },
-      {
-        title: "Water Contamination Resistance",
-        description:
-          "Protects the engine against performance loss caused by water ingress or condensation in the oil.",
+          "Increases service intervals by 3–5 times, significantly lowering maintenance frequency and operational costs.",
       },
     ],
 
     usages: [
       {
-        title: "Passenger Cars & SUVs",
-        description:
-          "Enhances fuel efficiency, performance, and engine longevity in daily-use vehicles.",
+        title: "Surface Preparation",
+        description: "Ensure surfaces are clean and free of contaminants.",
       },
       {
-        title: "Commercial Vehicles & Trucks",
+        title: "Application",
         description:
-          "Withstands high-load operations and supports longer oil drain intervals for better uptime.",
+          "Apply POWER EP-2 Lithium Complex Grease directly to bearings, gears, or other metal surfaces using standard grease applicators.",
       },
       {
-        title: "Motorcycles & Scooters",
+        title: "Amount",
         description:
-          "Reduces friction and noise while improving responsiveness in smaller engines.",
-      },
-      {
-        title: "Heavy Machinery & Equipment",
-        description:
-          "Ensures durability and performance under extreme heat and pressure in construction and industrial settings.",
-      },
-      {
-        title: "High-Performance & Racing Vehicles",
-        description:
-          "Delivers stable lubrication and power output at high RPMs and elevated temperatures.",
-      },
-      {
-        title: "Extreme Weather Conditions",
-        description:
-          "Maintains optimal viscosity and protection in both hot and cold environments.",
+          "Make sure the appropriate amount of grease is applied to all necessary areas.",
       },
     ],
 
@@ -2173,6 +2149,7 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
     type: "engine-additives",
     images: ["/images/products/regular/0w20-regular.jpg"],
     href: "power-0w20-regular",
+    safetyDs: "/datasheet/MSDS-OW20.pdf",
     overview: `Power 0W20 is a reliable engine oil engineered to deliver consistent performance for daily drivers. Developed to meet SP standards, this lubricant ensures smoother cold starts, steady protection against wear, and improved cleanliness for petrol engines in routine operating conditions.
   
   With optimized thermal stability and enhanced detergents, it helps maintain engine efficiency, reduces buildup of deposits, and provides dependable lubrication across varying temperatures. Ideal for city commutes, light-duty vehicles, and standard driving cycles.`,
@@ -2967,6 +2944,7 @@ Suitable for both gasoline (petroleum) and diesel engines, POWER Booster combine
     type: "engine-additives",
     images: ["/images/products/regular/10w40-regular.jpg"],
     href: "power-10w40-regular",
+    safetyDs: "/datasheet/MSDS-10W40.pdf",
     overview: `Power 10W40 is a reliable synthetic engine oil formulated for consistent protection and performance in everyday driving. Designed for modern petrol engines, it ensures efficient cold starts, stable thermal performance, and reduced wear under normal driving loads.
   
   Built with detergent additives and smooth-flow technology, Power 10W40 helps maintain engine cleanliness and fuel economy, making it an ideal choice for drivers seeking affordable and effective lubrication for regular urban and highway use.`,
