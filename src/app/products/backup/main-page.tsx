@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 
 import { TabsContent } from "@/components/ui/tabs";
-import { getProducts } from "@/features/products/actions";
+import { PRODUCTS } from "@/data/products";
 import { ProductCard } from "@/features/products/components/product-card";
 import { Tablist } from "@/features/products/components/tab-list";
 
@@ -19,9 +19,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function ProductsPage() {
-  const products = await getProducts();
-
+export default function ProductsPage() {
   return (
     <main className="container space-y-8 py-12">
       <header className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -45,7 +43,7 @@ export default async function ProductsPage() {
               className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
               aria-label="All Products"
             >
-              {products.map((product, id) => (
+              {PRODUCTS.map((product, id) => (
                 <ProductCard data={product} key={`${id}-${product.title}`} />
               ))}
             </section>
@@ -56,7 +54,7 @@ export default async function ProductsPage() {
               className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
               aria-label="Engine Additives"
             >
-              {products.filter((p) => p.category === "engine-additives")?.map(
+              {PRODUCTS.filter((p) => p.type === "engine-additives")?.map(
                 (product, id) => (
                   <ProductCard data={product} key={`${id}-${product.title}`} />
                 )
@@ -68,7 +66,7 @@ export default async function ProductsPage() {
               className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
               aria-label="Lubrication Products"
             >
-              {products.filter((p) => p.category === "lubrication")?.map(
+              {PRODUCTS.filter((p) => p.type === "lubrication")?.map(
                 (product, id) => (
                   <ProductCard data={product} key={`${id}-${product.title}`} />
                 )
@@ -80,7 +78,7 @@ export default async function ProductsPage() {
               className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
               aria-label="Fuel System Products"
             >
-              {products.filter((p) => p.category === "fuel-system")?.map(
+              {PRODUCTS.filter((p) => p.type === "fuel-system")?.map(
                 (product, id) => (
                   <ProductCard data={product} key={`${id}-${product.title}`} />
                 )
@@ -92,7 +90,7 @@ export default async function ProductsPage() {
               className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
               aria-label="Industrial Application Products"
             >
-              {products.filter((p) => p.category === "industrial")?.map(
+              {PRODUCTS.filter((p) => p.type === "industrial")?.map(
                 (product, id) => (
                   <ProductCard data={product} key={`${id}-${product.title}`} />
                 )

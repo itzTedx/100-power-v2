@@ -1,7 +1,5 @@
 "use client";
 
-import React, { useCallback, useEffect, useState } from "react";
-
 import { type EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import {
@@ -11,6 +9,7 @@ import {
   PlusCircle,
   X,
 } from "lucide-react";
+import React, { useCallback, useEffect, useState } from "react";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 
 import { Button } from "@/components/ui/button";
@@ -360,7 +359,7 @@ const ImageCarousel: React.FC<ImageCarousel_BasicProps> = ({
   return (
     <div
       className={cn(
-        "relative w-full max-w-3xl",
+        "relative w-full max-w-4xl",
         {
           "flex-row-reverse": showThumbs && thumbPosition === "left",
           "flex gap-4":
