@@ -128,7 +128,7 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
             "@context": "https://schema.org/",
             "@type": "Product",
             name: metadata.title,
-            image: [metadata.images],
+            image: metadata.images,
             brand: {
               "@type": "Brand",
               name: "100 Power",
