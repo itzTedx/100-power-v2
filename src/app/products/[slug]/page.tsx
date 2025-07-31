@@ -18,7 +18,10 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { PRODUCTS } from "@/data/products";
-import { getProductBySlug, getProductMetadata } from "@/features/products/actions";
+import {
+  getProductBySlug,
+  getProductMetadata,
+} from "@/features/products/actions";
 import { Header } from "@/features/products/components/header";
 import {
   DirectionsTabs,
@@ -28,6 +31,7 @@ import {
   SplitSection,
   TabContent,
 } from "@/features/products/components/tabs";
+import { constructMetadata } from "@/features/seo";
 
 type Params = Promise<{ slug: string }>;
 
@@ -37,40 +41,40 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Params;
-}): Promise<Metadata> {
-  // read route params
+
+
+export async function  generateMetadata({ params }: { params: Params }) {
   const { slug } = await params;
 
-  // fetch data
   const product = await getProductBySlug(slug);
   if (!product)
     return {
       title: "Product not Available",
     };
 
-  return {
-    title: `${product.metadata.title} - Hundred Power`,
-    // description: product.overview.slice(0, 240),
+  const fullTitle =  product.metadata.meta.title;
+  const description = product.metadata.meta.description;
+  const image = product.metadata.images[0];
+  const canonicalUrl = `/products/${product.metadata.slug}`;
 
-    openGraph: {
-      images: product.metadata.images,
-    },
-  };
+  return constructMetadata({
+    fullTitle,
+    description,
+    image,
+    canonicalUrl
+  });
 }
+
 
 export default async function ProductSlugPage({ params }: { params: Params }) {
   const { slug } = await params;
-  // const product = PRODUCTS.find((p) => p.href === slug);
+
 
   const product = await getProductBySlug(slug);
 
   if (!product) return notFound();
 
-  // const images: CarouselImages = product.images.map((img) => ({ url: img }));
+
   const { content, metadata } = product;
 
   return (
@@ -110,7 +114,11 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
               DirectionsTabs,
               TabContent,
               SplitSection,
-              Table: (props) => <div className="col-span-4"><Table {...props} className="col-span-4" /></div>,
+              Table: (props) => (
+                <div className="col-span-4">
+                  <Table {...props} className="col-span-4" />
+                </div>
+              ),
               TableBody,
               TableCell,
               TableHead,

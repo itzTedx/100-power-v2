@@ -18,7 +18,7 @@ const geistSans = Geist({
 })
 
 export const metadata: Metadata = {
-  title: '100 Power | Next-Gen Lubrication Technology for Maximum Performance',
+  title: '100 Power - Next-Gen Lubrication Technology for Maximum Performance',
   description:
     '100 Power is a UAE-based brand delivering American innovation in lubrication. Maximize performance, minimize friction, and protect the planet with our military-grade, eco-conscious solutions.',
   openGraph: {

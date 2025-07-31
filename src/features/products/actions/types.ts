@@ -15,4 +15,8 @@ export type ProductMetadata = {
   quantities: string[];
   safetyDs?: string;
   technicalDs?: string;
+  meta: {
+    title: string;
+    description: string;
+  };
 };
