@@ -18,7 +18,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { PRODUCTS } from "@/data/products";
-import { getProductBySlug } from "@/features/products/actions";
+import { getProductBySlug, getProductMetadata } from "@/features/products/actions";
 import { Header } from "@/features/products/components/header";
 import {
   DirectionsTabs,
@@ -46,7 +46,7 @@ export async function generateMetadata({
   const { slug } = await params;
 
   // fetch data
-  const product = PRODUCTS.find((p) => p.href === slug);
+  const product =  getProductMetadata(slug);
   if (!product)
     return {
       title: "Product not Available",
@@ -54,7 +54,7 @@ export async function generateMetadata({
 
   return {
     title: `${product.title} - Hundred Power`,
-    description: product.overview.slice(0, 240),
+    // description: product.overview.slice(0, 240),
 
     openGraph: {
       images: product.images,

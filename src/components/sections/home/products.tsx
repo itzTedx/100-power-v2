@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { PRODUCTS } from "@/data/products";
 import { getProducts } from "@/features/products/actions";
 import { ProductCard } from "@/features/products/components/product-card";
 

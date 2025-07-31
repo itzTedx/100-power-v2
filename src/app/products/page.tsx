@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 
 import { TabsContent } from "@/components/ui/tabs";
-import { PRODUCTS } from "@/data/products";
 import { getProducts } from "@/features/products/actions";
 import { ProductCard } from "@/features/products/components/product-card";
 import { Tablist } from "@/features/products/components/tab-list";
