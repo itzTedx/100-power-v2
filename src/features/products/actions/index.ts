@@ -36,6 +36,7 @@ export function getProductMetadata(
   filepath: string
 ): ProductMetadata & { slug: string } {
   const slug = filepath.replace(/\.mdx$/, "");
+
   const filePath = path.join(root, filepath);
 
   const fileContent = fs.readFileSync(filePath, { encoding: "utf8" });

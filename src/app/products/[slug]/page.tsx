@@ -46,18 +46,18 @@ export async function generateMetadata({
   const { slug } = await params;
 
   // fetch data
-  const product =  getProductMetadata(slug);
+  const product = await getProductBySlug(slug);
   if (!product)
     return {
       title: "Product not Available",
     };
 
   return {
-    title: `${product.title} - Hundred Power`,
+    title: `${product.metadata.title} - Hundred Power`,
     // description: product.overview.slice(0, 240),
 
     openGraph: {
-      images: product.images,
+      images: product.metadata.images,
     },
   };
 }

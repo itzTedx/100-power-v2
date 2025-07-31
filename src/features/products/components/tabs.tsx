@@ -27,6 +27,7 @@ export function SplitSection({ children }: Props) {
   );
 }
 
+const tabsTriggerClassName = "hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
 
 export const InformationTabs = ({ children }: Props) => {
   return (
@@ -34,13 +35,13 @@ export const InformationTabs = ({ children }: Props) => {
       <TabsList className="text-foreground h-auto w-full justify-start gap-2 overflow-x-auto rounded-none border-b bg-transparent px-0 py-1">
         <TabsTrigger
           value="core"
-          className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
+          className={tabsTriggerClassName}
         >
           Core Advantages
         </TabsTrigger>
         <TabsTrigger
           value="usages"
-          className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
+          className={tabsTriggerClassName}
         >
           Usages
         </TabsTrigger>
@@ -59,7 +60,7 @@ export const DirectionsTabs = ({ children }: Props) => {
       <TabsList className="text-foreground mb-3 h-auto w-full justify-start gap-2 overflow-x-auto rounded-none border-b bg-transparent px-0 py-1">
         <TabsTrigger
           value="directions"
-          className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
+          className={tabsTriggerClassName}
         >
           Directions of Use
         </TabsTrigger>
@@ -78,25 +79,25 @@ export const SafetyTabs = ({ children }: Props) => {
       <TabsList className="text-foreground  h-auto w-full justify-start gap-2 overflow-x-auto rounded-none border-b bg-transparent px-0 py-1">
         <TabsTrigger
           value="handling"
-          className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
+          className={tabsTriggerClassName}
         >
           Handling & Safety
         </TabsTrigger>
         <TabsTrigger
           value="first-aid"
-          className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
+          className={tabsTriggerClassName}
         >
           First Aid Measures
         </TabsTrigger>
         <TabsTrigger
           value="disposal"
-          className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
+          className={tabsTriggerClassName}
         >
           Disposal
         </TabsTrigger>
         <TabsTrigger
           value="hazardous"
-          className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
+          className={tabsTriggerClassName}
         >
          Hazardous Components
         </TabsTrigger>
