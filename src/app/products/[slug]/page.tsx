@@ -41,9 +41,7 @@ export async function generateStaticParams() {
   }));
 }
 
-
-
-export async function  generateMetadata({ params }: { params: Params }) {
+export async function generateMetadata({ params }: { params: Params }) {
   const { slug } = await params;
 
   const product = await getProductBySlug(slug);
@@ -52,7 +50,7 @@ export async function  generateMetadata({ params }: { params: Params }) {
       title: "Product not Available",
     };
 
-  const fullTitle =  product.metadata.meta.title;
+  const fullTitle = product.metadata.meta.title;
   const description = product.metadata.meta.description;
   const image = product.metadata.images[0];
   const canonicalUrl = `/products/${product.metadata.slug}`;
@@ -61,19 +59,16 @@ export async function  generateMetadata({ params }: { params: Params }) {
     fullTitle,
     description,
     image,
-    canonicalUrl
+    canonicalUrl,
   });
 }
-
 
 export default async function ProductSlugPage({ params }: { params: Params }) {
   const { slug } = await params;
 
-
   const product = await getProductBySlug(slug);
 
   if (!product) return notFound();
-
 
   const { content, metadata } = product;
 
