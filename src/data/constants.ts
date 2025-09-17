@@ -1,3 +1,5 @@
+import type { ElementType } from "react";
+
 import {
   IconBrandFacebook,
   IconBrandInstagram,
@@ -9,7 +11,6 @@ import {
   IconPhoneCall,
 } from "@tabler/icons-react";
 import { Building2 } from "lucide-react";
-import type { ElementType } from "react";
 
 import {
   IconClogSpin,

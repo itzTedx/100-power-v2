@@ -1,8 +1,11 @@
 export default {
-  hello: {
-    world: "Hello {param}!",
-    nested: {
-      translations: "Translations",
-    },
+  navbar: {
+    links: [
+      { Home: "Дом" },
+      { About: "О" },
+      { Solutions: "Решения" },
+      { Products: "Продукты" },
+    ],
+    contact: "Контакт",
   },
 } as const;

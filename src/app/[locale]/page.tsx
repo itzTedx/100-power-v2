@@ -1,19 +1,18 @@
-import Link from "next/link";
+import Link from 'next/link'
 
-import { IconArrowUpRight } from "@tabler/icons-react";
+import { IconArrowUpRight } from '@tabler/icons-react'
 
-import { Faqs } from "@/components/sections/faq";
-import { About } from "@/components/sections/home/about";
-import { Hero } from "@/components/sections/home/hero";
-import { Industries } from "@/components/sections/home/industries";
-import { Products } from "@/components/sections/home/products";
-import { Technologies } from "@/components/sections/home/technologies";
-import { Video } from "@/components/sections/home/video";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+import { Faqs } from '@/components/sections/faq'
+import { About } from '@/components/sections/home/about'
+import { Hero } from '@/components/sections/home/hero'
+import { Products } from '@/components/sections/home/products'
+import { Technologies } from '@/components/sections/home/technologies'
+import { Video } from '@/components/sections/home/video'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Separator } from '@/components/ui/separator'
 
-import { IconUserQuestion } from "@/assets/icons";
+import { IconUserQuestion } from '@/assets/icons'
 
 export default function Home() {
   return (
@@ -22,7 +21,7 @@ export default function Home() {
       <About />
       <Video />
       <Products />
-      <Industries />
+      {/* <Industries /> */}
       <Technologies />
 
       <section className="container max-w-7xl space-y-6 py-8 md:space-y-8 md:py-12">
@@ -45,5 +44,5 @@ export default function Home() {
         <Faqs />
       </section>
     </main>
-  );
+  )
 }
