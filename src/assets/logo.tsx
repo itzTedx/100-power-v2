@@ -1,5 +1,5 @@
-import { JSX, SVGProps } from 'react'
-import Image from 'next/image'
+import { JSX, SVGProps } from "react";
+import Image from "next/image";
 
 export const Logo = () => {
   return (
@@ -11,8 +11,8 @@ export const Logo = () => {
       src="/logo.webp"
       width={96}
     />
-  )
-}
+  );
+};
 
 export const IconLogo = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -63,5 +63,5 @@ export const IconLogo = (
         fill="currentColor"
       />
     </svg>
-  )
-}
+  );
+};

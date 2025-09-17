@@ -10,9 +10,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { getProducts } from "@/features/products/actions";
 import { ProductCard } from "@/features/products/components/product-card";
+import { getScopedI18n } from "@/locale/server";
 
 export const Products = async () => {
   const products = await getProducts();
+  const t = await getScopedI18n("home.products");
   return (
     <section
       aria-labelledby="products-heading"
@@ -20,7 +22,7 @@ export const Products = async () => {
     >
       <Badge>
         <Dot />
-        Flagship Products
+        {t("badge")}
       </Badge>
       <Separator />
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -28,15 +30,13 @@ export const Products = async () => {
           className="font-bold font-helvetica text-2xl sm:text-4xl md:text-5xl"
           id="products-heading"
         >
-          High-Performance Products for Demanding Machines
+          {t("title")}
         </h2>
         <div>
           <p className="mb-2 text-base tracking-tight sm:text-xl md:text-2xl">
-            Each product is developed with precision and purpose - to enhance{" "}
-            <span className="text-primary">
-              durability, reduce wear, and improve performance
-            </span>{" "}
-            under extreme conditions.
+            {t("description.first")}{" "}
+            <span className="text-primary">{t("description.highlight")}</span>{" "}
+            {t("description.last")}
           </p>
           <Button
             aria-label="Explore all products"
@@ -45,7 +45,7 @@ export const Products = async () => {
             variant="secondary"
           >
             <Link href="/products">
-              Explore Products <ArrowUpRight size={18} />
+              {t("button")} <ArrowUpRight size={18} />
             </Link>
           </Button>
         </div>
@@ -58,7 +58,7 @@ export const Products = async () => {
               className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
               value="engine-additives"
             >
-              Engine Additives
+              Engine Oil
             </TabsTrigger>
             <TabsTrigger
               className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
@@ -70,7 +70,7 @@ export const Products = async () => {
               className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
               value="fuel-system"
             >
-              Fuel System
+              Marine & Aviation
             </TabsTrigger>
             <TabsTrigger
               className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
@@ -121,7 +121,7 @@ export const Products = async () => {
         </TabsContent>
         <div className="mx-auto mt-4 w-fit">
           <Button variant="secondary">
-            <Link href="/products">Load More</Link>
+            <Link href="/products">{t("loadButton")}</Link>
           </Button>
         </div>
       </Tabs>

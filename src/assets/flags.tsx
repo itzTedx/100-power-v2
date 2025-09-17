@@ -1,4 +1,4 @@
-import { JSX, SVGProps } from 'react'
+import { JSX, SVGProps } from "react";
 
 export const FlagUae = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -10,8 +10,8 @@ export const FlagUae = (
       <path d="M0 2h6v1H0z" />
       <path d="M0 0h1.5v3H0z" fill="#C8102E" />
     </svg>
-  )
-}
+  );
+};
 
 export const FlagEn = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -49,8 +49,8 @@ export const FlagEn = (
         <use x="2470" xlinkHref="#e" />
       </g>
     </svg>
-  )
-}
+  );
+};
 
 export const FlagRu = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -61,5 +61,5 @@ export const FlagRu = (
       <path d="M0 3h9v3H0z" fill="#DA291C" />
       <path d="M0 2h9v2H0z" fill="#0032A0" />
     </svg>
-  )
-}
+  );
+};

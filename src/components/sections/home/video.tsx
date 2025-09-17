@@ -5,8 +5,10 @@ import { ArrowUpRight, Play } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
 
 import { cn } from "@/lib/utils";
+import { getScopedI18n } from "@/locale/server";
 
-export const Video = () => {
+export const Video = async () => {
+  const t = await getScopedI18n("home.video");
   return (
     <section
       aria-labelledby="innovation-heading"
@@ -27,16 +29,16 @@ export const Video = () => {
           >
             <Play className="size-5 sm:size-6" />
           </div>
-          <span>Play Video</span>
+          <span>{t("play")}</span>
         </button>
         <div className="relative z-10 mt-auto space-y-2 text-end md:space-y-4">
           <h2
             className="font-bold font-helvetica text-background text-xl sm:text-5xl md:text-6xl"
             id="innovation-heading"
           >
-            Driven by Innovation.
+            {t("title.first")}
             <br />
-            Engineered for Impact.
+            {t("title.last")}
           </h2>
 
           <Button
@@ -48,7 +50,7 @@ export const Video = () => {
               aria-label="Learn more about our technology"
               href="/technology"
             >
-              Learn More <ArrowUpRight className="size-3 sm:size-5" />
+              {t("button")} <ArrowUpRight className="size-3 sm:size-5" />
             </Link>
           </Button>
         </div>

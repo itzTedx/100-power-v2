@@ -1,16 +1,16 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import Link from 'next/link'
+import { useState } from "react";
+import Link from "next/link";
 
-import { IconArrowUpRight } from '@tabler/icons-react'
-import { ArrowUpRight, Menu } from 'lucide-react'
+import { IconArrowUpRight } from "@tabler/icons-react";
+import { ArrowUpRight, Menu } from "lucide-react";
 
-import { Logo } from '@/assets/logo'
+import { Logo } from "@/assets/logo";
 
-import { CATEGORIES, NAV_LINKS } from '@/data/constants'
+import { CATEGORIES, NAV_LINKS } from "@/data/constants";
 
-import { Button } from '../ui/button'
+import { Button } from "../ui/button";
 import {
   Sheet,
   SheetContent,
@@ -18,10 +18,10 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '../ui/sheet'
+} from "../ui/sheet";
 
 export const MobileSheet = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <Sheet modal onOpenChange={setIsOpen} open={isOpen}>
       <SheetTrigger asChild className="md:hidden">
@@ -93,5 +93,5 @@ export const MobileSheet = () => {
         </div>
       </SheetContent>
     </Sheet>
-  )
-}
+  );
+};
