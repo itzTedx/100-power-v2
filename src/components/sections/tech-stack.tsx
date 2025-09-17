@@ -1,46 +1,58 @@
 import Image from 'next/image'
 
 import { FEATURES } from '@/data/constants'
+import { getScopedI18n } from '@/locale/server'
 
 import { Button } from '../ui/button'
 import { Separator } from '../ui/separator'
 
-export const TechStack = () => {
-  return FEATURES.map((item) => (
+export const TechStack = async () => {
+  const t = await getScopedI18n('home.technologies')
+  type Key = Parameters<typeof t>[0]
+
+  return FEATURES.map((item, i) => (
     <div className="group py-6" key={item.title}>
       <div className="grid grid-cols-1 items-start gap-9 md:grid-cols-2">
         <h3 className="inline-flex items-center gap-3 font-bold font-helvetica text-5xl">
-          {item.title}
+          {t(`technology.${i}.title` as Key)}
         </h3>
 
-        <p className="text-xl tracking-tight">{item.description}</p>
+        <p className="text-xl tracking-tight">
+          {t(`technology.${i}.description` as Key)}
+        </p>
       </div>
       <div className="grid gap-9 py-12 md:grid-cols-3">
         <ul className="order-2 grid grid-cols-2 gap-6 md:order-1 md:col-span-2 md:group-last:order-2">
-          {item.features.map((feature) => (
+          {item.features.map((feature, idx) => (
             <li className="space-y-4 md:p-3" key={feature.id}>
               <div className="space-y-3">
                 <p className="text-muted-foreground/80">0{feature.id}</p>
                 <Separator />
                 <h4 className="font-helvetica font-medium text-2xl">
-                  {feature.title}
+                  {t(`technology.${i}.feature.${idx}.title` as Key)}
                 </h4>
               </div>
               <p className="text-lg text-muted-foreground">
-                {feature.description}
+                {t(`technology.${i}.feature.${idx}.description` as Key)}
               </p>
             </li>
           ))}
         </ul>
-        {/* <CardFlip data={item} Icon={item.Icon} /> */}
+
         <div className="relative order-1 flex min-h-64 items-end overflow-hidden rounded-md sm:order-2 md:group-last:order-1">
           <div className="relative z-10 flex w-full items-center justify-between p-6 text-accent">
             <div>
-              <h5 className="font-helvetica text-2xl">{item.title}</h5>
-              <p className="tracking-tight">{item.subtitle}</p>
+              <h5 className="font-helvetica text-2xl">
+                {t(`technology.${i}.title` as Key)}
+              </h5>
+              <p className="tracking-tight">
+                {t(`technology.${i}.subtitle` as Key)}
+              </p>
             </div>
             <Button
-              aria-label={`Learn more about ${item.title}`}
+              aria-label={`Learn more about ${t(
+                `technology.${i}.title` as Key
+              )}`}
               className="size-12"
               size="icon"
             >
@@ -48,7 +60,7 @@ export const TechStack = () => {
             </Button>
           </div>
           <Image
-            alt={`Technology: ${item.title}`}
+            alt={`Technology: ${t(`technology.${i}.title` as Key)}`}
             className="object-cover"
             fill
             src={item.image}

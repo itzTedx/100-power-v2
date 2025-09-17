@@ -88,5 +88,63 @@ export default {
     },
     description:
       "We reduce emissions, prevent pollution, and contribute to a cleaner industrial future by reducing oil waste, extending equipment life, and minimizing energy loss.",
+    technology: [
+      {
+        title: "Micro Metallurgical Process",
+        subtitle: "Stronger. Smoother. Smarter Metal.",
+        description:
+          "Our proprietary micro-metallurgical process creates ultra-hard, smooth surfaces that reduce wear, extend lifespan, and enhance oil flow by cleaning and polishing engine internals.",
+        feature: [
+          {
+            title: "Eliminates friction",
+            description:
+              "Effectively reduces friction, ensuring smoother operation, improved efficiency, and reduced engine wear.",
+          },
+          {
+            title: "Polishes internal surfaces",
+            description:
+              "Gently polishes internal engine surfaces to restore performance, reduce noise, and extend vehicle life.",
+          },
+          {
+            title: "Prevents sludge and build-up",
+            description:
+              "Prevents sludge, deposits, and contaminants, keeping engine parts clean and avoiding blockages.",
+          },
+          {
+            title: "Increases durability under stress",
+            description:
+              "Boosts engine part’s strength and resilience to handle high temperatures, heavy loads, and harsh conditions.",
+          },
+        ],
+      },
+      {
+        title: "Anti Friction Technology",
+        subtitle: "Friction - Resistant by Design",
+        description:
+          "Our advanced AFT technology creates a protective micro-layer that reduces wear, noise, and vibration while resisting corrosion for longer, smoother equipment performance.",
+        feature: [
+          {
+            title: "Reduces metal-to-metal contact",
+            description:
+              "Forms a protective micro-layer that reduces metal contact, lowering friction and preventing wear.",
+          },
+          {
+            title: "Minimizes noise and vibration",
+            description:
+              "Dampens harsh engine movement, minimizing noise and vibration for a smoother, quieter drive.",
+          },
+          {
+            title: "Resists abrasion and oxidation",
+            description:
+              "Shields components from wear and oxidation damage, preserving surfaces for durability and cleaner operation.",
+          },
+          {
+            title: "Optimizes reliability and uptime",
+            description:
+              "Improves engine stability and dependability, reducing breakdown risks and ensuring maximum uptime.",
+          },
+        ],
+      },
+    ],
   },
 } as const;
