@@ -1,18 +1,18 @@
-import Image from "next/image";
-import { JSX, SVGProps } from "react";
+import { JSX, SVGProps } from 'react'
+import Image from 'next/image'
 
 export const Logo = () => {
   return (
     <Image
-      src="/logo.webp"
       alt="100 Power Logo"
       height={54}
-      width={96}
-      priority
       loading="eager"
+      priority
+      src="/logo.webp"
+      width={96}
     />
-  );
-};
+  )
+}
 
 export const IconLogo = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -20,10 +20,10 @@ export const IconLogo = (
   return (
     <svg
       {...props}
-      width="24"
+      fill="none"
       height="10"
       viewBox="0 0 24 10"
-      fill="none"
+      width="24"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -63,5 +63,5 @@ export const IconLogo = (
         fill="currentColor"
       />
     </svg>
-  );
-};
+  )
+}

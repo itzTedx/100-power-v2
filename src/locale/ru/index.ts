@@ -1,3 +1,5 @@
+import home from "./home";
+
 export default {
   navbar: {
     links: [
@@ -8,4 +10,5 @@ export default {
     ],
     contact: "Контакт",
   },
+  home,
 } as const;
