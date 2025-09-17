@@ -147,4 +147,52 @@ export default {
       },
     ],
   },
+  faqs: {
+    badge: "Frequently Asked Questions",
+    title: "Have any questions?",
+    button: "Ask as anything",
+    faq: [
+      {
+        title: "What is Engine?",
+        content: `The engine is the heart of an automobile. It is a device that is made of metal that converts the chemical energy of fuel into mechanical energy which is used to drive the vehicle. It is basically a device that produces power. The rotating parts of an engine produce energy from the consumption of fuel and provide energy to the vehicle.
+      
+      The engine is the heart of an automobile. It is a device that is made of metal that converts the chemical energy of fuel into mechanical energy which is used to drive the vehicle. It is basically a device that produces power. The rotating parts of an engine produce energy from the consumption of fuel and provide energy to the vehicle.`,
+      },
+      {
+        title: "What makes Power-10 effective for equipment maintenance?",
+        content:
+          "The engine is the heart of an automobile. It is a device that is made of metal that converts the chemical energy of fuel into mechanical energy which is used to drive the vehicle. It is basically a device that produces power. The rotating parts of an engine produce energy from the consumption of fuel and provide energy to the vehicle.",
+      },
+      {
+        title: "What is Friction?",
+        content:
+          "The engine is the heart of an automobile. It is a device that is made of metal that converts the chemical energy of fuel into mechanical energy which is used to drive the vehicle. It is basically a device that produces power. The rotating parts of an engine produce energy from the consumption of fuel and provide energy to the vehicle.",
+      },
+      {
+        title: "Is Power-10 safe to use on sensitive parts?",
+        content:
+          "The engine is the heart of an automobile. It is a device that is made of metal that converts the chemical energy of fuel into mechanical energy which is used to drive the vehicle. It is basically a device that produces power. The rotating parts of an engine produce energy from the consumption of fuel and provide energy to the vehicle.",
+      },
+      {
+        title: "What is Power-10, and where and when should I use it?",
+        content:
+          "The engine is the heart of an automobile. It is a device that is made of metal that converts the chemical energy of fuel into mechanical energy which is used to drive the vehicle. It is basically a device that produces power. The rotating parts of an engine produce energy from the consumption of fuel and provide energy to the vehicle.",
+      },
+      {
+        title: "Why choose EP-2 Lithium Grease for heavy machinery?",
+        content:
+          "The engine is the heart of an automobile. It is a device that is made of metal that converts the chemical energy of fuel into mechanical energy which is used to drive the vehicle. It is basically a device that produces power. The rotating parts of an engine produce energy from the consumption of fuel and provide energy to the vehicle.",
+      },
+      {
+        title: "Where an EP-2 Grease be used in marine environments?",
+        content:
+          "The engine is the heart of an automobile. It is a device that is made of metal that converts the chemical energy of fuel into mechanical energy which is used to drive the vehicle. It is basically a device that produces power. The rotating parts of an engine produce energy from the consumption of fuel and provide energy to the vehicle.",
+      },
+      {
+        title: "What is EP-2 Grease, and where and when should I use it?",
+        content:
+          "The engine is the heart of an automobile. It is a device that is made of metal that converts the chemical energy of fuel into mechanical energy which is used to drive the vehicle. It is basically a device that produces power. The rotating parts of an engine produce energy from the consumption of fuel and provide energy to the vehicle.",
+      },
+    ],
+  },
 } as const;

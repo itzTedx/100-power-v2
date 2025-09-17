@@ -1,14 +1,7 @@
 import home from "./home";
+import layout from "./layout";
 
 export default {
-  navbar: {
-    links: [
-      { Home: "Дом" },
-      { About: "О" },
-      { Solutions: "Решения" },
-      { Products: "Продукты" },
-    ],
-    contact: "Контакт",
-  },
+  layout,
   home,
 } as const;

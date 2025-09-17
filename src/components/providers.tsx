@@ -1,10 +1,10 @@
-"use client";
+'use client'
 
-import type { ReactNode } from "react";
+import type { ReactNode } from 'react'
 
-import { ProgressProvider } from "@bprogress/next/app";
+import { ProgressProvider } from '@bprogress/next/app'
 
-import { I18nProviderClient } from "@/locale/client";
+import { I18nProviderClient } from '@/locale/client'
 
 const Providers = ({ children }: { children: ReactNode }) => {
   return (
@@ -17,20 +17,20 @@ const Providers = ({ children }: { children: ReactNode }) => {
     >
       {children}
     </ProgressProvider>
-  );
-};
+  )
+}
 
-export default Providers;
+export default Providers
 
 type ProviderProps = {
-  locale: string;
-  children: ReactNode;
-};
+  locale: string
+  children: ReactNode
+}
 
-export function Provider({ locale, children }: ProviderProps) {
+export function I18nProvider({ locale, children }: ProviderProps) {
   return (
     <I18nProviderClient fallback={<p>Loading...</p>} locale={locale}>
       {children}
     </I18nProviderClient>
-  );
+  )
 }
