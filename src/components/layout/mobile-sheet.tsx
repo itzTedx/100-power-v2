@@ -1,12 +1,16 @@
-"use client";
+'use client'
 
-import { IconArrowUpRight } from "@tabler/icons-react";
-import { ArrowUpRight, Menu } from "lucide-react";
-import Link from "next/link";
-import { useState } from "react";
-import { Logo } from "@/assets/logo";
-import { CATEGORIES, NAV_LINKS } from "@/data/constants";
-import { Button } from "../ui/button";
+import { useState } from 'react'
+import Link from 'next/link'
+
+import { IconArrowUpRight } from '@tabler/icons-react'
+import { ArrowUpRight, Menu } from 'lucide-react'
+
+import { Logo } from '@/assets/logo'
+
+import { CATEGORIES, NAV_LINKS } from '@/data/constants'
+
+import { Button } from '../ui/button'
 import {
   Sheet,
   SheetContent,
@@ -14,17 +18,17 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "../ui/sheet";
+} from '../ui/sheet'
 
 export const MobileSheet = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
   return (
-    <Sheet modal open={isOpen} onOpenChange={setIsOpen}>
-      <SheetTrigger className="md:hidden" asChild>
+    <Sheet modal onOpenChange={setIsOpen} open={isOpen}>
+      <SheetTrigger asChild className="md:hidden">
         <Button
-          variant="outline"
+          className="rounded-sm border-muted-foreground/60 bg-muted/60"
           size="icon"
-          className="border-muted-foreground/60 bg-muted/60 rounded-sm"
+          variant="outline"
         >
           <Menu />
         </Button>
@@ -42,17 +46,17 @@ export const MobileSheet = () => {
           <ul className="w-full space-y-2 font-medium">
             {NAV_LINKS.map((link, i) => (
               <li
-                key={`${link.href}-${i}`}
                 className="w-full"
+                key={`${link.href}-${i}`}
                 onClick={() => setIsOpen(false)}
               >
                 <Link
+                  className="inline-flex w-full items-center justify-between rounded-sm px-3 py-3 tracking-tight transition-colors hover:bg-accent hover:text-primary-foreground"
                   href={link.href}
-                  className="hover:text-primary-foreground hover:bg-accent inline-flex w-full items-center justify-between rounded-sm px-3 py-3 tracking-tight transition-colors"
                 >
                   {link.title}
 
-                  <IconArrowUpRight className="text-muted-foreground size-4" />
+                  <IconArrowUpRight className="size-4 text-muted-foreground" />
                 </Link>
               </li>
             ))}
@@ -61,12 +65,12 @@ export const MobileSheet = () => {
                 {CATEGORIES.map((prod, i) => (
                   <li key={i} onClick={() => setIsOpen(false)}>
                     <Link
+                      className="inline-flex w-full items-center justify-between rounded-sm py-2 pr-3 pl-2 tracking-tight transition-colors hover:bg-accent hover:text-primary-foreground"
                       href={prod.href}
-                      className="hover:text-primary-foreground hover:bg-accent inline-flex w-full items-center justify-between rounded-sm py-2 pr-3 pl-2 tracking-tight transition-colors"
                     >
                       {prod.title}
 
-                      <IconArrowUpRight className="text-muted-foreground size-4" />
+                      <IconArrowUpRight className="size-4 text-muted-foreground" />
                     </Link>
                   </li>
                 ))}
@@ -77,9 +81,9 @@ export const MobileSheet = () => {
           <div className="px-3">
             <Button
               asChild
-              variant="secondary"
               className="w-full"
               onClick={() => setIsOpen(false)}
+              variant="secondary"
             >
               <Link href="/contact">
                 Contact <ArrowUpRight size={18} />
@@ -89,5 +93,5 @@ export const MobileSheet = () => {
         </div>
       </SheetContent>
     </Sheet>
-  );
-};
+  )
+}

@@ -1,22 +1,22 @@
-import Image from "next/image";
+import Image from 'next/image'
 
-import { IconArrowUpRight } from "@tabler/icons-react";
+import { IconArrowUpRight } from '@tabler/icons-react'
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
 
 export const Hero = () => {
   return (
-    <section aria-labelledby="hero-heading" className="container py-9 md:py-12">
-      <div className="space-y-5 text-center max-md:pb-6 md:py-6">
+    <section aria-labelledby="hero-heading" className="container py-9 md:pb-12">
+      <div className="space-y-5 text-center max-md:pb-6 md:pb-6">
         <Badge variant="primary">Engineered to Protect</Badge>
 
         <h1
           className="font-bold font-helvetica text-4xl tracking-wide sm:text-5xl md:text-6xl"
           id="hero-heading"
         >
-          Advanced Additives for Peak <br className="hidden md:block" />{" "}
-          Performance and Lasting{" "}
+          Advanced Additives for Peak <br className="hidden md:block" />{' '}
+          Performance and Lasting{' '}
           <span className="text-primary">Protection.</span>
         </h1>
         <p className="text-base sm:text-lg md:text-xl">
@@ -42,5 +42,5 @@ export const Hero = () => {
         />
       </div>
     </section>
-  );
-};
+  )
+}
