@@ -1,11 +1,14 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.2.0/schema.json",
   "vcs": {
-    "enabled": false,
+    "enabled": true,
     "clientKind": "git",
-    "useIgnoreFile": false
+    "useIgnoreFile": true
   },
-  "files": { "ignoreUnknown": false },
+  "files": {
+    "ignoreUnknown": true,
+    "includes": ["**", "!node_modules", "!.next", "!dist", "!build"]
+  },
   "formatter": {
     "enabled": true,
     "formatWithErrors": false,
@@ -23,18 +26,53 @@
     "enabled": true,
     "rules": {
       "recommended": false,
+      "a11y": {
+        "noAriaUnsupportedElements": "warn",
+        "useAltText": "warn",
+        "useAriaPropsForRole": "warn",
+        "useValidAriaProps": "warn",
+        "useValidAriaValues": "warn"
+      },
       "complexity": {
         "noUselessThisAlias": "error",
         "noUselessTypeConstraint": "error",
         "useArrowFunction": "error"
       },
-      "correctness": { "noUnusedVariables": "warn" },
+      "correctness": {
+        "recommended": true,
+        "noUnusedImports": {
+          "level": "warn",
+          "fix": "safe"
+        },
+        "noUnusedVariables": "warn",
+        "useExhaustiveDependencies": "info",
+        "useHookAtTopLevel": "error",
+        "useJsxKeyInIterable": "error"
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "level": "warn",
+          "fix": "safe",
+          "options": {
+            "functions": ["clsx", "cva", "cn"]
+          }
+        }
+      },
       "style": {
+        "noParameterAssign": "error",
         "noCommonJs": "error",
         "noNamespace": "error",
         "useArrayLiterals": "error",
         "useAsConstAssertion": "error",
+        "useDefaultParameterLast": "error",
         "useBlockStatements": "off",
+        "useEnumInitializers": "error",
+        "useSelfClosingElements": "error",
+        "useSingleVarDeclarator": "error",
+        "noUnusedTemplateLiteral": "error",
+        "useNumberNamespace": "error",
+        "noInferrableTypes": "error",
+        "noUselessElse": "error",
         "useTemplate": "error"
       },
       "suspicious": {
@@ -42,8 +80,13 @@
         "noExtraNonNullAssertion": "error",
         "noMisleadingInstantiator": "error",
         "noUnsafeDeclarationMerging": "error",
-        "useNamespaceKeyword": "error"
+        "useNamespaceKeyword": "error",
+        "noDuplicateJsxProps": "error"
       }
+    },
+    "domains": {
+      "next": "recommended",
+      "react": "recommended"
     }
   },
   "javascript": {
@@ -62,6 +105,37 @@
   "html": { "formatter": { "selfCloseVoidElements": "always" } },
   "assist": {
     "enabled": true,
-    "actions": { "source": { "organizeImports": "on" } }
+    "actions": {
+      "source": {
+        "useSortedAttributes": "on",
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              ":TYPES:",
+              ["react", "react/**"],
+              ["next", "next/**"],
+              ":BLANK_LINE:",
+
+              [":PACKAGE:", "!@ziron", "!@ziron/**"],
+              ":BLANK_LINE:",
+
+              ["@ziron", "@ziron/**"],
+              ":BLANK_LINE:",
+
+              ["@", "@/components/**"],
+              ":BLANK_LINE:",
+
+              ["@", "@/assets/**"],
+              ":BLANK_LINE:",
+
+              ":ALIAS:",
+              ":BLANK_LINE:",
+              ":PATH:"
+            ]
+          }
+        }
+      }
+    }
   }
 }

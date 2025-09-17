@@ -1,15 +1,15 @@
-'use client'
+"use client";
 
-import { useQueryState } from 'nuqs'
-import type { ReactNode } from 'react'
+import { useQueryState } from "nuqs";
+import type { ReactNode } from "react";
 
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const Tablist = ({ children }: { children: ReactNode }) => {
-  const [category, setCategory] = useQueryState('category', {
-    defaultValue: 'all',
-  })
+  const [category, setCategory] = useQueryState("category", {
+    defaultValue: "all",
+  });
   return (
     <Tabs
       defaultValue="all"
@@ -59,5 +59,5 @@ export const Tablist = ({ children }: { children: ReactNode }) => {
       </ScrollArea>
       {children}
     </Tabs>
-  )
-}
+  );
+};

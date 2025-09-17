@@ -1,8 +1,8 @@
-import { IconCertificate } from '@tabler/icons-react'
-import Image from 'next/image'
+import { IconCertificate } from "@tabler/icons-react";
+import Image from "next/image";
 
-import { Badge } from '@/components/ui/badge'
-import { Separator } from '@/components/ui/separator'
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
 
 export const Certified = () => {
   return (
@@ -41,5 +41,5 @@ export const Certified = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

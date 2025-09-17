@@ -170,7 +170,7 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
                       </Link>
                     </Button>
                   )}
-                  {product.technicalDs  && (
+                  {product.technicalDs && (
                     <Button variant="secondary" asChild>
                       <Link href={product.technicalDs} target="_blank">
                         <IconChart />
@@ -178,7 +178,6 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
                       </Link>
                     </Button>
                   )}
-                 
                 </div>
               </section>
             )}

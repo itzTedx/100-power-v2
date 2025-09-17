@@ -1,11 +1,13 @@
-import { ArrowUpRight, Dot } from "lucide-react";
 import Link from "next/link";
+
+import { ArrowUpRight, Dot } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 import { getProducts } from "@/features/products/actions";
 import { ProductCard } from "@/features/products/components/product-card";
 
@@ -13,8 +15,8 @@ export const Products = async () => {
   const products = await getProducts();
   return (
     <section
-      className="container space-y-8 py-8 sm:py-12"
       aria-labelledby="products-heading"
+      className="container space-y-8 py-8 sm:py-12"
     >
       <Badge>
         <Dot />
@@ -23,8 +25,8 @@ export const Products = async () => {
       <Separator />
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <h2
+          className="font-bold font-helvetica text-2xl sm:text-4xl md:text-5xl"
           id="products-heading"
-          className="font-helvetica text-2xl font-bold sm:text-4xl md:text-5xl"
         >
           High-Performance Products for Demanding Machines
         </h2>
@@ -37,10 +39,10 @@ export const Products = async () => {
             under extreme conditions.
           </p>
           <Button
-            variant="secondary"
             aria-label="Explore all products"
-            className="w-full sm:w-auto"
             asChild
+            className="w-full sm:w-auto"
+            variant="secondary"
           >
             <Link href="/products">
               Explore Products <ArrowUpRight size={18} />
@@ -51,28 +53,28 @@ export const Products = async () => {
 
       <Tabs defaultValue="engine-additives">
         <ScrollArea>
-          <TabsList className="text-foreground mb-4 h-auto w-full gap-2 rounded-none border-b bg-transparent px-0 py-1">
+          <TabsList className="mb-4 h-auto w-full gap-2 rounded-none border-b bg-transparent px-0 py-1 text-foreground">
             <TabsTrigger
+              className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
               value="engine-additives"
-              className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
             >
               Engine Additives
             </TabsTrigger>
             <TabsTrigger
+              className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
               value="lubrication"
-              className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
             >
               Lubrication
             </TabsTrigger>
             <TabsTrigger
+              className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
               value="fuel-system"
-              className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
             >
               Fuel System
             </TabsTrigger>
             <TabsTrigger
+              className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
               value="industrial"
-              className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
             >
               Industrial Application
             </TabsTrigger>
@@ -81,7 +83,8 @@ export const Products = async () => {
         </ScrollArea>
         <TabsContent value="engine-additives">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {products.filter((p) => p.category === "engine-additives")
+            {products
+              .filter((p) => p.category === "engine-additives")
               ?.slice(0, 9)
               .map((product, id) => (
                 <ProductCard data={product} key={id} />
@@ -90,33 +93,33 @@ export const Products = async () => {
         </TabsContent>
         <TabsContent value="lubrication">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {products.filter((p) => p.category === "lubrication")?.map(
-              (product, id) => (
+            {products
+              .filter((p) => p.category === "lubrication")
+              ?.map((product, id) => (
                 <ProductCard data={product} key={id} />
-              )
-            )}
+              ))}
           </div>
         </TabsContent>
 
         <TabsContent value="fuel-system">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {products.filter((p) => p.category === "fuel-system")?.map(
-              (product, id) => (
+            {products
+              .filter((p) => p.category === "fuel-system")
+              ?.map((product, id) => (
                 <ProductCard data={product} key={id} />
-              )
-            )}
+              ))}
           </div>
         </TabsContent>
         <TabsContent value="industrial">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {products.filter((p) => p.category === "industrial")?.map(
-              (product, id) => (
+            {products
+              .filter((p) => p.category === "industrial")
+              ?.map((product, id) => (
                 <ProductCard data={product} key={id} />
-              )
-            )}
+              ))}
           </div>
         </TabsContent>
-        <div className="w-fit mx-auto mt-4">
+        <div className="mx-auto mt-4 w-fit">
           <Button variant="secondary">
             <Link href="/products">Load More</Link>
           </Button>

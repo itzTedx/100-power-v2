@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useTransition } from 'react'
-import { useForm } from 'react-hook-form'
-import { toast } from 'sonner'
-import { Button } from '@/components/ui/button'
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useTransition } from "react";
+import { useForm } from "react-hook-form";
+import { toast } from "sonner";
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -12,37 +12,37 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { sendContactEmail } from '../actions/mutation'
-import { ContactFormData, contactSchema } from '../schema/contact-schema'
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { sendContactEmail } from "../actions/mutation";
+import { ContactFormData, contactSchema } from "../schema/contact-schema";
 
 export function ContactForm() {
-  const [isPending, startTransition] = useTransition()
+  const [isPending, startTransition] = useTransition();
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
-      name: '',
-      companyName: '',
-      email: '',
-      phoneNumber: '',
-      message: '',
-      subject: '',
+      name: "",
+      companyName: "",
+      email: "",
+      phoneNumber: "",
+      message: "",
+      subject: "",
     },
-    mode: 'onBlur',
-  })
+    mode: "onBlur",
+  });
 
   async function onSubmit(values: ContactFormData) {
     startTransition(async () => {
-      const result = await sendContactEmail(values)
+      const result = await sendContactEmail(values);
 
       if (result.success) {
-        form.reset()
-        toast.success('We will get back to you shortly.')
+        form.reset();
+        toast.success("We will get back to you shortly.");
       }
-    })
+    });
   }
 
   return (
@@ -145,5 +145,5 @@ export function ContactForm() {
         </Button>
       </form>
     </Form>
-  )
+  );
 }

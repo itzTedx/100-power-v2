@@ -12,7 +12,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-export const Header = ({  metadata, children }: Props) => {
+export const Header = ({ metadata, children }: Props) => {
   const carousel: CarouselImages = metadata.images.map((img) => ({ url: img }));
   return (
     <section className="grid grid-cols-1 gap-8 pt-4 md:grid-cols-2">

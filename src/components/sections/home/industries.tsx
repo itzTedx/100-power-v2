@@ -1,11 +1,12 @@
+import { Suspense } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { Suspense } from "react";
 
 import { Dot } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+
 import { INDUSTRIES } from "@/data/constants";
 
 const SimpleMarquee = dynamic(() => import("@/components/animated/marquee"));
@@ -13,8 +14,8 @@ const SimpleMarquee = dynamic(() => import("@/components/animated/marquee"));
 export const Industries = () => {
   return (
     <section
-      className="overflow-hidden py-12"
       aria-labelledby="industries-heading"
+      className="overflow-hidden py-12"
     >
       <div className="container mb-16 space-y-8">
         <Badge>
@@ -24,8 +25,8 @@ export const Industries = () => {
         <Separator />
         <div className="grid grid-cols-2 gap-4">
           <h2
+            className="font-bold font-helvetica text-5xl"
             id="industries-heading"
-            className="font-helvetica text-5xl font-bold"
           >
             Serving Every Sector with Precision
           </h2>
@@ -46,34 +47,34 @@ export const Industries = () => {
         }
       >
         <SimpleMarquee
-          className="w-full"
           baseVelocity={4}
-          repeat={4}
+          className="w-full"
           draggable
+          repeat={4}
+          scrollAwareDirection={true}
           scrollSpringConfig={{ damping: 50, stiffness: 400 }}
           slowDownFactor={0.1}
-          slowdownOnHover
           slowDownSpringConfig={{ damping: 60, stiffness: 300 }}
-          scrollAwareDirection={true}
+          slowdownOnHover
           useScrollVelocity={true}
         >
           {INDUSTRIES.map((item, i) => (
             <MarqueeItem key={i}>
               <div className="relative aspect-4/3 h-60 overflow-hidden rounded-2xl p-6 md:h-[26rem]">
                 <div className="relative z-20 flex h-full items-end">
-                  <h4 className="font-helvetica bg-background rounded-sm px-2 py-0.5 font-medium">
+                  <h4 className="rounded-sm bg-background px-2 py-0.5 font-helvetica font-medium">
                     {item.label}
                   </h4>
                 </div>
 
                 <Image
-                  src={item.image}
                   alt={`Industry: ${item.label}`}
                   className="object-cover"
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   loading={i < 2 ? "eager" : "lazy"}
                   priority={i < 2}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  src={item.image}
                 />
               </div>
             </MarqueeItem>

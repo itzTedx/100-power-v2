@@ -6,10 +6,10 @@ export const IconDashboard = (
   return (
     <svg
       {...props}
-      width="40"
+      fill="none"
       height="36"
       viewBox="0 0 40 36"
-      fill="none"
+      width="40"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -26,10 +26,10 @@ export const IconWrench = (
   return (
     <svg
       {...props}
-      width="36"
+      fill="none"
       height="36"
       viewBox="0 0 36 36"
-      fill="none"
+      width="36"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g clipPath="url(#clip0_138_1252)">
@@ -40,7 +40,7 @@ export const IconWrench = (
       </g>
       <defs>
         <clipPath id="clip0_138_1252">
-          <rect width="36" height="36" fill="white" />
+          <rect fill="white" height="36" width="36" />
         </clipPath>
       </defs>
     </svg>
@@ -53,10 +53,10 @@ export const IconEco = (
   return (
     <svg
       {...props}
-      width="36"
+      fill="none"
       height="36"
       viewBox="0 0 36 36"
-      fill="none"
+      width="36"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g clipPath="url(#clip0_138_1252)">
@@ -67,7 +67,7 @@ export const IconEco = (
       </g>
       <defs>
         <clipPath id="clip0_138_1252">
-          <rect width="36" height="36" fill="white" />
+          <rect fill="white" height="36" width="36" />
         </clipPath>
       </defs>
     </svg>
@@ -80,10 +80,10 @@ export const IconShield = (
   return (
     <svg
       {...props}
-      width="24"
+      fill="none"
       height="24"
       viewBox="0 0 24 24"
-      fill="none"
+      width="24"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g clipPath="url(#clip0_160_476)">
@@ -98,7 +98,7 @@ export const IconShield = (
       </g>
       <defs>
         <clipPath id="clip0_160_476">
-          <rect width="24" height="24" fill="white" />
+          <rect fill="white" height="24" width="24" />
         </clipPath>
       </defs>
     </svg>
@@ -111,10 +111,10 @@ export const IconChart = (
   return (
     <svg
       {...props}
-      width="24"
+      fill="none"
       height="24"
       viewBox="0 0 24 24"
-      fill="none"
+      width="24"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -147,10 +147,10 @@ export const IconThunder = (
   return (
     <svg
       {...props}
-      width="16"
+      fill="none"
       height="16"
       viewBox="0 0 16 16"
-      fill="none"
+      width="16"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -167,10 +167,10 @@ export const IconClogSpin = (
   return (
     <svg
       {...props}
-      width="24"
+      fill="none"
       height="25"
       viewBox="0 0 24 25"
-      fill="none"
+      width="24"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -187,10 +187,10 @@ export const IconUserQuestion = (
   return (
     <svg
       {...props}
-      width="16"
+      fill="none"
       height="16"
       viewBox="0 0 16 16"
-      fill="none"
+      width="16"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g clipPath="url(#clip0_138_1094)">
@@ -201,7 +201,7 @@ export const IconUserQuestion = (
       </g>
       <defs>
         <clipPath id="clip0_138_1094">
-          <rect width="16" height="16" fill="white" />
+          <rect fill="white" height="16" width="16" />
         </clipPath>
       </defs>
     </svg>
@@ -214,10 +214,10 @@ export const IconClock = (
   return (
     <svg
       {...props}
-      width="41"
+      fill="none"
       height="73"
       viewBox="0 0 41 73"
-      fill="none"
+      width="41"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -237,10 +237,10 @@ export const IconOdometer = (
   return (
     <svg
       {...props}
-      width="62"
+      fill="none"
       height="82"
       viewBox="0 0 62 82"
-      fill="none"
+      width="62"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -257,10 +257,10 @@ export const IconGears = (
   return (
     <svg
       {...props}
-      width="61"
+      fill="none"
       height="82"
       viewBox="0 0 61 82"
-      fill="none"
+      width="61"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -278,10 +278,10 @@ export const IconCo2 = (
   return (
     <svg
       {...props}
-      width="24"
+      fill="none"
       height="24"
       viewBox="0 0 24 24"
-      fill="none"
+      width="24"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g clipPath="url(#clip0_253_59)">
@@ -292,7 +292,7 @@ export const IconCo2 = (
       </g>
       <defs>
         <clipPath id="clip0_253_59">
-          <rect width="24" height="24" fill="white" />
+          <rect fill="white" height="24" width="24" />
         </clipPath>
       </defs>
     </svg>

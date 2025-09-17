@@ -1,11 +1,11 @@
-import { ArrowUpRight } from 'lucide-react'
-import Link from 'next/link'
+import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
-import { Logo } from '@/assets/logo'
-import { NAV_LINKS } from '@/data/constants'
+import { Logo } from "@/assets/logo";
+import { NAV_LINKS } from "@/data/constants";
 
-import { Button } from '../ui/button'
-import { MobileSheet } from './mobile-sheet'
+import { Button } from "../ui/button";
+import { MobileSheet } from "./mobile-sheet";
 
 export const Navbar = () => {
   return (
@@ -38,5 +38,5 @@ export const Navbar = () => {
         </div>
       </nav>
     </header>
-  )
-}
+  );
+};

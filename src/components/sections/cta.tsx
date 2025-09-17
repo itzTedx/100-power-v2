@@ -1,7 +1,7 @@
-import { IconArrowUpRight } from '@tabler/icons-react'
-import Image from 'next/image'
+import { IconArrowUpRight } from "@tabler/icons-react";
+import Image from "next/image";
 
-import { Button } from '../ui/button'
+import { Button } from "../ui/button";
 
 export const Cta = () => {
   return (
@@ -42,5 +42,5 @@ export const Cta = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

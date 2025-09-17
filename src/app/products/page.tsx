@@ -56,11 +56,11 @@ export default async function ProductsPage() {
               className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
               aria-label="Engine Additives"
             >
-              {products.filter((p) => p.category === "engine-additives")?.map(
-                (product, id) => (
+              {products
+                .filter((p) => p.category === "engine-additives")
+                ?.map((product, id) => (
                   <ProductCard data={product} key={`${id}-${product.title}`} />
-                )
-              )}
+                ))}
             </section>
           </TabsContent>
           <TabsContent value="lubrication">
@@ -68,11 +68,11 @@ export default async function ProductsPage() {
               className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
               aria-label="Lubrication Products"
             >
-              {products.filter((p) => p.category === "lubrication")?.map(
-                (product, id) => (
+              {products
+                .filter((p) => p.category === "lubrication")
+                ?.map((product, id) => (
                   <ProductCard data={product} key={`${id}-${product.title}`} />
-                )
-              )}
+                ))}
             </section>
           </TabsContent>
           <TabsContent value="fuel-system">
@@ -80,11 +80,11 @@ export default async function ProductsPage() {
               className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
               aria-label="Fuel System Products"
             >
-              {products.filter((p) => p.category === "fuel-system")?.map(
-                (product, id) => (
+              {products
+                .filter((p) => p.category === "fuel-system")
+                ?.map((product, id) => (
                   <ProductCard data={product} key={`${id}-${product.title}`} />
-                )
-              )}
+                ))}
             </section>
           </TabsContent>
           <TabsContent value="industrial">
@@ -92,11 +92,11 @@ export default async function ProductsPage() {
               className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
               aria-label="Industrial Application Products"
             >
-              {products.filter((p) => p.category === "industrial")?.map(
-                (product, id) => (
+              {products
+                .filter((p) => p.category === "industrial")
+                ?.map((product, id) => (
                   <ProductCard data={product} key={`${id}-${product.title}`} />
-                )
-              )}
+                ))}
             </section>
           </TabsContent>
         </Tablist>
