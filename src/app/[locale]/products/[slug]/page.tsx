@@ -1,6 +1,8 @@
-import { Metadata } from "next";
-import { notFound } from "next/navigation";
-import MDXContent from "@/components/markdown/mdx-component";
+import { notFound } from 'next/navigation'
+
+import { setStaticParamsLocale } from 'next-international/server'
+
+import MDXContent from '@/components/markdown/mdx-component'
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -8,7 +10,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+} from '@/components/ui/breadcrumb'
 import {
   Table,
   TableBody,
@@ -16,13 +18,11 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
-import { PRODUCTS } from "@/data/products";
-import {
-  getProductBySlug,
-  getProductMetadata,
-} from "@/features/products/actions";
-import { Header } from "@/features/products/components/header";
+} from '@/components/ui/table'
+
+import { PRODUCTS } from '@/data/products'
+import { getProductBySlug } from '@/features/products/actions'
+import { Header } from '@/features/products/components/header'
 import {
   DirectionsTabs,
   InformationTabs,
@@ -30,47 +30,53 @@ import {
   Section,
   SplitSection,
   TabContent,
-} from "@/features/products/components/tabs";
-import { constructMetadata } from "@/features/seo";
+} from '@/features/products/components/tabs'
+import { constructMetadata } from '@/features/seo'
+import { getStaticParams } from '@/locale/server'
 
-type Params = Promise<{ slug: string }>;
+type Params = Promise<{ slug: string; locale: string }>
 
 export async function generateStaticParams() {
-  return PRODUCTS.map((post) => ({
-    slug: post.href,
-  }));
+  const locales = getStaticParams() as Array<{ locale: string }>
+  return locales.flatMap(({ locale }) =>
+    PRODUCTS.map((post) => ({
+      locale,
+      slug: post.href,
+    }))
+  )
 }
 
 export async function generateMetadata({ params }: { params: Params }) {
-  const { slug } = await params;
+  const { slug } = await params
 
-  const product = await getProductBySlug(slug);
+  const product = await getProductBySlug(slug)
   if (!product)
     return {
-      title: "Product not Available",
-    };
+      title: 'Product not Available',
+    }
 
-  const fullTitle = product.metadata.meta.title;
-  const description = product.metadata.meta.description;
-  const image = product.metadata.images[0];
-  const canonicalUrl = `/products/${product.metadata.slug}`;
+  const fullTitle = product.metadata.meta.title
+  const description = product.metadata.meta.description
+  const image = product.metadata.images[0]
+  const canonicalUrl = `/products/${product.metadata.slug}`
 
   return constructMetadata({
     fullTitle,
     description,
     image,
     canonicalUrl,
-  });
+  })
 }
 
 export default async function ProductSlugPage({ params }: { params: Params }) {
-  const { slug } = await params;
+  const { slug, locale } = await params
+  setStaticParamsLocale(locale)
 
-  const product = await getProductBySlug(slug);
+  const product = await getProductBySlug(slug)
 
-  if (!product) return notFound();
+  if (!product) return notFound()
 
-  const { content, metadata } = product;
+  const { content, metadata } = product
 
   return (
     <>
@@ -87,10 +93,10 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
             <BreadcrumbSeparator>/</BreadcrumbSeparator>
             <BreadcrumbItem>
               <BreadcrumbLink
-                href={`/products?category=${metadata.category}`}
                 className="capitalize"
+                href={`/products?category=${metadata.category}`}
               >
-                {metadata.category.replace(/-/g, " ")}
+                {metadata.category.replace(/-/g, ' ')}
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator>/</BreadcrumbSeparator>
@@ -99,9 +105,8 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
-        <article className="prose max-w-none prose-h2:text-muted-foreground prose-h2:mb-1 prose-h2:text-base prose-h2:font-normal prose-p:text-base prose-p:leading-normal prose-p:tracking-tight sm:prose-p:text-lg prose-li:prose-p:text-base prose-li:text-base prose-h3:text-xl prose-ul:mt-0 prose-ol:mt-0 prose-h3:mt-4 prose-h3:mb-2 prose-table:mt-0 prose-table:prose-p:mt-0 prose-table:prose-p:mb-0">
+        <article className="prose prose-h3:mt-4 prose-ol:mt-0 prose-table:mt-0 prose-table:prose-p:mt-0 prose-ul:mt-0 prose-h2:mb-1 prose-h3:mb-2 prose-table:prose-p:mb-0 max-w-none prose-h2:font-normal prose-h2:text-base prose-h2:text-muted-foreground prose-h3:text-xl prose-li:prose-p:text-base prose-li:text-base prose-p:text-base prose-p:leading-normal prose-p:tracking-tight sm:prose-p:text-lg">
           <MDXContent
-            source={content}
             components={{
               Header: (props) => <Header {...props} metadata={metadata} />,
               InformationTabs,
@@ -121,24 +126,25 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
               TableRow,
               SafetyTabs,
             }}
+            source={content}
           />
         </article>
       </main>
       <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org/",
-            "@type": "Product",
+            '@context': 'https://schema.org/',
+            '@type': 'Product',
             name: metadata.title,
             image: metadata.images,
             brand: {
-              "@type": "Brand",
-              name: "100 Power",
+              '@type': 'Brand',
+              name: '100 Power',
             },
           }),
         }}
+        type="application/ld+json"
       />
     </>
-  );
+  )
 }

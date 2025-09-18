@@ -1,25 +1,34 @@
-import { Metadata } from "next";
+import { Metadata } from 'next'
 
-import { Benefits } from "@/components/sections/solutions/benefits";
-import { Certified } from "@/components/sections/solutions/certified";
-import { SolutionHero } from "@/components/sections/solutions/hero";
-import { Results } from "@/components/sections/solutions/results";
-import { SolutionTechnologies } from "@/components/sections/solutions/technologies";
+import { setStaticParamsLocale } from 'next-international/server'
+
+import { Benefits } from '@/components/sections/solutions/benefits'
+import { Certified } from '@/components/sections/solutions/certified'
+import { SolutionHero } from '@/components/sections/solutions/hero'
+import { Results } from '@/components/sections/solutions/results'
+import { SolutionTechnologies } from '@/components/sections/solutions/technologies'
 
 export const metadata: Metadata = {
-  title: "High-Performance Solutions | 100 Power",
+  title: 'High-Performance Solutions | 100 Power',
   description:
-    "Explore high-performance lubrication, engine additives, and industrial products engineered for durability, reduced wear, and optimal machine performance under extreme conditions.",
+    'Explore high-performance lubrication, engine additives, and industrial products engineered for durability, reduced wear, and optimal machine performance under extreme conditions.',
   openGraph: {
-    title: "High-Performance Products | 100 Power",
+    title: 'High-Performance Products | 100 Power',
     description:
-      "Explore high-performance lubrication, engine additives, and industrial products engineered for durability, reduced wear, and optimal machine performance under extreme conditions.",
-    url: "https://www.100poweruae.com/solutions",
-    type: "website",
+      'Explore high-performance lubrication, engine additives, and industrial products engineered for durability, reduced wear, and optimal machine performance under extreme conditions.',
+    url: 'https://www.100poweruae.com/solutions',
+    type: 'website',
   },
-};
+}
 
-export default function SolutionsPage() {
+export default async function SolutionsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  setStaticParamsLocale(locale)
+
   return (
     <main>
       <SolutionHero />
@@ -42,5 +51,5 @@ export default function SolutionsPage() {
         </div>
       </section> */}
     </main>
-  );
+  )
 }

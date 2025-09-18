@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { IconArrowUpRight } from '@tabler/icons-react'
 import { ArrowUpRight, CheckIcon } from 'lucide-react'
+import { setStaticParamsLocale } from 'next-international/server'
 
 import { Faqs } from '@/components/sections/faq'
 import { Badge } from '@/components/ui/badge'
@@ -22,6 +23,11 @@ import { IconLogo } from '@/assets/logo'
 import { CONTACT } from '@/data/constants'
 import { ContactForm } from '@/features/contact/components/contact-form'
 import { cn } from '@/lib/utils'
+import { getStaticParams } from '@/locale/server'
+
+export function generateStaticParams() {
+  return getStaticParams()
+}
 
 export const metadata: Metadata = {
   title: 'Contact us | 100 Power',
@@ -54,7 +60,14 @@ const steps = [
   },
 ]
 
-export default function ContactPage() {
+export default async function ContactPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  setStaticParamsLocale(locale)
+
   return (
     <main className="space-y-6 py-12 md:space-y-16">
       <section

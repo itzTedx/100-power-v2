@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+import createNextIntlPlugin from "next-intl/plugin";
+
 const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
@@ -35,4 +37,10 @@ const nextConfig: NextConfig = {
   generateEtags: true,
 };
 
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin({
+  // experimental: {
+  //   createMessagesDeclaration: ["./src/dictionaries/en.json"],
+  // },
+});
+
+export default withNextIntl(nextConfig);

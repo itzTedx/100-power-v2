@@ -1,0 +1,14 @@
+import { defineRouting } from "next-intl/routing";
+
+export const routing = defineRouting({
+  // A list of all locales that are supported
+  locales: ["en", "ar", "ru"],
+
+  // Used when no locale matches
+  defaultLocale: "en",
+
+  localeCookie: {
+    // Custom cookie name
+    name: "100_POWER_LOCALE",
+  },
+});

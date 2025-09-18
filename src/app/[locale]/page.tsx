@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import { IconArrowUpRight } from '@tabler/icons-react'
+import { setStaticParamsLocale } from 'next-international/server'
 
 import { Faqs } from '@/components/sections/faq'
 import { About } from '@/components/sections/home/about'
@@ -14,10 +15,21 @@ import { Separator } from '@/components/ui/separator'
 
 import { IconUserQuestion } from '@/assets/icons'
 
-import { getScopedI18n } from '@/locale/server'
+import { getScopedI18n, getStaticParams } from '@/locale/server'
 
-export default async function Home() {
-  const tFaqs = await getScopedI18n('home.faqs')
+export function generateStaticParams() {
+  return getStaticParams()
+}
+
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  setStaticParamsLocale(locale)
+
+  const t = await getScopedI18n('home.faqs')
 
   return (
     <main>
@@ -32,17 +44,17 @@ export default async function Home() {
         <div className="space-y-4">
           <Badge>
             <IconUserQuestion />
-            {tFaqs('badge')}
+            {t('badge')}
           </Badge>
           <Separator />
           <div className="flex flex-col items-start justify-between gap-4 sm:gap-6 md:flex-row md:gap-9">
             <h2 className="inline-flex items-center gap-3 font-helvetica font-medium text-4xl md:text-5xl">
-              {tFaqs('title')}
+              {t('title')}
             </h2>
 
             <Button asChild className="w-fit" variant="secondary">
               <Link href="/contact">
-                {tFaqs('button')} <IconArrowUpRight />
+                {t('button')} <IconArrowUpRight />
               </Link>
             </Button>
           </div>
