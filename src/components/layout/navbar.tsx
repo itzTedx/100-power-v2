@@ -1,18 +1,18 @@
 import Link from 'next/link'
 
 import { ArrowUpRight } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 
 import { Logo } from '@/assets/logo'
 
 import { NAV_LINKS } from '@/data/constants'
-import { getScopedI18n } from '@/locale/server'
 
 import { Button } from '../ui/button'
 import { LanguageSelector } from './locale-selector'
 import { MobileSheet } from './mobile-sheet'
 
 export const Navbar = async () => {
-  const t = await getScopedI18n('layout.navbar')
+  const t = await getTranslations('layout.navbar')
   const linkKeys = [
     'links.0.Home',
     'links.1.About',

@@ -1,20 +1,20 @@
-import Link from "next/link";
+import Link from 'next/link'
 
-import { ArrowUpRight, Dot } from "lucide-react";
+import { ArrowUpRight, Dot } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { Separator } from "@/components/ui/separator";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
+import { Separator } from '@/components/ui/separator'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
-import { getProducts } from "@/features/products/actions";
-import { ProductCard } from "@/features/products/components/product-card";
-import { getScopedI18n } from "@/locale/server";
+import { getProducts } from '@/features/products/actions'
+import { ProductCard } from '@/features/products/components/product-card'
 
 export const Products = async () => {
-  const products = await getProducts();
-  const t = await getScopedI18n("home.products");
+  const products = await getProducts()
+  const t = await getTranslations('home.products')
   return (
     <section
       aria-labelledby="products-heading"
@@ -22,7 +22,7 @@ export const Products = async () => {
     >
       <Badge>
         <Dot />
-        {t("badge")}
+        {t('badge')}
       </Badge>
       <Separator />
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -30,13 +30,13 @@ export const Products = async () => {
           className="font-bold font-helvetica text-2xl sm:text-4xl md:text-5xl"
           id="products-heading"
         >
-          {t("title")}
+          {t('title')}
         </h2>
         <div>
           <p className="mb-2 text-base tracking-tight sm:text-xl md:text-2xl">
-            {t("description.first")}{" "}
-            <span className="text-primary">{t("description.highlight")}</span>{" "}
-            {t("description.last")}
+            {t('description.first')}{' '}
+            <span className="text-primary">{t('description.highlight')}</span>{' '}
+            {t('description.last')}
           </p>
           <Button
             aria-label="Explore all products"
@@ -45,7 +45,7 @@ export const Products = async () => {
             variant="secondary"
           >
             <Link href="/products">
-              {t("button")} <ArrowUpRight size={18} />
+              {t('button')} <ArrowUpRight size={18} />
             </Link>
           </Button>
         </div>
@@ -84,7 +84,7 @@ export const Products = async () => {
         <TabsContent value="engine-additives">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {products
-              .filter((p) => p.category === "engine-additives")
+              .filter((p) => p.category === 'engine-additives')
               ?.slice(0, 9)
               .map((product, id) => (
                 <ProductCard data={product} key={id} />
@@ -94,7 +94,7 @@ export const Products = async () => {
         <TabsContent value="lubrication">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {products
-              .filter((p) => p.category === "lubrication")
+              .filter((p) => p.category === 'lubrication')
               ?.map((product, id) => (
                 <ProductCard data={product} key={id} />
               ))}
@@ -104,7 +104,7 @@ export const Products = async () => {
         <TabsContent value="fuel-system">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {products
-              .filter((p) => p.category === "fuel-system")
+              .filter((p) => p.category === 'fuel-system')
               ?.map((product, id) => (
                 <ProductCard data={product} key={id} />
               ))}
@@ -113,7 +113,7 @@ export const Products = async () => {
         <TabsContent value="industrial">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {products
-              .filter((p) => p.category === "industrial")
+              .filter((p) => p.category === 'industrial')
               ?.map((product, id) => (
                 <ProductCard data={product} key={id} />
               ))}
@@ -121,10 +121,10 @@ export const Products = async () => {
         </TabsContent>
         <div className="mx-auto mt-4 w-fit">
           <Button variant="secondary">
-            <Link href="/products">{t("loadButton")}</Link>
+            <Link href="/products">{t('loadButton')}</Link>
           </Button>
         </div>
       </Tabs>
     </section>
-  );
-};
+  )
+}

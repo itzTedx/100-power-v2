@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Geist } from 'next/font/google'
 
+import type { AbstractIntlMessages } from 'next-intl'
+import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
 
 import { Footer, Navbar } from '@/components/layout'
@@ -12,15 +14,24 @@ import { cn } from '@/lib/utils'
 
 import './globals.css'
 
+import { notFound } from 'next/navigation'
+
+import { setRequestLocale } from 'next-intl/server'
+
 import Providers from '@/components/providers'
 import { Toaster } from '@/components/ui/sonner'
 
-import { getCurrentLocale } from '@/locale/server'
+import { getMessages } from '@/locale'
+import { routing } from '@/locale/routing'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
 })
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }))
+}
 
 export const metadata: Metadata = {
   title: '100 Power - Next-Gen Lubrication Technology for Maximum Performance',
@@ -60,15 +71,28 @@ export const metadata: Metadata = {
 }
 export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode
+  params: Promise<{ locale: string }>
 }>) {
-  const currentLocale = await getCurrentLocale()
+  const { locale } = await params
+  if (!hasLocale(routing.locales, locale)) {
+    notFound()
+  }
+
+  // Enable static rendering
+  setRequestLocale(locale)
+
+  const messages = (await getMessages(
+    locale
+  )) as unknown as AbstractIntlMessages
+
   return (
     <html
       className="scroll-smooth"
-      dir={currentLocale === 'ar' ? 'rtl' : 'ltr'}
-      lang="en"
+      dir={locale === 'ar' ? 'rtl' : 'ltr'}
+      lang={locale}
     >
       <body
         className={cn(
@@ -77,15 +101,17 @@ export default async function RootLayout({
           helvetica.variable
         )}
       >
-        <Providers>
-          <NuqsAdapter>
-            <Navbar />
-            {children}
-            <Cta />
-            <Footer />
-            <Toaster richColors />
-          </NuqsAdapter>
-        </Providers>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Providers>
+            <NuqsAdapter>
+              <Navbar />
+              {children}
+              <Cta />
+              <Footer />
+              <Toaster richColors />
+            </NuqsAdapter>
+          </Providers>
+        </NextIntlClientProvider>
       </body>
     </html>
   )

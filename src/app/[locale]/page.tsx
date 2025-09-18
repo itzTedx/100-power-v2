@@ -1,7 +1,8 @@
 import Link from 'next/link'
 
 import { IconArrowUpRight } from '@tabler/icons-react'
-import { setStaticParamsLocale } from 'next-international/server'
+import { Locale } from 'next-intl'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 
 import { Faqs } from '@/components/sections/faq'
 import { About } from '@/components/sections/home/about'
@@ -15,21 +16,16 @@ import { Separator } from '@/components/ui/separator'
 
 import { IconUserQuestion } from '@/assets/icons'
 
-import { getScopedI18n, getStaticParams } from '@/locale/server'
-
-export function generateStaticParams() {
-  return getStaticParams()
+type Props = {
+  params: Promise<{ locale: Locale }>
 }
 
-export default async function Home({
-  params,
-}: {
-  params: Promise<{ locale: string }>
-}) {
+export default async function Home({ params }: Props) {
   const { locale } = await params
-  setStaticParamsLocale(locale)
+  // Enable static rendering
+  setRequestLocale(locale)
 
-  const t = await getScopedI18n('home.faqs')
+  const t = await getTranslations('home.faqs')
 
   return (
     <main>

@@ -1,14 +1,13 @@
 import { Dot } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 
-import { getScopedI18n } from '@/locale/server'
-
 import { TechStack } from '../tech-stack'
 
 export const Technologies = async () => {
-  const t = await getScopedI18n('home.technologies')
+  const t = await getTranslations('home.technologies')
   return (
     <section aria-labelledby="technologies-heading" className="py-12">
       <div className="container max-w-5xl py-20 text-center">

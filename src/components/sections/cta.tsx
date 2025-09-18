@@ -1,13 +1,12 @@
 import Image from 'next/image'
 
 import { IconArrowUpRight } from '@tabler/icons-react'
-
-import { getScopedI18n } from '@/locale/server'
+import { getTranslations } from 'next-intl/server'
 
 import { Button } from '../ui/button'
 
 export const Cta = async () => {
-  const t = await getScopedI18n('layout.cta')
+  const t = await getTranslations('layout.cta')
   return (
     <section aria-labelledby="cta-heading" className="container py-8 md:py-12">
       <div className="relative grid grid-cols-1 overflow-hidden rounded-sm bg-secondary px-4 text-secondary-foreground md:grid-cols-2 md:px-12">

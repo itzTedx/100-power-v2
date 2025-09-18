@@ -37,10 +37,6 @@ const nextConfig: NextConfig = {
   generateEtags: true,
 };
 
-const withNextIntl = createNextIntlPlugin({
-  // experimental: {
-  //   createMessagesDeclaration: ["./src/dictionaries/en.json"],
-  // },
-});
+const withNextIntl = createNextIntlPlugin("./src/locale/request.ts");
 
 export default withNextIntl(nextConfig);

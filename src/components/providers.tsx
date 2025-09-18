@@ -4,8 +4,6 @@ import type { ReactNode } from 'react'
 
 import { ProgressProvider } from '@bprogress/next/app'
 
-import { I18nProviderClient } from '@/locale/client'
-
 const Providers = ({ children }: { children: ReactNode }) => {
   return (
     <ProgressProvider
@@ -21,16 +19,3 @@ const Providers = ({ children }: { children: ReactNode }) => {
 }
 
 export default Providers
-
-type ProviderProps = {
-  locale: string
-  children: ReactNode
-}
-
-export function I18nProvider({ locale, children }: ProviderProps) {
-  return (
-    <I18nProviderClient fallback={<p>Loading...</p>} locale={locale}>
-      {children}
-    </I18nProviderClient>
-  )
-}

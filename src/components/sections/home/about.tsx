@@ -1,24 +1,24 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
+} from '@/components/ui/card'
+import { Separator } from '@/components/ui/separator'
 
-import { IconLogo } from "@/assets/logo";
+import { IconLogo } from '@/assets/logo'
 
-import { WHO_WE_ARE } from "@/data/constants";
-import { getScopedI18n } from "@/locale/server";
+import { WHO_WE_ARE } from '@/data/constants'
 
 export const About = async () => {
-  const t = await getScopedI18n("home.about");
-  type AboutKey = Parameters<typeof t>[0];
+  const t = await getTranslations('home.about')
+  type AboutKey = Parameters<typeof t>[0]
 
   return (
     <section
@@ -27,7 +27,7 @@ export const About = async () => {
     >
       <Badge>
         <IconLogo />
-        {t("badge")}
+        {t('badge')}
       </Badge>
       <Separator />
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -66,7 +66,7 @@ export const About = async () => {
         <div className="space-y-2 py-3 md:col-span-1">
           <Badge>
             <IconLogo className="shrink-0" />
-            {t("badge")}
+            {t('badge')}
           </Badge>
           <Separator />
           <div className="space-y-4">
@@ -74,23 +74,23 @@ export const About = async () => {
               className="text-balance font-medium text-2xl tracking-tighter sm:text-3xl md:text-4xl"
               id="about-heading"
             >
-              {t("title.first")}{" "}
-              <span className="text-primary">{t("title.highlight")}</span>{" "}
-              {t("title.last")}
+              {t('title.first')}{' '}
+              <span className="text-primary">{t('title.highlight')}</span>{' '}
+              {t('title.last')}
             </h2>
             <p className="text-balance text-base tracking-tight sm:text-lg">
-              {t("description")}
+              {t('description')}
             </p>
             <Button
               aria-label="Learn more about 100 Power"
               className="w-full sm:w-auto"
               variant="secondary"
             >
-              {t("button")} <ArrowUpRight size={18} />
+              {t('button')} <ArrowUpRight size={18} />
             </Button>
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
