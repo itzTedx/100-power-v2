@@ -1,8 +1,9 @@
-import { IconCertificate } from "@tabler/icons-react";
-import Image from "next/image";
+import Image from 'next/image'
 
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
+import { IconCertificate } from '@tabler/icons-react'
+
+import { Badge } from '@/components/ui/badge'
+import { Separator } from '@/components/ui/separator'
 
 export const Certified = () => {
   return (
@@ -12,34 +13,34 @@ export const Certified = () => {
         USA-Certified
       </Badge>
       <Separator />
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid gap-6 md:grid-cols-3">
         <div className="col-span-2 space-y-6">
-          <h2 className="font-helvetica text-4xl font-bold">
+          <h2 className="font-bold font-helvetica text-4xl">
             Engineered with Certified U.S. Technology
           </h2>
-          <p className="text-xl leading-normal font-light tracking-tight">
+          <p className="font-light text-xl leading-normal tracking-tight">
             We proudly incorporate Anti-Friction Technology developed in the
             USA, ensuring unmatched quality, reliability, and innovation. This
             badge represents our commitment to world-class performance and
             engineering excellence in lubrication science.
           </p>
-          <ul className="list-inside list-disc space-y-3 text-xl leading-normal font-light tracking-tight">
+          <ul className="list-inside list-disc space-y-3 font-light text-xl leading-normal tracking-tight">
             <li> Certified Micro-Metallurgical Process</li>
             <li>Made to U.S. Standards</li>
             <li>Trusted in Industrial & Military Applications</li>
           </ul>
         </div>
-        <div className="flex size-56 md:h-full md:w-full items-center justify-center">
+        <div className="flex size-56 items-center justify-center md:h-full md:w-full">
           <div className="relative aspect-square h-full shrink-0">
             <Image
-              src="/images/usa-certificate.png"
               alt=""
-              fill
               className="object-contain object-center"
+              fill
+              src="/images/usa-certificate.png"
             />
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

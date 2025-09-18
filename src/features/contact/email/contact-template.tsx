@@ -8,26 +8,26 @@ import {
   Link,
   Section,
   Text,
-} from "@react-email/components";
+} from '@react-email/components'
 
-import { ContactFormData } from "../schema/contact-schema";
+import { ContactFormData } from '../schema/contact-schema'
 
 interface Props {
-  data: ContactFormData;
+  data: ContactFormData
 }
 
 export default function ContactFormSubmission(props: Props) {
   const {
-    name = "N/A",
-    companyName = "N/A",
-    email = "N/A",
-    phoneNumber = "N/A",
+    name = 'N/A',
+    companyName = 'N/A',
+    email = 'N/A',
+    phoneNumber = 'N/A',
 
     subject,
-    message = "No message content.",
-  } = props.data;
+    message = 'No message content.',
+  } = props.data
 
-  const companyLogo = "https://100-power.com/logo.webp";
+  const companyLogo = 'https://100-power.com/logo.webp'
 
   return (
     <Html>
@@ -37,15 +37,15 @@ export default function ContactFormSubmission(props: Props) {
           {/* Header with Company Logo */}
           <Section style={header}>
             <Img
-              src={companyLogo}
-              width="60"
-              height="60"
               alt="Company Logo"
-              style={logo as React.CSSProperties}
+              height="60"
               onError={(e) => {
-                (e.target as HTMLImageElement).src =
-                  "https://v0.dev/placeholder.svg?height=60&width=60";
+                ;(e.target as HTMLImageElement).src =
+                  'https://v0.dev/placeholder.svg?height=60&width=60'
               }}
+              src={companyLogo}
+              style={logo as React.CSSProperties}
+              width="60"
             />
           </Section>
 
@@ -110,7 +110,7 @@ export default function ContactFormSubmission(props: Props) {
               <Link href="https://www.100-power.com/" style={footerLink}>
                 Visit website
               </Link>
-              {" • "}
+              {' • '}
               <Link
                 href="https://www.zironmedia.com/contact"
                 style={footerLink}
@@ -119,146 +119,147 @@ export default function ContactFormSubmission(props: Props) {
               </Link>
             </Text>
             <Text style={footerText}>
-              ©{new Date().getFullYear()} Hundred Power LLC, All rights reserved
+              ©{new Date().getFullYear()} Hundred Power LLC, All rights
+              reserved
             </Text>
           </Section>
         </Container>
       </Body>
     </Html>
-  );
+  )
 }
 
 const main = {
-  backgroundColor: "#f8f8f8",
+  backgroundColor: '#f8f8f8',
   fontFamily:
     '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
-};
+}
 
 const container = {
-  margin: "0 auto",
-  padding: "20px 0 48px",
-  width: "600px",
-  maxWidth: "100%",
-};
+  margin: '0 auto',
+  padding: '20px 0 48px',
+  width: '600px',
+  maxWidth: '100%',
+}
 
 const header = {
-  textAlign: "center" as React.CSSProperties["textAlign"],
-  padding: "20px 0",
-};
+  textAlign: 'center' as React.CSSProperties['textAlign'],
+  padding: '20px 0',
+}
 
 const logo = {
-  margin: "0 auto",
-  borderRadius: "8px",
-  boxShadow: "0 2px 4px rgba(0,0,0,0.08)",
-};
+  margin: '0 auto',
+  borderRadius: '8px',
+  boxShadow: '0 2px 4px rgba(0,0,0,0.08)',
+}
 
 const content = {
-  backgroundColor: "#ffffff",
-  borderRadius: "12px",
-  padding: "36px 32px",
+  backgroundColor: '#ffffff',
+  borderRadius: '12px',
+  padding: '36px 32px',
   boxShadow:
-    "0 6px 16px -4px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06)",
-};
+    '0 6px 16px -4px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06)',
+}
 
 const heading = {
-  fontSize: "28px",
-  fontWeight: "700",
-  color: "#1a202c",
-  textAlign: "center" as React.CSSProperties["textAlign"],
-  margin: "0 0 16px",
-  lineHeight: "1.2",
-};
+  fontSize: '28px',
+  fontWeight: '700',
+  color: '#1a202c',
+  textAlign: 'center' as React.CSSProperties['textAlign'],
+  margin: '0 0 16px',
+  lineHeight: '1.2',
+}
 
 const introText = {
-  fontSize: "16px",
-  lineHeight: "1.6",
-  color: "#4a5568",
-  textAlign: "center" as React.CSSProperties["textAlign"],
-  margin: "0 0 32px",
-};
+  fontSize: '16px',
+  lineHeight: '1.6',
+  color: '#4a5568',
+  textAlign: 'center' as React.CSSProperties['textAlign'],
+  margin: '0 0 32px',
+}
 
 const detailsSection = {
-  backgroundColor: "#fbfbfb",
-  borderRadius: "8px",
-  padding: "24px",
-  marginBottom: "24px",
-  border: "1px solid #e2e8f0",
-};
+  backgroundColor: '#fbfbfb',
+  borderRadius: '8px',
+  padding: '24px',
+  marginBottom: '24px',
+  border: '1px solid #e2e8f0',
+}
 
 const sectionTitle = {
-  fontSize: "20px",
-  fontWeight: "600",
-  color: "#2d3748",
-  margin: "0 0 16px",
-};
+  fontSize: '20px',
+  fontWeight: '600',
+  color: '#2d3748',
+  margin: '0 0 16px',
+}
 
 const divider = {
-  borderColor: "#edf2f7",
-  margin: "0 0 20px",
-};
+  borderColor: '#edf2f7',
+  margin: '0 0 20px',
+}
 
 const detailRow = {
-  marginBottom: "16px",
-};
+  marginBottom: '16px',
+}
 
 const detailLabel = {
-  fontSize: "14px",
-  fontWeight: "600",
-  color: "#4a5568",
-  margin: "0 0 4px",
-  textTransform: "uppercase" as React.CSSProperties["textTransform"],
-  letterSpacing: "0.05em",
-};
+  fontSize: '14px',
+  fontWeight: '600',
+  color: '#4a5568',
+  margin: '0 0 4px',
+  textTransform: 'uppercase' as React.CSSProperties['textTransform'],
+  letterSpacing: '0.05em',
+}
 
 const detailValue = {
-  fontSize: "16px",
-  color: "#2d3748",
-  margin: "0",
-  lineHeight: "1.5",
-};
+  fontSize: '16px',
+  color: '#2d3748',
+  margin: '0',
+  lineHeight: '1.5',
+}
 
 const messageSection = {
-  marginTop: "20px",
-};
+  marginTop: '20px',
+}
 
 const messageContent = {
-  fontSize: "16px",
-  color: "#2d3748",
-  lineHeight: "1.6",
-  backgroundColor: "#f0f4f8",
-  padding: "16px",
-  borderRadius: "8px",
-  border: "1px solid #cbd5e0",
-  whiteSpace: "pre-wrap" as React.CSSProperties["whiteSpace"],
-  wordBreak: "break-word" as React.CSSProperties["wordBreak"],
-};
+  fontSize: '16px',
+  color: '#2d3748',
+  lineHeight: '1.6',
+  backgroundColor: '#f0f4f8',
+  padding: '16px',
+  borderRadius: '8px',
+  border: '1px solid #cbd5e0',
+  whiteSpace: 'pre-wrap' as React.CSSProperties['whiteSpace'],
+  wordBreak: 'break-word' as React.CSSProperties['wordBreak'],
+}
 
 const closingText = {
-  fontSize: "16px",
-  lineHeight: "1.6",
-  color: "#4a5568",
-  textAlign: "center" as React.CSSProperties["textAlign"],
-  margin: "32px 0 0",
-};
+  fontSize: '16px',
+  lineHeight: '1.6',
+  color: '#4a5568',
+  textAlign: 'center' as React.CSSProperties['textAlign'],
+  margin: '32px 0 0',
+}
 
 const hr = {
-  borderColor: "#e2e8f0",
-  margin: "48px 0",
-};
+  borderColor: '#e2e8f0',
+  margin: '48px 0',
+}
 
 const footer = {
-  textAlign: "center" as React.CSSProperties["textAlign"],
-  padding: "0 20px",
-};
+  textAlign: 'center' as React.CSSProperties['textAlign'],
+  padding: '0 20px',
+}
 
 const footerText = {
-  fontSize: "13px",
-  color: "#718096",
-  margin: "0 0 8px",
-  lineHeight: "1.5",
-};
+  fontSize: '13px',
+  color: '#718096',
+  margin: '0 0 8px',
+  lineHeight: '1.5',
+}
 
 const footerLink = {
-  color: "#3182ce",
-  textDecoration: "none",
-};
+  color: '#3182ce',
+  textDecoration: 'none',
+}

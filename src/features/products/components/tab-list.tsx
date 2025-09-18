@@ -1,63 +1,64 @@
-"use client";
+'use client'
 
-import { useQueryState } from "nuqs";
-import type { ReactNode } from "react";
+import type { ReactNode } from 'react'
 
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useQueryState } from 'nuqs'
+
+import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
 export const Tablist = ({ children }: { children: ReactNode }) => {
-  const [category, setCategory] = useQueryState("category", {
-    defaultValue: "all",
-  });
+  const [category, setCategory] = useQueryState('category', {
+    defaultValue: 'all',
+  })
   return (
     <Tabs
-      defaultValue="all"
       className=""
-      value={category}
+      defaultValue="all"
       onValueChange={setCategory}
+      value={category}
     >
       <ScrollArea>
         <TabsList
-          className="text-foreground mb-2 h-auto w-full gap-2 rounded-none border-b bg-transparent px-0 py-1"
           aria-label="Product categories"
+          className="mb-2 h-auto w-full gap-2 rounded-none border-b bg-transparent px-0 py-1 text-foreground"
         >
           <TabsTrigger
+            className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
             value="all"
-            className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
           >
             All Products
           </TabsTrigger>
 
           <TabsTrigger
+            className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
             value="engine-additives"
-            className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
           >
             Engine Additives
           </TabsTrigger>
           <TabsTrigger
+            className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
             value="lubrication"
-            className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
           >
             Lubrication
           </TabsTrigger>
           <TabsTrigger
+            className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
             value="fuel-system"
-            className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
           >
             Fuel System
           </TabsTrigger>
           <TabsTrigger
+            className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
             value="industrial"
-            className="hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
           >
             Industrial Application
           </TabsTrigger>
-          <div className="absolute bg-gradient-to-l from-background w-20 to-transparent inset-y-0 pointer-events-none touch-none right-0" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-20 touch-none bg-gradient-to-l from-background to-transparent" />
         </TabsList>
         <ScrollBar orientation="horizontal" />
       </ScrollArea>
       {children}
     </Tabs>
-  );
-};
+  )
+}

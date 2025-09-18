@@ -1,10 +1,12 @@
-"use client";
+'use client'
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useTransition } from "react";
-import { useForm } from "react-hook-form";
-import { toast } from "sonner";
-import { Button } from "@/components/ui/button";
+import { useTransition } from 'react'
+
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useForm } from 'react-hook-form'
+import { toast } from 'sonner'
+
+import { Button } from '@/components/ui/button'
 import {
   Form,
   FormControl,
@@ -12,44 +14,45 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { sendContactEmail } from "../actions/mutation";
-import { ContactFormData, contactSchema } from "../schema/contact-schema";
+} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+
+import { sendContactEmail } from '../actions/mutation'
+import { ContactFormData, contactSchema } from '../schema/contact-schema'
 
 export function ContactForm() {
-  const [isPending, startTransition] = useTransition();
+  const [isPending, startTransition] = useTransition()
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
-      name: "",
-      companyName: "",
-      email: "",
-      phoneNumber: "",
-      message: "",
-      subject: "",
+      name: '',
+      companyName: '',
+      email: '',
+      phoneNumber: '',
+      message: '',
+      subject: '',
     },
-    mode: "onBlur",
-  });
+    mode: 'onBlur',
+  })
 
   async function onSubmit(values: ContactFormData) {
     startTransition(async () => {
-      const result = await sendContactEmail(values);
+      const result = await sendContactEmail(values)
 
       if (result.success) {
-        form.reset();
-        toast.success("We will get back to you shortly.");
+        form.reset()
+        toast.success('We will get back to you shortly.')
       }
-    });
+    })
   }
 
   return (
     <Form {...form}>
       <form
-        onSubmit={form.handleSubmit(onSubmit)}
         className="relative z-10 space-y-6 rounded-2xl bg-white"
+        onSubmit={form.handleSubmit(onSubmit)}
       >
         <div className="grid gap-4 sm:grid-cols-2">
           <FormField
@@ -59,7 +62,7 @@ export function ContactForm() {
               <FormItem>
                 <FormLabel required>Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="Name" autoFocus {...field} />
+                  <Input autoFocus placeholder="Name" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -130,8 +133,8 @@ export function ContactForm() {
               <FormLabel required>Message</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Tell us about your requirements..."
                   className="min-h-[100px] sm:min-h-[120px]"
+                  placeholder="Tell us about your requirements..."
                   {...field}
                 />
               </FormControl>
@@ -140,10 +143,10 @@ export function ContactForm() {
           )}
         />
 
-        <Button type="submit" disabled={isPending} className="w-full md:w-fit">
+        <Button className="w-full md:w-fit" disabled={isPending} type="submit">
           {isPending ? <span>Sending...</span> : <>Send Message</>}
         </Button>
       </form>
     </Form>
-  );
+  )
 }
