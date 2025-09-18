@@ -29,6 +29,10 @@ const geistSans = Geist({
   subsets: ['latin'],
 })
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }))
+}
+
 export const metadata: Metadata = {
   title: '100 Power - Next-Gen Lubrication Technology for Maximum Performance',
   description:
