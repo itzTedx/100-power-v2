@@ -1,14 +1,14 @@
-import Link from "next/link";
+import Link from 'next/link'
 
-import { ArrowUpRight, Play } from "lucide-react";
+import { ArrowUpRight, Play } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from '@/components/ui/button'
 
-import { cn } from "@/lib/utils";
-import { getScopedI18n } from "@/locale/server";
+import { cn } from '@/lib/utils'
 
 export const Video = async () => {
-  const t = await getScopedI18n("home.video");
+  const t = await getTranslations('home.video')
   return (
     <section
       aria-labelledby="innovation-heading"
@@ -24,21 +24,21 @@ export const Video = async () => {
             aria-hidden="true"
             className={cn(
               buttonVariants(),
-              "grid size-12 place-content-center rounded-full bg-black text-secondary-foreground transition-colors duration-300 group-hover:bg-primary sm:size-14"
+              'grid size-12 place-content-center rounded-full bg-black text-secondary-foreground transition-colors duration-300 group-hover:bg-primary sm:size-14'
             )}
           >
             <Play className="size-5 sm:size-6" />
           </div>
-          <span>{t("play")}</span>
+          <span>{t('play')}</span>
         </button>
         <div className="relative z-10 mt-auto space-y-2 text-end md:space-y-4">
           <h2
             className="font-bold font-helvetica text-background text-xl sm:text-5xl md:text-6xl"
             id="innovation-heading"
           >
-            {t("title.first")}
+            {t('title.first')}
             <br />
-            {t("title.last")}
+            {t('title.last')}
           </h2>
 
           <Button
@@ -50,7 +50,7 @@ export const Video = async () => {
               aria-label="Learn more about our technology"
               href="/technology"
             >
-              {t("button")} <ArrowUpRight className="size-3 sm:size-5" />
+              {t('button')} <ArrowUpRight className="size-3 sm:size-5" />
             </Link>
           </Button>
         </div>
@@ -73,7 +73,7 @@ export const Video = async () => {
         >
           <source src="/videos/100-Power-Info.webm" type="video/webm" />
           Your browser does not support the video tag. Watch our brand video on
-          our{" "}
+          our{' '}
           <a
             href="https://www.youtube.com/@100poweruae"
             rel="noopener noreferrer"
@@ -85,5 +85,5 @@ export const Video = async () => {
         </video>
       </article>
     </section>
-  );
-};
+  )
+}

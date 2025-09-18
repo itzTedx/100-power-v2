@@ -25,4 +25,4 @@ export default {
     copyright: "©{year} جميع الحقوق محفوظة لشركة هاندرد باور ذ.م.م.",
     developer: "تم التصميم والتطوير بواسطة Ziron Media",
   },
-} as const;
+};

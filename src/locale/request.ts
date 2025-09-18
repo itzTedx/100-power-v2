@@ -1,22 +1,8 @@
 import { hasLocale } from "next-intl";
 import { getRequestConfig } from "next-intl/server";
 
-import ar from "./ar";
-import en from "./en";
+import { getMessages } from ".";
 import { routing } from "./routing";
-import ru from "./ru";
-
-export const messages = {
-  ar,
-  ru,
-  en,
-};
-
-export type Locale = keyof typeof messages;
-
-export async function getMessages(locale: string) {
-  return messages[locale as keyof typeof messages];
-}
 
 export default getRequestConfig(async ({ requestLocale }) => {
   // Typically corresponds to the `[locale]` segment
@@ -27,6 +13,6 @@ export default getRequestConfig(async ({ requestLocale }) => {
 
   return {
     locale,
-    messages: getMessages(locale),
+    messages: await getMessages(locale),
   };
 });

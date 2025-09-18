@@ -1,12 +1,13 @@
 import Link from 'next/link'
 
+import { getTranslations } from 'next-intl/server'
+
 import { Logo } from '@/assets/logo'
 
 import { FOOTER, SOCIALS } from '@/data/constants'
-import { getScopedI18n } from '@/locale/server'
 
 export async function Footer() {
-  const t = await getScopedI18n('layout.footer')
+  const t = await getTranslations('layout.footer')
   return (
     <footer
       aria-label="Site Footer"

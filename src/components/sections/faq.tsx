@@ -1,5 +1,6 @@
+import { getTranslations } from 'next-intl/server'
+
 import { FAQS } from '@/data/faqs'
-import { getScopedI18n } from '@/locale/server'
 
 import {
   Accordion,
@@ -9,7 +10,7 @@ import {
 } from '../ui/accordion'
 
 export const Faqs = async () => {
-  const tFaqs = await getScopedI18n('home.faqs')
+  const tFaqs = await getTranslations('home.faqs')
 
   // Load FAQs from data instead of translations
   const faqs = FAQS

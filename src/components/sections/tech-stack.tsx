@@ -1,13 +1,14 @@
 import Image from 'next/image'
 
+import { getTranslations } from 'next-intl/server'
+
 import { FEATURES } from '@/data/constants'
-import { getScopedI18n } from '@/locale/server'
 
 import { Button } from '../ui/button'
 import { Separator } from '../ui/separator'
 
 export const TechStack = async () => {
-  const t = await getScopedI18n('home.technologies')
+  const t = await getTranslations('home.technologies')
   type Key = Parameters<typeof t>[0]
 
   return FEATURES.map((item, i) => (
