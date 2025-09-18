@@ -9,10 +9,10 @@ import { TechStack } from '../tech-stack'
 export const Technologies = async () => {
   const t = await getTranslations('home.technologies')
   return (
-    <section aria-labelledby="technologies-heading" className="py-12">
-      <div className="container max-w-5xl py-20 text-center">
+    <section aria-labelledby="technologies-heading" className="py-8 md:py-12">
+      <div className="container max-w-5xl py-8 text-center md:py-20">
         <h2
-          className="text-balance font-bold font-helvetica text-6xl"
+          className="text-balance font-bold font-helvetica text-4xl sm:text-5xl md:text-6xl"
           id="technologies-heading"
         >
           {t('title.first')}{' '}

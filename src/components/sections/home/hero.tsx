@@ -14,7 +14,7 @@ export const Hero = async () => {
         <Badge variant="primary">{t('badge')}</Badge>
 
         <h1
-          className="mx-auto max-w-5xl font-bold font-helvetica text-4xl tracking-wide sm:text-5xl md:text-6xl"
+          className="mx-auto max-w-5xl font-bold font-helvetica text-2xl tracking-wide sm:text-4xl md:text-5xl lg:text-6xl"
           id="hero-heading"
         >
           {t('title.text')}{' '}

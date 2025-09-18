@@ -12,9 +12,9 @@ export const TechStack = async () => {
   type Key = Parameters<typeof t>[0]
 
   return FEATURES.map((item, i) => (
-    <div className="group py-6" key={item.title}>
+    <div className="group md:py-6" key={item.title}>
       <div className="grid grid-cols-1 items-start gap-9 md:grid-cols-2">
-        <h3 className="inline-flex items-center gap-3 font-bold font-helvetica text-5xl">
+        <h3 className="inline-flex items-center gap-3 font-bold font-helvetica text-3xl sm:text-4xl md:text-5xl">
           {t(`technology.${i}.title` as Key)}
         </h3>
 
@@ -33,7 +33,7 @@ export const TechStack = async () => {
                   {t(`technology.${i}.feature.${idx}.title` as Key)}
                 </h4>
               </div>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-muted-foreground md:text-lg">
                 {t(`technology.${i}.feature.${idx}.description` as Key)}
               </p>
             </li>
