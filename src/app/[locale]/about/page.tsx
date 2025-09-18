@@ -1,12 +1,11 @@
 import { Metadata } from 'next'
 
-import { IconArrowUpRight } from '@tabler/icons-react'
 import { Dot } from 'lucide-react'
-import { setStaticParamsLocale } from 'next-international/server'
+import { Locale } from 'next-intl'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 
 import { Values } from '@/components/sections/solutions/values'
 import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
 import {
   Card,
   CardContent,
@@ -19,11 +18,7 @@ import { Separator } from '@/components/ui/separator'
 import { DotMap } from '@/assets/dot-map'
 
 import { WHO_WE_ARE } from '@/data/constants'
-import { getStaticParams } from '@/locale/server'
-
-export function generateStaticParams() {
-  return getStaticParams()
-}
+import { Header } from '@/features/about/header'
 
 export const metadata: Metadata = {
   title: 'About Us | 100 Power',
@@ -39,36 +34,19 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function AboutPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>
-}) {
+type Props = {
+  params: Promise<{ locale: Locale }>
+}
+
+export default async function AboutPage({ params }: Props) {
   const { locale } = await params
-  setStaticParamsLocale(locale)
+  setRequestLocale(locale)
+
+  const t = await getTranslations('about')
 
   return (
     <main className="container py-8 md:py-12">
-      <header>
-        <div className="mx-auto max-w-4xl space-y-5 px-2 py-6 text-center md:px-0">
-          <Badge variant="primary">Engineered to Protect</Badge>
-
-          <h1 className="font-bold font-helvetica text-3xl tracking-wide sm:text-5xl md:text-6xl">
-            Powering Performance with{' '}
-            <span className="text-primary">Innovation and Integrity</span>
-          </h1>
-          <p className="text-base sm:text-lg md:text-xl">
-            At 100 Power, we develop advanced micro-metallurgical additives that
-            protect and enhance machinery across industries worldwide—delivering
-            reliability, sustainability, and unmatched quality.
-          </p>
-          <Button asChild className="w-full sm:w-auto">
-            <a aria-label="Contact 100 Power" href="/contact">
-              Contact us <IconArrowUpRight size={18} />
-            </a>
-          </Button>
-        </div>
-      </header>
+      <Header />
       <section className="space-y-8 py-8 md:py-12">
         <Badge>
           <Dot /> About 100 Power

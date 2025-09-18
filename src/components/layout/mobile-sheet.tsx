@@ -1,16 +1,17 @@
-"use client";
+'use client'
 
-import { useState } from "react";
-import Link from "next/link";
+import { useState } from 'react'
+import Link from 'next/link'
 
-import { IconArrowUpRight } from "@tabler/icons-react";
-import { ArrowUpRight, Menu } from "lucide-react";
+import { IconArrowUpRight } from '@tabler/icons-react'
+import { ArrowUpRight, Menu } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
-import { Logo } from "@/assets/logo";
+import { Logo } from '@/assets/logo'
 
-import { CATEGORIES, NAV_LINKS } from "@/data/constants";
+import { CATEGORIES, NAV_LINKS } from '@/data/constants'
 
-import { Button } from "../ui/button";
+import { Button } from '../ui/button'
 import {
   Sheet,
   SheetContent,
@@ -18,10 +19,19 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "../ui/sheet";
+} from '../ui/sheet'
 
 export const MobileSheet = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
+  const t = useTranslations('layout.navbar')
+
+  const linkKeys = [
+    'links.0.Home',
+    'links.1.About',
+    'links.2.Solutions',
+    'links.3.Products',
+  ] as const
+
   return (
     <Sheet modal onOpenChange={setIsOpen} open={isOpen}>
       <SheetTrigger asChild className="md:hidden">
@@ -54,7 +64,7 @@ export const MobileSheet = () => {
                   className="inline-flex w-full items-center justify-between rounded-sm px-3 py-3 tracking-tight transition-colors hover:bg-accent hover:text-primary-foreground"
                   href={link.href}
                 >
-                  {link.title}
+                  {t(linkKeys[i])}
 
                   <IconArrowUpRight className="size-4 text-muted-foreground" />
                 </Link>
@@ -86,12 +96,12 @@ export const MobileSheet = () => {
               variant="secondary"
             >
               <Link href="/contact">
-                Contact <ArrowUpRight size={18} />
+                {t('contact')} <ArrowUpRight size={18} />
               </Link>
             </Button>
           </div>
         </div>
       </SheetContent>
     </Sheet>
-  );
-};
+  )
+}
