@@ -1,18 +1,11 @@
 import { Suspense } from 'react'
 import type { Metadata } from 'next'
 
-import { setStaticParamsLocale } from 'next-international/server'
-
 import { TabsContent } from '@/components/ui/tabs'
 
 import { getProducts } from '@/features/products/actions'
 import { ProductCard } from '@/features/products/components/product-card'
 import { Tablist } from '@/features/products/components/tab-list'
-import { getStaticParams } from '@/locale/server'
-
-export function generateStaticParams() {
-  return getStaticParams()
-}
 
 export const metadata: Metadata = {
   title: 'High-Performance Products | 100 Power',
@@ -27,14 +20,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function ProductsPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>
-}) {
-  const { locale } = await params
-  setStaticParamsLocale(locale)
-
+export default async function ProductsPage() {
   const products = await getProducts()
 
   return (

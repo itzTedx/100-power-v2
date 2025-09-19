@@ -1,7 +1,5 @@
 import { Metadata } from 'next'
 
-import { setStaticParamsLocale } from 'next-international/server'
-
 import { Benefits } from '@/components/sections/solutions/benefits'
 import { Certified } from '@/components/sections/solutions/certified'
 import { SolutionHero } from '@/components/sections/solutions/hero'
@@ -21,14 +19,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function SolutionsPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>
-}) {
-  const { locale } = await params
-  setStaticParamsLocale(locale)
-
+export default async function SolutionsPage() {
   return (
     <main>
       <SolutionHero />

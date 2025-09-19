@@ -1,7 +1,5 @@
 import { notFound } from 'next/navigation'
 
-import { setStaticParamsLocale } from 'next-international/server'
-
 import MDXContent from '@/components/markdown/mdx-component'
 import {
   Breadcrumb,
@@ -32,18 +30,13 @@ import {
   TabContent,
 } from '@/features/products/components/tabs'
 import { constructMetadata } from '@/features/seo'
-import { getStaticParams } from '@/locale/server'
 
-type Params = Promise<{ slug: string; locale: string }>
+type Params = Promise<{ slug: string }>
 
 export async function generateStaticParams() {
-  const locales = getStaticParams() as Array<{ locale: string }>
-  return locales.flatMap(({ locale }) =>
-    PRODUCTS.map((post) => ({
-      locale,
-      slug: post.href,
-    }))
-  )
+  return PRODUCTS.map((post) => ({
+    slug: post.href,
+  }))
 }
 
 export async function generateMetadata({ params }: { params: Params }) {
@@ -69,8 +62,7 @@ export async function generateMetadata({ params }: { params: Params }) {
 }
 
 export default async function ProductSlugPage({ params }: { params: Params }) {
-  const { slug, locale } = await params
-  setStaticParamsLocale(locale)
+  const { slug } = await params
 
   const product = await getProductBySlug(slug)
 
