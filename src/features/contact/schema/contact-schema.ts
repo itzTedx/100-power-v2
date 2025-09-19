@@ -1,4 +1,9 @@
+import { ar, en, ru } from "zod/locales";
 import { z } from "zod/v4";
+
+z.config(en());
+z.config(ru());
+z.config(ar());
 
 export const contactSchema = z.object({
   name: z

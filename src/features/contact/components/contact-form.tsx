@@ -3,6 +3,7 @@
 import { useTransition } from 'react'
 
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useTranslations } from 'next-intl'
 import { useForm } from 'react-hook-form'
 import { toast } from 'sonner'
 
@@ -23,6 +24,7 @@ import { ContactFormData, contactSchema } from '../schema/contact-schema'
 
 export function ContactForm() {
   const [isPending, startTransition] = useTransition()
+  const t = useTranslations('contact.form')
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
@@ -43,7 +45,7 @@ export function ContactForm() {
 
       if (result.success) {
         form.reset()
-        toast.success('We will get back to you shortly.')
+        toast.success(t('success'))
       }
     })
   }
@@ -60,9 +62,13 @@ export function ContactForm() {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel required>Name</FormLabel>
+                <FormLabel required>{t('name.label')}</FormLabel>
                 <FormControl>
-                  <Input autoFocus placeholder="Name" {...field} />
+                  <Input
+                    autoFocus
+                    placeholder={t('name.placeholder')}
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -74,9 +80,9 @@ export function ContactForm() {
             name="companyName"
             render={({ field }) => (
               <FormItem>
-                <FormLabel required>Company</FormLabel>
+                <FormLabel required>{t('company.label')}</FormLabel>
                 <FormControl>
-                  <Input placeholder="Company Name" {...field} />
+                  <Input placeholder={t('company.placeholder')} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -88,9 +94,9 @@ export function ContactForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel required>Email</FormLabel>
+                <FormLabel required>{t('email.label')}</FormLabel>
                 <FormControl>
-                  <Input placeholder="name@company.com" {...field} />
+                  <Input placeholder={t('email.placeholder')} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -102,9 +108,9 @@ export function ContactForm() {
             name="phoneNumber"
             render={({ field }) => (
               <FormItem>
-                <FormLabel required>Phone Number</FormLabel>
+                <FormLabel required>{t('phone.label')}</FormLabel>
                 <FormControl>
-                  <Input placeholder="Phone number" {...field} />
+                  <Input placeholder={t('phone.placeholder')} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -116,9 +122,9 @@ export function ContactForm() {
           name="subject"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Subject</FormLabel>
+              <FormLabel>{t('subject.label')}</FormLabel>
               <FormControl>
-                <Input placeholder="What's this regarding?" {...field} />
+                <Input placeholder={t('subject.placeholder')} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -130,11 +136,11 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel required>Message</FormLabel>
+              <FormLabel required>{t('message.label')}</FormLabel>
               <FormControl>
                 <Textarea
                   className="min-h-[100px] sm:min-h-[120px]"
-                  placeholder="Tell us about your requirements..."
+                  placeholder={t('message.placeholder')}
                   {...field}
                 />
               </FormControl>
@@ -144,7 +150,11 @@ export function ContactForm() {
         />
 
         <Button className="w-full md:w-fit" disabled={isPending} type="submit">
-          {isPending ? <span>Sending...</span> : <>Send Message</>}
+          {isPending ? (
+            <span>{t('button.loading')}</span>
+          ) : (
+            <>{t('button.text')}</>
+          )}
         </Button>
       </form>
     </Form>

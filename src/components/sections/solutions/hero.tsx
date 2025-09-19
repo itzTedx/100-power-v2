@@ -1,25 +1,23 @@
-import Link from "next/link";
+import Link from 'next/link'
 
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button'
 
-export const SolutionHero = () => {
+export const SolutionHero = async () => {
+  const t = await getTranslations('solutions.hero')
   return (
-    <section className="z-10 container max-w-4xl overflow-hidden py-20 text-center">
-      <h1 className="font-helvetica mb-6 text-4xl font-bold md:text-6xl">
-        Smarter Lubrication. Longer Life. Greener Impact.
+    <section className="container z-10 max-w-4xl overflow-hidden py-20 text-center">
+      <h1 className="mb-6 font-bold font-helvetica text-4xl md:text-6xl">
+        {t('title')}
       </h1>
-      <p className="mb-8 text-lg md:text-xl">
-        We engineer advanced solutions that protect, optimize, and extend the
-        life of engines and machinery using proprietary Micro-Metallurgical
-        Technology.
-      </p>
+      <p className="mb-8 text-lg md:text-xl">{t('description')}</p>
       <Button asChild>
         <Link href="/products">
-          Explore Products <ArrowUpRight />
+          {t('button')} <ArrowUpRight />
         </Link>
       </Button>
     </section>
-  );
-};
+  )
+}

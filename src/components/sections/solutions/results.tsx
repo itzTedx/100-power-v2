@@ -1,7 +1,8 @@
-import { IconPresentation } from "@tabler/icons-react";
+import { IconPresentation } from '@tabler/icons-react'
+import { getTranslations } from 'next-intl/server'
 
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
+import { Badge } from '@/components/ui/badge'
+import { Separator } from '@/components/ui/separator'
 import {
   Table,
   TableBody,
@@ -9,75 +10,73 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from '@/components/ui/table'
 
-export const Results = () => {
+export const Results = async () => {
+  const t = await getTranslations('solutions.results')
   return (
     <section className="container max-w-7xl space-y-8 py-16">
       <Badge>
         <IconPresentation />
-        Proven Results
+        {t('badge')}
       </Badge>
       <Separator />
       <div className="grid grid-cols-2 gap-28">
-        <h2 className="font-helvetica text-4xl font-bold">
-          Real Results. <br /> Real Impact.
+        <h2 className="whitespace-pre-line font-bold font-helvetica text-4xl">
+          {t('title')}
         </h2>
-        <p className="text-2xl tracking-tight">
-          100 Power improves uptime, reduces costs, and enhances performance —
-          powered by advanced U.S. anti-friction technology.
-        </p>
+        <p className="text-2xl tracking-tight">{t('description')}</p>
       </div>
-      <Table className="bg-card overflow-hidden rounded-sm border">
+      <Table className="overflow-hidden rounded-sm border bg-card">
         <TableHeader className="bg-muted/50">
           <TableRow>
-            <TableHead className="px-6 py-4 text-left text-lg font-semibold">
+            <TableHead className="px-6 py-4 text-left font-semibold text-lg">
               &nbsp;
             </TableHead>
             <TableHead className="px-6 py-4 font-semibold">
-              Without 100 Power
+              {t('table.title.without')}
             </TableHead>
             <TableHead className="px-6 py-4 font-semibold">
-              With 100 Power
+              {t('table.title.with')}
             </TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           <TableRow className="">
-            <TableCell className="font-helvetica px-6 py-4 text-lg font-medium">
-              Downtime
+            <TableCell className="px-6 py-4 font-helvetica font-medium text-lg">
+              {t('table.row.downtown.title')}
             </TableCell>
-            <TableCell className="text-muted-foreground px-6 py-4 text-lg">
-              Frequent interruptions
+            <TableCell className="px-6 py-4 text-lg text-muted-foreground">
+              {t('table.row.downtown.without')}
             </TableCell>
-            <TableCell className="text-primary px-6 py-4 text-lg font-medium">
-              Extended uptime
-            </TableCell>
-          </TableRow>
-          <TableRow className="">
-            <TableCell className="font-helvetica px-6 py-4 text-lg font-medium">
-              Maintenance Cost
-            </TableCell>
-            <TableCell className="text-muted-foreground px-6 py-4 text-lg">
-              High and recurring
-            </TableCell>
-            <TableCell className="text-primary px-6 py-4 text-lg font-medium">
-              Reduced significantly
+            <TableCell className="px-6 py-4 font-medium text-lg text-primary">
+              {t('table.row.downtown.with')}
             </TableCell>
           </TableRow>
           <TableRow className="">
-            <TableCell className="font-helvetica px-6 py-4 text-lg font-medium">
-              Performance Consistency
+            <TableCell className="px-6 py-4 font-helvetica font-medium text-lg">
+              {t('table.row.maintenance.title')}
             </TableCell>
-            <TableCell className="text-muted-foreground px-6 py-4 text-lg">
-              Inconsistent and inefficient
+            <TableCell className="px-6 py-4 text-lg text-muted-foreground">
+              {t('table.row.maintenance.without')}
             </TableCell>
-            <TableCell className="text-primary px-6 py-4 text-lg font-medium">
-              Smooth, long-term consistency
+            <TableCell className="px-6 py-4 font-medium text-lg text-primary">
+              {t('table.row.maintenance.with')}
+            </TableCell>
+          </TableRow>
+          <TableRow className="">
+            <TableCell className="px-6 py-4 font-helvetica font-medium text-lg">
+              {t('table.row.performance.title')}
+            </TableCell>
+            <TableCell className="px-6 py-4 text-lg text-muted-foreground">
+              {t('table.row.performance.without')}
+            </TableCell>
+            <TableCell className="px-6 py-4 font-medium text-lg text-primary">
+              {t('table.row.performance.with')}
             </TableCell>
           </TableRow>
         </TableBody>
       </Table>
     </section>
-  );
-};
+  )
+}

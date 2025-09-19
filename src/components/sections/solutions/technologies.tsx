@@ -1,19 +1,21 @@
-import { Dot } from "lucide-react";
+import { Dot } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
+import { Badge } from '@/components/ui/badge'
+import { Separator } from '@/components/ui/separator'
 
-import { TechStack } from "../tech-stack";
-import { Values } from "./values";
+import { TechStack } from '../tech-stack'
+import { Values } from './values'
 
-export const SolutionTechnologies = () => {
+export const SolutionTechnologies = async () => {
+  const t = await getTranslations('solutions')
   return (
-    <section id="technology" className="container py-16">
+    <section className="container py-16" id="technology">
       <Values />
       <div className="container max-w-7xl space-y-8 pt-20">
         <Badge>
           <Dot />
-          Our Core Technologies
+          {t('technologies')}
         </Badge>
         <Separator />
         <div className="divide-y">
@@ -21,5 +23,5 @@ export const SolutionTechnologies = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

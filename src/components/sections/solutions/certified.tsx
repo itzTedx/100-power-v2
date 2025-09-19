@@ -1,33 +1,30 @@
 import Image from 'next/image'
 
 import { IconCertificate } from '@tabler/icons-react'
+import { getTranslations } from 'next-intl/server'
 
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 
-export const Certified = () => {
+export const Certified = async () => {
+  const t = await getTranslations('solutions.certified')
   return (
     <section className="container max-w-7xl space-y-8 pb-20">
       <Badge>
         <IconCertificate />
-        USA-Certified
+        {t('badge')}
       </Badge>
       <Separator />
       <div className="grid gap-6 md:grid-cols-3">
         <div className="col-span-2 space-y-6">
-          <h2 className="font-bold font-helvetica text-4xl">
-            Engineered with Certified U.S. Technology
-          </h2>
+          <h2 className="font-bold font-helvetica text-4xl">{t('title')}</h2>
           <p className="font-light text-xl leading-normal tracking-tight">
-            We proudly incorporate Anti-Friction Technology developed in the
-            USA, ensuring unmatched quality, reliability, and innovation. This
-            badge represents our commitment to world-class performance and
-            engineering excellence in lubrication science.
+            {t('description')}
           </p>
           <ul className="list-inside list-disc space-y-3 font-light text-xl leading-normal tracking-tight">
-            <li> Certified Micro-Metallurgical Process</li>
-            <li>Made to U.S. Standards</li>
-            <li>Trusted in Industrial & Military Applications</li>
+            <li>{t('list.one')}</li>
+            <li>{t('list.two')}</li>
+            <li>{t('list.three')}</li>
           </ul>
         </div>
         <div className="flex size-56 items-center justify-center md:h-full md:w-full">
