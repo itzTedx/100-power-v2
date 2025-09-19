@@ -1,13 +1,14 @@
 import { Suspense } from 'react'
 import type { Metadata } from 'next'
 
-import { getLocale, getTranslations } from 'next-intl/server'
+import { getTranslations } from 'next-intl/server'
 
 import { TabsContent } from '@/components/ui/tabs'
 
 import { getProducts } from '@/features/products/actions'
 import { ProductCard } from '@/features/products/components/product-card'
 import { Tablist } from '@/features/products/components/tab-list'
+import { Locale } from '@/locale'
 
 export const metadata: Metadata = {
   title: 'High-Performance Products | 100 Power',
@@ -22,8 +23,12 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function ProductsPage() {
-  const locale = await getLocale()
+interface Props {
+  params: Promise<{ locale: Locale }>
+}
+
+export default async function ProductsPage({ params }: Props) {
+  const { locale } = await params
   const products = await getProducts({ locale })
   const t = await getTranslations('products')
 

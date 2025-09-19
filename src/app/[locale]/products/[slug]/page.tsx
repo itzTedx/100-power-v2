@@ -20,8 +20,7 @@ import {
   TableRow,
 } from '@/components/ui/table'
 
-import { PRODUCTS } from '@/data/products'
-import { getProductBySlug } from '@/features/products/actions'
+import { getProductBySlug, getProducts } from '@/features/products/actions'
 import { Header } from '@/features/products/components/header'
 import {
   DirectionsTabs,
@@ -32,13 +31,23 @@ import {
   TabContent,
 } from '@/features/products/components/tabs'
 import { constructMetadata } from '@/features/seo'
+import { Locale } from '@/locale'
+import { routing } from '@/locale/routing'
 
-type Params = Promise<{ slug: string }>
+type Params = Promise<{ slug: string; locale: Locale }>
 
 export async function generateStaticParams() {
-  return PRODUCTS.map((post) => ({
-    slug: post.href,
-  }))
+  const allParams = await Promise.all(
+    routing.locales.map(async (locale) => {
+      const products = await getProducts({ locale })
+      return products.map((post) => ({
+        locale: locale,
+        slug: post.slug,
+      }))
+    })
+  )
+
+  return allParams.flat()
 }
 
 export async function generateMetadata({ params }: { params: Params }) {
@@ -64,8 +73,7 @@ export async function generateMetadata({ params }: { params: Params }) {
 }
 
 export default async function ProductSlugPage({ params }: { params: Params }) {
-  const { slug } = await params
-  const locale = await getLocale()
+  const { slug, locale } = await params
   const product = await getProductBySlug(slug, { locale })
 
   if (!product) return notFound()

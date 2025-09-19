@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 import { ArrowUpRight, Dot } from 'lucide-react'
-import { getTranslations } from 'next-intl/server'
+import { getLocale, getTranslations } from 'next-intl/server'
 
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -13,7 +13,8 @@ import { getProducts } from '@/features/products/actions'
 import { ProductCard } from '@/features/products/components/product-card'
 
 export const Products = async () => {
-  const products = await getProducts()
+  const locale = await getLocale()
+  const products = await getProducts({ locale })
   const t = await getTranslations('home.products')
   return (
     <section
