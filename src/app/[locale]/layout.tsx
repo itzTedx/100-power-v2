@@ -83,7 +83,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
 
     verification: {
-      google: 'EAeAjAM1Zm9ATZQk-J_R5sAmYeRcFbxyhFJ9fJrOJvk',
+      google: 'fTdWqZbJwOheew6IAibaK5UBtFhSeUf-Pi6Xg30lHQ0',
     },
     metadataBase: new URL('https://www.100poweruae.com'),
   }

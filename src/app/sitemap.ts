@@ -1,55 +1,45 @@
 import type { MetadataRoute } from "next";
 
-import { PRODUCTS } from "@/data/products";
+import { getProducts } from "@/features/products/actions";
+import { Locale } from "@/locale";
+import { routing } from "@/locale/routing";
 
-const BASEURL = "https://www.100-power.com";
+const BASEURL = "https://www.100poweruae.com";
 
-const uniqueTypes = Array.from(
-  new Set(PRODUCTS.map((p) => p.type).filter(Boolean))
-);
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const locales = routing.locales as ReadonlyArray<Locale>;
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const productsCategoriesEntries: MetadataRoute.Sitemap = uniqueTypes.map(
-    (type) => ({
-      url: `${BASEURL}/products?category=${type}`,
-      changeFrequency: "monthly",
-      priority: 0.9,
+  // Static pages per locale
+  const staticPaths = [
+    "",
+    "about",
+    "solutions",
+    "products",
+    "contact",
+  ] as const;
+
+  const staticEntries: MetadataRoute.Sitemap = locales.flatMap((locale) =>
+    staticPaths.map((path) => ({
+      url: `${BASEURL}/${locale}${path ? `/${path}` : ""}`,
+      changeFrequency: (path === "products"
+        ? "monthly"
+        : "yearly") as MetadataRoute.Sitemap[number]["changeFrequency"],
+      priority: path === "" ? 1 : path === "products" ? 0.8 : 0.8,
+    }))
+  );
+
+  // Product detail pages per locale
+  const productsByLocale = await Promise.all(
+    locales.map(async (locale) => {
+      const products = await getProducts({ locale });
+      return products.map((p) => ({
+        url: `${BASEURL}/${locale}/products/${p.slug}`,
+        changeFrequency:
+          "monthly" as MetadataRoute.Sitemap[number]["changeFrequency"],
+        priority: 0.9,
+      }));
     })
   );
 
-  const productsEntries = PRODUCTS.map((p) => ({
-    url: `${BASEURL}/products/${p.href}`,
-    priority: 0.9,
-  }));
-
-  return [
-    {
-      url: BASEURL,
-      changeFrequency: "yearly",
-      priority: 1,
-    },
-    {
-      url: `${BASEURL}/about`,
-      changeFrequency: "yearly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASEURL}/solutions`,
-      changeFrequency: "yearly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASEURL}/products`,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASEURL}/contact`,
-      changeFrequency: "yearly",
-      priority: 0.7,
-    },
-
-    ...productsCategoriesEntries,
-    ...productsEntries,
-  ];
+  return [...staticEntries, ...productsByLocale.flat()];
 }
