@@ -17,7 +17,7 @@ export const About = async () => {
         </h2>
         <article className="col-span-2 space-y-4 font-helvetica text-base leading-relaxed sm:text-xl md:text-2xl">
           <h3 className="font-medium text-xl md:text-3xl">{t('subtitle')}</h3>
-          <p>{t('description')}</p>
+          <p className="whitespace-pre-line">{t('description')}</p>
         </article>
       </div>
     </section>

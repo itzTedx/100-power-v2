@@ -6,7 +6,7 @@ import { setRequestLocale } from 'next-intl/server'
 import { Separator } from '@/components/ui/separator'
 
 import { About } from '@/features/about/about'
-import { Features } from '@/features/about/features'
+import { Commitment } from '@/features/about/commitment'
 import { Header } from '@/features/about/header'
 import { MissionVision } from '@/features/about/mission-vision'
 import { Presence } from '@/features/about/presence'
@@ -39,7 +39,7 @@ export default async function AboutPage({ params }: Props) {
       <About />
       <Separator />
       <MissionVision />
-      <Features />
+      <Commitment />
       <Presence />
     </main>
   )
