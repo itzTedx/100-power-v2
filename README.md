@@ -16,6 +16,25 @@ This project powers the **digital ecosystem of 100 Power**, providing a scalable
 
 With manufacturing operations in the **USA and UAE**, 100 Power aims to set a new standard in lubrication technology across international markets.
 
+## 🧭 Table of Contents
+- [Global Impact](#global-impact)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Internationalization (i18n)](#internationalization-i18n)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Windows Notes](#windows-notes)
+- [Available Scripts](#available-scripts)
+- [Development Guidelines](#development-guidelines)
+- [Contact Form Integration](#contact-form-integration)
+- [Design System](#design-system)
+- [Deployment](#deployment)
+- [Analytics & SEO](#analytics--seo)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## ✨ Features
 
 - **Modern Web Platform** - Built with Next.js 15 and React 19 for optimal performance
@@ -68,40 +87,66 @@ With manufacturing operations in the **USA and UAE**, 100 Power aims to set a ne
 100-power-v2/
 ├── src/
 │   ├── app/                    # Next.js App Router
-│   │   ├── about/             # About page
-│   │   ├── contact/           # Contact page
-│   │   ├── products/          # Products page
-│   │   ├── solutions/         # Solutions page
-│   │   ├── globals.css        # Global styles
-│   │   ├── layout.tsx         # Root layout
-│   │   └── page.tsx           # Home page
-│   ├── components/            # Reusable components
-│   │   ├── ui/               # Base UI components
-│   │   ├── layout/           # Layout components
-│   │   ├── sections/         # Page sections
-│   │   ├── animated/         # Animated components
-│   │   └── markdown/         # Markdown components
-│   ├── features/             # Feature modules
-│   │   ├── contact/          # Contact form functionality
-│   │   ├── products/         # Product management
-│   │   └── seo/              # SEO utilities
-│   ├── data/                 # Static data and constants
-│   ├── lib/                  # Utility functions
-│   ├── assets/               # Static assets
-│   └── contents/             # Content management
-├── public/                   # Public assets
-│   ├── images/              # Image assets
-│   ├── videos/              # Video assets
-│   └── datasheet/           # Product datasheets
-├── .github/                  # GitHub workflows
-└── config files             # Various configuration files
+│   │   └── [locale]/           # Locale-aware routes (en, ar, ru)
+│   │       ├── about/          # About page
+│   │       ├── contact/        # Contact page
+│   │       ├── products/       # Products page
+│   │       ├── solutions/      # Solutions page
+│   │       ├── globals.css     # Global styles
+│   │       ├── layout.tsx      # Root layout per-locale
+│   │       └── page.tsx        # Home page
+│   ├── components/             # Reusable components
+│   │   ├── ui/                 # Base UI components
+│   │   ├── layout/             # Layout components
+│   │   ├── sections/           # Page sections
+│   │   ├── animated/           # Animated components
+│   │   └── markdown/           # Markdown components
+│   ├── features/               # Feature modules
+│   │   ├── contact/            # Contact form functionality
+│   │   ├── products/           # Product management
+│   │   └── seo/                # SEO utilities
+│   ├── locale/                 # i18n (next-intl) configuration & messages
+│   │   ├── routing.ts          # defineRouting (locales, defaultLocale, cookie)
+│   │   ├── request.ts          # getRequestConfig to load messages
+│   │   ├── en/                 # English messages
+│   │   ├── ar/                 # Arabic messages
+│   │   └── ru/                 # Russian messages
+│   ├── data/                   # Static data and constants
+│   ├── lib/                    # Utility functions
+│   ├── assets/                 # Static assets
+│   └── contents/               # Content management
+├── public/                     # Public assets
+│   ├── images/                 # Image assets
+│   ├── videos/                 # Video assets
+│   └── datasheet/              # Product datasheets
+├── src/middleware.ts           # next-intl locale routing middleware
+├── .github/                    # GitHub workflows
+└── config files                # Various configuration files
 ```
+
+## 🌐 Internationalization (i18n)
+
+- **Library**: `next-intl` with localized routing via `[locale]` segment.
+- **Supported locales**: `en`, `ar`, `ru` (default: `en`). See `src/locale/routing.ts`.
+- **Locale cookie**: `100_POWER_LOCALE` to persist user choice.
+- **Middleware**: `src/middleware.ts` enables locale-aware routing and redirects.
+- **RTL/LTR**: `dir` attribute is set per-locale in `app/[locale]/layout.tsx` (Arabic is RTL).
+
+### Usage
+- **Server**: use `getTranslations` and `setRequestLocale` in server components or metadata.
+- **Client**: use `useTranslations` inside client components.
+- **Messages**: add/update message files under `src/locale/{locale}/` and load via `getMessages`.
+
+### Add a new language
+1. Create `src/locale/<code>/` with message files.
+2. Add the locale code to `locales` in `src/locale/routing.ts`.
+3. Ensure any RTL locales set correct `dir` handling if needed.
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- **Node.js** 18+ 
+- **Node.js** 22+
 - **pnpm** (recommended) or npm
 - **Git**
 
@@ -124,7 +169,6 @@ With manufacturing operations in the **USA and UAE**, 100 Power aims to set a ne
    ```bash
    cp .env.example .env.local
    ```
-   
    Configure the following variables:
    ```env
    # Email Configuration
@@ -133,8 +177,8 @@ With manufacturing operations in the **USA and UAE**, 100 Power aims to set a ne
    EMAIL_USER=your-email@domain.com
    EMAIL_PASS=your-email-password
    CONTACT_RECEIVER_EMAIL=contact@100poweruae.com
-   
-   # Google Analytics
+
+   # Google Analytics (GA4)
    NEXT_PUBLIC_GA_ID=your-ga-id
    ```
 
@@ -147,6 +191,10 @@ With manufacturing operations in the **USA and UAE**, 100 Power aims to set a ne
 
 5. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
+
+### Windows Notes
+- Use a terminal that supports Node and pnpm well (e.g., Windows Terminal, PowerShell, or Git Bash as you prefer).
+- If you run into native module build issues, ensure Build Tools are installed and try running your terminal as Administrator.
 
 ## 📝 Available Scripts
 
@@ -192,14 +240,23 @@ The contact form uses:
 ### Email Configuration
 ```typescript
 // src/features/contact/actions/mutation.tsx
-const transporter = nodemailer.createTransporter({
+import nodemailer from 'nodemailer';
+
+const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
   port: Number(process.env.SMTP_PORT),
-  secure: true,
+  secure: Number(process.env.SMTP_PORT) === 465,
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
   },
+});
+
+await transporter.sendMail({
+  from: process.env.EMAIL_USER,
+  to: process.env.CONTACT_RECEIVER_EMAIL,
+  subject: 'New contact form submission',
+  html: '<p>...</p>',
 });
 ```
 
