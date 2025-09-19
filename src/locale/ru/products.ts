@@ -11,5 +11,5 @@ export default {
   },
   loading: "Загрузка…",
   button: "Откройте для себя это",
-  premium: "премия",
+  premium: "Премиум",
 };
