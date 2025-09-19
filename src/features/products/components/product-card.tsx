@@ -27,6 +27,7 @@ interface Props {
 
 export const ProductCard = async ({ data }: Props) => {
   const t = await getTranslations('products')
+
   return (
     <Card className="group relative overflow-hidden">
       <Link className="absolute inset-0 z-40" href={`/products/${data.slug}`} />
@@ -35,7 +36,9 @@ export const ProductCard = async ({ data }: Props) => {
           <div
             className={cn(
               'size-3 rounded-full',
-              data.range === 'Premium' ? 'bg-primary' : 'bg-muted-foreground/80'
+              data.range === t('premium')
+                ? 'bg-primary'
+                : 'bg-muted-foreground/80'
             )}
           />
           <p className="font-medium">{data.range}</p>
@@ -71,8 +74,8 @@ export const ProductCard = async ({ data }: Props) => {
           <div className="pointer-events-none absolute inset-0 translate-y-full bg-gradient-to-t from-card to-transparent transition-transform group-hover:translate-y-0" />
         </div>
       </CardContent>
-      <CardFooter className="flex-col items-start">
-        <CardDescription className="flex flex-wrap items-center text-[10px] tracking-tighter sm:text-sm md:font-medium">
+      <CardFooter className="flex-col ltr:items-start rtl:items-end">
+        <CardDescription className="flex flex-wrap items-center text-[10px] tracking-tighter sm:text-sm md:font-medium rtl:flex-row-reverse">
           {data.quantities.map((q, i) => (
             <Fragment key={q}>
               <p>{q}</p>{' '}

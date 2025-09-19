@@ -9,4 +9,5 @@ export default {
   },
   loading: "جارٍ التحميل…",
   button: "اكتشفه",
+  premium: "غالي",
 };
