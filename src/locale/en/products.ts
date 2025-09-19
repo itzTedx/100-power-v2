@@ -9,4 +9,5 @@ export default {
     },
   },
   loading: "Loading…",
+  button: "Discover it",
 };

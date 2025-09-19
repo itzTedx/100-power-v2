@@ -33,7 +33,7 @@ export async function getProducts({
 }): Promise<ProductMetadata[]> {
   const files = fs.readdirSync(root(locale));
 
-  let products = files.map((file) => getProductMetadata(file));
+  let products = files.map((file) => getProductMetadata(file, locale));
 
   // Sort by id in ascending order
   products.sort((a, b) => (a.id ?? 0) - (b.id ?? 0));
@@ -46,11 +46,12 @@ export async function getProducts({
 }
 
 export function getProductMetadata(
-  filepath: string
+  filepath: string,
+  locale: Locale
 ): ProductMetadata & { slug: string } {
   const slug = filepath.replace(/\.mdx$/, "");
 
-  const filePath = path.join(root("en"), filepath);
+  const filePath = path.join(root(locale), filepath);
 
   const fileContent = fs.readFileSync(filePath, { encoding: "utf8" });
   const { data } = matter(fileContent);
