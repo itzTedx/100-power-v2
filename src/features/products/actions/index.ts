@@ -1,13 +1,20 @@
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
+
+import { Locale } from "@/locale";
+
 import { Product, ProductMetadata } from "./types";
 
-const root = path.join(process.cwd(), "src", "contents", "products");
+const root = (locale: Locale) =>
+  path.join(process.cwd(), "src", "contents", "products", locale);
 
-export async function getProductBySlug(slug: string): Promise<Product | null> {
+export async function getProductBySlug(
+  slug: string,
+  { locale }: { locale: Locale }
+): Promise<Product | null> {
   try {
-    const filePath = path.join(root, `${slug}.mdx`);
+    const filePath = path.join(root(locale), `${slug}.mdx`);
     const fileContent = fs.readFileSync(filePath, { encoding: "utf8" });
     const { data, content } = matter(fileContent);
 
@@ -17,8 +24,14 @@ export async function getProductBySlug(slug: string): Promise<Product | null> {
   }
 }
 
-export async function getProducts(limit?: number): Promise<ProductMetadata[]> {
-  const files = fs.readdirSync(root);
+export async function getProducts({
+  limit,
+  locale,
+}: {
+  limit?: number;
+  locale: Locale;
+}): Promise<ProductMetadata[]> {
+  const files = fs.readdirSync(root(locale));
 
   let products = files.map((file) => getProductMetadata(file));
 
@@ -37,7 +50,7 @@ export function getProductMetadata(
 ): ProductMetadata & { slug: string } {
   const slug = filepath.replace(/\.mdx$/, "");
 
-  const filePath = path.join(root, filepath);
+  const filePath = path.join(root("en"), filepath);
 
   const fileContent = fs.readFileSync(filePath, { encoding: "utf8" });
   const { data } = matter(fileContent);

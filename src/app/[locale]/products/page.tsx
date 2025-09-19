@@ -1,6 +1,8 @@
 import { Suspense } from 'react'
 import type { Metadata } from 'next'
 
+import { getLocale, getTranslations } from 'next-intl/server'
+
 import { TabsContent } from '@/components/ui/tabs'
 
 import { getProducts } from '@/features/products/actions'
@@ -21,25 +23,27 @@ export const metadata: Metadata = {
 }
 
 export default async function ProductsPage() {
-  const products = await getProducts()
+  const locale = await getLocale()
+  const products = await getProducts({ locale })
+  const t = await getTranslations('products')
 
   return (
     <main className="container space-y-8 py-12">
       <header className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <h1 className="font-bold font-helvetica text-3xl sm:text-4xl md:text-5xl">
-          High-Performance Products for Demanding Machines
+          {t('header.title')}
         </h1>
         <div>
           <p className="mb-2 text-lg tracking-tight sm:text-xl md:text-2xl">
-            Each product is developed with precision and purpose - to enhance{' '}
+            {t('header.description.first')}{' '}
             <span className="text-primary">
-              durability, reduce wear, and improve performance
+              {t('header.description.highlight')}
             </span>{' '}
-            under extreme conditions.
+            {t('header.description.last')}
           </p>
         </div>
       </header>
-      <Suspense fallback={'Loading...'}>
+      <Suspense fallback={t('loading')}>
         <Tablist>
           <TabsContent value="all">
             <section
