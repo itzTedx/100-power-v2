@@ -24,12 +24,22 @@ export async function Footer() {
 
           {FOOTER.map((nav) => (
             <nav
-              aria-label={nav.heading}
+              aria-label={
+                nav.id === 1
+                  ? t('sections.quickLinks')
+                  : nav.id === 2
+                    ? t('sections.products')
+                    : t('sections.factoryAddress')
+              }
               className="flex flex-col gap-2"
               key={nav.id}
             >
               <h3 className="mb-2 font-aloevera font-medium text-primary tracking-tight">
-                {nav.heading}
+                {nav.id === 1
+                  ? t('sections.quickLinks')
+                  : nav.id === 2
+                    ? t('sections.products')
+                    : t('sections.factoryAddress')}
               </h3>
               <ul className="space-y-2">
                 {nav.items.map((link) => (
@@ -38,9 +48,43 @@ export async function Footer() {
                       <Link
                         href={link.href!}
                         prefetch={false}
-                        title={link.title}
+                        title={(() => {
+                          if (link.href === '/') return t('nav.home')
+                          if (link.href === '/about') return t('nav.about')
+                          if (link.href === '/solutions')
+                            return t('nav.solutions')
+                          if (link.href === '/products')
+                            return t('nav.products')
+                          if (link.href === '/contact') return t('nav.contact')
+                          if (link.href?.includes('engine-additives'))
+                            return t('categories.engineAdditives')
+                          if (link.href?.includes('lubrication'))
+                            return t('categories.lubrication')
+                          if (link.href?.includes('fuel-system'))
+                            return t('categories.fuelSystem')
+                          if (link.href?.includes('industrial'))
+                            return t('categories.industrial')
+                          return link.title
+                        })()}
                       >
-                        {link.title}
+                        {(() => {
+                          if (link.href === '/') return t('nav.home')
+                          if (link.href === '/about') return t('nav.about')
+                          if (link.href === '/solutions')
+                            return t('nav.solutions')
+                          if (link.href === '/products')
+                            return t('nav.products')
+                          if (link.href === '/contact') return t('nav.contact')
+                          if (link.href?.includes('engine-additives'))
+                            return t('categories.engineAdditives')
+                          if (link.href?.includes('lubrication'))
+                            return t('categories.lubrication')
+                          if (link.href?.includes('fuel-system'))
+                            return t('categories.fuelSystem')
+                          if (link.href?.includes('industrial'))
+                            return t('categories.industrial')
+                          return link.title
+                        })()}
                       </Link>
                     ) : (
                       link.title
@@ -95,7 +139,7 @@ export async function Footer() {
             </li>
           </ul>
           <p className="text-center md:text-left">
-            {t('copyright', { year: new Date().getFullYear() })}
+            {t('copyright', { year: new Date().getFullYear().toString() })}
           </p>
           <Link
             className="text-center text-muted/80 text-sm tracking-tight md:text-right"

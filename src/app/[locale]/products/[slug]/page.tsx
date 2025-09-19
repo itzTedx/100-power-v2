@@ -86,6 +86,7 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
     .products as Record<string, unknown>
   const breadcrumb = productsMessages.breadcrumb as Record<string, unknown>
   const categories = breadcrumb.categories as Array<Record<string, string>>
+
   const categoryLabel = Array.isArray(categories)
     ? (categories.find((categoryObject) => categoryObject[metadata.category])?.[
         metadata.category
@@ -112,7 +113,8 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
                 className="capitalize"
                 href={`/products?category=${metadata.category}`}
               >
-                {categoryLabel}
+                {/** biome-ignore  lint/suspicious/noExplicitAny: i don't know the type>*/}
+                {t(`breadcrumb.categories.${categoryLabel}` as any)}
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator>/</BreadcrumbSeparator>

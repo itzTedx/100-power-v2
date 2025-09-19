@@ -22,6 +22,25 @@ export default {
       privacy: "Privacy Policy",
       terms: "Terms & Condition",
     },
+    // New: Footer sections and link labels for i18n
+    sections: {
+      quickLinks: "Quick Links",
+      products: "Products",
+      factoryAddress: "Factory Address",
+    },
+    nav: {
+      home: "Home",
+      about: "About",
+      solutions: "Solutions",
+      products: "Products",
+      contact: "Contact",
+    },
+    categories: {
+      engineAdditives: "Engine Additives",
+      lubrication: "Lubrication",
+      fuelSystem: "Fuel System",
+      industrial: "Industrial Application",
+    },
     copyright: "©{year} Hundred Power LLC, All rights reserved",
     developer: "Designed & Developed by Ziron Media",
   },

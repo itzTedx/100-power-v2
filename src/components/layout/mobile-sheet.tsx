@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 import { IconArrowUpRight } from '@tabler/icons-react'
 import { ArrowUpRight, Menu } from 'lucide-react'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 import { Logo } from '@/assets/logo'
 
@@ -24,6 +24,8 @@ import {
 export const MobileSheet = () => {
   const [isOpen, setIsOpen] = useState(false)
   const t = useTranslations('layout.navbar')
+  const locale = useLocale()
+  const tProducts = useTranslations('products.breadcrumb.categories')
 
   const linkKeys = [
     'links.0.Home',
@@ -31,6 +33,16 @@ export const MobileSheet = () => {
     'links.2.Solutions',
     'links.3.Products',
   ] as const
+
+  const getCategoryKeyFromHref = (href: string) => {
+    try {
+      const query = href.split('?')[1] ?? ''
+      const params = new URLSearchParams(query)
+      return params.get('category')
+    } catch {
+      return null
+    }
+  }
 
   return (
     <Sheet modal onOpenChange={setIsOpen} open={isOpen}>
@@ -43,7 +55,7 @@ export const MobileSheet = () => {
           <Menu />
         </Button>
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent side={locale === 'ar' ? 'left' : 'right'}>
         <SheetHeader>
           <SheetTitle>
             <Logo />
@@ -78,7 +90,19 @@ export const MobileSheet = () => {
                       className="inline-flex w-full items-center justify-between rounded-sm py-2 pr-3 pl-2 tracking-tight transition-colors hover:bg-accent hover:text-primary-foreground"
                       href={prod.href}
                     >
-                      {prod.title}
+                      {(() => {
+                        const key = getCategoryKeyFromHref(prod.href)
+                        if (key) {
+                          try {
+                            return (
+                              tProducts as unknown as (s: string) => string
+                            )(key)
+                          } catch {
+                            return prod.title
+                          }
+                        }
+                        return prod.title
+                      })()}
 
                       <IconArrowUpRight className="size-4 text-muted-foreground" />
                     </Link>
