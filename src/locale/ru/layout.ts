@@ -3,8 +3,8 @@ export default {
     links: [
       { Home: "Дом" },
       { About: "о нас" },
-      { Solutions: "Решения" },
       { Products: "Продукты" },
+      { Solutions: "Решения" },
     ],
     contact: "Контакт",
   },

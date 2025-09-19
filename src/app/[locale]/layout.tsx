@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 import { Geist } from 'next/font/google'
 
 import type { AbstractIntlMessages } from 'next-intl'
@@ -14,9 +13,10 @@ import { cn } from '@/lib/utils'
 
 import './globals.css'
 
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
-import { setRequestLocale } from 'next-intl/server'
+import { getLocale, getTranslations, setRequestLocale } from 'next-intl/server'
 
 import Providers from '@/components/providers'
 import { Toaster } from '@/components/ui/sonner'
@@ -33,42 +33,62 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }))
 }
 
-export const metadata: Metadata = {
-  title: '100 Power - Next-Gen Lubrication Technology for Maximum Performance',
-  description:
-    '100 Power is a UAE-based brand delivering American innovation in lubrication. Maximize performance, minimize friction, and protect the planet with our military-grade, eco-conscious solutions.',
-  openGraph: {
-    title:
-      '100 Power | Next-Gen Lubrication Technology for Maximum Performance',
-    description:
-      '100 Power is a UAE-based brand delivering American innovation in lubrication. Maximize performance, minimize friction, and protect the planet with our military-grade, eco-conscious solutions.',
-    url: 'https://www.100poweruae.com/',
-    siteName: '100 Power',
-    images: [
-      {
-        url: '/images/hero-oil.webp',
-        width: 1200,
-        height: 630,
-        alt: '100 Power - Next-Gen Lubrication Technology',
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('metadata.home')
+  const locale = await getLocale()
+
+  const title = t('title')
+  const description = t('description')
+  const keywords = t('keywords')
+  const image = '/images/hero-oil.webp'
+  const url = '/'
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: url,
+      languages: {
+        en: '/en',
+        ar: '/ar',
+        ru: '/ru',
+        'x-default': '/en',
       },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title:
-      '100 Power | Next-Gen Lubrication Technology for Maximum Performance',
-    description:
-      '100 Power is a UAE-based brand delivering American innovation in lubrication. Maximize performance, minimize friction, and protect the planet with our military-grade, eco-conscious solutions.',
-    images: ['/images/hero-oil.webp'],
-    site: '@100poweruae',
-  },
-  verification: {
-    google: 'EAeAjAM1Zm9ATZQk-J_R5sAmYeRcFbxyhFJ9fJrOJvk',
-  },
-  metadataBase: new URL('https://www.100poweruae.com'),
+    },
+    keywords,
+
+    openGraph: {
+      title,
+      description,
+      url: 'https://www.100poweruae.com/',
+      siteName: '100 Power',
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: '100 Power - Next-Gen Lubrication Technology',
+        },
+      ],
+      locale,
+      type: 'website',
+    },
+
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [image],
+      site: '@100poweruae',
+    },
+
+    verification: {
+      google: 'EAeAjAM1Zm9ATZQk-J_R5sAmYeRcFbxyhFJ9fJrOJvk',
+    },
+    metadataBase: new URL('https://www.100poweruae.com'),
+  }
 }
+
 export default async function RootLayout({
   children,
   params,

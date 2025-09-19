@@ -16,8 +16,8 @@ export const Navbar = async () => {
   const linkKeys = [
     'links.0.Home',
     'links.1.About',
-    'links.2.Solutions',
-    'links.3.Products',
+    'links.2.Products',
+    'links.3.Solutions',
   ] as const
 
   return (

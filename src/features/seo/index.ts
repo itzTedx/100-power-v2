@@ -47,6 +47,10 @@ export function constructMetadata({
       creator: "@100power",
     },
 
+    verification: {
+      google: "EAeAjAM1Zm9ATZQk-J_R5sAmYeRcFbxyhFJ9fJrOJvk",
+    },
+
     metadataBase: new URL("https://www.100poweruae.com"),
     ...((url || canonicalUrl) && {
       alternates: {

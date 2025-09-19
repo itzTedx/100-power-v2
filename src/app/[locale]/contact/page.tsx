@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { IconArrowUpRight } from '@tabler/icons-react'
 import { ArrowUpRight, CheckIcon } from 'lucide-react'
-import { getTranslations } from 'next-intl/server'
+import { getLocale, getTranslations } from 'next-intl/server'
 
 import { Faqs } from '@/components/sections/faq'
 import { Badge } from '@/components/ui/badge'
@@ -24,18 +24,55 @@ import { CONTACT } from '@/data/constants'
 import { ContactForm } from '@/features/contact/components/contact-form'
 import { cn } from '@/lib/utils'
 
-export const metadata: Metadata = {
-  title: 'Contact us | 100 Power',
-  description:
-    'Learn about 100 Power: our mission, vision, global presence, and commitment to advanced micro-metallurgical additives for machinery and engines worldwide.',
-  openGraph: {
-    title: 'AContact | 100 Power',
-    description:
-      "Discover 100 Power's innovation in micro-metallurgical additives, our global reach, and our dedication to performance, reliability, and sustainability.",
-    url: 'https://www.100poweruae.com/contact',
-    siteName: '100 Power',
-    type: 'website',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('metadata.contact')
+  const locale = await getLocale()
+
+  const title = t('title')
+  const description = t('description')
+  const keywords = t('keywords')
+  const image = '/images/hero-oil.webp'
+  const url = '/contact'
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: url,
+      languages: {
+        en: `/en${url}`,
+        ar: `/ar${url}`,
+        ru: `/ru${url}`,
+        'x-default': `/en${url}`,
+      },
+    },
+    keywords,
+
+    openGraph: {
+      title,
+      description,
+      url: 'https://www.100poweruae.com/',
+      siteName: '100 Power',
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: '100 Power - Next-Gen Lubrication Technology',
+        },
+      ],
+      locale,
+      type: 'website',
+    },
+
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [image],
+      site: '@100poweruae',
+    },
+  }
 }
 
 const steps = [

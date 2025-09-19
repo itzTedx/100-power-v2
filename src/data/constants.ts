@@ -31,14 +31,14 @@ export const NAV_LINKS = [
     href: "/about",
   },
   {
-    id: 3,
-    title: "Solutions",
-    href: "/solutions",
-  },
-  {
     id: 4,
     title: "Products",
     href: "/products",
+  },
+  {
+    id: 3,
+    title: "Solutions",
+    href: "/solutions",
   },
 ];
 

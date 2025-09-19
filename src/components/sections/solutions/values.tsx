@@ -65,9 +65,9 @@ export const Values = async () => {
         <div className="z-10 flex items-center gap-3 px-3 pr-2 font-helvetica">
           <IconTrendingDown3 className="size-8 shrink-0 text-primary" />
 
-          <p className="font-medium text-[#AF5E00] text-sm leading-tight md:text-lg">
+          <h2 className="font-medium text-[#AF5E00] text-sm leading-tight md:text-lg">
             {t('environment.title')}
-          </p>
+          </h2>
         </div>
         <div className="absolute inset-0 z-1 bg-gradient-to-r from-neutral-50 via-neutral-50 to-transparent" />
         <IconCo2 className="-right-4 absolute size-20 text-[#FEC966]" />
