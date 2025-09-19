@@ -76,6 +76,33 @@ export default {
       placeholder: "Tell us about your requirements…",
     },
     button: { text: "Send Message", loading: "Sending…" },
+    validation: {
+      name: {
+        min: "Full name must be at least 2 characters",
+        max: "Full name must not exceed 100 characters",
+        regex: "Full name should only contain letters and spaces",
+      },
+      company: {
+        min: "Company name must be at least 2 characters",
+        max: "Company name must not exceed 100 characters",
+      },
+      email: {
+        email: "Please enter a valid email address",
+        min: "Email must be at least 5 characters",
+        max: "Email must not exceed 100 characters",
+      },
+      phone: {
+        regex: "Please enter a valid phone number",
+      },
+      subject: {
+        min: "Subject must be at least 5 characters",
+        max: "Subject must not exceed 200 characters",
+      },
+      message: {
+        min: "Message must be at least 6 characters",
+        max: "Message must not exceed 1000 characters",
+      },
+    },
   },
   faq: {
     badge: "Frequently Asked Questions",

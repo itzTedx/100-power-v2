@@ -1,9 +1,41 @@
-import { ar, en, ru } from "zod/locales";
 import { z } from "zod/v4";
 
-z.config(en());
-z.config(ru());
-z.config(ar());
+export const createContactSchema = (t: (key: string) => string) =>
+  z.object({
+    name: z
+      .string()
+      .min(2, t("validation.name.min"))
+      .max(100, t("validation.name.max"))
+      .regex(/^[a-zA-Z\s]*$/, t("validation.name.regex")),
+
+    companyName: z
+      .string()
+      .min(2, t("validation.company.min"))
+      .max(100, t("validation.company.max")),
+
+    email: z
+      .email(t("validation.email.email"))
+      .min(5, t("validation.email.min"))
+      .max(100, t("validation.email.max")),
+
+    phoneNumber: z
+      .string()
+      .regex(
+        /^(\+\d{1,3}[- ]?)?\(?\d{3}\)?[- ]?\d{3}[- ]?\d{4}$/,
+        t("validation.phone.regex")
+      ),
+
+    subject: z
+      .string()
+      .min(5, t("validation.subject.min"))
+      .max(200, t("validation.subject.max"))
+      .optional(),
+
+    message: z
+      .string()
+      .min(6, t("validation.message.min"))
+      .max(1000, t("validation.message.max")),
+  });
 
 export const contactSchema = z.object({
   name: z

@@ -20,14 +20,16 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 
 import { sendContactEmail } from '../actions/mutation'
-import { ContactFormData, contactSchema } from '../schema/contact-schema'
+import { ContactFormData, createContactSchema } from '../schema/contact-schema'
 
 export function ContactForm() {
   const [isPending, startTransition] = useTransition()
   const t = useTranslations('contact.form')
 
   const form = useForm<ContactFormData>({
-    resolver: zodResolver(contactSchema),
+    resolver: zodResolver(
+      createContactSchema(t as unknown as (key: string) => string)
+    ),
     defaultValues: {
       name: '',
       companyName: '',
