@@ -1,5 +1,7 @@
 import { notFound } from 'next/navigation'
 
+import { getLocale } from 'next-intl/server'
+
 import MDXContent from '@/components/markdown/mdx-component'
 import {
   Breadcrumb,
@@ -41,8 +43,8 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Params }) {
   const { slug } = await params
-
-  const product = await getProductBySlug(slug)
+  const locale = await getLocale()
+  const product = await getProductBySlug(slug, { locale })
   if (!product)
     return {
       title: 'Product not Available',
@@ -63,8 +65,8 @@ export async function generateMetadata({ params }: { params: Params }) {
 
 export default async function ProductSlugPage({ params }: { params: Params }) {
   const { slug } = await params
-
-  const product = await getProductBySlug(slug)
+  const locale = await getLocale()
+  const product = await getProductBySlug(slug, { locale })
 
   if (!product) return notFound()
 

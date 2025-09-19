@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Dot } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -24,7 +25,8 @@ interface Props {
   data: ProductMetadata
 }
 
-export const ProductCard = ({ data }: Props) => {
+export const ProductCard = async ({ data }: Props) => {
+  const t = await getTranslations('products')
   return (
     <Card className="group relative overflow-hidden">
       <Link className="absolute inset-0 z-40" href={`/products/${data.slug}`} />
@@ -63,7 +65,7 @@ export const ProductCard = ({ data }: Props) => {
         </div>
         <div className="absolute inset-0 z-10 flex items-end justify-center p-4 opacity-0 transition-opacity group-hover:opacity-100">
           <Button className="z-10 mx-auto" variant="outline">
-            Discover it
+            {t('button')}
           </Button>
 
           <div className="pointer-events-none absolute inset-0 translate-y-full bg-gradient-to-t from-card to-transparent transition-transform group-hover:translate-y-0" />
