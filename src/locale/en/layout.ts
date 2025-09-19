@@ -25,4 +25,4 @@ export default {
     copyright: "©{year} Hundred Power LLC, All rights reserved",
     developer: "Designed & Developed by Ziron Media",
   },
-};
+} as const;

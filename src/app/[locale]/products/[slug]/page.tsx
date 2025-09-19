@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 
-import { getLocale } from 'next-intl/server'
+import { getLocale, getMessages, getTranslations } from 'next-intl/server'
 
 import MDXContent from '@/components/markdown/mdx-component'
 import {
@@ -75,10 +75,22 @@ export async function generateMetadata({ params }: { params: Params }) {
 export default async function ProductSlugPage({ params }: { params: Params }) {
   const { slug, locale } = await params
   const product = await getProductBySlug(slug, { locale })
-
+  const t = await getTranslations('products')
   if (!product) return notFound()
 
   const { content, metadata } = product
+
+  // Derive localized category label from the messages object to avoid typed key constraints
+  const messages = await getMessages()
+  const productsMessages = (messages as unknown as Record<string, unknown>)
+    .products as Record<string, unknown>
+  const breadcrumb = productsMessages.breadcrumb as Record<string, unknown>
+  const categories = breadcrumb.categories as Array<Record<string, string>>
+  const categoryLabel = Array.isArray(categories)
+    ? (categories.find((categoryObject) => categoryObject[metadata.category])?.[
+        metadata.category
+      ] ?? metadata.category)
+    : metadata.category
 
   return (
     <>
@@ -86,11 +98,13 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              <BreadcrumbLink href="/">{t('breadcrumb.home')}</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator>/</BreadcrumbSeparator>
             <BreadcrumbItem>
-              <BreadcrumbLink href="/products">Products</BreadcrumbLink>
+              <BreadcrumbLink href="/products">
+                {t('breadcrumb.products')}
+              </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator>/</BreadcrumbSeparator>
             <BreadcrumbItem>
@@ -98,7 +112,7 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
                 className="capitalize"
                 href={`/products?category=${metadata.category}`}
               >
-                {metadata.category.replace(/-/g, ' ')}
+                {categoryLabel}
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator>/</BreadcrumbSeparator>
@@ -117,8 +131,8 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
               TabContent,
               SplitSection,
               Table: (props) => (
-                <div className="col-span-4">
-                  <Table {...props} className="col-span-4" />
+                <div className="md:col-span-4">
+                  <Table {...props} className="md:col-span-4" />
                 </div>
               ),
               TableBody,

@@ -2,6 +2,7 @@
 
 import type { ReactNode } from 'react'
 
+import { useTranslations } from 'next-intl'
 import { useQueryState } from 'nuqs'
 
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
@@ -11,6 +12,8 @@ export const Tablist = ({ children }: { children: ReactNode }) => {
   const [category, setCategory] = useQueryState('category', {
     defaultValue: 'all',
   })
+
+  const t = useTranslations('products.breadcrumb.categories')
   return (
     <Tabs
       className=""
@@ -27,32 +30,32 @@ export const Tablist = ({ children }: { children: ReactNode }) => {
             className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
             value="all"
           >
-            All Products
+            {t('all')}
           </TabsTrigger>
 
           <TabsTrigger
             className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
             value="engine-additives"
           >
-            Engine Additives
+            {t('engine-additives')}
           </TabsTrigger>
           <TabsTrigger
             className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
             value="lubrication"
           >
-            Lubrication
+            {t('lubrication')}
           </TabsTrigger>
           <TabsTrigger
             className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
             value="fuel-system"
           >
-            Fuel System
+            {t('fuel-system')}
           </TabsTrigger>
           <TabsTrigger
             className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
             value="industrial"
           >
-            Industrial Application
+            {t('industrial')}
           </TabsTrigger>
           <div className="pointer-events-none absolute inset-y-0 right-0 w-20 touch-none bg-gradient-to-l from-background to-transparent" />
         </TabsList>

@@ -1,4 +1,15 @@
 export default {
+  breadcrumb: {
+    home: "дом",
+    products: "Продукты",
+    categories: {
+      all: "Все продукты",
+      "engine-additives": "Присадки для двигателя",
+      lubrication: "Смазка",
+      "fuel-system": "Морской и Авиационный",
+      industrial: "Промышленный",
+    },
+  },
   header: {
     title: "Высокопроизводительные продукты для требовательных машин",
     description: {
@@ -12,4 +23,22 @@ export default {
   loading: "Загрузка…",
   button: "Откройте для себя это",
   premium: "Премиум",
-};
+
+  page: {
+    packings: "Доступные упаковки",
+    downloads: {
+      title: "Загрузка технических листов",
+      safetyDs: "Паспорт безопасности материала",
+      technicalDs: "Технический паспорт",
+    },
+    tabs: {
+      direction: "Инструкция по применению",
+      advantages: "Основные преимущества",
+      usages: "Применение",
+      handling: "Обращение и безопасность",
+      firstAid: "Меры первой помощи",
+      disposal: "Утилизация",
+      hazardous: "Опасные компоненты",
+    },
+  },
+} as const;

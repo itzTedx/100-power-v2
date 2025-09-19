@@ -1,3 +1,5 @@
+import { getTranslations } from 'next-intl/server'
+
 import {
   TabsContent as ShadcnTabsContent,
   Tabs,
@@ -30,15 +32,19 @@ export function SplitSection({ children }: Props) {
 const tabsTriggerClassName =
   'hover:bg-accent hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none'
 
-export const InformationTabs = ({ children }: Props) => {
+export const InformationTabs = async ({ children }: Props) => {
+  const t = await getTranslations('products.page.tabs')
   return (
-    <Tabs className="col-span-12 items-start md:col-span-7" defaultValue="core">
+    <Tabs
+      className="col-span-12 items-start md:col-span-7 rtl:items-end"
+      defaultValue="core"
+    >
       <TabsList className="h-auto w-full justify-start gap-2 overflow-x-auto rounded-none border-b bg-transparent px-0 py-1 text-foreground">
         <TabsTrigger className={tabsTriggerClassName} value="core">
-          Core Advantages
+          {t('advantages')}
         </TabsTrigger>
         <TabsTrigger className={tabsTriggerClassName} value="usages">
-          Usages
+          {t('usages')}
         </TabsTrigger>
       </TabsList>
       {children}
@@ -46,7 +52,8 @@ export const InformationTabs = ({ children }: Props) => {
   )
 }
 
-export const DirectionsTabs = ({ children }: Props) => {
+export const DirectionsTabs = async ({ children }: Props) => {
+  const t = await getTranslations('products.page.tabs')
   return (
     <Tabs
       className={cn('col-span-12 mt-6 items-start md:col-span-5 md:mt-0')}
@@ -54,7 +61,7 @@ export const DirectionsTabs = ({ children }: Props) => {
     >
       <TabsList className="mb-3 h-auto w-full justify-start gap-2 overflow-x-auto rounded-none border-b bg-transparent px-0 py-1 text-foreground">
         <TabsTrigger className={tabsTriggerClassName} value="directions">
-          Directions of Use
+          {t('direction')}
         </TabsTrigger>
       </TabsList>
       {children}
@@ -62,24 +69,25 @@ export const DirectionsTabs = ({ children }: Props) => {
   )
 }
 
-export const SafetyTabs = ({ children }: Props) => {
+export const SafetyTabs = async ({ children }: Props) => {
+  const t = await getTranslations('products.page.tabs')
   return (
     <Tabs
-      className="col-span-12 mt-6 items-start md:col-span-7 md:mt-0"
+      className="mt-6 items-start md:col-span-7 md:mt-0"
       defaultValue="handling"
     >
       <TabsList className="h-auto w-full justify-start gap-2 overflow-x-auto rounded-none border-b bg-transparent px-0 py-1 text-foreground">
         <TabsTrigger className={tabsTriggerClassName} value="handling">
-          Handling & Safety
+          {t('direction')}
         </TabsTrigger>
         <TabsTrigger className={tabsTriggerClassName} value="first-aid">
-          First Aid Measures
+          {t('firstAid')}
         </TabsTrigger>
         <TabsTrigger className={tabsTriggerClassName} value="disposal">
-          Disposal
+          {t('disposal')}
         </TabsTrigger>
         <TabsTrigger className={tabsTriggerClassName} value="hazardous">
-          Hazardous Components
+          {t('hazardous')}
         </TabsTrigger>
       </TabsList>
       {children}

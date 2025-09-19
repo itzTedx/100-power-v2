@@ -1,4 +1,15 @@
 export default {
+  breadcrumb: {
+    home: "بيت",
+    products: "منتجات",
+    categories: {
+      all: "جميع المنتجات",
+      "engine-additives": "إضافات المحرك",
+      lubrication: "تشحيم",
+      "fuel-system": "البحرية والطيران",
+      industrial: "صناعي",
+    },
+  },
   header: {
     title: "منتجات عالية الأداء للآلات المتطلبة",
     description: {
@@ -10,4 +21,22 @@ export default {
   loading: "جارٍ التحميل…",
   button: "اكتشفه",
   premium: "غالي",
-};
+
+  page: {
+    packings: "التعبئات المتوفرة",
+    downloads: {
+      title: "تحميل نشرة البيانات",
+      safetyDs: "ورقة بيانات السلامة للمواد",
+      technicalDs: "النشرة الفنية",
+    },
+    tabs: {
+      direction: "طريقة الاستخدام",
+      advantages: "المزايا الأساسية",
+      usages: "الاستخدامات",
+      handling: "التعامل والسلامة",
+      firstAid: "إجراءات الإسعافات الأولية",
+      disposal: "التخلص من المواد",
+      hazardous: "المكونات الخطرة",
+    },
+  },
+} as const;

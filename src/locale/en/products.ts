@@ -1,4 +1,15 @@
 export default {
+  breadcrumb: {
+    home: "Home",
+    products: "Products",
+    categories: {
+      all: "ALl Products",
+      "engine-additives": "Engine Additives",
+      lubrication: "Lubrication",
+      "fuel-system": "Marine & Aviation",
+      industrial: "Industrial",
+    },
+  },
   header: {
     title: "High-Performance Products for Demanding Machines",
     description: {
@@ -11,4 +22,22 @@ export default {
   loading: "Loading…",
   button: "Discover it",
   premium: "Premium",
-};
+
+  page: {
+    packings: "Available Packings",
+    downloads: {
+      title: "Data Sheet Downloads",
+      safetyDs: "Material Safety Data Sheet",
+      technicalDs: "Technical Data Sheet",
+    },
+    tabs: {
+      direction: "Direction of use",
+      advantages: "Core Advantages",
+      usages: "Usages",
+      handling: "Handling & Safety",
+      firstAid: "First Aid Measures",
+      disposal: "Disposal",
+      hazardous: "Hazardous Components",
+    },
+  },
+} as const;

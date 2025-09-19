@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+import { getTranslations } from 'next-intl/server'
+
 import { Button } from '@/components/ui/button'
 import ImageCarousel, {
   type CarouselImages,
@@ -16,7 +18,8 @@ interface Props {
   children: React.ReactNode
 }
 
-export const Header = ({ metadata, children }: Props) => {
+export const Header = async ({ metadata, children }: Props) => {
+  const t = await getTranslations('products')
   const carousel: CarouselImages = metadata.images.map((img) => ({ url: img }))
   return (
     <section className="grid grid-cols-1 gap-8 pt-4 md:grid-cols-2">
@@ -37,7 +40,7 @@ export const Header = ({ metadata, children }: Props) => {
               <div
                 className={cn(
                   'size-3 rounded-full',
-                  metadata.range === 'Premium'
+                  metadata.range === t('premium')
                     ? 'bg-primary'
                     : 'bg-muted-foreground/80'
                 )}
@@ -58,7 +61,7 @@ export const Header = ({ metadata, children }: Props) => {
             className="not-prose mb-1 font-semibold tracking-tight"
             id="quantities-heading"
           >
-            Available Packings
+            {t('page.packings')}
           </h2>
           <ul className="not-prose flex gap-4 font-helvetica font-medium text-base">
             {metadata.quantities.map((q) => (
@@ -74,14 +77,14 @@ export const Header = ({ metadata, children }: Props) => {
         {(metadata.safetyDs || metadata.technicalDs) && (
           <section aria-labelledby="datasheet-heading">
             <h2 className="mb-1 text-muted-foreground" id="datasheet-heading">
-              Data Sheet Downloads
+              {t('page.downloads.title')}
             </h2>
             <div className="flex flex-col gap-2 space-x-0 sm:flex-row sm:gap-0 sm:space-x-3">
               {metadata.safetyDs && (
                 <Button asChild variant="secondary">
                   <Link href={metadata.safetyDs} target="_blank">
                     <IconShield />
-                    Material Safety Data Sheet
+                    {t('page.downloads.safetyDs')}
                   </Link>
                 </Button>
               )}
@@ -89,7 +92,7 @@ export const Header = ({ metadata, children }: Props) => {
                 <Button asChild variant="secondary">
                   <Link href={metadata.technicalDs} target="_blank">
                     <IconChart />
-                    Technical Data Sheet
+                    {t('page.downloads.technicalDs')}
                   </Link>
                 </Button>
               )}
