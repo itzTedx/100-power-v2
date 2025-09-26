@@ -7,6 +7,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { Faqs } from '@/components/sections/faq'
 import { About } from '@/components/sections/home/about'
 import { Hero } from '@/components/sections/home/hero'
+import { Industries } from '@/components/sections/home/industries'
 import { Products } from '@/components/sections/home/products'
 import { Technologies } from '@/components/sections/home/technologies'
 import { Video } from '@/components/sections/home/video'
@@ -31,9 +32,9 @@ export default async function Home({ params }: Props) {
     <main>
       <Hero />
       <About />
+      <Industries />
       <Video />
       <Products />
-      {/* <Industries /> */}
       <Technologies />
 
       <section className="container grid max-w-7xl gap-9 py-8 md:grid-cols-2 md:py-12">

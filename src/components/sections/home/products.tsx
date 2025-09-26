@@ -1,25 +1,23 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { ArrowUpRight, Dot } from 'lucide-react'
-import { getLocale, getTranslations } from 'next-intl/server'
+import { getTranslations } from 'next-intl/server'
 
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
 import { Separator } from '@/components/ui/separator'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
-import { getProducts } from '@/features/products/actions'
-import { ProductCard } from '@/features/products/components/product-card'
+import { CATEGORIES_LINKS } from '@/data/constants'
 
 export const Products = async () => {
-  const locale = await getLocale()
-  const products = await getProducts({ locale })
+  // const locale = await getLocale()
+  // const products = await getProducts({ locale })
   const t = await getTranslations('home.products')
   return (
     <section
       aria-labelledby="products-heading"
-      className="container space-y-8 py-8 sm:py-12"
+      className="container max-w-7xl space-y-8 py-8 sm:py-12"
     >
       <Badge>
         <Dot />
@@ -52,80 +50,38 @@ export const Products = async () => {
         </div>
       </div>
 
-      <Tabs defaultValue="engine-additives">
-        <ScrollArea>
-          <TabsList className="mb-4 h-auto w-full gap-2 rounded-none border-b bg-transparent px-0 py-1 text-foreground">
-            <TabsTrigger
-              className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
-              value="engine-additives"
-            >
-              Engine Oil
-            </TabsTrigger>
-            <TabsTrigger
-              className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
-              value="lubrication"
-            >
-              Lubrication
-            </TabsTrigger>
-            <TabsTrigger
-              className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
-              value="fuel-system"
-            >
-              Marine & Aviation
-            </TabsTrigger>
-            <TabsTrigger
-              className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
-              value="industrial"
-            >
-              Industrial Application
-            </TabsTrigger>
-          </TabsList>
-          <ScrollBar orientation="horizontal" />
-        </ScrollArea>
-        <TabsContent value="engine-additives">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {products
-              .filter((p) => p.category === 'engine-additives')
-              ?.slice(0, 9)
-              .map((product, id) => (
-                <ProductCard data={product} key={id} />
-              ))}
+      <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {CATEGORIES_LINKS.map((link) => (
+          <div
+            className="grid grid-cols-3 items-center gap-3 rounded-xl bg-card p-6 transition-transform hover:scale-102"
+            key={link.id}
+          >
+            <Link className="absolute inset-0 z-10" href={link.href} />
+            <div className="col-span-2">
+              <h3 className="font-semibold text-2xl tracking-tight">
+                {link.title}
+              </h3>
+              <p className="text text-muted-foreground">{link.description}</p>
+            </div>
+            <div className="relative aspect-square">
+              <Image
+                alt=""
+                className="object-contain"
+                fill
+                src="/images/100power.webp"
+              />
+            </div>
           </div>
-        </TabsContent>
-        <TabsContent value="lubrication">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {products
-              .filter((p) => p.category === 'lubrication')
-              ?.map((product, id) => (
-                <ProductCard data={product} key={id} />
-              ))}
-          </div>
-        </TabsContent>
+        ))}
+      </div>
 
-        <TabsContent value="fuel-system">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {products
-              .filter((p) => p.category === 'fuel-system')
-              ?.map((product, id) => (
-                <ProductCard data={product} key={id} />
-              ))}
-          </div>
-        </TabsContent>
-        <TabsContent value="industrial">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {products
-              .filter((p) => p.category === 'industrial')
-              ?.map((product, id) => (
-                <ProductCard data={product} key={id} />
-              ))}
-          </div>
-        </TabsContent>
-        <div className="mx-auto mt-4 w-fit">
-          <Button variant="secondary">
-            <Link href="/products">{t('loadButton')}</Link>
-          </Button>
-        </div>
-      </Tabs>
+      {/* <div className="mx-auto mt-4 w-fit">
+        <Button aria-label="Explore all products" asChild variant="secondary">
+          <Link href="/products">
+            {t('button')} <ArrowUpRight size={18} />
+          </Link>
+        </Button>
+      </div> */}
     </section>
   )
 }

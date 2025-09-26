@@ -3,6 +3,15 @@ import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
 
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from '@/components/ui/navigation-menu'
+
 import { Logo } from '@/assets/logo'
 
 import { NAV_LINKS } from '@/data/constants'
@@ -22,24 +31,47 @@ export const Navbar = async () => {
 
   return (
     <header className="sticky top-0 z-999 border-background border-b bg-background/80 py-2 backdrop-blur-xl">
-      <nav className="container flex items-center justify-between">
+      <NavigationMenu
+        className="container grid max-w-auto grid-cols-2 items-center justify-between md:grid-cols-3"
+        viewport={false}
+      >
         <Link href="/">
           <Logo />
         </Link>
 
-        <ul className="hidden items-center gap-3 font-medium lg:flex">
-          {NAV_LINKS.map((link, i) => (
-            <li key={`${link.href}-${i}`}>
-              <Link
-                className="rounded-sm px-4 py-2.5 tracking-tight transition-colors hover:bg-accent hover:text-primary-foreground"
-                href={link.href}
-              >
-                {t(linkKeys[i])}
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <div className="flex items-center gap-2">
+        <NavigationMenuList className="font-medium">
+          {NAV_LINKS.map((link, i) =>
+            link.id === 3 ? (
+              <NavigationMenuItem key={`${link.href}-${i}`}>
+                <NavigationMenuTrigger>Products</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                    {link.items?.map((component) => (
+                      <ListItem
+                        href={component.href}
+                        key={component.id}
+                        title={component.title}
+                      >
+                        {component.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            ) : (
+              <NavigationMenuItem key={`${link.href}-${i}`}>
+                <NavigationMenuLink asChild>
+                  <Link href={link.href}>
+                    <div className="rounded-sm px-4 font-medium text-base tracking-tight transition-colors hover:bg-accent hover:text-primary-foreground">
+                      {t(linkKeys[i])}
+                    </div>
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            )
+          )}
+        </NavigationMenuList>
+        <div className="flex items-center gap-2 justify-self-end">
           <LanguageSelector />
           <Button asChild variant="secondary">
             <Link href="/contact">
@@ -50,7 +82,27 @@ export const Navbar = async () => {
 
           <MobileSheet />
         </div>
-      </nav>
+      </NavigationMenu>
     </header>
+  )
+}
+
+function ListItem({
+  title,
+  children,
+  href,
+  ...props
+}: React.ComponentPropsWithoutRef<'li'> & { href: string }) {
+  return (
+    <li {...props}>
+      <NavigationMenuLink asChild>
+        <Link href={href}>
+          <div className="font-medium text-sm leading-none">{title}</div>
+          <p className="line-clamp-2 font-normal text-muted-foreground text-xs leading-snug">
+            {children}
+          </p>
+        </Link>
+      </NavigationMenuLink>
+    </li>
   )
 }

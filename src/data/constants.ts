@@ -19,6 +19,37 @@ import {
   IconWrench,
 } from "@/assets/icons";
 
+export const CATEGORIES_LINKS = [
+  {
+    id: 1,
+    title: "Engine Oil",
+    href: "/products",
+    description:
+      "High-performance oils for maximum engine protection and efficiency.",
+  },
+  {
+    id: 2,
+    title: "Lubrication",
+    href: "/products",
+    description:
+      "Premium lubricants to reduce friction and extend equipment life.",
+  },
+  {
+    id: 3,
+    title: "Marine & Aviation",
+    href: "/products",
+    description:
+      "Specialized solutions for marine vessels and aircraft engines.",
+  },
+  {
+    id: 4,
+    title: "Industrial",
+    href: "/products",
+    description:
+      "Reliable industrial oils and lubricants for heavy-duty operations.",
+  },
+];
+
 export const NAV_LINKS = [
   {
     id: 1,
@@ -31,12 +62,13 @@ export const NAV_LINKS = [
     href: "/about",
   },
   {
-    id: 4,
+    id: 3,
     title: "Products",
     href: "/products",
+    items: CATEGORIES_LINKS,
   },
   {
-    id: 3,
+    id: 4,
     title: "Solutions",
     href: "/solutions",
   },
