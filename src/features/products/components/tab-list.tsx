@@ -18,8 +18,8 @@ export const Tablist = ({ children }: { children: ReactNode }) => {
   const t = useTranslations('products.breadcrumb.categories')
   return (
     <Tabs defaultValue="all" onValueChange={setCategory} value={category}>
-      <div className="items-center justify-between md:flex">
-        <ScrollArea className="md:flex-1">
+      <div className="z-50 flex items-center justify-between bg-background/80 backdrop-blur-xl max-md:sticky max-md:top-16">
+        <ScrollArea className="w-[85%] md:flex-1">
           <TabsList
             aria-label="Product categories"
             className="mb-2 h-auto w-full justify-start gap-2 rounded-none border-b bg-transparent px-0 py-1 text-foreground"
