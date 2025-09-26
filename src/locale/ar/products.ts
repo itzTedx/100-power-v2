@@ -22,6 +22,19 @@ export default {
   button: "اكتشفه",
   premium: "غالي",
 
+  filters: {
+    title: "تصفية",
+    range: {
+      title: "تصفية حسب النطاق",
+      options: {
+        all: "الكل",
+        Regular: "عادي",
+        Premium: "ممتاز",
+        "Super Premium": "فائق الممتاز",
+      },
+    },
+  },
+
   page: {
     packings: "التعبئات المتوفرة",
     downloads: {

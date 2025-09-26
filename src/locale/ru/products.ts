@@ -24,6 +24,19 @@ export default {
   button: "Откройте для себя это",
   premium: "Премиум",
 
+  filters: {
+    title: "Фильтр",
+    range: {
+      title: "Фильтр по диапазону",
+      options: {
+        all: "Все",
+        Regular: "Обычный",
+        Premium: "Премиум",
+        "Super Premium": "Супер Премиум",
+      },
+    },
+  },
+
   page: {
     packings: "Доступные упаковки",
     downloads: {

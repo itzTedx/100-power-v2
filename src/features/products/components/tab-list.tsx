@@ -2,7 +2,7 @@
 
 import type { ReactNode } from 'react'
 
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { useQueryState } from 'nuqs'
 
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
@@ -14,12 +14,16 @@ export const Tablist = ({ children }: { children: ReactNode }) => {
   const [category, setCategory] = useQueryState('category', {
     defaultValue: 'all',
   })
+  const locale = useLocale()
 
   const t = useTranslations('products.breadcrumb.categories')
   return (
     <Tabs defaultValue="all" onValueChange={setCategory} value={category}>
       <div className="z-50 flex items-center justify-between bg-background/80 backdrop-blur-xl max-md:sticky max-md:top-16">
-        <ScrollArea className="w-[85%] md:flex-1">
+        <ScrollArea
+          className="w-[85%] ltr:md:flex-1"
+          dir={locale === 'ar' ? 'rtl' : 'ltr'}
+        >
           <TabsList
             aria-label="Product categories"
             className="mb-2 h-auto w-full justify-start gap-2 rounded-none border-b bg-transparent px-0 py-1 text-foreground"

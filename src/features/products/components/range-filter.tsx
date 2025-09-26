@@ -3,6 +3,7 @@
 import { useMemo } from 'react'
 
 import { IconFilter } from '@tabler/icons-react'
+import { useTranslations } from 'next-intl'
 import { useQueryState } from 'nuqs'
 
 import { Button } from '@/components/ui/button'
@@ -19,17 +20,31 @@ import {
 
 import { cn } from '@/lib/utils'
 
-const RANGE_OPTIONS = [
-  { value: 'all', label: 'All' },
-  { value: 'Regular', label: 'Regular' },
-  { value: 'Premium', label: 'Premium' },
-  { value: 'Super Premium', label: 'Super Premium' },
+const RANGE_OPTION_VALUES = [
+  'all',
+  'Regular',
+  'Premium',
+  'Super Premium',
 ] as const
+
+type RangeOptionValue = (typeof RANGE_OPTION_VALUES)[number]
 
 export function RangeFilter() {
   const [range, setRange] = useQueryState('range', { defaultValue: 'all' })
 
-  const options = useMemo(() => RANGE_OPTIONS, [])
+  const t = useTranslations('products.filters')
+
+  const options = useMemo(
+    () =>
+      RANGE_OPTION_VALUES.map((value) => ({
+        value,
+        label:
+          value === 'all'
+            ? t('range.options.all')
+            : t(`range.options.${value}` as const),
+      })),
+    [t]
+  )
 
   return (
     <>
@@ -61,9 +76,9 @@ export function RangeFilter() {
         <DrawerContent>
           <div className="mx-auto w-full max-w-sm">
             <DrawerHeader>
-              <DrawerTitle>Filter</DrawerTitle>
+              <DrawerTitle>{t('title')}</DrawerTitle>
               <DrawerDescription className="sr-only">
-                Filter by Range
+                {t('range.title')}
               </DrawerDescription>
             </DrawerHeader>
             <div className="px-4 pb-0">
@@ -79,7 +94,7 @@ export function RangeFilter() {
                           ? 'border-primary bg-background text-foreground shadow-sm'
                           : 'border-transparent bg-muted/40 text-muted-foreground'
                       )}
-                      onClick={() => setRange(opt.value)}
+                      onClick={() => setRange(opt.value as RangeOptionValue)}
                       type="button"
                     >
                       {opt.label}

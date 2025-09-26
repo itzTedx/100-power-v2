@@ -28,9 +28,13 @@ export function ProductGrid({ products, category = 'all' }: Props) {
     }
 
     if (range !== 'all') {
-      result = result.filter(
-        (p) => (p.range ?? '').toLowerCase() === range.toLowerCase()
-      )
+      const normalized = range.toLowerCase()
+      result = result.filter((p) => {
+        if (p.rangeKey) {
+          return p.rangeKey.toLowerCase() === normalized
+        }
+        return (p.range ?? '').toLowerCase() === normalized
+      })
     }
 
     return result

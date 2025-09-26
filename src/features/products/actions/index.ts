@@ -9,6 +9,30 @@ import { Product, ProductMetadata } from "./types";
 const root = (locale: Locale) =>
   path.join(process.cwd(), "src", "contents", "products", locale);
 
+function resolveRangeKey(
+  value?: string
+): "Premium" | "Regular" | "Super Premium" | undefined {
+  if (!value) return undefined;
+  const v = value.toLowerCase().trim();
+
+  // English
+  if (v === "regular") return "Regular";
+  if (v === "premium") return "Premium";
+  if (v === "super premium" || v === "super-premium") return "Super Premium";
+
+  // Arabic common variants
+  if (v === "عادي") return "Regular";
+  if (v === "ممتاز" || v === "بريميوم") return "Premium";
+  if (v === "فائق الممتاز" || v === "سوبر بريميوم") return "Super Premium";
+
+  // Russian
+  if (v === "обычный") return "Regular";
+  if (v === "премиум") return "Premium";
+  if (v === "супер премиум" || v === "суперпремиум") return "Super Premium";
+
+  return undefined;
+}
+
 export async function getProductBySlug(
   slug: string,
   { locale }: { locale: Locale }
@@ -18,7 +42,16 @@ export async function getProductBySlug(
     const fileContent = fs.readFileSync(filePath, { encoding: "utf8" });
     const { data, content } = matter(fileContent);
 
-    return { metadata: { ...(data as ProductMetadata), slug }, content };
+    const metadata = data as ProductMetadata;
+
+    return {
+      metadata: {
+        ...metadata,
+        slug,
+        rangeKey: resolveRangeKey(metadata.range),
+      },
+      content,
+    };
   } catch {
     return null;
   }
@@ -56,5 +89,7 @@ export function getProductMetadata(
   const fileContent = fs.readFileSync(filePath, { encoding: "utf8" });
   const { data } = matter(fileContent);
 
-  return { ...(data as ProductMetadata), slug };
+  const metadata = data as ProductMetadata;
+
+  return { ...metadata, slug, rangeKey: resolveRangeKey(metadata.range) };
 }

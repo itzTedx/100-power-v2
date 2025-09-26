@@ -23,6 +23,19 @@ export default {
   button: "Discover it",
   premium: "Premium",
 
+  filters: {
+    title: "Filter",
+    range: {
+      title: "Filter by Range",
+      options: {
+        all: "All",
+        Regular: "Regular",
+        Premium: "Premium",
+        "Super Premium": "Super Premium",
+      },
+    },
+  },
+
   page: {
     packings: "Available Packings",
     downloads: {

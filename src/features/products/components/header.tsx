@@ -40,7 +40,7 @@ export const Header = async ({ metadata, children }: Props) => {
               <div
                 className={cn(
                   'size-3 rounded-full',
-                  metadata.range === t('premium')
+                  metadata.rangeKey === 'Premium'
                     ? 'bg-primary'
                     : 'bg-muted-foreground/80'
                 )}

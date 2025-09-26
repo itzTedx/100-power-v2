@@ -38,7 +38,9 @@ export const ProductCard = ({ data }: Props) => {
           <div
             className={cn(
               'size-3 rounded-full',
-              data.range === 'Premium' ? 'bg-primary' : 'bg-muted-foreground/80'
+              data.rangeKey === 'Premium'
+                ? 'bg-primary'
+                : 'bg-muted-foreground/80'
             )}
           />
           <p className="font-medium">{data.range}</p>
