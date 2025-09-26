@@ -21,6 +21,11 @@ interface Props {
 export const Header = async ({ metadata, children }: Props) => {
   const t = await getTranslations('products')
   const carousel: CarouselImages = metadata.images.map((img) => ({ url: img }))
+  const rangeLabel = metadata.rangeKey
+    ? t(`filters.range.options.${metadata.rangeKey}` as const)
+    : metadata.range
+
+  console.log(metadata.rangeKey)
   return (
     <section className="grid grid-cols-1 gap-8 pt-4 md:grid-cols-2">
       <div className="not-prose h-fit md:sticky md:top-[14svh]">
@@ -35,7 +40,7 @@ export const Header = async ({ metadata, children }: Props) => {
 
       <div className="space-y-4">
         <header>
-          {metadata.range && (
+          {(metadata.rangeKey || metadata.range) && (
             <div className="flex shrink-0 items-center gap-2">
               <div
                 className={cn(
@@ -46,7 +51,7 @@ export const Header = async ({ metadata, children }: Props) => {
                 )}
               />
               <span className="font-medium text-base sm:text-lg">
-                {metadata.range}
+                {rangeLabel}
               </span>
             </div>
           )}

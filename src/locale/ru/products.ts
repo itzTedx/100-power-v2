@@ -53,5 +53,6 @@ export default {
       disposal: "Утилизация",
       hazardous: "Опасные компоненты",
     },
+    related: "Сопутствующие товары для",
   },
 } as const;

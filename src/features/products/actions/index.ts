@@ -22,7 +22,7 @@ function resolveRangeKey(
 
   // Arabic common variants
   if (v === "عادي") return "Regular";
-  if (v === "ممتاز" || v === "بريميوم") return "Premium";
+  if (v === "ممتاز" || v === "بريميوم" || v === "غالي") return "Premium";
   if (v === "فائق الممتاز" || v === "سوبر بريميوم") return "Super Premium";
 
   // Russian
@@ -92,4 +92,24 @@ export function getProductMetadata(
   const metadata = data as ProductMetadata;
 
   return { ...metadata, slug, rangeKey: resolveRangeKey(metadata.range) };
+}
+
+export async function getRelatedProducts({
+  category,
+  limit,
+  locale,
+}: {
+  category: string;
+  limit?: number;
+  locale: Locale;
+}): Promise<ProductMetadata[]> {
+  const result = await getProducts({ locale });
+
+  const products = result.filter((product) => product.category === category);
+
+  if (limit) {
+    return products.slice(0, limit);
+  }
+
+  return products;
 }

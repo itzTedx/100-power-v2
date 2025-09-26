@@ -52,5 +52,6 @@ export default {
       disposal: "Disposal",
       hazardous: "Hazardous Components",
     },
+    related: "Related Products to",
   },
 } as const;

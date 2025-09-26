@@ -20,8 +20,13 @@ import {
   TableRow,
 } from '@/components/ui/table'
 
-import { getProductBySlug, getProducts } from '@/features/products/actions'
+import {
+  getProductBySlug,
+  getProducts,
+  getRelatedProducts,
+} from '@/features/products/actions'
 import { Header } from '@/features/products/components/header'
+import { ProductGrid } from '@/features/products/components/product-grid'
 import {
   DirectionsTabs,
   InformationTabs,
@@ -93,6 +98,12 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
       ] ?? metadata.category)
     : metadata.category
 
+  const relatedProducts = await getRelatedProducts({
+    limit: 3,
+    locale,
+    category: product.metadata.category,
+  })
+
   return (
     <>
       <main className="container py-4">
@@ -147,6 +158,15 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
             source={content}
           />
         </article>
+
+        <section>
+          <h3 className="mb-4 font-semibold text-2xl">
+            {t('page.related')}{' '}
+            {/** biome-ignore  lint/suspicious/noExplicitAny: i don't know the type>*/}
+            {t(`breadcrumb.categories.${categoryLabel}` as any)}
+          </h3>
+          <ProductGrid products={relatedProducts} />
+        </section>
       </main>
       <script
         dangerouslySetInnerHTML={{

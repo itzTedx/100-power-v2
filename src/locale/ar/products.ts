@@ -51,5 +51,6 @@ export default {
       disposal: "التخلص من المواد",
       hazardous: "المكونات الخطرة",
     },
+    related: "المنتجات ذات الصلة ب",
   },
 } as const;
