@@ -98,8 +98,8 @@ export default async function ProductsPage({ params }: Props) {
           <TabsContent value="lubrication">
             <ProductGrid category="lubrication" products={products} />
           </TabsContent>
-          <TabsContent value="fuel-system">
-            <ProductGrid category="fuel-system" products={products} />
+          <TabsContent value="marine-aviation">
+            <ProductGrid category="marine-aviation" products={products} />
           </TabsContent>
           <TabsContent value="industrial">
             <ProductGrid category="industrial" products={products} />

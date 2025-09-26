@@ -45,7 +45,7 @@ export const Tablist = ({ children }: { children: ReactNode }) => {
             </TabsTrigger>
             <TabsTrigger
               className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
-              value="fuel-system"
+              value="marine-aviation"
             >
               {t('fuel-system')}
             </TabsTrigger>

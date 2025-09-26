@@ -3,7 +3,7 @@ export default {
     home: "Home",
     products: "Products",
     categories: {
-      all: "ALl Products",
+      all: "All Products",
       "engine-additives": "Engine Additives",
       lubrication: "Lubrication",
       "fuel-system": "Marine & Aviation",

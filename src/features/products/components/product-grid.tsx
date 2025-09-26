@@ -13,7 +13,7 @@ interface Props {
     | 'all'
     | 'engine-additives'
     | 'lubrication'
-    | 'fuel-system'
+    | 'marine-aviation'
     | 'industrial'
 }
 
