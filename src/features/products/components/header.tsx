@@ -25,7 +25,6 @@ export const Header = async ({ metadata, children }: Props) => {
     ? t(`filters.range.options.${metadata.rangeKey}` as const)
     : metadata.range
 
-  console.log(metadata.rangeKey)
   return (
     <section className="grid grid-cols-1 gap-8 pt-4 md:grid-cols-2">
       <div className="not-prose h-fit md:sticky md:top-[14svh]">

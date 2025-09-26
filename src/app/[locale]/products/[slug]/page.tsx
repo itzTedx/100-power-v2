@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import { notFound } from 'next/navigation'
 
 import { getLocale, getMessages, getTranslations } from 'next-intl/server'
@@ -165,7 +166,9 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
             {/** biome-ignore  lint/suspicious/noExplicitAny: i don't know the type>*/}
             {t(`breadcrumb.categories.${categoryLabel}` as any)}
           </h3>
-          <ProductGrid products={relatedProducts} />
+          <Suspense fallback={'Loading...'}>
+            <ProductGrid products={relatedProducts} />
+          </Suspense>
         </section>
       </main>
       <script
