@@ -33,7 +33,7 @@ export const Navbar = async () => {
     <header className="sticky top-0 z-999 border-background border-b bg-background/80 py-2 backdrop-blur-xl">
       <NavigationMenu
         className="container grid max-w-auto grid-cols-2 items-center justify-between md:grid-cols-3"
-        viewport={false}
+        viewport={true}
       >
         <Link href="/">
           <Logo />
@@ -44,8 +44,8 @@ export const Navbar = async () => {
               link.id === 3 ? (
                 <NavigationMenuItem key={`${link.href}-${i}`}>
                   <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                  <NavigationMenuContent className="w-full bg-card">
+                    <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[720px]">
                       {link.items?.map((component) => (
                         <ListItem
                           href={component.href}
@@ -96,7 +96,7 @@ function ListItem({
 }: React.ComponentPropsWithoutRef<'li'> & { href: string }) {
   return (
     <li {...props}>
-      <NavigationMenuLink asChild>
+      <NavigationMenuLink asChild className="h-full p-5 hover:bg-background">
         <Link href={href}>
           <div className="font-medium text-sm leading-none">{title}</div>
           <p className="line-clamp-2 font-normal text-muted-foreground text-xs leading-snug">

@@ -53,7 +53,7 @@ export const Products = async () => {
       <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {CATEGORIES_LINKS.map((link) => (
           <div
-            className="grid grid-cols-3 items-center gap-3 rounded-xl bg-card p-6 transition-transform hover:scale-102"
+            className="relative grid grid-cols-3 items-center gap-3 rounded-xl bg-card p-6 transition-transform hover:scale-102"
             key={link.id}
           >
             <Link className="absolute inset-0 z-10" href={link.href} />
