@@ -64,12 +64,7 @@ export const Products = async () => {
               <p className="text text-muted-foreground">{link.description}</p>
             </div>
             <div className="relative aspect-square">
-              <Image
-                alt=""
-                className="object-contain"
-                fill
-                src="/images/100power.webp"
-              />
+              <Image alt="" className="object-contain" fill src={link.image} />
             </div>
           </div>
         ))}

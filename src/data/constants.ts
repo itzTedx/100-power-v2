@@ -26,6 +26,7 @@ export const CATEGORIES_LINKS = [
     href: "/products?category=engine-additives",
     description:
       "High-performance oils for maximum engine protection and efficiency.",
+    image: "/images/100power.webp",
   },
   {
     id: 2,
@@ -33,6 +34,7 @@ export const CATEGORIES_LINKS = [
     href: "/products?category=lubrication",
     description:
       "Premium lubricants to reduce friction and extend equipment life.",
+    image: "/images/power-10.webp",
   },
   {
     id: 3,
@@ -40,6 +42,7 @@ export const CATEGORIES_LINKS = [
     href: "/products?category=marine-aviation",
     description:
       "Specialized solutions for marine vessels and aircraft engines.",
+    image: "/images/100power.webp",
   },
   {
     id: 4,
@@ -47,6 +50,7 @@ export const CATEGORIES_LINKS = [
     href: "/products?category=industrial",
     description:
       "Reliable industrial oils and lubricants for heavy-duty operations.",
+    image: "/images/100power.webp",
   },
 ];
 
