@@ -50,7 +50,7 @@ export const CATEGORIES_LINKS = [
     href: "/products?category=industrial",
     description:
       "Reliable industrial oils and lubricants for heavy-duty operations.",
-    image: "/images/100power.webp",
+    image: "/images/hydraulic.webp",
   },
 ];
 
