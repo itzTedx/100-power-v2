@@ -31,9 +31,9 @@ export default async function Home({ params }: Props) {
     <main>
       <Hero />
       <About />
+      {/* <Industries /> */}
       <Video />
       <Products />
-      {/* <Industries /> */}
       <Technologies />
 
       <section className="container grid max-w-7xl gap-9 py-8 md:grid-cols-2 md:py-12">
