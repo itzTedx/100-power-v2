@@ -7,7 +7,7 @@ export type ProductMetadata = {
   id: number;
   title: string;
   slug: string;
-  range?: "Premium" | "Regular";
+  range?: "Premium" | "Regular" | "Super Premium";
   category: "engine-additives" | "lubrication" | "fuel-system" | "industrial";
   images: string[];
   quantities: string[];

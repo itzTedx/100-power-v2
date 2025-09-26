@@ -1,9 +1,11 @@
+'use client'
+
 import { Fragment } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 import { Dot } from 'lucide-react'
-import { getTranslations } from 'next-intl/server'
+import { useTranslations } from 'next-intl'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -25,8 +27,8 @@ interface Props {
   data: ProductMetadata
 }
 
-export const ProductCard = async ({ data }: Props) => {
-  const t = await getTranslations('products')
+export const ProductCard = ({ data }: Props) => {
+  const t = useTranslations('products')
 
   return (
     <Card className="group relative overflow-hidden">
@@ -36,9 +38,7 @@ export const ProductCard = async ({ data }: Props) => {
           <div
             className={cn(
               'size-3 rounded-full',
-              data.range === t('premium')
-                ? 'bg-primary'
-                : 'bg-muted-foreground/80'
+              data.range === 'Premium' ? 'bg-primary' : 'bg-muted-foreground/80'
             )}
           />
           <p className="font-medium">{data.range}</p>

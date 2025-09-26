@@ -38,39 +38,40 @@ export const Navbar = async () => {
         <Link href="/">
           <Logo />
         </Link>
-
-        <NavigationMenuList className="font-medium">
-          {NAV_LINKS.map((link, i) =>
-            link.id === 3 ? (
-              <NavigationMenuItem key={`${link.href}-${i}`}>
-                <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                    {link.items?.map((component) => (
-                      <ListItem
-                        href={component.href}
-                        key={component.id}
-                        title={component.title}
-                      >
-                        {component.description}
-                      </ListItem>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            ) : (
-              <NavigationMenuItem key={`${link.href}-${i}`}>
-                <NavigationMenuLink asChild>
-                  <Link href={link.href}>
-                    <div className="rounded-sm px-4 font-medium text-base tracking-tight transition-colors hover:bg-accent hover:text-primary-foreground">
-                      {t(linkKeys[i])}
-                    </div>
-                  </Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-            )
-          )}
-        </NavigationMenuList>
+        <div className="hidden md:block">
+          <NavigationMenuList className="font-medium">
+            {NAV_LINKS.map((link, i) =>
+              link.id === 3 ? (
+                <NavigationMenuItem key={`${link.href}-${i}`}>
+                  <NavigationMenuTrigger>Products</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                      {link.items?.map((component) => (
+                        <ListItem
+                          href={component.href}
+                          key={component.id}
+                          title={component.title}
+                        >
+                          {component.description}
+                        </ListItem>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              ) : (
+                <NavigationMenuItem key={`${link.href}-${i}`}>
+                  <NavigationMenuLink asChild>
+                    <Link href={link.href}>
+                      <div className="rounded-sm px-4 font-medium text-base tracking-tight transition-colors hover:bg-accent hover:text-primary-foreground">
+                        {t(linkKeys[i])}
+                      </div>
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              )
+            )}
+          </NavigationMenuList>
+        </div>
         <div className="flex items-center gap-2 justify-self-end">
           <LanguageSelector />
           <Button asChild variant="secondary">
