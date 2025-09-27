@@ -12,14 +12,14 @@ import { RangeFilter } from './range-filter'
 
 export const Tablist = ({ children }: { children: ReactNode }) => {
   const [category, setCategory] = useQueryState('category', {
-    defaultValue: 'engine-additives',
+    defaultValue: 'engine-oil',
   })
   const locale = useLocale()
 
   const t = useTranslations('products.breadcrumb.categories')
   return (
     <Tabs
-      defaultValue="engine-additives"
+      defaultValue="engine-oil"
       onValueChange={setCategory}
       value={category}
     >
@@ -41,9 +41,9 @@ export const Tablist = ({ children }: { children: ReactNode }) => {
 
             <TabsTrigger
               className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
-              value="engine-additives"
+              value="engine-oil"
             >
-              {t('engine-additives')}
+              {t('engine-oil')}
             </TabsTrigger>
             <TabsTrigger
               className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"

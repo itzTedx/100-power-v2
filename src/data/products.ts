@@ -3,7 +3,7 @@ export interface ProductType {
   title: string;
   href: string;
   images: string[];
-  type: "lubrication" | "engine-additives" | "fuel-system" | "industrial";
+  type: "lubrication" | "engine-oil" | "fuel-system" | "industrial";
   quantity: string[];
   overview: string;
   benefits: string[];
@@ -27,7 +27,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Premium",
     title: "POWER 5W20",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/5w20.jpg"],
     href: "power-5w20",
     overview: `Engineered to meet the latest API SP standards, this advanced motor oil is tailored for modern petrol engines—offering outstanding wear protection, cleaner operation, and longer engine life whether you're stuck in city traffic or driving long highway stretches.
@@ -161,7 +161,7 @@ export const PRODUCTS: ProductType[] = [
     href: "power-5w30",
     title: "POWER 5W30",
     images: ["/images/products/5w30.jpg"],
-    type: "engine-additives",
+    type: "engine-oil",
     overview:
       "Experience next-generation engine care with POWER 5W30, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.\n\n    With Micro-Lubricant Technology, advanced detergency, and superior thermal stability, Power keeps your engine running smoother, quieter, and more efficiently every day.",
     benefits: [
@@ -255,7 +255,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Premium",
     title: "POWER 5W40",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/5w40.jpg"],
     href: "power-5w40",
     overview: `Experience next-generation engine care with POWER 5W40, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.
@@ -387,7 +387,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Premium",
     title: "POWER 10W30",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/10w30.jpg"],
     href: "power-10w30",
     overview: `Experience next-generation engine care with POWER 10W30, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.
@@ -519,7 +519,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Premium",
     title: "POWER 10W40",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/10w40.jpg"],
     href: "power-10w40",
     safetyDs: "/datasheet/MSDS-10W40.pdf",
@@ -652,7 +652,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Premium",
     title: "POWER 75W90",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/75W90.jpg"],
     href: "power-75w90",
     overview: `Formulated for high-performance manual transmissions and differentials, this fully synthetic gear oil offers outstanding load-bearing capability, smooth shifting, and long-lasting protection in extreme conditions.
@@ -754,7 +754,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Premium",
     title: "POWER 85W90",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/85W90.jpg"],
     href: "power-85w90",
     overview: `POWER 85W90 is a high-performance mineral-based gear oil designed for manual transmissions, axles, and differentials in commercial and passenger vehicles. Formulated with extreme pressure (EP) additives, it provides excellent protection against gear wear, corrosion, and oxidation—even under high torque and load conditions.
@@ -856,7 +856,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Premium",
     title: "POWER 0W20",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/0w20.jpg"],
     href: "power-0w20",
     safetyDs: "/datasheet/MSDS-OW20.pdf",
@@ -959,7 +959,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Premium",
     title: "POWER 0W30",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/0w30.jpg"],
     href: "power-0w30",
     overview: `POWER 0W30 is a high-performance mineral-based gear oil designed for manual transmissions, axles, and differentials in commercial and passenger vehicles. Formulated with extreme pressure (EP) additives, it provides excellent protection against gear wear, corrosion, and oxidation—even under high torque and load conditions.
@@ -1061,7 +1061,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Premium",
     title: "POWER 20W40",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/20w40.jpg"],
     href: "power-20w40",
     overview: `POWER 20W40 is a high-performance mineral-based gear oil designed for manual transmissions, axles, and differentials in commercial and passenger vehicles. Formulated with extreme pressure (EP) additives, it provides excellent protection against gear wear, corrosion, and oxidation—even under high torque and load conditions.
@@ -1163,7 +1163,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Premium",
     title: "POWER 20W50",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/20w50.jpg"],
     href: "power-20w50",
     overview: `POWER 20W50 is a high-performance mineral-based gear oil designed for manual transmissions, axles, and differentials in commercial and passenger vehicles. Formulated with extreme pressure (EP) additives, it provides excellent protection against gear wear, corrosion, and oxidation—even under high torque and load conditions.
@@ -1717,7 +1717,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Premium",
     title: "ATF DEX III - Automatic Transmission Fluid",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/atf-dex-iii.jpg"],
     href: "atf-dex-iii",
     overview: `POWER ATF DEX III is a high-performance automatic transmission fluid designed to meet the requirements of Dexron III and other major OEM specifications. It delivers smooth gear shifting, enhanced transmission protection, and reliable performance in a wide range of automatic transmissions, power steering systems, and hydraulic applications.
@@ -1826,7 +1826,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Premium",
     title: "ATF DEX IV - Automatic Transmission Fluid",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/atf-dex-iv.jpg"],
     href: "atf-dex-iv",
     overview: `POWER ATF DEX IV is a high-performance automatic transmission fluid designed to meet the requirements of Dexron IV and other major OEM specifications. It delivers smooth gear shifting, enhanced transmission protection, and reliable performance in a wide range of automatic transmissions, power steering systems, and hydraulic applications.
@@ -1934,7 +1934,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Premium",
     title: "ATF WS - Automatic Transmission Fluid",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/atf-ws.jpg"],
     href: "atf-iv",
     overview: `POWER ATF WS is a fully synthetic, low-viscosity automatic transmission fluid formulated to meet the stringent requirements of Toyota WS (World Standard) and other modern automatic transmission systems. It offers exceptional thermal and oxidative stability, friction durability, and precise shifting performance—making it ideal for high-efficiency, electronically controlled transmissions.
@@ -2147,7 +2147,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Regular",
     title: "Power 0W20",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/regular/0w20-regular.jpg"],
     href: "power-0w20-regular",
     safetyDs: "/datasheet/MSDS-OW20.pdf",
@@ -2280,7 +2280,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Regular",
     title: "Power 0W30",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/regular/0w30-Regular.jpg"],
     href: "power-0w30-regular",
     overview: `Power 0W30 is a reliable synthetic engine oil formulated for consistent protection and performance in everyday driving. Designed for modern petrol engines, it ensures efficient cold starts, stable thermal performance, and reduced wear under normal driving loads.
@@ -2412,7 +2412,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Regular",
     title: "Power 5W20",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/regular/5w20-regular.jpg"],
     href: "power-5w20-regular",
     overview: `Power 5W20 is a reliable engine oil engineered to deliver consistent performance for daily drivers. Developed to meet SP standards, this lubricant ensures smoother cold starts, steady protection against wear, and improved cleanliness for petrol engines in routine operating conditions.
@@ -2544,7 +2544,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Regular",
     title: "Power 5W30",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/regular/5w30-regular.jpg"],
     href: "power-5w30-regular",
     overview: `Power 5W30 is a reliable synthetic engine oil formulated for consistent protection and performance in everyday driving. Designed for modern petrol engines, it ensures efficient cold starts, stable thermal performance, and reduced wear under normal driving loads.
@@ -2677,7 +2677,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Regular",
     title: "POWER 5W40",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/regular/5w40-regular.jpg"],
     href: "power-5w40",
     overview: `Experience next-generation engine care with POWER 5W40, formulated to meet API SP standards. Designed for modern petrol engines, it delivers exceptional wear protection, cleaner performance, and extended engine life—whether you're navigating city traffic or cruising the highway.
@@ -2810,7 +2810,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Regular",
     title: "Power 10W30",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/regular/10w30-regular.jpg"],
     href: "power-10w30-regular",
     overview: `Power 10W30 is a reliable engine oil engineered to deliver consistent performance for daily drivers. Developed to meet SP standards, this lubricant ensures smoother cold starts, steady protection against wear, and improved cleanliness for petrol engines in routine operating conditions.
@@ -2942,7 +2942,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Regular",
     title: "Power 10W40",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/regular/10w40-regular.jpg"],
     href: "power-10w40-regular",
     safetyDs: "/datasheet/MSDS-10W40.pdf",
@@ -3075,7 +3075,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Regular",
     title: "Power 20W40",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/regular/20w40-regular.jpg"],
     href: "power-20w40-regular",
     overview: `Power 20W40 is a dependable regular-grade engine oil formulated for everyday petrol and light‑duty diesel engines. Featuring Micro‑Lubricant Technology and meeting industry-standard specifications, it provides consistent cold start performance, excellent wear protection, and thermal stability under standard driving conditions.
@@ -3207,7 +3207,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Regular",
     title: "Power 20W50",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/regular/20w50-regular.jpg"],
     href: "power-20w50-regular",
     overview: `Power 20W50 is a durable, multi-grade engine oil crafted for consistent protection in older engines, light diesel vehicles, and machines operating under moderate to heavy loads. Its thicker viscosity ensures solid film strength at higher temperatures, while additives provide effective wear resistance and cleanliness over time.
@@ -3339,7 +3339,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Regular",
     title: "Power 75W90",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/regular/75w90-regular.jpg"],
     href: "power-75w90-regular",
     overview: `Power 75W90 is a high-performance gear oil designed for everyday applications in manual transmissions, differentials, and axle systems. Offering reliable protection under standard driving conditions, this GL-5 rated lubricant delivers smooth gear shifting, reduces wear, and ensures stable performance in both high-load and varying temperature environments.
@@ -3471,7 +3471,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Regular",
     title: "Power 85W90",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/regular/85w90-regular.jpg"],
     href: "power-85w90-regular",
     overview: `Power 85W90 is a heavy-duty gear oil formulated for use in manual transmissions, differentials, and axle assemblies operating under moderate to severe load conditions. It provides strong film strength, excellent load-carrying capabilities, and long-lasting protection against wear, oxidation, and corrosion.
@@ -3603,7 +3603,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Regular",
     title: "Power ATF DEX III",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/regular/atf-dex-iii-regular.jpg"],
     href: "power-atf-dex-iii-regular",
     overview: `Power ATF DEX III is a high-performance automatic transmission fluid formulated to meet the requirements of General Motors DEXRON®-III and other manufacturer specifications. It delivers reliable performance, smooth shifting, and robust wear protection in automatic transmissions, power steering systems, and certain hydraulic applications.
@@ -3735,7 +3735,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Regular",
     title: "ATF DEX IV Regular",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/regular/atf-dex-iv-regular.jpg"],
     href: "atf-dex-iv-regular",
     overview: `ATF DEX IV Regular is a premium automatic transmission fluid specially formulated 
@@ -3839,7 +3839,7 @@ export const PRODUCTS: ProductType[] = [
   {
     range: "Regular",
     title: "ATF WS Regular",
-    type: "engine-additives",
+    type: "engine-oil",
     images: ["/images/products/regular/atf-ws-regular.jpg"],
     href: "atf-ws-regular",
     overview: `ATF WS Regular is a specialized automatic transmission fluid formulated to meet the stringent 

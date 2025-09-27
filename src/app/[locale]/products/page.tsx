@@ -92,8 +92,8 @@ export default async function ProductsPage({ params }: Props) {
             <ProductGrid category="all" products={products} />
           </TabsContent>
 
-          <TabsContent value="engine-additives">
-            <ProductGrid category="engine-additives" products={products} />
+          <TabsContent value="engine-oil">
+            <ProductGrid category="engine-oil" products={products} />
           </TabsContent>
           <TabsContent value="lubrication">
             <ProductGrid category="lubrication" products={products} />

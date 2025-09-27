@@ -4,7 +4,7 @@ export default {
     products: "منتجات",
     categories: {
       all: "جميع المنتجات",
-      "engine-additives": "إضافات المحرك",
+      "engine-oil": "إضافات المحرك",
       lubrication: "تشحيم",
       "fuel-system": "البحرية والطيران",
       industrial: "صناعي",

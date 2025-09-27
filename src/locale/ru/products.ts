@@ -4,7 +4,7 @@ export default {
     products: "Продукты",
     categories: {
       all: "Все продукты",
-      "engine-additives": "Присадки для двигателя",
+      "engine-oil": "Присадки для двигателя",
       lubrication: "Смазка",
       "fuel-system": "Морской и Авиационный",
       industrial: "Промышленный",

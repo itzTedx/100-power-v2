@@ -32,7 +32,7 @@ export const CATEGORIES_LINKS = [
   {
     id: 1,
     title: "Engine Oil",
-    href: "/products?category=engine-additives",
+    href: "/products?category=engine-oil",
     description:
       "High-performance oils for maximum engine protection and efficiency.",
     image: "/images/100power.webp",
@@ -114,8 +114,8 @@ export const WHO_WE_ARE = [
 export const CATEGORIES = [
   {
     id: 1,
-    title: "Engine Additives",
-    href: "/products?category=engine-additives",
+    title: "Engine OI",
+    href: "/products?category=engine-oil",
   },
   {
     id: 2,

@@ -11,7 +11,7 @@ interface Props {
   products: ProductMetadata[]
   category?:
     | 'all'
-    | 'engine-additives'
+    | 'engine-oil'
     | 'lubrication'
     | 'marine-aviation'
     | 'industrial'

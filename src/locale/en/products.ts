@@ -4,7 +4,7 @@ export default {
     products: "Products",
     categories: {
       all: "All Products",
-      "engine-additives": "Engine Additives",
+      "engine-oil": "Engine Oil",
       lubrication: "Lubrication",
       "fuel-system": "Marine & Aviation",
       industrial: "Industrial",

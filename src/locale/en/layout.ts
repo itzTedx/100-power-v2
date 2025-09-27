@@ -60,7 +60,7 @@ export default {
       contact: "Contact",
     },
     categories: {
-      engineAdditives: "Engine Additives",
+      engineAdditives: "Engine oil",
       lubrication: "Lubrication",
       fuelSystem: "Fuel System",
       industrial: "Industrial Application",
