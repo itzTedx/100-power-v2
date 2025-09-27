@@ -66,7 +66,8 @@ export default {
     categories: {
       engineAdditives: "Engine oil",
       lubrication: "Lubrication",
-      fuelSystem: "Fuel System",
+      aviation: "Aviation",
+      marine: "Marine",
       industrial: "Industrial Application",
     },
     copyright: "©{year} Hundred Power LLC, All rights reserved",

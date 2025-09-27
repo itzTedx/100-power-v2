@@ -156,7 +156,7 @@ export const FOOTER = [
   {
     id: 2,
     heading: "Products",
-    items: CATEGORIES,
+    items: CATEGORIES_LINKS,
   },
   {
     id: 3,

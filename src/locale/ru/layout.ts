@@ -64,11 +64,13 @@ export default {
       contact: "Контакты",
     },
     categories: {
-      engineAdditives: "Присадки для двигателя",
+      engineAdditives: "Моторное масло",
       lubrication: "Смазка",
-      fuelSystem: "Топливная система",
+      aviation: "Авиация",
+      marine: "Морской транспорт",
       industrial: "Промышленное применение",
     },
+
     copyright: "©{year} ООО «Сто Пауэр Трейдинг», Все права защищены",
     developer: "Разработано и создано Ziron Media",
   },

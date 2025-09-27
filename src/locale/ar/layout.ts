@@ -59,11 +59,13 @@ export default {
       contact: "اتصال",
     },
     categories: {
-      engineAdditives: "مضافات المحرك",
+      engineAdditives: "زيت المحرك",
       lubrication: "التشحيم",
-      fuelSystem: "نظام الوقود",
-      industrial: "تطبيقات صناعية",
+      aviation: "الطيران",
+      marine: "البحرية",
+      industrial: "التطبيقات الصناعية",
     },
+
     copyright: "©{year} جميع الحقوق محفوظة لشركة هاندرد باور ذ.م.م.",
     developer: "تم التصميم والتطوير بواسطة Ziron Media",
   },
