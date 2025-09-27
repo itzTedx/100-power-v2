@@ -43,16 +43,18 @@ export const Navbar = async () => {
             {NAV_LINKS.map((link, i) =>
               link.id === 3 ? (
                 <NavigationMenuItem key={`${link.href}-${i}`}>
-                  <NavigationMenuTrigger>Products</NavigationMenuTrigger>
+                  <NavigationMenuTrigger>
+                    {t(linkKeys[i])}
+                  </NavigationMenuTrigger>
                   <NavigationMenuContent className="w-full bg-card">
                     <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[720px]">
-                      {link.items?.map((component) => (
+                      {link.items?.map((component, itemIndex) => (
                         <ListItem
                           href={component.href}
                           key={component.id}
-                          title={component.title}
+                          title={t(`links.2.items.${itemIndex}.title`)}
                         >
-                          {component.description}
+                          {t(`links.2.items.${itemIndex}.description`)}
                         </ListItem>
                       ))}
                     </ul>

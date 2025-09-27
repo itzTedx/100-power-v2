@@ -3,7 +3,31 @@ export default {
     links: [
       { Home: "Home" },
       { About: "About" },
-      { Products: "Products" },
+      {
+        Products: "Products",
+        items: [
+          {
+            title: "Engine Oil",
+            description:
+              "High-performance oils for maximum engine protection and efficiency.",
+          },
+          {
+            title: "Lubrication",
+            description:
+              "Premium lubricants to reduce friction and extend equipment life.",
+          },
+          {
+            title: "Marine & Aviation",
+            description:
+              "Specialized solutions for marine vessels and aircraft engines.",
+          },
+          {
+            title: "Industrial",
+            description:
+              "Reliable industrial oils and lubricants for heavy-duty operations.",
+          },
+        ],
+      },
       { Solutions: "Solutions" },
     ],
     contact: "Contact",
