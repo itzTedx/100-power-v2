@@ -43,9 +43,11 @@ export const Navbar = async () => {
             {NAV_LINKS.map((link, i) =>
               link.id === 3 ? (
                 <NavigationMenuItem key={`${link.href}-${i}`}>
-                  <NavigationMenuTrigger>
-                    {t(linkKeys[i])}
-                  </NavigationMenuTrigger>
+                  <Link href={link.href}>
+                    <NavigationMenuTrigger>
+                      {t(linkKeys[i])}
+                    </NavigationMenuTrigger>
+                  </Link>
                   <NavigationMenuContent className="w-full bg-card">
                     <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[720px]">
                       {link.items?.map((component, itemIndex) => (
@@ -100,7 +102,7 @@ function ListItem({
     <li {...props}>
       <NavigationMenuLink asChild className="h-full p-5 hover:bg-background">
         <Link href={href}>
-          <div className="font-medium text-sm leading-none">{title}</div>
+          <div className="font-medium text-lg leading-none">{title}</div>
           <p className="line-clamp-2 font-normal text-muted-foreground text-xs leading-snug">
             {children}
           </p>
