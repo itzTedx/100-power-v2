@@ -9,6 +9,22 @@ export default {
       "Next-gen lubrication technology to maximize performance, minimize friction, and protect the planet.",
     button: "Explore Solutions",
   },
+  featured: {
+    badge: "Specialized Solutions",
+    title: {
+      text: "Precision Lubrication for",
+      highlight: "Sea & Sky",
+    },
+    description: {
+      line1: "Our specialized",
+      highlight: "Marine and Aviation",
+      last: "solutions are engineered to perform under extreme conditions. From powerful ship engines to high-performance aircraft turbines, 100 Power products deliver unmatched protection, reliability, and efficiency - ensuring safety, performance, and longevity where it matters most.",
+    },
+    solution: {
+      marine: "Marine Solutions",
+      aviation: "Aviation Solutions",
+    },
+  },
   about: {
     badge: "Who we are",
     lists: [
@@ -72,6 +88,7 @@ export default {
       { label: "Automotive" },
       { label: "Railways" },
       { label: "Mining" },
+      { label: "Aviation" },
       { label: "Marine & Shipping" },
       { label: "Construction" },
       { label: "Agriculture" },

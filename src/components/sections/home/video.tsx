@@ -68,7 +68,6 @@ export const Video = async () => {
           className="absolute inset-0 h-full w-full object-cover"
           loop
           muted
-          poster="/images/video-poster.webp"
           title="100 Power brand video"
         >
           <source src="/videos/100-Power-Info.webm" type="video/webm" />

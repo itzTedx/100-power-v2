@@ -18,6 +18,15 @@ import {
   IconThunder,
   IconWrench,
 } from "@/assets/icons";
+import { IconAgriculture } from "@/assets/icons/agriculture";
+import { IconAirplane } from "@/assets/icons/airplane";
+import { IconCar } from "@/assets/icons/car";
+import { IconConstruction } from "@/assets/icons/construction";
+import { IconIndustrial } from "@/assets/icons/industrial";
+import { IconMilitary } from "@/assets/icons/military";
+import { IconMining } from "@/assets/icons/mining";
+import { IconShip } from "@/assets/icons/ship";
+import { IconTrain } from "@/assets/icons/train";
 
 export const CATEGORIES_LINKS = [
   {
@@ -287,14 +296,31 @@ export const FEATURES: Feature[] = [
 ];
 
 export const INDUSTRIES = [
-  { label: "Automotive", image: "/images/automotive.webp" },
-  { label: "Railways", image: "/images/railway.webp" },
-  { label: "Mining", image: "/images/mining.webp" },
-  { label: "Marine & Shipping", image: "/images/marine.webp" },
-  { label: "Construction", image: "/images/construction.webp" },
-  { label: "Agriculture", image: "/images/agriculture.webp" },
-  { label: "Defense & Military", image: "/images/military.webp" },
-  { label: "Industrial Equipment", image: "/images/industrial.webp" },
+  { label: "Automotive", image: "/images/automotive.webp", Icon: IconCar },
+  { label: "Railways", image: "/images/railway.webp", Icon: IconTrain },
+  { label: "Mining", image: "/images/mining.webp", Icon: IconMining },
+  { label: "Aviation", image: "/images/aviation.webp", Icon: IconAirplane },
+  { label: "Marine & Shipping", image: "/images/marine.webp", Icon: IconShip },
+  {
+    label: "Construction",
+    image: "/images/construction.webp",
+    Icon: IconConstruction,
+  },
+  {
+    label: "Agriculture",
+    image: "/images/agriculture.webp",
+    Icon: IconAgriculture,
+  },
+  {
+    label: "Defense & Military",
+    image: "/images/military.webp",
+    Icon: IconMilitary,
+  },
+  {
+    label: "Industrial Equipment",
+    image: "/images/industrial.webp",
+    Icon: IconIndustrial,
+  },
 ];
 
 export const COMMITMENT = [
