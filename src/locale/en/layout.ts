@@ -17,9 +17,13 @@ export default {
               "Premium lubricants to reduce friction and extend equipment life.",
           },
           {
-            title: "Marine & Aviation",
+            title: "Marine",
+            description: "High-performance oils for ships and marine engines.",
+          },
+          {
+            title: "Aviation",
             description:
-              "Specialized solutions for marine vessels and aircraft engines.",
+              "Reliable lubrication for aircraft safety and performance.",
           },
           {
             title: "Industrial",

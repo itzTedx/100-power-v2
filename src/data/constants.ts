@@ -47,14 +47,20 @@ export const CATEGORIES_LINKS = [
   },
   {
     id: 3,
-    title: "Marine & Aviation",
-    href: "/products?category=marine-aviation",
-    description:
-      "Specialized solutions for marine vessels and aircraft engines.",
+    title: "Marine",
+    href: "/products?category=marine",
+    description: "High-performance oils for ships and marine engines.",
     image: "/images/100power.webp",
   },
   {
     id: 4,
+    title: "Aviation",
+    href: "/products?category=aviation",
+    description: "Reliable lubrication for aircraft safety and performance.",
+    image: "/images/100power.webp",
+  },
+  {
+    id: 5,
     title: "Industrial",
     href: "/products?category=industrial",
     description:

@@ -4,10 +4,11 @@ export default {
     products: "منتجات",
     categories: {
       all: "جميع المنتجات",
-      "engine-oil": "إضافات المحرك",
-      lubrication: "تشحيم",
-      "fuel-system": "البحرية والطيران",
-      industrial: "صناعي",
+      "engine-oil": "زيت المحرك",
+      lubrication: "مواد التشحيم",
+      marine: "البحري",
+      aviation: "الطيران",
+      industrial: "الصناعي",
     },
   },
   header: {

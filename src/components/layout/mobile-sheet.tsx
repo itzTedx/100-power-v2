@@ -9,7 +9,7 @@ import { useLocale, useTranslations } from 'next-intl'
 
 import { Logo } from '@/assets/logo'
 
-import { CATEGORIES, NAV_LINKS } from '@/data/constants'
+import { CATEGORIES_LINKS, NAV_LINKS } from '@/data/constants'
 
 import { Button } from '../ui/button'
 import {
@@ -84,7 +84,7 @@ export const MobileSheet = () => {
             ))}
             <li className="ml-5 border-l pl-2">
               <ul className="space-y-2">
-                {CATEGORIES.map((prod, i) => (
+                {CATEGORIES_LINKS.map((prod, i) => (
                   <li key={i} onClick={() => setIsOpen(false)}>
                     <Link
                       className="inline-flex w-full items-center justify-between rounded-sm py-2 pr-3 pl-2 tracking-tight transition-colors hover:bg-accent hover:text-primary-foreground"
