@@ -23,6 +23,8 @@ export default {
     solution: {
       marine: "الحلول البحرية",
       aviation: "الحلول الجوية",
+      locomotive: "حلول القاطرات",
+      construction: "حلول البناء",
     },
   },
 

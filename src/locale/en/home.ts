@@ -23,6 +23,8 @@ export default {
     solution: {
       marine: "Marine Solutions",
       aviation: "Aviation Solutions",
+      locomotive: "Locomotive Solutions",
+      construction: "Construction Solutions",
     },
   },
   about: {

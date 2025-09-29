@@ -20,10 +20,12 @@ export const Featured = async () => {
       className="py-6 sm:py-9 md:py-12"
     >
       {/* Industries Marquee */}
-      <div className="container relative z-10 max-w-6xl bg-card p-4 shadow-primary-foreground/5 shadow-xl sm:p-6 md:rounded-2xl">
+      <div className="container relative z-10 max-w-6xl overflow-hidden bg-card p-4 shadow-primary-foreground/5 shadow-xl sm:p-6 md:rounded-2xl">
         <div className="sr-only">
           <h3>Industries We Serve</h3>
         </div>
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-1/4 select-none bg-gradient-to-r from-card to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-1/4 select-none bg-gradient-to-l from-card to-transparent" />
         <Marquee aria-label="Industries we serve" className="[--duration:30s]">
           {INDUSTRIES.map(({ Icon }, i) => (
             <div
@@ -69,7 +71,7 @@ export const Featured = async () => {
             role="list"
           >
             <article
-              className="relative flex aspect-4/3 items-end justify-start overflow-hidden rounded-xl bg-card p-4 transition-transform hover:scale-102 sm:aspect-5/4 sm:p-6"
+              className="relative flex aspect-4/3 items-end justify-start overflow-hidden rounded-xl bg-card p-4 transition-transform hover:scale-102 sm:aspect-5/3 sm:p-6"
               role="listitem"
             >
               <Image
@@ -86,7 +88,7 @@ export const Featured = async () => {
             </article>
 
             <article
-              className="relative flex aspect-4/3 items-end justify-start overflow-hidden rounded-xl bg-card p-4 transition-transform hover:scale-102 sm:aspect-5/4 sm:p-6"
+              className="relative flex aspect-4/3 items-end justify-start overflow-hidden rounded-xl bg-card p-4 transition-transform hover:scale-102 sm:aspect-5/3 sm:p-6"
               role="listitem"
             >
               <Image
@@ -99,6 +101,38 @@ export const Featured = async () => {
               />
               <div className="relative z-10 rounded-lg bg-card px-3 py-2 text-sm tracking-tight sm:text-base">
                 <h3 className="font-medium">{t('solution.aviation')}</h3>
+              </div>
+            </article>
+            <article
+              className="relative flex aspect-4/3 items-end justify-start overflow-hidden rounded-xl bg-card p-4 transition-transform hover:scale-102 sm:aspect-5/3 sm:p-6"
+              role="listitem"
+            >
+              <Image
+                alt="Aviation and aerospace logistics solution featuring modern aircraft and airport infrastructure"
+                className="object-cover"
+                fill
+                priority={false}
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                src="/images/airplane.webp"
+              />
+              <div className="relative z-10 rounded-lg bg-card px-3 py-2 text-sm tracking-tight sm:text-base">
+                <h3 className="font-medium">{t('solution.locomotive')}</h3>
+              </div>
+            </article>
+            <article
+              className="relative flex aspect-4/3 items-end justify-start overflow-hidden rounded-xl bg-card p-4 transition-transform hover:scale-102 sm:aspect-5/3 sm:p-6"
+              role="listitem"
+            >
+              <Image
+                alt="Aviation and aerospace logistics solution featuring modern aircraft and airport infrastructure"
+                className="object-cover"
+                fill
+                priority={false}
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                src="/images/airplane.webp"
+              />
+              <div className="relative z-10 rounded-lg bg-card px-3 py-2 text-sm tracking-tight sm:text-base">
+                <h3 className="font-medium">{t('solution.construction')}</h3>
               </div>
             </article>
           </div>

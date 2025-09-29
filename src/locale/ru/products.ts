@@ -8,6 +8,7 @@ export default {
       lubrication: "Смазочные материалы",
       marine: "Морской транспорт",
       aviation: "Авиация",
+      locomotive: "Локомотив",
       industrial: "Промышленность",
     },
   },

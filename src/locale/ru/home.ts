@@ -23,6 +23,8 @@ export default {
     solution: {
       marine: "Морские решения",
       aviation: "Авиационные решения",
+      locomotive: "Решения для локомотивов",
+      construction: "Строительные решения",
     },
   },
 

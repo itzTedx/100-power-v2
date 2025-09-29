@@ -26,6 +26,11 @@ export default {
               "Reliable lubrication for aircraft safety and performance.",
           },
           {
+            title: "Locomotive",
+            description:
+              "High-performance oils and lubricants for trains and rail engines.",
+          },
+          {
             title: "Industrial",
             description:
               "Reliable industrial oils and lubricants for heavy-duty operations.",

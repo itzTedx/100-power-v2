@@ -8,6 +8,7 @@ export default {
       lubrication: "Lubrication",
       marine: "Marine",
       aviation: "Aviation",
+      locomotive: "Locomotive",
       industrial: "Industrial",
     },
   },

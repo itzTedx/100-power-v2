@@ -1,4 +1,4 @@
-import { JSX, SVGProps } from "react";
+import { JSX, SVGProps } from 'react'
 
 export const FlagUae = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -10,8 +10,8 @@ export const FlagUae = (
       <path d="M0 2h6v1H0z" />
       <path d="M0 0h1.5v3H0z" fill="#C8102E" />
     </svg>
-  );
-};
+  )
+}
 
 export const FlagEn = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -49,8 +49,8 @@ export const FlagEn = (
         <use x="2470" xlinkHref="#e" />
       </g>
     </svg>
-  );
-};
+  )
+}
 
 export const FlagRu = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -61,5 +61,25 @@ export const FlagRu = (
       <path d="M0 3h9v3H0z" fill="#DA291C" />
       <path d="M0 2h9v2H0z" fill="#0032A0" />
     </svg>
-  );
-};
+  )
+}
+
+export const FlagUK = (
+  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
+) => {
+  return (
+    <svg {...props} viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h640v480H0z" fill="#012169" />
+      <path
+        d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0z"
+        fill="#FFF"
+      />
+      <path
+        d="m424 281 216 159v40L369 281zm-184 20 6 35L54 480H0zM640 0v3L391 191l2-44L590 0zM0 0l239 176h-60L0 42z"
+        fill="#C8102E"
+      />
+      <path d="M241 0v480h160V0zM0 160v160h640V160z" fill="#FFF" />
+      <path d="M0 193v96h640v-96zM273 0v480h96V0z" fill="#C8102E" />
+    </svg>
+  )
+}

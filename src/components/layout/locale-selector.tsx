@@ -13,7 +13,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 
-import { FlagEn, FlagRu, FlagUae } from '@/assets/flags'
+import { FlagRu, FlagUae, FlagUK } from '@/assets/flags'
 
 import { cn } from '@/lib/utils'
 import { usePathname, useRouter } from '@/locale/navigation'
@@ -21,7 +21,7 @@ import { usePathname, useRouter } from '@/locale/navigation'
 import { Button } from '../ui/button'
 
 const LANGUAGES = [
-  { code: 'en', label: 'EN', title: 'English', Icon: FlagEn },
+  { code: 'en', label: 'EN', title: 'English', Icon: FlagUK },
   { code: 'ar', label: 'AR', title: 'Arabic', Icon: FlagUae },
   { code: 'ru', label: 'RU', title: 'Russian', Icon: FlagRu },
 ] as const

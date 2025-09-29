@@ -61,6 +61,13 @@ export const CATEGORIES_LINKS = [
   },
   {
     id: 5,
+    title: "Locomotive",
+    href: "/products?category=locomotive",
+    description: "Reliable lubrication for aircraft safety and performance.",
+    image: "/images/100power.webp",
+  },
+  {
+    id: 6,
     title: "Industrial",
     href: "/products?category=industrial",
     description:

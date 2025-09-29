@@ -8,6 +8,7 @@ export default {
       lubrication: "مواد التشحيم",
       marine: "البحري",
       aviation: "الطيران",
+      locomotive: "القطارات",
       industrial: "الصناعي",
     },
   },
