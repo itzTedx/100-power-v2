@@ -68,6 +68,7 @@ export default {
       products: "Продукты",
       contact: "Контакты",
     },
+
     categories: {
       engineAdditives: "Моторное масло",
       lubrication: "Смазка",

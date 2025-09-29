@@ -63,6 +63,7 @@ export default {
       products: "المنتجات",
       contact: "اتصال",
     },
+
     categories: {
       engineAdditives: "زيت المحرك",
       lubrication: "التشحيم",
