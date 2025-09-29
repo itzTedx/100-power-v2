@@ -14,6 +14,7 @@ export const Products = async () => {
   // const locale = await getLocale()
   // const products = await getProducts({ locale })
   const t = await getTranslations('home.products')
+  const categoryT = await getTranslations('layout.navbar')
   return (
     <section
       aria-labelledby="products-heading"
@@ -51,7 +52,7 @@ export const Products = async () => {
       </div>
 
       <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
-        {CATEGORIES_LINKS.map((link) => (
+        {CATEGORIES_LINKS.map((link, itemIndex) => (
           <div
             className="relative grid grid-cols-5 items-center gap-3 rounded-xl bg-card p-6 transition-transform hover:scale-102"
             key={link.id}
@@ -59,9 +60,11 @@ export const Products = async () => {
             <Link className="absolute inset-0 z-10" href={link.href} />
             <div className="col-span-3">
               <h3 className="font-semibold text-2xl tracking-tight">
-                {link.title}
+                {categoryT(`links.2.items.${itemIndex}.title`)}
               </h3>
-              <p className="text text-muted-foreground">{link.description}</p>
+              <p className="text text-muted-foreground">
+                {categoryT(`links.2.items.${itemIndex}.description`)}
+              </p>
             </div>
             <div className="relative col-span-2 aspect-square">
               <Image alt="" className="object-contain" fill src={link.image} />

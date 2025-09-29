@@ -64,6 +64,8 @@ export async function Footer() {
                             return t('categories.marine')
                           if (link.href?.includes('aviation'))
                             return t('categories.aviation')
+                          if (link.href?.includes('locomotive'))
+                            return t('categories.locomotive')
                           if (link.href?.includes('industrial'))
                             return t('categories.industrial')
                           return link.title
@@ -85,6 +87,8 @@ export async function Footer() {
                             return t('categories.marine')
                           if (link.href?.includes('aviation'))
                             return t('categories.aviation')
+                          if (link.href?.includes('locomotive'))
+                            return t('categories.locomotive')
                           if (link.href?.includes('industrial'))
                             return t('categories.industrial')
                           return link.title

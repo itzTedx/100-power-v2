@@ -73,6 +73,7 @@ export default {
       lubrication: "Lubrication",
       aviation: "Aviation",
       marine: "Marine",
+      locomotive: "Locomotive",
       industrial: "Industrial Application",
     },
     copyright: "©{year} Hundred Power LLC, All rights reserved",

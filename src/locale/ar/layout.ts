@@ -68,6 +68,7 @@ export default {
       lubrication: "التشحيم",
       aviation: "الطيران",
       marine: "البحرية",
+      locomotive: "القطارات",
       industrial: "التطبيقات الصناعية",
     },
 
