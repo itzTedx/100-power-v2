@@ -23,7 +23,10 @@ export const Tablist = ({ children }: { children: ReactNode }) => {
       onValueChange={setCategory}
       value={category}
     >
-      <div className="z-50 flex items-center justify-between bg-background/80 backdrop-blur-xl max-md:sticky max-md:top-16">
+      <div
+        className="z-50 flex items-center justify-between bg-background/80 backdrop-blur-xl max-md:sticky max-md:top-16"
+        dir={locale === 'ar' ? 'rtl' : 'ltr'}
+      >
         <ScrollArea
           className="w-[85%] ltr:md:flex-1"
           dir={locale === 'ar' ? 'rtl' : 'ltr'}
@@ -75,7 +78,7 @@ export const Tablist = ({ children }: { children: ReactNode }) => {
             >
               {t('industrial')}
             </TabsTrigger>
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-20 touch-none bg-gradient-to-l from-background to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 w-20 touch-none from-background to-transparent ltr:right-0 ltr:bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r" />
           </TabsList>
           <ScrollBar orientation="horizontal" />
         </ScrollArea>
