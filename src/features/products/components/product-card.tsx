@@ -76,7 +76,7 @@ export const ProductCard = ({ data }: Props) => {
           <div className="pointer-events-none absolute inset-0 translate-y-full bg-gradient-to-t from-card to-transparent transition-transform group-hover:translate-y-0" />
         </div>
       </CardContent>
-      <CardFooter className="flex-col ltr:items-start rtl:items-end">
+      <CardFooter className="flex-col items-start">
         <CardDescription className="flex flex-wrap items-center text-[10px] tracking-tighter sm:text-sm md:font-medium rtl:flex-row-reverse">
           {data.quantities.map((q, i) => (
             <Fragment key={q}>
