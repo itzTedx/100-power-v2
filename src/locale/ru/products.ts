@@ -38,6 +38,19 @@ export default {
       },
     },
   },
+  locomotive: {
+    title: "Локомотив",
+    options: {
+      engine: "Двигатели",
+      compressor: "Компрессоры",
+      gear: "Редукторы и тяга",
+      hydraulic: "Гидравлика",
+      grease: "Смазка",
+      coupler: "Сцепка и автосцепное устройство",
+      rail: "Рельсы и гребень колеса",
+      transformer: "Трансформатор",
+    },
+  },
 
   industrial: {
     title: "Промышленность",

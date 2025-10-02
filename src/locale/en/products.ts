@@ -37,6 +37,19 @@ export default {
       },
     },
   },
+  locomotive: {
+    title: "Locomotive",
+    options: {
+      engine: "Engines",
+      compressor: "Compressors",
+      gear: "Gear and Traction",
+      hydraulic: "Hydraulic",
+      grease: "Grease",
+      coupler: "Coupler and Draft Gear",
+      rail: "Rail and Wheel Flange",
+      transformer: "Transformer",
+    },
+  },
   industrial: {
     title: "Industrial",
     options: {

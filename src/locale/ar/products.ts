@@ -36,6 +36,19 @@ export default {
       },
     },
   },
+  locomotive: {
+    title: "القطارات",
+    options: {
+      engine: "المحركات",
+      compressor: "الضواغط",
+      gear: "التروس والجر",
+      hydraulic: "الهيدروليك",
+      grease: "الشحوم",
+      coupler: "الاقتران وجهاز السحب",
+      rail: "السكك وحافة العجلة",
+      transformer: "المحول",
+    },
+  },
 
   industrial: {
     title: "الصناعة",

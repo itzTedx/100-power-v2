@@ -11,6 +11,7 @@ import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { cn } from '@/lib/utils'
 
 import { IndustrialCategories } from './industrial-categories'
+import { LocomotiveCategories } from './locomotive-categories'
 import { RangeFilter } from './range-filter'
 
 export const Tablist = ({ children }: { children: ReactNode }) => {
@@ -91,6 +92,7 @@ export const Tablist = ({ children }: { children: ReactNode }) => {
         {category === 'engine-oil' && <RangeFilter />}
         {category === 'industrial' && <IndustrialCategories />}
       </div>
+      {category === 'locomotive' && <LocomotiveCategories />}
       {children}
     </Tabs>
   )
