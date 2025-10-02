@@ -8,6 +8,9 @@ import { useQueryState } from 'nuqs'
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
+import { cn } from '@/lib/utils'
+
+import { IndustrialCategories } from './industrial-categories'
 import { RangeFilter } from './range-filter'
 
 export const Tablist = ({ children }: { children: ReactNode }) => {
@@ -28,7 +31,10 @@ export const Tablist = ({ children }: { children: ReactNode }) => {
         dir={locale === 'ar' ? 'rtl' : 'ltr'}
       >
         <ScrollArea
-          className="w-[85%] ltr:md:flex-1"
+          className={cn(
+            'ltr:md:flex-1',
+            category === 'engine-oil' ? 'w-[85%]' : 'w-full'
+          )}
           dir={locale === 'ar' ? 'rtl' : 'ltr'}
         >
           <TabsList
@@ -83,6 +89,7 @@ export const Tablist = ({ children }: { children: ReactNode }) => {
           <ScrollBar orientation="horizontal" />
         </ScrollArea>
         {category === 'engine-oil' && <RangeFilter />}
+        {category === 'industrial' && <IndustrialCategories />}
       </div>
       {children}
     </Tabs>

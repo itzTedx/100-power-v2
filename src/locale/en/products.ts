@@ -37,6 +37,14 @@ export default {
       },
     },
   },
+  industrial: {
+    title: "Industrial",
+    options: {
+      locomotive: "Locomotive",
+      mining: "Mining",
+      oil: "Oil & Gas",
+    },
+  },
 
   page: {
     packings: "Available Packings",
