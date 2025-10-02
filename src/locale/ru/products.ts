@@ -39,6 +39,15 @@ export default {
     },
   },
 
+  industrial: {
+    title: "Промышленность",
+    options: {
+      locomotive: "Локомотивы",
+      mining: "Горнодобывающая промышленность",
+      oil: "Нефть и газ",
+    },
+  },
+
   page: {
     packings: "Доступные упаковки",
     downloads: {

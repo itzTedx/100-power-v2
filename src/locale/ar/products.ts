@@ -37,6 +37,15 @@ export default {
     },
   },
 
+  industrial: {
+    title: "الصناعة",
+    options: {
+      locomotive: "القطارات",
+      mining: "التعدين",
+      oil: "النفط والغاز",
+    },
+  },
+
   page: {
     packings: "التعبئات المتوفرة",
     downloads: {
