@@ -113,7 +113,7 @@ export const Featured = async () => {
                 fill
                 priority={false}
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-                src="/images/airplane.webp"
+                src="/images/locomotive.webp"
               />
               <div className="relative z-10 rounded-lg bg-card px-3 py-2 text-sm tracking-tight sm:text-base">
                 <h3 className="font-medium">{t('solution.locomotive')}</h3>
@@ -129,7 +129,7 @@ export const Featured = async () => {
                 fill
                 priority={false}
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-                src="/images/airplane.webp"
+                src="/images/construction-1.webp"
               />
               <div className="relative z-10 rounded-lg bg-card px-3 py-2 text-sm tracking-tight sm:text-base">
                 <h3 className="font-medium">{t('solution.construction')}</h3>
