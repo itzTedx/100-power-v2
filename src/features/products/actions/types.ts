@@ -9,9 +9,16 @@ export type ProductMetadata = {
   slug: string;
   range?: string;
   rangeKey?: "Premium" | "Regular" | "Super Premium";
-  category: "engine-oil" | "lubrication" | "aviation" | "marine" | "industrial";
-  images: string[];
-  quantities: string[];
+  category:
+    | "engine-oil"
+    | "lubrication"
+    | "marine"
+    | "aviation"
+    | "locomotive"
+    | "industrial";
+  subcategory?: string;
+  images?: string[];
+  quantities?: string[];
   safetyDs?: string;
   technicalDs?: string;
   meta: {

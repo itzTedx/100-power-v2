@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react'
 
 import { useLocale, useTranslations } from 'next-intl'
-import { useQueryState } from 'nuqs'
+import { parseAsString, useQueryStates } from 'nuqs'
 
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -15,16 +15,26 @@ import { LocomotiveCategories } from './locomotive-categories'
 import { RangeFilter } from './range-filter'
 
 export const Tablist = ({ children }: { children: ReactNode }) => {
-  const [category, setCategory] = useQueryState('category', {
-    defaultValue: 'engine-oil',
+  const [q, setQ] = useQueryStates({
+    category: parseAsString.withDefault('engine-oil'),
+    query: parseAsString.withDefault('all'),
+    range: parseAsString.withDefault('all'),
   })
   const locale = useLocale()
+
+  const { category } = q
 
   const t = useTranslations('products.breadcrumb.categories')
   return (
     <Tabs
       defaultValue="engine-oil"
-      onValueChange={setCategory}
+      onValueChange={(value) =>
+        setQ({
+          category: value,
+          query: null,
+          range: null,
+        })
+      }
       value={category}
     >
       <div
@@ -91,8 +101,8 @@ export const Tablist = ({ children }: { children: ReactNode }) => {
         </ScrollArea>
         {category === 'engine-oil' && <RangeFilter />}
         {category === 'industrial' && <IndustrialCategories />}
+        {category === 'locomotive' && <LocomotiveCategories />}
       </div>
-      {category === 'locomotive' && <LocomotiveCategories />}
       {children}
     </Tabs>
   )

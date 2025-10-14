@@ -104,6 +104,9 @@ export default async function ProductsPage({ params }: Props) {
           <TabsContent value="aviation">
             <ProductGrid category="aviation" products={products} />
           </TabsContent>
+          <TabsContent value="locomotive">
+            <ProductGrid category="locomotive" products={products} />
+          </TabsContent>
           <TabsContent value="industrial">
             <ProductGrid category="industrial" products={products} />
           </TabsContent>

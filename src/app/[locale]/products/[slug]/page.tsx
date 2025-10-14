@@ -67,7 +67,7 @@ export async function generateMetadata({ params }: { params: Params }) {
 
   const fullTitle = product.metadata.meta.title
   const description = product.metadata.meta.description
-  const image = product.metadata.images[0]
+  const image = product.metadata.images?.[0]
   const canonicalUrl = `/products/${product.metadata.slug}`
 
   return constructMetadata({
@@ -160,7 +160,7 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
           />
         </article>
 
-        <section>
+        <section className="mt-9">
           <h3 className="mb-4 font-semibold text-2xl">
             {t('page.related')}{' '}
             {/** biome-ignore  lint/suspicious/noExplicitAny: i don't know the type>*/}

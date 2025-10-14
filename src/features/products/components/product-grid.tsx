@@ -15,11 +15,13 @@ interface Props {
     | 'lubrication'
     | 'marine'
     | 'aviation'
+    | 'locomotive'
     | 'industrial'
 }
 
 export function ProductGrid({ products, category = 'all' }: Props) {
   const [range] = useQueryState('range', { defaultValue: 'all' })
+  const [query] = useQueryState('query', { defaultValue: 'all' })
 
   const filtered = useMemo(() => {
     let result = products
@@ -38,8 +40,16 @@ export function ProductGrid({ products, category = 'all' }: Props) {
       })
     }
 
+    // Filter by subcategory when a specific query is provided
+    if (query !== 'all') {
+      const normalized = query.toLowerCase()
+      result = result.filter(
+        (p) => (p.subcategory ?? '').toLowerCase() === normalized
+      )
+    }
+
     return result
-  }, [products, category, range])
+  }, [products, category, range, query])
 
   return (
     <section

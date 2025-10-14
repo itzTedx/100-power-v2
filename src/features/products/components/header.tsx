@@ -20,7 +20,9 @@ interface Props {
 
 export const Header = async ({ metadata, children }: Props) => {
   const t = await getTranslations('products')
-  const carousel: CarouselImages = metadata.images.map((img) => ({ url: img }))
+  const carousel: CarouselImages = metadata.images
+    ? metadata.images.map((img) => ({ url: img }))
+    : [{ url: '/no-image.svg' }]
   const rangeLabel = metadata.rangeKey
     ? t(`filters.range.options.${metadata.rangeKey}` as const)
     : metadata.range
@@ -60,24 +62,26 @@ export const Header = async ({ metadata, children }: Props) => {
         </header>
         <section aria-label="overview">{children}</section>
 
-        <section aria-labelledby="quantities-heading">
-          <h2
-            className="not-prose mb-1 font-semibold tracking-tight"
-            id="quantities-heading"
-          >
-            {t('page.packings')}
-          </h2>
-          <ul className="not-prose flex gap-4 font-helvetica font-medium text-base">
-            {metadata.quantities.map((q) => (
-              <li
-                className="rounded-sm border border-primary/50 bg-primary/5 px-3 py-1"
-                key={q}
-              >
-                {q}
-              </li>
-            ))}
-          </ul>
-        </section>
+        {metadata.quantities && (
+          <section aria-labelledby="quantities-heading">
+            <h2
+              className="not-prose mb-1 font-semibold tracking-tight"
+              id="quantities-heading"
+            >
+              {t('page.packings')}
+            </h2>
+            <ul className="not-prose flex gap-4 font-helvetica font-medium text-base">
+              {metadata.quantities?.map((q) => (
+                <li
+                  className="rounded-sm border border-primary/50 bg-primary/5 px-3 py-1"
+                  key={q}
+                >
+                  {q}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
         {(metadata.safetyDs || metadata.technicalDs) && (
           <section aria-labelledby="datasheet-heading">
             <h2 className="mb-1 text-muted-foreground" id="datasheet-heading">
