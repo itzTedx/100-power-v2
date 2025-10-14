@@ -10,6 +10,7 @@ import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
 import { cn } from '@/lib/utils'
 
+import { AviationCategories } from './aviation-categories'
 import { IndustrialCategories } from './industrial-categories'
 import { LocomotiveCategories } from './locomotive-categories'
 import { RangeFilter } from './range-filter'
@@ -52,13 +53,6 @@ export const Tablist = ({ children }: { children: ReactNode }) => {
             aria-label="Product categories"
             className="mb-2 h-auto w-full justify-start gap-2 rounded-none border-b bg-transparent px-0 py-1 text-foreground"
           >
-            {/* <TabsTrigger
-              className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
-              value="all"
-            >
-              {t('all')}
-            </TabsTrigger> */}
-
             <TabsTrigger
               className="after:-mb-1 relative flex-0 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 hover:bg-accent hover:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:hover:bg-accent data-[state=active]:after:bg-primary"
               value="engine-oil"
@@ -100,6 +94,7 @@ export const Tablist = ({ children }: { children: ReactNode }) => {
           <ScrollBar orientation="horizontal" />
         </ScrollArea>
         {category === 'engine-oil' && <RangeFilter />}
+        {category === 'aviation' && <AviationCategories />}
         {category === 'industrial' && <IndustrialCategories />}
         {category === 'locomotive' && <LocomotiveCategories />}
       </div>

@@ -2,7 +2,6 @@
 
 import { useMemo } from 'react'
 
-import { IconFilter } from '@tabler/icons-react'
 import { useTranslations } from 'next-intl'
 import { useQueryState } from 'nuqs'
 
@@ -17,56 +16,51 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from '@/components/ui/drawer'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
+
+import { IconFilter } from '@/assets/icons'
 
 import { cn } from '@/lib/utils'
 
-const RANGE_OPTION_VALUES = [
-  'all',
-  'Regular',
-  'Premium',
-  'Super Premium',
-] as const
+const RANGE_OPTION_VALUES = ['piston', 'turbine', 'hydraulic', 'gear'] as const
 
 type RangeOptionValue = (typeof RANGE_OPTION_VALUES)[number]
 
-export function RangeFilter() {
-  const [range, setRange] = useQueryState('range', { defaultValue: 'all' })
+export function AviationCategories() {
+  const [range, setRange] = useQueryState('query', { defaultValue: 'all' })
 
-  const t = useTranslations('products.filters')
+  const t = useTranslations('products.aviation')
 
   const options = useMemo(
     () =>
       RANGE_OPTION_VALUES.map((value) => ({
         value,
-        label:
-          value === 'all'
-            ? t('range.options.all')
-            : t(`range.options.${value}` as const),
+        label: t(`options.${value}` as const),
       })),
     [t]
   )
 
   return (
     <>
-      <div className="hidden shrink-0 flex-wrap items-center gap-2 md:flex">
-        {options.map((opt) => (
-          <button
-            aria-pressed={range === opt.value}
-            className={cn(
-              'inline-flex h-9 items-center justify-center rounded-md border px-3 font-medium text-sm transition-colors',
-              'hover:bg-accent hover:text-foreground',
-              range === opt.value
-                ? 'border-primary bg-background text-foreground shadow-sm'
-                : 'border-transparent bg-muted/40 text-muted-foreground'
-            )}
-            key={opt.value}
-            onClick={() => setRange(opt.value)}
-            type="button"
-          >
-            {opt.label}
-          </button>
-        ))}
-      </div>
+      <Select defaultValue="all" onValueChange={setRange} value={range}>
+        <SelectTrigger className="hidden w-[240px] shrink-0 md:flex">
+          <SelectValue placeholder="Theme" />
+        </SelectTrigger>
+        <SelectContent>
+          <SelectItem value="all">All Products</SelectItem>
+          {options.map((option) => (
+            <SelectItem key={option.value} value={option.value}>
+              {option.label}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
       <Drawer>
         <DrawerTrigger asChild className="md:hidden">
           <Button size="icon" variant="outline">
@@ -78,17 +72,17 @@ export function RangeFilter() {
             <DrawerHeader>
               <DrawerTitle>{t('title')}</DrawerTitle>
               <DrawerDescription className="sr-only">
-                {t('range.title')}
+                {t('title')}
               </DrawerDescription>
             </DrawerHeader>
             <div className="px-4 pb-0">
-              <div className="grid items-start gap-2">
+              <div className="grid items-center gap-2">
                 {options.map((opt) => (
                   <DrawerClose asChild key={opt.value}>
                     <button
                       aria-pressed={range === opt.value}
                       className={cn(
-                        'inline-flex h-9 items-start justify-start rounded-md border px-3 font-medium text-sm transition-colors',
+                        'inline-flex h-9 items-center justify-center rounded-md border px-3 font-medium text-sm transition-colors',
                         'hover:bg-accent hover:text-foreground',
                         range === opt.value
                           ? 'border-primary bg-background text-foreground shadow-sm'

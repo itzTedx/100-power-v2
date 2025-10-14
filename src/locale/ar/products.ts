@@ -39,6 +39,7 @@ export default {
   locomotive: {
     title: "القطارات",
     options: {
+      all: "جميع المنتجات",
       engine: "المحركات",
       compressor: "الضواغط",
       gear: "التروس والجر",
@@ -47,6 +48,16 @@ export default {
       coupler: "الاقتران وجهاز السحب",
       rail: "السكك وحافة العجلة",
       transformer: "المحول",
+    },
+  },
+  aviation: {
+    title: "الطيران",
+    options: {
+      all: "جميع المنتجات",
+      piston: "زيوت محركات المكبس",
+      turbine: "زيوت محركات التوربين",
+      hydraulic: "سوائل هيدروليكية",
+      gear: "زيت التروس",
     },
   },
 

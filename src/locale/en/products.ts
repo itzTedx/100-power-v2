@@ -40,6 +40,7 @@ export default {
   locomotive: {
     title: "Locomotive",
     options: {
+      all: "All Products",
       engine: "Engines",
       compressor: "Compressors",
       gear: "Gear and Traction",
@@ -48,6 +49,16 @@ export default {
       coupler: "Coupler and Draft Gear",
       rail: "Rail and Wheel Flange",
       transformer: "Transformer",
+    },
+  },
+  aviation: {
+    title: "Aviation",
+    options: {
+      all: "All Products",
+      piston: "Piston Engine Oils",
+      turbine: "Turbine Engine Oils",
+      hydraulic: "Hydraulic Fluids",
+      gear: "Gear Oil",
     },
   },
   industrial: {
