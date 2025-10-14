@@ -16,11 +16,16 @@ import { LocomotiveCategories } from './locomotive-categories'
 import { RangeFilter } from './range-filter'
 
 export const Tablist = ({ children }: { children: ReactNode }) => {
-  const [q, setQ] = useQueryStates({
-    category: parseAsString.withDefault('engine-oil'),
-    query: parseAsString.withDefault('all'),
-    range: parseAsString.withDefault('all'),
-  })
+  const [q, setQ] = useQueryStates(
+    {
+      category: parseAsString.withDefault('engine-oil'),
+      query: parseAsString.withDefault('all'),
+      range: parseAsString.withDefault('all'),
+    },
+    {
+      history: 'push',
+    }
+  )
   const locale = useLocale()
 
   const { category } = q

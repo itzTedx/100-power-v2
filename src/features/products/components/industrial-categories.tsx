@@ -25,7 +25,10 @@ const RANGE_OPTION_VALUES = ['locomotive', 'mining', 'oil'] as const
 type RangeOptionValue = (typeof RANGE_OPTION_VALUES)[number]
 
 export function IndustrialCategories() {
-  const [range, setRange] = useQueryState('range', { defaultValue: 'all' })
+  const [range, setRange] = useQueryState('range', {
+    defaultValue: 'all',
+    history: 'push',
+  })
 
   const t = useTranslations('products.industrial')
 

@@ -42,7 +42,10 @@ const RANGE_OPTION_VALUES = [
 type RangeOptionValue = (typeof RANGE_OPTION_VALUES)[number]
 
 export function LocomotiveCategories() {
-  const [range, setRange] = useQueryState('query', { defaultValue: 'all' })
+  const [range, setRange] = useQueryState('query', {
+    defaultValue: 'all',
+    history: 'push',
+  })
 
   const t = useTranslations('products.locomotive')
 

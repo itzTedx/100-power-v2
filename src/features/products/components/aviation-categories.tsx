@@ -33,7 +33,10 @@ const RANGE_OPTION_VALUES = ['piston', 'turbine', 'hydraulic', 'gear'] as const
 type RangeOptionValue = (typeof RANGE_OPTION_VALUES)[number]
 
 export function AviationCategories() {
-  const [range, setRange] = useQueryState('query', { defaultValue: 'all' })
+  const [range, setRange] = useQueryState('query', {
+    defaultValue: 'all',
+    history: 'push',
+  })
 
   const t = useTranslations('products.aviation')
 
@@ -53,7 +56,7 @@ export function AviationCategories() {
           <SelectValue placeholder="Theme" />
         </SelectTrigger>
         <SelectContent>
-          <SelectItem value="all">All Products</SelectItem>
+          <SelectItem value="all">{t('options.all')}</SelectItem>
           {options.map((option) => (
             <SelectItem key={option.value} value={option.value}>
               {option.label}

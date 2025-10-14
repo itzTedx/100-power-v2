@@ -30,7 +30,10 @@ const RANGE_OPTION_VALUES = [
 type RangeOptionValue = (typeof RANGE_OPTION_VALUES)[number]
 
 export function RangeFilter() {
-  const [range, setRange] = useQueryState('range', { defaultValue: 'all' })
+  const [range, setRange] = useQueryState('range', {
+    defaultValue: 'all',
+    history: 'push',
+  })
 
   const t = useTranslations('products.filters')
 

@@ -69,7 +69,6 @@ export default {
       oil: "النفط والغاز",
     },
   },
-
   page: {
     packings: "التعبئات المتوفرة",
     downloads: {
