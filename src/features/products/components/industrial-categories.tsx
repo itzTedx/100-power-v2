@@ -2,30 +2,35 @@
 
 import { useMemo } from 'react'
 
-import { IconFilter } from '@tabler/icons-react'
 import { useTranslations } from 'next-intl'
 import { useQueryState } from 'nuqs'
 
-import { Button } from '@/components/ui/button'
 import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from '@/components/ui/drawer'
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
 
-import { cn } from '@/lib/utils'
+const RANGE_OPTION_VALUES = [
+  'air',
+  'deck',
+  'rust',
+  'hydraulic',
+  'boat',
+  'auxiliary',
+  'agitator',
+  'pump',
+  'propulsion',
+] as const
 
-const RANGE_OPTION_VALUES = ['locomotive', 'mining', 'oil'] as const
-
-type RangeOptionValue = (typeof RANGE_OPTION_VALUES)[number]
+// type RangeOptionValue = (typeof RANGE_OPTION_VALUES)[number]
 
 export function IndustrialCategories() {
-  const [range, setRange] = useQueryState('range', {
+  const [range, setRange] = useQueryState('query', {
     defaultValue: 'all',
     history: 'push',
   })
@@ -36,36 +41,30 @@ export function IndustrialCategories() {
     () =>
       RANGE_OPTION_VALUES.map((value) => ({
         value,
-        label:
-          value === 'locomotive'
-            ? t('options.locomotive')
-            : t(`options.${value}` as const),
+        label: t(`options.${value}` as const),
       })),
     [t]
   )
 
   return (
     <>
-      <div className="hidden shrink-0 flex-wrap items-center gap-2 md:flex">
-        {options.map((opt) => (
-          <button
-            aria-pressed={range === opt.value}
-            className={cn(
-              'inline-flex h-9 items-center justify-center rounded-md border px-3 font-medium text-sm transition-colors',
-              'hover:bg-accent hover:text-foreground',
-              range === opt.value
-                ? 'border-primary bg-background text-foreground shadow-sm'
-                : 'border-transparent bg-muted/40 text-muted-foreground'
-            )}
-            key={opt.value}
-            onClick={() => setRange(opt.value)}
-            type="button"
-          >
-            {opt.label}
-          </button>
-        ))}
-      </div>
-      <Drawer>
+      <Select defaultValue="all" onValueChange={setRange} value={range}>
+        <SelectTrigger className="w-full shrink-0 md:w-[240px]">
+          <SelectValue placeholder="Theme" />
+        </SelectTrigger>
+        <SelectContent>
+          <SelectGroup>
+            <SelectLabel>{t('options.label')}</SelectLabel>
+            <SelectItem value="all">{t('options.all')}</SelectItem>
+            {options.map((option) => (
+              <SelectItem key={option.value} value={option.value}>
+                {option.label}
+              </SelectItem>
+            ))}
+          </SelectGroup>
+        </SelectContent>
+      </Select>
+      {/* <Drawer>
         <DrawerTrigger asChild className="md:hidden">
           <Button size="icon" variant="outline">
             <IconFilter />
@@ -108,7 +107,7 @@ export function IndustrialCategories() {
             </DrawerFooter>
           </div>
         </DrawerContent>
-      </Drawer>
+      </Drawer> */}
     </>
   )
 }

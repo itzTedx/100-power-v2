@@ -5,17 +5,6 @@ import { useMemo } from 'react'
 import { useTranslations } from 'next-intl'
 import { useQueryState } from 'nuqs'
 
-import { Button } from '@/components/ui/button'
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from '@/components/ui/drawer'
 import {
   Select,
   SelectContent,
@@ -23,10 +12,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-
-import { IconFilter } from '@/assets/icons'
-
-import { cn } from '@/lib/utils'
 
 const RANGE_OPTION_VALUES = [
   'engine',
@@ -61,7 +46,7 @@ export function LocomotiveCategories() {
   return (
     <>
       <Select defaultValue="all" onValueChange={setRange} value={range}>
-        <SelectTrigger className="hidden w-[240px] shrink-0 md:flex">
+        <SelectTrigger className="w-full shrink-0 md:w-[240px]">
           <SelectValue placeholder="Theme" />
         </SelectTrigger>
         <SelectContent>
@@ -73,7 +58,7 @@ export function LocomotiveCategories() {
           ))}
         </SelectContent>
       </Select>
-      <Drawer>
+      {/* <Drawer>
         <DrawerTrigger asChild className="md:hidden">
           <Button size="icon" variant="outline">
             <IconFilter />
@@ -116,7 +101,7 @@ export function LocomotiveCategories() {
             </DrawerFooter>
           </div>
         </DrawerContent>
-      </Drawer>
+      </Drawer> */}
     </>
   )
 }

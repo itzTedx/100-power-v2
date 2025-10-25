@@ -99,6 +99,12 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
       ] ?? metadata.category)
     : metadata.category
 
+  const subCategoryLabel = Array.isArray(categories)
+    ? (categories.find(
+        (categoryObject) => categoryObject[metadata.subcategory ?? '']
+      )?.[metadata.subcategory ?? ''] ?? metadata.subcategory)
+    : metadata.subcategory
+
   const relatedProducts = await getRelatedProducts({
     limit: 3,
     locale,
@@ -130,6 +136,22 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator>/</BreadcrumbSeparator>
+            {subCategoryLabel && (
+              <>
+                <BreadcrumbItem>
+                  <BreadcrumbLink
+                    className="capitalize"
+                    href={`/products?category=${metadata.category}&query=${metadata.subcategory}`}
+                  >
+                    {t(
+                      /** biome-ignore  lint/suspicious/noExplicitAny: i don't know the type>*/
+                      `breadcrumb.subcategory.${metadata.subcategory}` as any
+                    )}
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator>/</BreadcrumbSeparator>
+              </>
+            )}
             <BreadcrumbItem>
               <BreadcrumbPage>{metadata.title}</BreadcrumbPage>
             </BreadcrumbItem>

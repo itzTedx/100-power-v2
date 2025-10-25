@@ -15,12 +15,45 @@ export async function Footer() {
     >
       <div className="container">
         <div className="grid grid-cols-1 gap-8 py-8 sm:grid-cols-2 md:grid-cols-4 md:py-12">
-          <address className="col-span-1 space-y-3 not-italic md:col-span-1">
-            <h3 className="font-aloevera font-bold text-primary">
-              {t('title')}
-            </h3>
-            <p>{t('description')}</p>
-          </address>
+          <div className="flex flex-col justify-between">
+            <address className="space-y-3 not-italic">
+              <h3 className="font-aloevera font-bold text-primary">
+                {t('title')}
+              </h3>
+              <p>{t('description')}</p>
+            </address>
+            <div className="flex flex-col justify-between gap-4 py-4 md:py-6">
+              <Link
+                aria-label="Home"
+                className="mb-2 md:mb-0"
+                href="/"
+                title="Home"
+              >
+                <Logo aria-label="100 Power Logo" />
+              </Link>
+
+              <ul
+                aria-label="Social Media Links"
+                className="flex items-center gap-2"
+              >
+                {SOCIALS.map((s) => (
+                  <li key={s.id}>
+                    <Link
+                      aria-label="Social Link"
+                      className="group flex size-10 items-center justify-center rounded-md bg-accent/10 transition-colors hover:bg-accent/20"
+                      href={s.href}
+                      prefetch={false}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      title="Social Link"
+                    >
+                      <s.icon className="transition-colors group-hover:text-card" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
 
           {FOOTER.map((nav) => (
             <nav
@@ -44,8 +77,9 @@ export async function Footer() {
               <ul className="space-y-2">
                 {nav.items.map((link) => (
                   <li key={link.id}>
-                    {'href' in link ? (
+                    {'href' in link && (
                       <Link
+                        className="transition-colors hover:text-primary"
                         href={link.href!}
                         prefetch={false}
                         title={(() => {
@@ -96,46 +130,118 @@ export async function Footer() {
                           return link.title
                         })()}
                       </Link>
-                    ) : (
-                      link.title
                     )}
                   </li>
                 ))}
               </ul>
             </nav>
           ))}
+          <div className="space-y-6">
+            <div className="flex flex-col gap-2">
+              <h3 className="mb-2 font-aloevera font-medium text-primary tracking-tight">
+                Factory Address
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    className="text-secondary-foreground/90"
+                    href={'/'}
+                    prefetch={false}
+                  >
+                    Plot No-4, Block 5, Umm Al Thuoob, New Industrial Area, Umm
+                    Al Quwain, United Arab Emirates, PO BOX 1171
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="text-secondary-foreground/80"
+                    href={'mailto:info@100poweruae.com'}
+                    prefetch={false}
+                  >
+                    info@100poweruae.com
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="text-secondary-foreground/80"
+                    href={'tel:+971527862528'}
+                    prefetch={false}
+                  >
+                    +971 52 786 2528
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="flex flex-col gap-4">
+              <h3 className="-mb-2 font-aloevera font-medium text-primary tracking-tight">
+                Distributor Address
+              </h3>
+              <ul className="space-y-1">
+                <li>
+                  <Link
+                    className="text-secondary-foreground/90"
+                    href={'/'}
+                    prefetch={false}
+                  >
+                    LLC "VIP UKRPROMARKET, <br />
+                    Ukraine, 50011, Kryvyi Rih,Yunatska Street , Building 11-B
+                    Edrpou
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="text-secondary-foreground/80"
+                    href={'tel:+380681345077'}
+                    prefetch={false}
+                  >
+                    Tel: +380 68 134 5077
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="text-secondary-foreground/80"
+                    href={'https://wa.me/380681345077'}
+                    prefetch={false}
+                  >
+                    Whatsapp: +380 68 134 5077
+                  </Link>
+                </li>
+              </ul>
+              <ul className="space-y-1">
+                <li>
+                  <Link
+                    className="text-secondary-foreground/90"
+                    href={'/'}
+                    prefetch={false}
+                  >
+                    TFI Online AB, <br />
+                    Sweden Stockholm 177 51 Järfälla
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="text-secondary-foreground/80"
+                    href={'tel:+46737791563'}
+                    prefetch={false}
+                  >
+                    Tel: +46 73 779 15 63
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="text-secondary-foreground/80"
+                    href={'https://wa.me/46737791563'}
+                    prefetch={false}
+                  >
+                    Whatsapp: +46 73 779 15 63
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col items-center justify-between gap-4 border-muted-foreground/20 border-y py-4 md:flex-row md:gap-0 md:py-6">
-          <Link
-            aria-label="Home"
-            className="mb-2 md:mb-0"
-            href="/"
-            title="Home"
-          >
-            <Logo aria-label="100 Power Logo" />
-          </Link>
 
-          <ul
-            aria-label="Social Media Links"
-            className="flex items-center gap-4"
-          >
-            {SOCIALS.map((s) => (
-              <li key={s.id}>
-                <Link
-                  aria-label="Social Link"
-                  href={s.href}
-                  prefetch={false}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Social Link"
-                >
-                  <s.icon />
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="flex flex-col items-center justify-between gap-2 py-3 text-sm md:flex-row md:gap-4">
+        <div className="flex flex-col items-center justify-between gap-2 border-muted-foreground/20 border-t py-4 text-sm md:flex-row md:gap-4">
           <ul className="flex flex-col items-center gap-2 sm:flex-row sm:gap-4">
             <li>
               <Link href="/privacy" prefetch={false} title={t('links.privacy')}>

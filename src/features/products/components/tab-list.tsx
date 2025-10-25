@@ -44,7 +44,10 @@ export const Tablist = ({ children }: { children: ReactNode }) => {
       value={category}
     >
       <div
-        className="z-50 flex items-center justify-between bg-background/80 backdrop-blur-xl max-md:sticky max-md:top-16"
+        className={cn(
+          'z-50 flex items-center justify-between bg-background/80 backdrop-blur-xl max-md:sticky max-md:top-16',
+          category !== 'engine-oil' && 'flex-col md:flex-row'
+        )}
         dir={locale === 'ar' ? 'rtl' : 'ltr'}
       >
         <ScrollArea

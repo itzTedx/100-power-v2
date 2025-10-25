@@ -3,10 +3,8 @@ import type { ElementType } from "react";
 import {
   IconBrandFacebook,
   IconBrandInstagram,
-  IconBrandPinterest,
   IconBrandTelegram,
   IconBrandX,
-  IconBrandYoutube,
   IconMail,
   IconPhoneCall,
 } from "@tabler/icons-react";
@@ -165,28 +163,28 @@ export const FOOTER = [
     heading: "Products",
     items: CATEGORIES_LINKS,
   },
-  {
-    id: 3,
-    heading: "Factory Address",
-    items: [
-      {
-        id: 1,
-        title:
-          "Plot No-4, Block 5, Umm Al Thuoob, New Industrial Area, Umm Al Quwain, United Arab Emirates, PO BOX 1171",
-        // href: "/",
-      },
-      {
-        id: 2,
-        title: "info@100poweruae.com",
-        href: "mailto:info@100poweruae.com",
-      },
-      {
-        id: 3,
-        title: "+971 52 786 2528",
-        href: "tel:+971527862528",
-      },
-    ],
-  },
+  // {
+  //   id: 3,
+  //   heading: "Factory Address",
+  //   items: [
+  //     {
+  //       id: 1,
+  //       title:
+  //         "Plot No-4, Block 5, Umm Al Thuoob, New Industrial Area, Umm Al Quwain, United Arab Emirates, PO BOX 1171",
+  //       // href: "/",
+  //     },
+  //     {
+  //       id: 2,
+  //       title: "info@100poweruae.com",
+  //       href: "mailto:info@100poweruae.com",
+  //     },
+  //     {
+  //       id: 3,
+  //       title: "+971 52 786 2528",
+  //       href: "tel:+971527862528",
+  //     },
+  //   ],
+  // },
 ];
 
 export const SOCIALS = [
@@ -205,16 +203,7 @@ export const SOCIALS = [
     icon: IconBrandTelegram,
     href: "/",
   },
-  {
-    id: 4,
-    icon: IconBrandYoutube,
-    href: "/",
-  },
-  {
-    id: 5,
-    icon: IconBrandPinterest,
-    href: "/",
-  },
+
   {
     id: 6,
     icon: IconBrandFacebook,
