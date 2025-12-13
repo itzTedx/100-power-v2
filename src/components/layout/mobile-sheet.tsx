@@ -1,17 +1,17 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import Link from 'next/link'
+import { useState } from "react";
+import Link from "next/link";
 
-import { IconArrowUpRight } from '@tabler/icons-react'
-import { ArrowUpRight, Menu } from 'lucide-react'
-import { useLocale, useTranslations } from 'next-intl'
+import { IconArrowUpRight } from "@tabler/icons-react";
+import { ArrowUpRight, Menu } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 
-import { Logo } from '@/assets/logo'
+import { Logo } from "@/assets/logo";
 
-import { CATEGORIES_LINKS, NAV_LINKS } from '@/data/constants'
+import { CATEGORIES_LINKS, NAV_LINKS } from "@/data/constants";
 
-import { Button } from '../ui/button'
+import { Button } from "../ui/button";
 import {
   Sheet,
   SheetContent,
@@ -19,30 +19,30 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '../ui/sheet'
+} from "../ui/sheet";
 
 export const MobileSheet = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const t = useTranslations('layout.navbar')
-  const locale = useLocale()
-  const tProducts = useTranslations('products.breadcrumb.categories')
+  const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations("layout.navbar");
+  const locale = useLocale();
+  const tProducts = useTranslations("products.breadcrumb.categories");
 
   const linkKeys = [
-    'links.0.Home',
-    'links.1.About',
-    'links.2.Products',
-    'links.3.Solutions',
-  ] as const
+    "links.0.Home",
+    "links.1.About",
+    "links.2.Products",
+    "links.3.Solutions",
+  ] as const;
 
   const getCategoryKeyFromHref = (href: string) => {
     try {
-      const query = href.split('?')[1] ?? ''
-      const params = new URLSearchParams(query)
-      return params.get('category')
+      const query = href.split("?")[1] ?? "";
+      const params = new URLSearchParams(query);
+      return params.get("category");
     } catch {
-      return null
+      return null;
     }
-  }
+  };
 
   return (
     <Sheet modal onOpenChange={setIsOpen} open={isOpen}>
@@ -55,7 +55,7 @@ export const MobileSheet = () => {
           <Menu />
         </Button>
       </SheetTrigger>
-      <SheetContent side={locale === 'ar' ? 'left' : 'right'}>
+      <SheetContent side={locale === "ar" ? "left" : "right"}>
         <SheetHeader>
           <SheetTitle>
             <Logo />
@@ -91,17 +91,17 @@ export const MobileSheet = () => {
                       href={prod.href}
                     >
                       {(() => {
-                        const key = getCategoryKeyFromHref(prod.href)
+                        const key = getCategoryKeyFromHref(prod.href);
                         if (key) {
                           try {
                             return (
                               tProducts as unknown as (s: string) => string
-                            )(key)
+                            )(key);
                           } catch {
-                            return prod.title
+                            return prod.title;
                           }
                         }
-                        return prod.title
+                        return prod.title;
                       })()}
 
                       <IconArrowUpRight className="size-4 text-muted-foreground" />
@@ -120,12 +120,12 @@ export const MobileSheet = () => {
               variant="secondary"
             >
               <Link href="/contact">
-                {t('contact')} <ArrowUpRight size={18} />
+                {t("contact")} <ArrowUpRight size={18} />
               </Link>
             </Button>
           </div>
         </div>
       </SheetContent>
     </Sheet>
-  )
-}
+  );
+};

@@ -1,7 +1,7 @@
-import Link from 'next/link'
+import Link from "next/link";
 
-import { ArrowUpRight } from 'lucide-react'
-import { getTranslations } from 'next-intl/server'
+import { ArrowUpRight } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
 import {
   NavigationMenu,
@@ -10,24 +10,24 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from '@/components/ui/navigation-menu'
+} from "@/components/ui/navigation-menu";
 
-import { Logo } from '@/assets/logo'
+import { Logo } from "@/assets/logo";
 
-import { NAV_LINKS } from '@/data/constants'
+import { NAV_LINKS } from "@/data/constants";
 
-import { Button } from '../ui/button'
-import { LanguageSelector } from './locale-selector'
-import { MobileSheet } from './mobile-sheet'
+import { Button } from "../ui/button";
+import { LanguageSelector } from "./locale-selector";
+import { MobileSheet } from "./mobile-sheet";
 
 export const Navbar = async () => {
-  const t = await getTranslations('layout.navbar')
+  const t = await getTranslations("layout.navbar");
   const linkKeys = [
-    'links.0.Home',
-    'links.1.About',
-    'links.2.Products',
-    'links.3.Solutions',
-  ] as const
+    "links.0.Home",
+    "links.1.About",
+    "links.2.Products",
+    "links.3.Solutions",
+  ] as const;
 
   return (
     <header className="sticky top-0 z-999 border-background border-b bg-background/80 py-2 backdrop-blur-xl">
@@ -80,7 +80,7 @@ export const Navbar = async () => {
           <LanguageSelector />
           <Button asChild variant="secondary">
             <Link href="/contact">
-              {t('contact')}
+              {t("contact")}
               <ArrowUpRight size={18} />
             </Link>
           </Button>
@@ -89,15 +89,15 @@ export const Navbar = async () => {
         </div>
       </NavigationMenu>
     </header>
-  )
-}
+  );
+};
 
 function ListItem({
   title,
   children,
   href,
   ...props
-}: React.ComponentPropsWithoutRef<'li'> & { href: string }) {
+}: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
   return (
     <li {...props}>
       <NavigationMenuLink asChild className="h-full p-5 hover:bg-background">
@@ -109,5 +109,5 @@ function ListItem({
         </Link>
       </NavigationMenuLink>
     </li>
-  )
+  );
 }

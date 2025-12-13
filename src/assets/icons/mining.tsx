@@ -1,4 +1,4 @@
-import { JSX, SVGProps } from 'react'
+import { JSX, SVGProps } from "react";
 
 export const IconMining = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -33,5 +33,5 @@ export const IconMining = (
         </clipPath>
       </defs>
     </svg>
-  )
-}
+  );
+};

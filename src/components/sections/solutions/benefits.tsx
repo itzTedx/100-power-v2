@@ -1,69 +1,69 @@
-import { IconStar } from '@tabler/icons-react'
-import { getTranslations } from 'next-intl/server'
+import { IconStar } from "@tabler/icons-react";
+import { getTranslations } from "next-intl/server";
 
-import { Badge } from '@/components/ui/badge'
+import { Badge } from "@/components/ui/badge";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card'
-import { Separator } from '@/components/ui/separator'
+} from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 
 export const Benefits = async () => {
-  const t = await getTranslations('solutions.benefits')
+  const t = await getTranslations("solutions.benefits");
   const BENEFITS = [
     {
-      icon: '⏳',
-      badge: '01 / Reliable Output',
-      title: 'Extended Service Intervals',
-      desc: 'Keep your equipment running at peak performance far beyond the limits of traditional lubricants. Our solution reduces the frequency of oil changes and maintenance stops.',
+      icon: "⏳",
+      badge: "01 / Reliable Output",
+      title: "Extended Service Intervals",
+      desc: "Keep your equipment running at peak performance far beyond the limits of traditional lubricants. Our solution reduces the frequency of oil changes and maintenance stops.",
     },
     {
-      icon: '⚡',
-      badge: '02 / Reliable Output',
-      title: 'Consistent Performance',
-      desc: 'Experience steady, reliable output across the life of your machinery. Unlike conventional products that degrade over time, our formula maintains functionality even under extreme conditions.',
+      icon: "⚡",
+      badge: "02 / Reliable Output",
+      title: "Consistent Performance",
+      desc: "Experience steady, reliable output across the life of your machinery. Unlike conventional products that degrade over time, our formula maintains functionality even under extreme conditions.",
     },
     {
-      icon: '💧',
-      badge: '03 / Efficiency',
-      title: 'Fuel & Oil Efficiency',
-      desc: 'Our technology helps maintain a stable fuel and oil curve — preventing spikes in usage as engines age or workloads increase. This means reduced costs and improved resource management.',
+      icon: "💧",
+      badge: "03 / Efficiency",
+      title: "Fuel & Oil Efficiency",
+      desc: "Our technology helps maintain a stable fuel and oil curve — preventing spikes in usage as engines age or workloads increase. This means reduced costs and improved resource management.",
     },
     {
-      icon: '🔩',
-      badge: '04 / Prolonged Life',
-      title: 'Extended Machinery Life',
-      desc: 'With wear reduction of up to 95%, our micro-metallurgical technology extends the lifespan of engines, hydraulics, and gear systems-by up to 8x-reducing replacement costs and downtime.',
+      icon: "🔩",
+      badge: "04 / Prolonged Life",
+      title: "Extended Machinery Life",
+      desc: "With wear reduction of up to 95%, our micro-metallurgical technology extends the lifespan of engines, hydraulics, and gear systems-by up to 8x-reducing replacement costs and downtime.",
     },
     {
-      icon: '🌱',
-      badge: '05 / Greener',
-      title: 'Environmental Impact',
-      desc: 'We help your business operate greener. Less lubricant waste, reduced emissions, and optimized combustion all contribute to a more sustainable future — without compromising performance.',
+      icon: "🌱",
+      badge: "05 / Greener",
+      title: "Environmental Impact",
+      desc: "We help your business operate greener. Less lubricant waste, reduced emissions, and optimized combustion all contribute to a more sustainable future — without compromising performance.",
     },
     {
-      icon: '⚙️',
-      badge: '06 / Low Energy Use',
-      title: 'Enhanced Energy Efficiency',
-      desc: 'Friction is the enemy of efficiency. Our anti-friction layer minimizes resistance, reduces power loss, and improves energy transfer — leading to lower energy consumption across your operations.',
+      icon: "⚙️",
+      badge: "06 / Low Energy Use",
+      title: "Enhanced Energy Efficiency",
+      desc: "Friction is the enemy of efficiency. Our anti-friction layer minimizes resistance, reduces power loss, and improves energy transfer — leading to lower energy consumption across your operations.",
     },
-  ]
+  ];
 
   return (
     <section className="container max-w-7xl space-y-8 pb-20">
       <Badge>
         <IconStar />
-        {t('badge')}
+        {t("badge")}
       </Badge>
       <Separator />
       <div className="grid grid-cols-2 gap-28">
         <h2 className="whitespace-pre-line font-bold font-helvetica text-4xl">
-          {t('title')}
+          {t("title")}
         </h2>
-        <p className="text-2xl tracking-tight">{t('description')}</p>
+        <p className="text-2xl tracking-tight">{t("description")}</p>
       </div>
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
         {BENEFITS.map((b, i) => (
@@ -92,5 +92,5 @@ export const Benefits = async () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};

@@ -1,4 +1,4 @@
-import { JSX, SVGProps } from 'react'
+import { JSX, SVGProps } from "react";
 
 export const IconMilitary = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -25,5 +25,5 @@ export const IconMilitary = (
         </clipPath>
       </defs>
     </svg>
-  )
-}
+  );
+};

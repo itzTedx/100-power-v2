@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
-import type { ReactNode } from 'react'
+import type { ReactNode } from "react";
 
-import { ProgressProvider } from '@bprogress/next/app'
+import { ProgressProvider } from "@bprogress/next/app";
 
 const Providers = ({ children }: { children: ReactNode }) => {
   return (
@@ -15,7 +15,7 @@ const Providers = ({ children }: { children: ReactNode }) => {
     >
       {children}
     </ProgressProvider>
-  )
-}
+  );
+};
 
-export default Providers
+export default Providers;

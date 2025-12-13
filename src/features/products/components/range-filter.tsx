@@ -1,12 +1,12 @@
-'use client'
+"use client";
 
-import { useMemo } from 'react'
+import { useMemo } from "react";
 
-import { IconFilter } from '@tabler/icons-react'
-import { useTranslations } from 'next-intl'
-import { useQueryState } from 'nuqs'
+import { IconFilter } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
+import { useQueryState } from "nuqs";
 
-import { Button } from '@/components/ui/button'
+import { Button } from "@/components/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -16,38 +16,38 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from '@/components/ui/drawer'
+} from "@/components/ui/drawer";
 
-import { cn } from '@/lib/utils'
+import { cn } from "@/lib/utils";
 
 const RANGE_OPTION_VALUES = [
-  'all',
-  'Regular',
-  'Premium',
-  'Super Premium',
-] as const
+  "all",
+  "Regular",
+  "Premium",
+  "Super Premium",
+] as const;
 
-type RangeOptionValue = (typeof RANGE_OPTION_VALUES)[number]
+type RangeOptionValue = (typeof RANGE_OPTION_VALUES)[number];
 
 export function RangeFilter() {
-  const [range, setRange] = useQueryState('range', {
-    defaultValue: 'all',
-    history: 'push',
-  })
+  const [range, setRange] = useQueryState("range", {
+    defaultValue: "all",
+    history: "push",
+  });
 
-  const t = useTranslations('products.filters')
+  const t = useTranslations("products.filters");
 
   const options = useMemo(
     () =>
       RANGE_OPTION_VALUES.map((value) => ({
         value,
         label:
-          value === 'all'
-            ? t('range.options.all')
+          value === "all"
+            ? t("range.options.all")
             : t(`range.options.${value}` as const),
       })),
     [t]
-  )
+  );
 
   return (
     <>
@@ -56,11 +56,11 @@ export function RangeFilter() {
           <button
             aria-pressed={range === opt.value}
             className={cn(
-              'inline-flex h-9 items-center justify-center rounded-md border px-3 font-medium text-sm transition-colors',
-              'hover:bg-accent hover:text-foreground',
+              "inline-flex h-9 items-center justify-center rounded-md border px-3 font-medium text-sm transition-colors",
+              "hover:bg-accent hover:text-foreground",
               range === opt.value
-                ? 'border-primary bg-background text-foreground shadow-sm'
-                : 'border-transparent bg-muted/40 text-muted-foreground'
+                ? "border-primary bg-background text-foreground shadow-sm"
+                : "border-transparent bg-muted/40 text-muted-foreground"
             )}
             key={opt.value}
             onClick={() => setRange(opt.value)}
@@ -79,9 +79,9 @@ export function RangeFilter() {
         <DrawerContent>
           <div className="mx-auto w-full max-w-sm">
             <DrawerHeader>
-              <DrawerTitle>{t('title')}</DrawerTitle>
+              <DrawerTitle>{t("title")}</DrawerTitle>
               <DrawerDescription className="sr-only">
-                {t('range.title')}
+                {t("range.title")}
               </DrawerDescription>
             </DrawerHeader>
             <div className="px-4 pb-0">
@@ -91,11 +91,11 @@ export function RangeFilter() {
                     <button
                       aria-pressed={range === opt.value}
                       className={cn(
-                        'inline-flex h-9 items-start justify-start rounded-md border px-3 font-medium text-sm transition-colors',
-                        'hover:bg-accent hover:text-foreground',
+                        "inline-flex h-9 items-start justify-start rounded-md border px-3 font-medium text-sm transition-colors",
+                        "hover:bg-accent hover:text-foreground",
                         range === opt.value
-                          ? 'border-primary bg-background text-foreground shadow-sm'
-                          : 'border-transparent bg-muted/40 text-muted-foreground'
+                          ? "border-primary bg-background text-foreground shadow-sm"
+                          : "border-transparent bg-muted/40 text-muted-foreground"
                       )}
                       onClick={() => setRange(opt.value as RangeOptionValue)}
                       type="button"
@@ -115,5 +115,5 @@ export function RangeFilter() {
         </DrawerContent>
       </Drawer>
     </>
-  )
+  );
 }

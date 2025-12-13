@@ -1,19 +1,19 @@
-import dynamic from 'next/dynamic'
-import Image from 'next/image'
+import dynamic from "next/dynamic";
+import Image from "next/image";
 
-import { Dot } from 'lucide-react'
-import { getTranslations } from 'next-intl/server'
+import { Dot } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
-import { Badge } from '@/components/ui/badge'
-import { Separator } from '@/components/ui/separator'
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
 
-import { INDUSTRIES } from '@/data/constants'
+import { INDUSTRIES } from "@/data/constants";
 
-const SimpleMarquee = dynamic(() => import('@/components/animated/marquee'))
+const SimpleMarquee = dynamic(() => import("@/components/animated/marquee"));
 
 export const Industries = async () => {
-  const t = await getTranslations('home.industries')
-  type Key = Parameters<typeof t>[0]
+  const t = await getTranslations("home.industries");
+  type Key = Parameters<typeof t>[0];
   return (
     <section
       aria-labelledby="industries-heading"
@@ -22,7 +22,7 @@ export const Industries = async () => {
       <div className="container mb-16 space-y-8">
         <Badge>
           <Dot />
-          {t('badge')}
+          {t("badge")}
         </Badge>
         <Separator />
         <div className="grid grid-cols-2 gap-4">
@@ -30,13 +30,13 @@ export const Industries = async () => {
             className="font-bold font-helvetica text-5xl"
             id="industries-heading"
           >
-            {t('title')}
+            {t("title")}
           </h2>
           <div>
             <p className="text-2xl tracking-tight">
-              {t('description.first')}{' '}
-              <span className="text-primary">{t('description.highlight')}</span>{' '}
-              {t('description.last')}
+              {t("description.first")}{" "}
+              <span className="text-primary">{t("description.highlight")}</span>{" "}
+              {t("description.last")}
             </p>
           </div>
         </div>
@@ -67,7 +67,7 @@ export const Industries = async () => {
                 alt={`Industry: ${item.label}`}
                 className="object-cover"
                 fill
-                loading={i < 2 ? 'eager' : 'lazy'}
+                loading={i < 2 ? "eager" : "lazy"}
                 priority={i < 2}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 src={item.image}
@@ -77,11 +77,11 @@ export const Industries = async () => {
         ))}
       </SimpleMarquee>
     </section>
-  )
-}
+  );
+};
 
 const MarqueeItem = ({ children }: { children: React.ReactNode }) => (
   <div className="mx-1 cursor-pointer duration-300 ease-in-out hover:scale-105 md:mx-2.5">
     {children}
   </div>
-)
+);

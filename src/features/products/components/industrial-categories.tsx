@@ -1,9 +1,9 @@
-'use client'
+"use client";
 
-import { useMemo } from 'react'
+import { useMemo } from "react";
 
-import { useTranslations } from 'next-intl'
-import { useQueryState } from 'nuqs'
+import { useTranslations } from "next-intl";
+import { useQueryState } from "nuqs";
 
 import {
   Select,
@@ -13,29 +13,29 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select'
+} from "@/components/ui/select";
 
 const RANGE_OPTION_VALUES = [
-  'air',
-  'deck',
-  'rust',
-  'hydraulic',
-  'boat',
-  'auxiliary',
-  'agitator',
-  'pump',
-  'propulsion',
-] as const
+  "air",
+  "deck",
+  "rust",
+  "hydraulic",
+  "boat",
+  "auxiliary",
+  "agitator",
+  "pump",
+  "propulsion",
+] as const;
 
 // type RangeOptionValue = (typeof RANGE_OPTION_VALUES)[number]
 
 export function IndustrialCategories() {
-  const [range, setRange] = useQueryState('query', {
-    defaultValue: 'all',
-    history: 'push',
-  })
+  const [range, setRange] = useQueryState("query", {
+    defaultValue: "all",
+    history: "push",
+  });
 
-  const t = useTranslations('products.industrial')
+  const t = useTranslations("products.industrial");
 
   const options = useMemo(
     () =>
@@ -44,7 +44,7 @@ export function IndustrialCategories() {
         label: t(`options.${value}` as const),
       })),
     [t]
-  )
+  );
 
   return (
     <>
@@ -54,8 +54,8 @@ export function IndustrialCategories() {
         </SelectTrigger>
         <SelectContent>
           <SelectGroup>
-            <SelectLabel>{t('options.label')}</SelectLabel>
-            <SelectItem value="all">{t('options.all')}</SelectItem>
+            <SelectLabel>{t("options.label")}</SelectLabel>
+            <SelectItem value="all">{t("options.all")}</SelectItem>
             {options.map((option) => (
               <SelectItem key={option.value} value={option.value}>
                 {option.label}
@@ -109,5 +109,5 @@ export function IndustrialCategories() {
         </DrawerContent>
       </Drawer> */}
     </>
-  )
+  );
 }

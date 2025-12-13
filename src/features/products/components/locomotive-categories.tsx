@@ -1,9 +1,9 @@
-'use client'
+"use client";
 
-import { useMemo } from 'react'
+import { useMemo } from "react";
 
-import { useTranslations } from 'next-intl'
-import { useQueryState } from 'nuqs'
+import { useTranslations } from "next-intl";
+import { useQueryState } from "nuqs";
 
 import {
   Select,
@@ -11,28 +11,26 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select'
+} from "@/components/ui/select";
 
 const RANGE_OPTION_VALUES = [
-  'engine',
-  'compressor',
-  'gear',
-  'hydraulic',
-  'grease',
-  'coupler',
-  'rail',
-  'transformer',
-] as const
-
-type RangeOptionValue = (typeof RANGE_OPTION_VALUES)[number]
+  "engine",
+  "compressor",
+  "gear",
+  "hydraulic",
+  "grease",
+  "coupler",
+  "rail",
+  "transformer",
+] as const;
 
 export function LocomotiveCategories() {
-  const [range, setRange] = useQueryState('query', {
-    defaultValue: 'all',
-    history: 'push',
-  })
+  const [range, setRange] = useQueryState("query", {
+    defaultValue: "all",
+    history: "push",
+  });
 
-  const t = useTranslations('products.locomotive')
+  const t = useTranslations("products.locomotive");
 
   const options = useMemo(
     () =>
@@ -41,7 +39,7 @@ export function LocomotiveCategories() {
         label: t(`options.${value}` as const),
       })),
     [t]
-  )
+  );
 
   return (
     <>
@@ -50,7 +48,7 @@ export function LocomotiveCategories() {
           <SelectValue placeholder="Theme" />
         </SelectTrigger>
         <SelectContent>
-          <SelectItem value="all">{t('options.all')}</SelectItem>
+          <SelectItem value="all">{t("options.all")}</SelectItem>
           {options.map((option) => (
             <SelectItem key={option.value} value={option.value}>
               {option.label}
@@ -103,5 +101,5 @@ export function LocomotiveCategories() {
         </DrawerContent>
       </Drawer> */}
     </>
-  )
+  );
 }

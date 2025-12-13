@@ -1,12 +1,12 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import { IconArrowUpRight } from '@tabler/icons-react'
-import { getTranslations } from 'next-intl/server'
+import { IconArrowUpRight } from "@tabler/icons-react";
+import { getTranslations } from "next-intl/server";
 
-import { Button } from '../ui/button'
+import { Button } from "../ui/button";
 
 export const Cta = async () => {
-  const t = await getTranslations('layout.cta')
+  const t = await getTranslations("layout.cta");
   return (
     <section aria-labelledby="cta-heading" className="container py-8 md:py-12">
       <div className="relative grid grid-cols-1 overflow-hidden rounded-sm bg-secondary px-4 text-secondary-foreground md:grid-cols-2 md:px-12">
@@ -15,13 +15,13 @@ export const Cta = async () => {
             className="mb-2 text-balance font-bold font-helvetica text-3xl leading-tight sm:text-4xl md:text-6xl md:leading-[1.1]"
             id="cta-heading"
           >
-            {t('title')}
+            {t("title")}
           </h3>
           <p className="mb-4 text-balance text-sm sm:text-base md:mb-28 md:text-lg">
-            {t('description')}
+            {t("description")}
           </p>
           <Button aria-label="Talk to an expert at 100 Power">
-            {t('button')} <IconArrowUpRight />
+            {t("button")} <IconArrowUpRight />
           </Button>
         </div>
         <div className="relative z-10">
@@ -44,5 +44,5 @@ export const Cta = async () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

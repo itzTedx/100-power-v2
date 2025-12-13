@@ -1,4 +1,4 @@
-import { JSX, SVGProps } from 'react'
+import { JSX, SVGProps } from "react";
 
 export const IconIndustrial = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -61,5 +61,5 @@ export const IconIndustrial = (
         />
       </g>
     </svg>
-  )
-}
+  );
+};

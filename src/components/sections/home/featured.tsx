@@ -1,19 +1,19 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import { getTranslations } from 'next-intl/server'
+import { getTranslations } from "next-intl/server";
 
-import { Badge } from '@/components/ui/badge'
-import { Marquee } from '@/components/ui/marquee'
+import { Badge } from "@/components/ui/badge";
+import { Marquee } from "@/components/ui/marquee";
 
-import { IconShip } from '@/assets/icons/ship'
+import { IconShip } from "@/assets/icons/ship";
 
-import { INDUSTRIES } from '@/data/constants'
+import { INDUSTRIES } from "@/data/constants";
 
 export const Featured = async () => {
-  const industriesT = await getTranslations('home.industries')
-  type Key = Parameters<typeof industriesT>[0]
+  const industriesT = await getTranslations("home.industries");
+  type Key = Parameters<typeof industriesT>[0];
 
-  const t = await getTranslations('home.featured')
+  const t = await getTranslations("home.featured");
   return (
     <section
       aria-labelledby="featured-solutions-heading"
@@ -46,21 +46,21 @@ export const Featured = async () => {
           <header className="mx-auto max-w-4xl space-y-3 pt-8 text-center sm:space-y-4 sm:pt-10 md:pt-12">
             <Badge>
               <IconShip aria-hidden="true" />
-              {t('badge')}
+              {t("badge")}
             </Badge>
             <h2
               className="font-bold text-2xl tracking-tight sm:text-3xl md:text-4xl"
               id="featured-solutions-heading"
             >
-              {t('title.text')}{' '}
-              <span className="text-primary">{t('title.highlight')}</span>
+              {t("title.text")}{" "}
+              <span className="text-primary">{t("title.highlight")}</span>
             </h2>
             <p className="font-light text-sm sm:text-base">
-              {t('description.line1')}{' '}
+              {t("description.line1")}{" "}
               <span className="font-medium text-primary">
-                {t('description.highlight')}
-              </span>{' '}
-              {t('description.last')}
+                {t("description.highlight")}
+              </span>{" "}
+              {t("description.last")}
             </p>
           </header>
 
@@ -83,7 +83,7 @@ export const Featured = async () => {
                 src="/images/harbour.webp"
               />
               <div className="relative z-10 rounded-lg bg-card px-3 py-2 text-sm tracking-tight sm:text-base">
-                <h3 className="font-medium">{t('solution.marine')}</h3>
+                <h3 className="font-medium">{t("solution.marine")}</h3>
               </div>
             </article>
 
@@ -100,7 +100,7 @@ export const Featured = async () => {
                 src="/images/airplane.webp"
               />
               <div className="relative z-10 rounded-lg bg-card px-3 py-2 text-sm tracking-tight sm:text-base">
-                <h3 className="font-medium">{t('solution.aviation')}</h3>
+                <h3 className="font-medium">{t("solution.aviation")}</h3>
               </div>
             </article>
             <article
@@ -116,7 +116,7 @@ export const Featured = async () => {
                 src="/images/locomotive.webp"
               />
               <div className="relative z-10 rounded-lg bg-card px-3 py-2 text-sm tracking-tight sm:text-base">
-                <h3 className="font-medium">{t('solution.locomotive')}</h3>
+                <h3 className="font-medium">{t("solution.locomotive")}</h3>
               </div>
             </article>
             <article
@@ -132,12 +132,12 @@ export const Featured = async () => {
                 src="/images/construction-1.webp"
               />
               <div className="relative z-10 rounded-lg bg-card px-3 py-2 text-sm tracking-tight sm:text-base">
-                <h3 className="font-medium">{t('solution.construction')}</h3>
+                <h3 className="font-medium">{t("solution.construction")}</h3>
               </div>
             </article>
           </div>
         </article>
       </div>
     </section>
-  )
-}
+  );
+};
