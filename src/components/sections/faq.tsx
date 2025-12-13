@@ -1,20 +1,20 @@
-import { getTranslations } from 'next-intl/server'
+import { getTranslations } from "next-intl/server";
 
-import { FAQS } from '@/data/faqs'
+import { FAQS } from "@/data/faqs";
 
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '../ui/accordion'
+} from "../ui/accordion";
 
 export const Faqs = async () => {
-  const tFaqs = await getTranslations('home.faqs')
+  const tFaqs = await getTranslations("home.faqs");
 
   // Load FAQs from data instead of translations
-  const faqs = FAQS
-  type Key = Parameters<typeof tFaqs>[0]
+  const faqs = FAQS;
+  type Key = Parameters<typeof tFaqs>[0];
 
   // // Ensure stable ids for accordion values
   // const faqsWithIds = useMemo(
@@ -48,16 +48,16 @@ export const Faqs = async () => {
           {tFaqs(`faq.${i}.content` as Key)}
         </AccordionContent>
       </AccordionItem>
-    ))
+    ));
 
   return (
     <section aria-labelledby="faq-heading">
       <h2 className="sr-only" id="faq-heading">
-        {tFaqs('badge')}
+        {tFaqs("badge")}
       </h2>
       <Accordion className="w-full space-y-3" collapsible type="single">
         {renderAccordionItems(faqs)}
       </Accordion>
     </section>
-  )
-}
+  );
+};

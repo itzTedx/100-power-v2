@@ -1,13 +1,13 @@
-'use client'
+"use client";
 
-import { Fragment } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
+import { Fragment } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
-import { Dot } from 'lucide-react'
-import { useTranslations } from 'next-intl'
+import { Dot } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-import { Button } from '@/components/ui/button'
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -15,20 +15,20 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card'
-import { TooltipProvider } from '@/components/ui/tooltip'
+} from "@/components/ui/card";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
-import { cn } from '@/lib/utils'
+import { cn } from "@/lib/utils";
 
-import { ProductMetadata } from '../actions/types'
-import { DatasheetButton } from './datasheet-button'
+import { ProductMetadata } from "../actions/types";
+import { DatasheetButton } from "./datasheet-button";
 
 interface Props {
-  data: ProductMetadata
+  data: ProductMetadata;
 }
 
 export const ProductCard = ({ data }: Props) => {
-  const t = useTranslations('products')
+  const t = useTranslations("products");
 
   return (
     <Card className="group relative gap-0 overflow-hidden">
@@ -38,10 +38,10 @@ export const ProductCard = ({ data }: Props) => {
           <div className="flex shrink-0 items-center gap-2">
             <div
               className={cn(
-                'size-3 rounded-full',
-                data.rangeKey === 'Premium'
-                  ? 'bg-primary'
-                  : 'bg-muted-foreground/80'
+                "size-3 rounded-full",
+                data.rangeKey === "Premium"
+                  ? "bg-primary"
+                  : "bg-muted-foreground/80"
               )}
             />
             <p className="font-medium">{data.range}</p>
@@ -74,7 +74,7 @@ export const ProductCard = ({ data }: Props) => {
         )}
         <div className="absolute inset-0 z-10 flex items-end justify-center p-4 opacity-0 transition-opacity group-hover:opacity-100">
           <Button className="z-10 mx-auto" variant="outline">
-            {t('button')}
+            {t("button")}
           </Button>
 
           <div className="pointer-events-none absolute inset-0 translate-y-full bg-gradient-to-t from-card to-transparent transition-transform group-hover:translate-y-0" />
@@ -85,11 +85,11 @@ export const ProductCard = ({ data }: Props) => {
           <CardDescription className="flex flex-wrap items-center text-[10px] tracking-tighter sm:text-sm md:font-medium rtl:flex-row-reverse">
             {data.quantities.map((q, i) => (
               <Fragment key={q}>
-                <p>{q}</p>{' '}
+                <p>{q}</p>{" "}
                 <Dot
                   className={cn(
-                    'size-3 md:size-4',
-                    data.quantities?.length === i + 1 && 'hidden'
+                    "size-3 md:size-4",
+                    data.quantities?.length === i + 1 && "hidden"
                   )}
                 />
               </Fragment>
@@ -99,5 +99,5 @@ export const ProductCard = ({ data }: Props) => {
         <CardTitle className="mt-1">{data.title}</CardTitle>
       </CardFooter>
     </Card>
-  )
-}
+  );
+};

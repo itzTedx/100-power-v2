@@ -1,13 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { IconChart, IconShield } from "@/assets/icons";
+
 import { Button } from "@/components/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+
+import { IconChart, IconShield } from "@/assets/icons";
 
 interface Props {
   type: "safetyDs" | "technicalDs";
@@ -18,7 +20,7 @@ export const DatasheetButton = ({ type, datasheet }: Props) => {
   return (
     <Tooltip>
       <TooltipTrigger asChild>
-        <Button size="icon" variant="secondary" className="z-99" asChild>
+        <Button asChild className="z-99" size="icon" variant="secondary">
           <Link href={datasheet} target="_blank">
             {type === "safetyDs" ? (
               <IconShield className="size-5" />

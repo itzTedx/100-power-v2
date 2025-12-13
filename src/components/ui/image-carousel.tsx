@@ -1,5 +1,7 @@
 "use client";
 
+import React, { useCallback, useEffect, useState } from "react";
+
 import { type EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import {
@@ -9,10 +11,10 @@ import {
   PlusCircle,
   X,
 } from "lucide-react";
-import React, { useCallback, useEffect, useState } from "react";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 
 import { Button } from "@/components/ui/button";
+
 import { cn } from "@/lib/utils";
 
 import {
@@ -69,18 +71,16 @@ const ImageContainer: React.FC<{
   return (
     <div
       className={cn(
-        "bg-card relative w-full overflow-hidden rounded-lg",
+        "relative w-full overflow-hidden rounded-lg bg-card",
         getAspectRatioClass(aspectRatio)
       )}
     >
       <Dialog>
         <DialogTrigger asChild>
-          <div className={`cursor-pointer`}>
+          <div className={"cursor-pointer"}>
+            {/** biome-ignore lint/performance/noImgElement: Ignore image element */}
             <img
-              src={image.url}
               alt={image.title || alt}
-              width={400}
-              height={600}
               className={cn(
                 "absolute inset-0 h-full w-full",
                 fit === "contain" && "object-contain",
@@ -88,6 +88,9 @@ const ImageContainer: React.FC<{
                 fit === "fill" && "object-fill",
                 classNameThumbnail
               )}
+              height={600}
+              src={image.url}
+              width={400}
             />
           </div>
         </DialogTrigger>
@@ -102,36 +105,36 @@ const ImageContainer: React.FC<{
 
           <div>
             <TransformWrapper
-              initialScale={1}
               initialPositionX={0}
               initialPositionY={0}
+              initialScale={1}
             >
               {({ zoomIn, zoomOut }) => (
                 <>
                   <TransformComponent>
-                    {/* You can swap this with your preferred image optization technique, like using  next/image */}
+                    {/** biome-ignore lint/performance/noImgElement: Ignore image element */}
                     <img
-                      src={image.url}
                       alt={image.title || "Full size"}
                       className={cn(
                         "max-h-[90vh] max-w-[90vw] object-contain",
                         classNameImage
                       )}
+                      src={image.url}
                     />
                   </TransformComponent>
                   {showImageControls && (
-                    <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-2">
+                    <div className="-translate-x-1/2 absolute bottom-4 left-1/2 z-10 flex gap-2">
                       <button
-                        onClick={() => zoomOut()}
-                        className="cursor-pointer rounded-full bg-black/50 p-2 text-white transition-colors hover:bg-black/70"
                         aria-label="Zoom out"
+                        className="cursor-pointer rounded-full bg-black/50 p-2 text-white transition-colors hover:bg-black/70"
+                        onClick={() => zoomOut()}
                       >
                         <MinusCircle className="size-6" />
                       </button>
                       <button
-                        onClick={() => zoomIn()}
-                        className="cursor-pointer rounded-full bg-black/50 p-2 text-white transition-colors hover:bg-black/70"
                         aria-label="Zoom in"
+                        className="cursor-pointer rounded-full bg-black/50 p-2 text-white transition-colors hover:bg-black/70"
+                        onClick={() => zoomIn()}
                       >
                         <PlusCircle className="size-6" />
                       </button>
@@ -142,8 +145,8 @@ const ImageContainer: React.FC<{
             </TransformWrapper>
             <DialogClose asChild>
               <button
-                className="absolute top-4 right-4 z-10 cursor-pointer rounded-full border bg-black/50 p-2 text-white transition-colors hover:bg-black/70"
                 aria-label="Close"
+                className="absolute top-4 right-4 z-10 cursor-pointer rounded-full border bg-black/50 p-2 text-white transition-colors hover:bg-black/70"
               >
                 <X className="size-6" />
               </button>
@@ -170,23 +173,24 @@ const Thumb: React.FC<ThumbPropType> = (props) => {
       )}
     >
       <button
-        onClick={onClick}
         className="relative w-full cursor-pointer touch-manipulation appearance-none overflow-hidden rounded-md border-0 bg-transparent p-0"
+        onClick={onClick}
         type="button"
       >
         <div
           className={cn(
             "relative w-full overflow-hidden rounded-lg bg-gray-100",
-            selected ? "border-primary/50 border-2" : "",
+            selected ? "border-2 border-primary/50" : "",
             getAspectRatioClass("square")
           )}
         >
+          {/** biome-ignore lint/performance/noImgElement: Ignore image element */}
           <img
-            src={imgUrl}
             alt={title || `Thumbnail ${index + 1}`}
-            width={400}
+            className={cn("h-full w-full bg-card object-contain")}
             height={600}
-            className={cn("bg-card h-full w-full object-contain")}
+            src={imgUrl}
+            width={400}
           />
         </div>
       </button>
@@ -358,6 +362,7 @@ const ImageCarousel: React.FC<ImageCarousel_BasicProps> = ({
 
   return (
     <div
+      aria-roledescription="carousel"
       className={cn(
         "relative w-full max-w-4xl",
         {
@@ -368,9 +373,8 @@ const ImageCarousel: React.FC<ImageCarousel_BasicProps> = ({
         },
         className
       )}
-      role="region"
-      aria-roledescription="carousel"
       onKeyDownCapture={handleKeyDown}
+      role="region"
       {...props}
     >
       {showThumbs && thumbPosition === "top" && (
@@ -379,11 +383,11 @@ const ImageCarousel: React.FC<ImageCarousel_BasicProps> = ({
             <div className="thumbs-horizontal group -ml-3 flex">
               {images?.map((image, index) => (
                 <Thumb
+                  imgUrl={image.url}
+                  index={index}
                   key={index}
                   onClick={() => onThumbClick(index)}
                   selected={index === currentIndex}
-                  index={index}
-                  imgUrl={image.url}
                   title={image.title}
                 />
               ))}
@@ -393,31 +397,31 @@ const ImageCarousel: React.FC<ImageCarousel_BasicProps> = ({
       )}
 
       <div
+        aria-label="Image carousel controls"
         className={cn(
           "relative",
           showThumbs &&
             (thumbPosition === "left" || thumbPosition === "right") &&
             "flex-[1_1_75%]"
         )}
-        aria-label="Image carousel controls"
       >
-        <div ref={emblaRef} className="overflow-hidden rounded-lg">
+        <div className="overflow-hidden rounded-lg" ref={emblaRef}>
           <div className="-ml-4 flex">
             {images?.map((image, index) => (
               <div
-                key={index}
-                className="min-w-0 shrink-0 grow-0 basis-full pl-4"
-                role="group"
                 aria-roledescription="slide"
+                className="min-w-0 shrink-0 grow-0 basis-full pl-4"
+                key={index}
+                role="group"
               >
                 <ImageContainer
-                  image={image}
                   alt={`Slide ${index + 1}`}
-                  fit={imageFit}
                   aspectRatio={aspectRatio}
-                  showImageControls={showImageControls}
                   classNameImage={classNameImage}
                   classNameThumbnail={classNameThumbnail}
+                  fit={imageFit}
+                  image={image}
+                  showImageControls={showImageControls}
                 />
               </div>
             ))}
@@ -427,22 +431,22 @@ const ImageCarousel: React.FC<ImageCarousel_BasicProps> = ({
         {showCarouselControls && (
           <>
             <Button
-              variant="outline"
-              size="icon"
-              className="bg-background/80 hover:bg-background dark:bg-background/80 dark:hover:bg-background absolute top-1/2 left-[2%] z-10 h-8 w-8 -translate-y-1/2 rounded-full backdrop-blur-xs disabled:opacity-50"
+              className="-translate-y-1/2 absolute top-1/2 left-[2%] z-10 h-8 w-8 rounded-full bg-background/80 backdrop-blur-xs hover:bg-background disabled:opacity-50 dark:bg-background/80 dark:hover:bg-background"
               disabled={!canScrollPrev}
               onClick={scrollPrev}
+              size="icon"
+              variant="outline"
             >
               <ArrowLeft className="h-4 w-4" />
               <span className="sr-only">Previous slide</span>
             </Button>
 
             <Button
-              variant="outline"
-              size="icon"
-              className="bg-background/80 hover:bg-background dark:bg-background/80 dark:hover:bg-background absolute top-1/2 right-[2%] z-10 h-8 w-8 -translate-y-1/2 rounded-full backdrop-blur-xs disabled:opacity-50"
+              className="-translate-y-1/2 absolute top-1/2 right-[2%] z-10 h-8 w-8 rounded-full bg-background/80 backdrop-blur-xs hover:bg-background disabled:opacity-50 dark:bg-background/80 dark:hover:bg-background"
               disabled={!canScrollNext}
               onClick={scrollNext}
+              size="icon"
+              variant="outline"
             >
               <ArrowRight className="h-4 w-4" />
               <span className="sr-only">Next slide</span>
@@ -479,11 +483,11 @@ const ImageCarousel: React.FC<ImageCarousel_BasicProps> = ({
               >
                 {images?.map((image, index) => (
                   <Thumb
+                    imgUrl={image.url}
+                    index={index}
                     key={index}
                     onClick={() => onThumbClick(index)}
                     selected={index === currentIndex}
-                    index={index}
-                    imgUrl={image.url}
                     title={image.title}
                   />
                 ))}

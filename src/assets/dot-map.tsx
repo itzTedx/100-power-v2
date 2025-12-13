@@ -6,22 +6,22 @@ export const DotMap = (
   return (
     <svg
       {...props}
-      width="1528"
+      fill="none"
       height="600"
       viewBox="0 0 1528 600"
-      fill="none"
+      width="1528"
       xmlns="http://www.w3.org/2000/svg"
     >
       <mask
+        height="600"
         id="mask0_218_48"
-        style={{ maskType: "alpha" }}
         maskUnits="userSpaceOnUse"
+        style={{ maskType: "alpha" }}
+        width="1528"
         x="0"
         y="0"
-        width="1528"
-        height="600"
       >
-        <rect width="1528" height="600" fill="url(#paint0_linear_218_48)" />
+        <rect fill="url(#paint0_linear_218_48)" height="600" width="1528" />
       </mask>
       <g mask="url(#mask0_218_48)">
         <path
@@ -13815,12 +13815,12 @@ export const DotMap = (
       </g>
       <defs>
         <linearGradient
+          gradientUnits="userSpaceOnUse"
           id="paint0_linear_218_48"
           x1="764"
-          y1="0"
           x2="764"
+          y1="0"
           y2="600"
-          gradientUnits="userSpaceOnUse"
         >
           <stop offset="0.288462" stopColor="#F2F2F2" />
           <stop offset="1" stopColor="#F2F2F2" stopOpacity="0" />

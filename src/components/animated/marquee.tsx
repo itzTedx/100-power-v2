@@ -3,8 +3,8 @@
 import { RefObject, useRef } from "react";
 
 import {
-  SpringOptions,
   motion,
+  SpringOptions,
   useAnimationFrame,
   useMotionValue,
   useScroll,
@@ -123,7 +123,7 @@ const SimpleMarquee = ({
     return `${easing ? easing(wrappedValue / -100) * -100 : wrappedValue}%`;
   });
 
-  useAnimationFrame((t, delta) => {
+  useAnimationFrame((_t, delta) => {
     if (isDragging.current && draggable) {
       if (isHorizontal) {
         baseX.set(baseX.get() + dragVelocity.current);
@@ -247,25 +247,25 @@ const SimpleMarquee = ({
   return (
     <motion.div
       className={cn("flex", isHorizontal ? "flex-row" : "flex-col", className)}
-      onHoverStart={() => (isHovered.current = true)}
+      dir="ltr"
       onHoverEnd={() => (isHovered.current = false)}
+      onHoverStart={() => (isHovered.current = true)}
+      onPointerCancel={handlePointerUp}
       onPointerDown={handlePointerDown}
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerUp}
-      onPointerCancel={handlePointerUp}
       ref={innerContainer}
-      dir="ltr"
     >
       {Array.from({ length: repeat }, (_, i) => i).map((i) => (
         <motion.div
-          key={i}
+          aria-hidden={i > 0}
           className={cn(
             "shrink-0",
             isHorizontal && "flex",
             draggable && grabCursor && "cursor-grab"
           )}
+          key={i}
           style={isHorizontal ? { x } : { y }}
-          aria-hidden={i > 0}
         >
           {children}
         </motion.div>

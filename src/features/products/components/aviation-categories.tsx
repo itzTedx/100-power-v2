@@ -1,9 +1,9 @@
-'use client'
+"use client";
 
-import { useMemo } from 'react'
+import { useMemo } from "react";
 
-import { useTranslations } from 'next-intl'
-import { useQueryState } from 'nuqs'
+import { useTranslations } from "next-intl";
+import { useQueryState } from "nuqs";
 
 import {
   Select,
@@ -11,19 +11,17 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select'
+} from "@/components/ui/select";
 
-const RANGE_OPTION_VALUES = ['piston', 'turbine', 'hydraulic', 'gear'] as const
-
-type RangeOptionValue = (typeof RANGE_OPTION_VALUES)[number]
+const RANGE_OPTION_VALUES = ["piston", "turbine", "hydraulic", "gear"] as const;
 
 export function AviationCategories() {
-  const [range, setRange] = useQueryState('query', {
-    defaultValue: 'all',
-    history: 'push',
-  })
+  const [range, setRange] = useQueryState("query", {
+    defaultValue: "all",
+    history: "push",
+  });
 
-  const t = useTranslations('products.aviation')
+  const t = useTranslations("products.aviation");
 
   const options = useMemo(
     () =>
@@ -32,7 +30,7 @@ export function AviationCategories() {
         label: t(`options.${value}` as const),
       })),
     [t]
-  )
+  );
 
   return (
     <>
@@ -41,7 +39,7 @@ export function AviationCategories() {
           <SelectValue placeholder="Theme" />
         </SelectTrigger>
         <SelectContent>
-          <SelectItem value="all">{t('options.all')}</SelectItem>
+          <SelectItem value="all">{t("options.all")}</SelectItem>
           {options.map((option) => (
             <SelectItem key={option.value} value={option.value}>
               {option.label}
@@ -94,5 +92,5 @@ export function AviationCategories() {
         </DrawerContent>
       </Drawer> */}
     </>
-  )
+  );
 }

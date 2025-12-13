@@ -1,15 +1,15 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import { getTranslations } from 'next-intl/server'
+import { getTranslations } from "next-intl/server";
 
-import { FEATURES } from '@/data/constants'
+import { FEATURES } from "@/data/constants";
 
-import { Button } from '../ui/button'
-import { Separator } from '../ui/separator'
+import { Button } from "../ui/button";
+import { Separator } from "../ui/separator";
 
 export const TechStack = async () => {
-  const t = await getTranslations('home.technologies')
-  type Key = Parameters<typeof t>[0]
+  const t = await getTranslations("home.technologies");
+  type Key = Parameters<typeof t>[0];
 
   return FEATURES.map((item, i) => (
     <div className="group md:py-6" key={item.title}>
@@ -69,5 +69,5 @@ export const TechStack = async () => {
         </div>
       </div>
     </div>
-  ))
-}
+  ));
+};

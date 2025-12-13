@@ -1,13 +1,13 @@
-'use client'
+"use client";
 
-import { useTransition } from 'react'
+import { useTransition } from "react";
 
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useTranslations } from 'next-intl'
-import { useForm } from 'react-hook-form'
-import { toast } from 'sonner'
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useTranslations } from "next-intl";
+import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 
-import { Button } from '@/components/ui/button'
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -15,41 +15,41 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
-import { sendContactEmail } from '../actions/mutation'
-import { ContactFormData, createContactSchema } from '../schema/contact-schema'
+import { sendContactEmail } from "../actions/mutation";
+import { ContactFormData, createContactSchema } from "../schema/contact-schema";
 
 export function ContactForm() {
-  const [isPending, startTransition] = useTransition()
-  const t = useTranslations('contact.form')
+  const [isPending, startTransition] = useTransition();
+  const t = useTranslations("contact.form");
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(
       createContactSchema(t as unknown as (key: string) => string)
     ),
     defaultValues: {
-      name: '',
-      companyName: '',
-      email: '',
-      phoneNumber: '',
-      message: '',
-      subject: '',
+      name: "",
+      companyName: "",
+      email: "",
+      phoneNumber: "",
+      message: "",
+      subject: "",
     },
-    mode: 'onBlur',
-  })
+    mode: "onBlur",
+  });
 
   async function onSubmit(values: ContactFormData) {
     startTransition(async () => {
-      const result = await sendContactEmail(values)
+      const result = await sendContactEmail(values);
 
       if (result.success) {
-        form.reset()
-        toast.success(t('success'))
+        form.reset();
+        toast.success(t("success"));
       }
-    })
+    });
   }
 
   return (
@@ -64,11 +64,11 @@ export function ContactForm() {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel required>{t('name.label')}</FormLabel>
+                <FormLabel required>{t("name.label")}</FormLabel>
                 <FormControl>
                   <Input
                     autoFocus
-                    placeholder={t('name.placeholder')}
+                    placeholder={t("name.placeholder")}
                     {...field}
                   />
                 </FormControl>
@@ -82,9 +82,9 @@ export function ContactForm() {
             name="companyName"
             render={({ field }) => (
               <FormItem>
-                <FormLabel required>{t('company.label')}</FormLabel>
+                <FormLabel required>{t("company.label")}</FormLabel>
                 <FormControl>
-                  <Input placeholder={t('company.placeholder')} {...field} />
+                  <Input placeholder={t("company.placeholder")} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -96,9 +96,9 @@ export function ContactForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel required>{t('email.label')}</FormLabel>
+                <FormLabel required>{t("email.label")}</FormLabel>
                 <FormControl>
-                  <Input placeholder={t('email.placeholder')} {...field} />
+                  <Input placeholder={t("email.placeholder")} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -110,9 +110,9 @@ export function ContactForm() {
             name="phoneNumber"
             render={({ field }) => (
               <FormItem>
-                <FormLabel required>{t('phone.label')}</FormLabel>
+                <FormLabel required>{t("phone.label")}</FormLabel>
                 <FormControl>
-                  <Input placeholder={t('phone.placeholder')} {...field} />
+                  <Input placeholder={t("phone.placeholder")} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -124,9 +124,9 @@ export function ContactForm() {
           name="subject"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{t('subject.label')}</FormLabel>
+              <FormLabel>{t("subject.label")}</FormLabel>
               <FormControl>
-                <Input placeholder={t('subject.placeholder')} {...field} />
+                <Input placeholder={t("subject.placeholder")} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -138,11 +138,11 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel required>{t('message.label')}</FormLabel>
+              <FormLabel required>{t("message.label")}</FormLabel>
               <FormControl>
                 <Textarea
                   className="min-h-[100px] sm:min-h-[120px]"
-                  placeholder={t('message.placeholder')}
+                  placeholder={t("message.placeholder")}
                   {...field}
                 />
               </FormControl>
@@ -153,12 +153,12 @@ export function ContactForm() {
 
         <Button className="w-full md:w-fit" disabled={isPending} type="submit">
           {isPending ? (
-            <span>{t('button.loading')}</span>
+            <span>{t("button.loading")}</span>
           ) : (
-            <>{t('button.text')}</>
+            <>{t("button.text")}</>
           )}
         </Button>
       </form>
     </Form>
-  )
+  );
 }

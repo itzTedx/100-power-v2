@@ -1,32 +1,32 @@
-import { Dot } from 'lucide-react'
-import { getTranslations } from 'next-intl/server'
+import { Dot } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
-import { Badge } from '@/components/ui/badge'
+import { Badge } from "@/components/ui/badge";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card'
-import { Separator } from '@/components/ui/separator'
+} from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 
-import { WHO_WE_ARE } from '@/data/constants'
+import { WHO_WE_ARE } from "@/data/constants";
 
 export const Commitment = async () => {
-  const t = await getTranslations('about.commitment')
+  const t = await getTranslations("about.commitment");
   return (
     <section className="space-y-8 py-8 md:py-12">
       <Badge>
-        <Dot /> {t('badge')}
+        <Dot /> {t("badge")}
       </Badge>
       <Separator />
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
         <h2 className="text-center font-bold font-helvetica text-3xl sm:text-4xl md:text-left md:text-5xl">
-          {t('title')}
+          {t("title")}
         </h2>
         <p className="text-center text-base sm:text-xl md:text-left md:text-2xl">
-          {t('description')}
+          {t("description")}
         </p>
       </div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-2">
@@ -54,5 +54,5 @@ export const Commitment = async () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};

@@ -1,20 +1,20 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
 
-import { ArrowUpRight, Dot } from 'lucide-react'
-import { getTranslations } from 'next-intl/server'
+import { ArrowUpRight, Dot } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Separator } from '@/components/ui/separator'
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
-import { CATEGORIES_LINKS } from '@/data/constants'
+import { CATEGORIES_LINKS } from "@/data/constants";
 
 export const Products = async () => {
   // const locale = await getLocale()
   // const products = await getProducts({ locale })
-  const t = await getTranslations('home.products')
-  const categoryT = await getTranslations('layout.navbar')
+  const t = await getTranslations("home.products");
+  const categoryT = await getTranslations("layout.navbar");
   return (
     <section
       aria-labelledby="products-heading"
@@ -22,7 +22,7 @@ export const Products = async () => {
     >
       <Badge>
         <Dot />
-        {t('badge')}
+        {t("badge")}
       </Badge>
       <Separator />
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -30,13 +30,13 @@ export const Products = async () => {
           className="font-bold font-helvetica text-2xl sm:text-4xl md:text-5xl"
           id="products-heading"
         >
-          {t('title')}
+          {t("title")}
         </h2>
         <div>
           <p className="mb-2 text-base tracking-tight sm:text-xl md:text-2xl">
-            {t('description.first')}{' '}
-            <span className="text-primary">{t('description.highlight')}</span>{' '}
-            {t('description.last')}
+            {t("description.first")}{" "}
+            <span className="text-primary">{t("description.highlight")}</span>{" "}
+            {t("description.last")}
           </p>
           <Button
             aria-label="Explore all products"
@@ -45,7 +45,7 @@ export const Products = async () => {
             variant="secondary"
           >
             <Link href="/products">
-              {t('button')} <ArrowUpRight size={18} />
+              {t("button")} <ArrowUpRight size={18} />
             </Link>
           </Button>
         </div>
@@ -81,5 +81,5 @@ export const Products = async () => {
         </Button>
       </div> */}
     </section>
-  )
-}
+  );
+};

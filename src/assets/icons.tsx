@@ -1,4 +1,4 @@
-import { JSX, SVGProps } from 'react'
+import { JSX, SVGProps } from "react";
 
 export const IconDashboard = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -17,8 +17,8 @@ export const IconDashboard = (
         fill="currentColor"
       />
     </svg>
-  )
-}
+  );
+};
 
 export const IconWrench = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -44,8 +44,8 @@ export const IconWrench = (
         </clipPath>
       </defs>
     </svg>
-  )
-}
+  );
+};
 
 export const IconEco = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -71,8 +71,8 @@ export const IconEco = (
         </clipPath>
       </defs>
     </svg>
-  )
-}
+  );
+};
 
 export const IconShield = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -102,8 +102,8 @@ export const IconShield = (
         </clipPath>
       </defs>
     </svg>
-  )
-}
+  );
+};
 
 export const IconChart = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -138,8 +138,8 @@ export const IconChart = (
         fill="currentColor"
       />
     </svg>
-  )
-}
+  );
+};
 
 export const IconThunder = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -158,8 +158,8 @@ export const IconThunder = (
         fill="currentColor"
       />
     </svg>
-  )
-}
+  );
+};
 
 export const IconClogSpin = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -178,8 +178,8 @@ export const IconClogSpin = (
         fill="currentColor"
       />
     </svg>
-  )
-}
+  );
+};
 
 export const IconUserQuestion = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -205,8 +205,8 @@ export const IconUserQuestion = (
         </clipPath>
       </defs>
     </svg>
-  )
-}
+  );
+};
 
 export const IconClock = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -229,8 +229,8 @@ export const IconClock = (
         fill="currentColor"
       />
     </svg>
-  )
-}
+  );
+};
 export const IconOdometer = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
 ) => {
@@ -248,8 +248,8 @@ export const IconOdometer = (
         fill="currentColor"
       />
     </svg>
-  )
-}
+  );
+};
 
 export const IconGears = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -269,8 +269,8 @@ export const IconGears = (
         strokeWidth="5"
       />
     </svg>
-  )
-}
+  );
+};
 
 export const IconCo2 = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -296,8 +296,8 @@ export const IconCo2 = (
         </clipPath>
       </defs>
     </svg>
-  )
-}
+  );
+};
 
 export const IconFilter = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -334,5 +334,5 @@ export const IconFilter = (
         />
       </g>
     </svg>
-  )
-}
+  );
+};

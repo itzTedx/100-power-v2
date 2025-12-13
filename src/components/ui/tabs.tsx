@@ -1,25 +1,25 @@
-'use client'
+"use client";
 
-import * as React from 'react'
+import * as React from "react";
 
-import { useLocale } from 'next-intl'
-import { Tabs as TabsPrimitive } from 'radix-ui'
+import { useLocale } from "next-intl";
+import { Tabs as TabsPrimitive } from "radix-ui";
 
-import { cn } from '@/lib/utils'
+import { cn } from "@/lib/utils";
 
 function Tabs({
   className,
   ...props
 }: React.ComponentProps<typeof TabsPrimitive.Root>) {
-  const locale = useLocale()
+  const locale = useLocale();
   return (
     <TabsPrimitive.Root
-      className={cn('flex flex-col gap-2', className)}
+      className={cn("flex flex-col gap-2", className)}
       data-slot="tabs"
-      dir={locale === 'ar' ? 'rtl' : 'ltr'}
+      dir={locale === "ar" ? "rtl" : "ltr"}
       {...props}
     />
-  )
+  );
 }
 
 function TabsList({
@@ -29,13 +29,13 @@ function TabsList({
   return (
     <TabsPrimitive.List
       className={cn(
-        'inline-flex h-9 w-fit items-center justify-center rounded-lg bg-muted p-[3px] text-muted-foreground',
+        "inline-flex h-9 w-fit items-center justify-center rounded-lg bg-muted p-[3px] text-muted-foreground",
         className
       )}
       data-slot="tabs-list"
       {...props}
     />
-  )
+  );
 }
 
 function TabsTrigger({
@@ -51,7 +51,7 @@ function TabsTrigger({
       data-slot="tabs-trigger"
       {...props}
     />
-  )
+  );
 }
 
 function TabsContent({
@@ -60,11 +60,11 @@ function TabsContent({
 }: React.ComponentProps<typeof TabsPrimitive.Content>) {
   return (
     <TabsPrimitive.Content
-      className={cn('w-full flex-1 outline-none', className)}
+      className={cn("w-full flex-1 outline-none", className)}
       data-slot="tabs-content"
       {...props}
     />
-  )
+  );
 }
 
-export { Tabs, TabsContent, TabsList, TabsTrigger }
+export { Tabs, TabsContent, TabsList, TabsTrigger };

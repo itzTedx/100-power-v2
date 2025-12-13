@@ -1,4 +1,4 @@
-import { JSX, SVGProps } from 'react'
+import { JSX, SVGProps } from "react";
 
 export const IconCar = (
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
@@ -22,5 +22,5 @@ export const IconCar = (
         </g>
       </g>
     </svg>
-  )
-}
+  );
+};
