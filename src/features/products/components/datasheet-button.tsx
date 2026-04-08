@@ -11,17 +11,32 @@ import {
 
 import { IconChart, IconShield } from "@/assets/icons";
 
+import { useOpenPanelTracking } from "@/lib/openpanel";
+
 interface Props {
   type: "safetyDs" | "technicalDs";
   datasheet: string;
 }
 
 export const DatasheetButton = ({ type, datasheet }: Props) => {
+  const { trackDatasheetOpen } = useOpenPanelTracking();
+
   return (
     <Tooltip>
       <TooltipTrigger asChild>
         <Button asChild className="z-99" size="icon" variant="secondary">
-          <Link href={datasheet} target="_blank">
+          <Link
+            href={datasheet}
+            onClick={() =>
+              trackDatasheetOpen({
+                datasheetType: type,
+                url: datasheet,
+                component: "DatasheetButton",
+                page: "products",
+              })
+            }
+            target="_blank"
+          >
             {type === "safetyDs" ? (
               <IconShield className="size-5" />
             ) : (

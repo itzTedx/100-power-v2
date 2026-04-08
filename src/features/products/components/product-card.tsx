@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/card";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
+import { useOpenPanelTracking } from "@/lib/openpanel";
 import { cn } from "@/lib/utils";
 
 import { ProductMetadata } from "../actions/types";
@@ -29,10 +30,22 @@ interface Props {
 
 export const ProductCard = ({ data }: Props) => {
   const t = useTranslations("products");
+  const { trackProductOpen } = useOpenPanelTracking();
 
   return (
     <Card className="group relative gap-0 overflow-hidden">
-      <Link className="absolute inset-0 z-40" href={`/products/${data.slug}`} />
+      <Link
+        className="absolute inset-0 z-40"
+        href={`/products/${data.slug}`}
+        onClick={() =>
+          trackProductOpen({
+            productSlug: data.slug,
+            page: "products",
+            component: "ProductCard",
+            source: "grid",
+          })
+        }
+      />
       {data.range && (
         <CardHeader className="relative flex items-start justify-between">
           <div className="flex shrink-0 items-center gap-2">

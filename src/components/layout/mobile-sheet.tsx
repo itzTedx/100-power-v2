@@ -10,6 +10,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Logo } from "@/assets/logo";
 
 import { CATEGORIES_LINKS, NAV_LINKS } from "@/data/constants";
+import { useOpenPanelTracking } from "@/lib/openpanel";
 
 import { Button } from "../ui/button";
 import {
@@ -26,6 +27,7 @@ export const MobileSheet = () => {
   const t = useTranslations("layout.navbar");
   const locale = useLocale();
   const tProducts = useTranslations("products.breadcrumb.categories");
+  const { trackUiClick } = useOpenPanelTracking();
 
   const linkKeys = [
     "links.0.Home",
@@ -70,7 +72,16 @@ export const MobileSheet = () => {
               <li
                 className="w-full"
                 key={`${link.href}-${i}`}
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false);
+                  trackUiClick({
+                    label: `nav_${link.href}`,
+                    href: link.href,
+                    page: "any",
+                    component: "MobileSheet",
+                    position: "menu",
+                  });
+                }}
               >
                 <Link
                   className="inline-flex w-full items-center justify-between rounded-sm px-3 py-3 tracking-tight transition-colors hover:bg-accent hover:text-primary-foreground"
@@ -85,7 +96,19 @@ export const MobileSheet = () => {
             <li className="ml-5 border-l pl-2">
               <ul className="space-y-2">
                 {CATEGORIES_LINKS.map((prod, i) => (
-                  <li key={i} onClick={() => setIsOpen(false)}>
+                  <li
+                    key={i}
+                    onClick={() => {
+                      setIsOpen(false);
+                      trackUiClick({
+                        label: `category_${prod.href}`,
+                        href: prod.href,
+                        page: "products",
+                        component: "MobileSheet",
+                        position: "category_list",
+                      });
+                    }}
+                  >
                     <Link
                       className="inline-flex w-full items-center justify-between rounded-sm py-2 pr-3 pl-2 tracking-tight transition-colors hover:bg-accent hover:text-primary-foreground"
                       href={prod.href}
@@ -116,7 +139,16 @@ export const MobileSheet = () => {
             <Button
               asChild
               className="w-full"
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                setIsOpen(false);
+                trackUiClick({
+                  label: "contact_primary",
+                  href: "/contact",
+                  page: "any",
+                  component: "MobileSheet",
+                  position: "footer_cta",
+                });
+              }}
               variant="secondary"
             >
               <Link href="/contact">

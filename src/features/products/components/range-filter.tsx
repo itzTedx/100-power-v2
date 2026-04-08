@@ -18,6 +18,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 
+import { useOpenPanelTracking } from "@/lib/openpanel";
 import { cn } from "@/lib/utils";
 
 const RANGE_OPTION_VALUES = [
@@ -36,6 +37,7 @@ export function RangeFilter() {
   });
 
   const t = useTranslations("products.filters");
+  const { trackProductFilterChange } = useOpenPanelTracking();
 
   const options = useMemo(
     () =>
@@ -63,7 +65,15 @@ export function RangeFilter() {
                 : "border-transparent bg-muted/40 text-muted-foreground"
             )}
             key={opt.value}
-            onClick={() => setRange(opt.value)}
+            onClick={() => {
+              setRange(opt.value);
+              trackProductFilterChange({
+                filter: "range",
+                value: opt.value,
+                page: "products",
+                component: "RangeFilter",
+              });
+            }}
             type="button"
           >
             {opt.label}
@@ -97,7 +107,15 @@ export function RangeFilter() {
                           ? "border-primary bg-background text-foreground shadow-sm"
                           : "border-transparent bg-muted/40 text-muted-foreground"
                       )}
-                      onClick={() => setRange(opt.value as RangeOptionValue)}
+                      onClick={() => {
+                        setRange(opt.value as RangeOptionValue);
+                        trackProductFilterChange({
+                          filter: "range",
+                          value: opt.value,
+                          page: "products",
+                          component: "RangeFilter",
+                        });
+                      }}
                       type="button"
                     >
                       {opt.label}

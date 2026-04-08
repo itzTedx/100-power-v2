@@ -19,12 +19,15 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
+import { useOpenPanelTracking } from "@/lib/openpanel";
+
 import { sendContactEmail } from "../actions/mutation";
 import { ContactFormData, createContactSchema } from "../schema/contact-schema";
 
 export function ContactForm() {
   const [isPending, startTransition] = useTransition();
   const t = useTranslations("contact.form");
+  const { trackContactSubmit } = useOpenPanelTracking();
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(
@@ -43,11 +46,27 @@ export function ContactForm() {
 
   async function onSubmit(values: ContactFormData) {
     startTransition(async () => {
+      trackContactSubmit({
+        status: "attempt",
+        page: "contact",
+        component: "ContactForm",
+      });
       const result = await sendContactEmail(values);
 
       if (result.success) {
         form.reset();
         toast.success(t("success"));
+        trackContactSubmit({
+          status: "success",
+          page: "contact",
+          component: "ContactForm",
+        });
+      } else {
+        trackContactSubmit({
+          status: "error",
+          page: "contact",
+          component: "ContactForm",
+        });
       }
     });
   }

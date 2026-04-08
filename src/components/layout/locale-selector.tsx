@@ -15,6 +15,7 @@ import {
 
 import { FlagRu, FlagUae, FlagUK } from "@/assets/flags";
 
+import { useOpenPanelTracking } from "@/lib/openpanel";
 import { cn } from "@/lib/utils";
 import { usePathname, useRouter } from "@/locale/navigation";
 
@@ -35,11 +36,18 @@ export function LanguageSelector({ className }: Props) {
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
   const params = useParams();
+  const { trackLocaleChange } = useOpenPanelTracking();
 
   const currentLocale = (params?.locale as Locale) || "en";
 
   const handleSelect = (code: string) => {
     const nextLocale = code as Locale;
+    trackLocaleChange({
+      from: currentLocale,
+      to: nextLocale,
+      component: "LanguageSelector",
+      locale: currentLocale,
+    });
     startTransition(() => {
       router.replace(
         // @ts-expect-error -- TypeScript will validate that only known `params` are used in combination with a given `pathname`. Since the two will always match for the current route, we can skip runtime checks.
