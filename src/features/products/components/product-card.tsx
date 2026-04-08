@@ -90,7 +90,7 @@ export const ProductCard = ({ data }: Props) => {
             {t("button")}
           </Button>
 
-          <div className="pointer-events-none absolute inset-0 translate-y-full bg-gradient-to-t from-card to-transparent transition-transform group-hover:translate-y-0" />
+          <div className="pointer-events-none absolute inset-0 translate-y-full bg-linear-to-t from-card to-transparent transition-transform group-hover:translate-y-0" />
         </div>
       </CardContent>
       <CardFooter className="flex-col items-start">

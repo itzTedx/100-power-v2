@@ -55,8 +55,8 @@ export const Industries = async () => {
         useScrollVelocity={true}
       >
         {INDUSTRIES.map((item, i) => (
-          <MarqueeItem key={i}>
-            <div className="relative aspect-4/3 h-60 overflow-hidden rounded-2xl p-6 md:h-[26rem]">
+          <MarqueeItem key={item.label}>
+            <div className="relative aspect-4/3 h-60 overflow-hidden rounded-2xl p-6 md:h-104">
               <div className="relative z-20 flex h-full items-end">
                 <h4 className="rounded-sm bg-background px-2 py-0.5 font-helvetica font-medium">
                   {t(`industry.${i}.label` as Key)}

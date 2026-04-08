@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
 
@@ -193,21 +194,18 @@ export default async function ProductSlugPage({ params }: { params: Params }) {
           </Suspense>
         </section>
       </main>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org/",
-            "@type": "Product",
-            name: metadata.title,
-            image: metadata.images,
-            brand: {
-              "@type": "Brand",
-              name: "100 Power",
-            },
-          }),
-        }}
-        type="application/ld+json"
-      />
+      <Script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org/",
+          "@type": "Product",
+          name: metadata.title,
+          image: metadata.images,
+          brand: {
+            "@type": "Brand",
+            name: "100 Power",
+          },
+        })}
+      </Script>
     </>
   );
 }

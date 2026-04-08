@@ -60,10 +60,10 @@ export default function CardFlip({ data, Icon }: CardFlipProps) {
                 <div
                   className={cn(
                     "absolute inset-[-8px] rounded-lg transition-opacity duration-300",
-                    "bg-gradient-to-br from-orange-500/20 via-orange-500/10 to-transparent"
+                    "bg-linear-to-br from-orange-500/20 via-orange-500/10 to-transparent"
                   )}
                 />
-                <Repeat2 className="group-hover/icon:-rotate-12 relative z-10 h-4 w-4 text-orange-500 transition-transform duration-300 group-hover/icon:scale-110" />
+                <Repeat2 className="relative z-10 h-4 w-4 text-orange-500 transition-transform duration-300 group-hover/icon:-rotate-12 group-hover/icon:scale-110" />
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@ export default function CardFlip({ data, Icon }: CardFlipProps) {
             "absolute inset-0 h-full w-full",
             "[backface-visibility:hidden] [transform:rotateY(180deg)]",
             "rounded-sm p-6",
-            "bg-gradient-to-b from-zinc-100 to-white dark:from-zinc-900 dark:to-black",
+            "bg-linear-to-b from-zinc-100 to-white dark:from-zinc-900 dark:to-black",
             "border border-zinc-200 dark:border-zinc-800",
             "shadow-xs dark:shadow-lg",
             "flex flex-col",
@@ -121,7 +121,7 @@ export default function CardFlip({ data, Icon }: CardFlipProps) {
                 "flex items-center justify-between",
                 "-m-3 rounded-xl p-3",
                 "transition-all duration-300",
-                "bg-gradient-to-r from-zinc-100 via-zinc-100 to-zinc-100",
+                "bg-linear-to-r from-zinc-100 via-zinc-100 to-zinc-100",
                 "dark:from-zinc-800 dark:via-zinc-800 dark:to-zinc-800",
                 "hover:from-0% hover:from-orange-500/10 hover:via-100% hover:via-orange-500/5 hover:to-100% hover:to-transparent",
                 "dark:hover:from-0% dark:hover:from-orange-500/20 dark:hover:via-100% dark:hover:via-orange-500/10 dark:hover:to-100% dark:hover:to-transparent",
@@ -135,7 +135,7 @@ export default function CardFlip({ data, Icon }: CardFlipProps) {
                 <div
                   className={cn(
                     "absolute inset-[-6px] rounded-lg transition-all duration-300",
-                    "bg-gradient-to-br from-orange-500/20 via-orange-500/10 to-transparent",
+                    "bg-linear-to-br from-orange-500/20 via-orange-500/10 to-transparent",
                     "scale-90 opacity-0 group-hover/start:scale-100 group-hover/start:opacity-100"
                   )}
                 />

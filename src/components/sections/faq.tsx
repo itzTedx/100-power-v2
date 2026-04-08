@@ -16,23 +16,6 @@ export const Faqs = async () => {
   const faqs = FAQS;
   type Key = Parameters<typeof tFaqs>[0];
 
-  // // Ensure stable ids for accordion values
-  // const faqsWithIds = useMemo(
-  //   () =>
-  //     faqs.map((item, index) => ({
-  //       id: item.id ?? index + 1,
-  //       title: item.title,
-  //       content: item.content,
-  //     })),
-  //   [faqs]
-  // )
-
-  // // Memoize the split of FAQS
-  // const [firstHalf, secondHalf] = useMemo(() => {
-  //   const half = Math.ceil(faqsWithIds.length / 2)
-  //   return [faqsWithIds.slice(0, half), faqsWithIds.slice(half)]
-  // }, [faqsWithIds])
-
   // Memoize rendering of accordion items
   const renderAccordionItems = (items: typeof faqs) =>
     items.map((item, i) => (

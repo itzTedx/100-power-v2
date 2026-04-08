@@ -17,7 +17,7 @@ export const Video = async () => {
       <article className="relative flex aspect-4/3 h-full flex-col items-end justify-end gap-4 overflow-hidden rounded-sm bg-gray-200 p-4 sm:aspect-video sm:p-9">
         <button
           aria-label="Play 100 Power brand video"
-          className="group -translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 z-10 flex cursor-pointer items-center gap-2 self-end font-semibold text-base text-white tracking-tight transition-colors hover:text-primary sm:text-lg"
+          className="group absolute top-1/2 left-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center gap-2 self-end font-semibold text-base text-white tracking-tight transition-colors hover:text-primary sm:text-lg"
           type="button"
         >
           <div
@@ -60,7 +60,7 @@ export const Video = async () => {
         />
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 bottom-0 z-1 h-2/3 bg-gradient-to-t from-foreground to-transparent"
+          className="absolute inset-x-0 bottom-0 z-1 h-2/3 bg-linear-to-t from-foreground to-transparent"
         />
         <video
           aria-label="100 Power brand video"

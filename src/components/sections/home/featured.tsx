@@ -24,13 +24,13 @@ export const Featured = async () => {
         <div className="sr-only">
           <h3>Industries We Serve</h3>
         </div>
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-1/4 select-none bg-gradient-to-r from-card to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-1/4 select-none bg-gradient-to-l from-card to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-1/4 select-none bg-linear-to-r from-card to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-1/4 select-none bg-linear-to-l from-card to-transparent" />
         <Marquee aria-label="Industries we serve" className="[--duration:30s]">
-          {INDUSTRIES.map(({ Icon }, i) => (
+          {INDUSTRIES.map(({ Icon, label }, i) => (
             <div
               className="flex items-center gap-1.5 rounded-lg bg-muted px-3.5 py-2"
-              key={i}
+              key={label}
               role="listitem"
             >
               <Icon aria-hidden="true" className="size-5" />
@@ -41,7 +41,7 @@ export const Featured = async () => {
       </div>
 
       {/* Main Content */}
-      <div className="-mt-8 sm:-mt-12 md:-mt-14 container">
+      <div className="container -mt-8 sm:-mt-12 md:-mt-14">
         <article className="rounded-xl bg-card/60 p-4 sm:p-6 md:p-9">
           <header className="mx-auto max-w-4xl space-y-3 pt-8 text-center sm:space-y-4 sm:pt-10 md:pt-12">
             <Badge>

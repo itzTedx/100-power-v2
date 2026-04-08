@@ -28,7 +28,7 @@ export const Hero = async () => {
           {t("button")} <IconArrowUpRight size={18} />
         </Button>
       </div>
-      <div className="relative h-48 w-full sm:h-72 md:h-[22rem] lg:h-[36rem]">
+      <div className="relative h-48 w-full sm:h-72 md:h-88 lg:h-144">
         <Image
           alt="High-performance lubrication technology - 100 Power hero image"
           className="object-contain"

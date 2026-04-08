@@ -123,7 +123,7 @@ const ImageContainer: React.FC<{
                     />
                   </TransformComponent>
                   {showImageControls && (
-                    <div className="-translate-x-1/2 absolute bottom-4 left-1/2 z-10 flex gap-2">
+                    <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-2">
                       <button
                         aria-label="Zoom out"
                         className="cursor-pointer rounded-full bg-black/50 p-2 text-white transition-colors hover:bg-black/70"
@@ -431,7 +431,7 @@ const ImageCarousel: React.FC<ImageCarousel_BasicProps> = ({
         {showCarouselControls && (
           <>
             <Button
-              className="-translate-y-1/2 absolute top-1/2 left-[2%] z-10 h-8 w-8 rounded-full bg-background/80 backdrop-blur-xs hover:bg-background disabled:opacity-50 dark:bg-background/80 dark:hover:bg-background"
+              className="absolute top-1/2 left-[2%] z-10 h-8 w-8 -translate-y-1/2 rounded-full bg-background/80 backdrop-blur-xs hover:bg-background disabled:opacity-50 dark:bg-background/80 dark:hover:bg-background"
               disabled={!canScrollPrev}
               onClick={scrollPrev}
               size="icon"
@@ -442,7 +442,7 @@ const ImageCarousel: React.FC<ImageCarousel_BasicProps> = ({
             </Button>
 
             <Button
-              className="-translate-y-1/2 absolute top-1/2 right-[2%] z-10 h-8 w-8 rounded-full bg-background/80 backdrop-blur-xs hover:bg-background disabled:opacity-50 dark:bg-background/80 dark:hover:bg-background"
+              className="absolute top-1/2 right-[2%] z-10 h-8 w-8 -translate-y-1/2 rounded-full bg-background/80 backdrop-blur-xs hover:bg-background disabled:opacity-50 dark:bg-background/80 dark:hover:bg-background"
               disabled={!canScrollNext}
               onClick={scrollNext}
               size="icon"
@@ -500,4 +500,5 @@ const ImageCarousel: React.FC<ImageCarousel_BasicProps> = ({
 };
 
 export default ImageCarousel;
+
 export type { CarouselImage, CarouselImages };

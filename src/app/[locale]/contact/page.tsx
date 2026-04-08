@@ -78,7 +78,7 @@ export async function generateMetadata(): Promise<Metadata> {
 const steps = [
   {
     title: "We'll prepare a proposal",
-    description: "Required scope, timeline and aprox. price will be included",
+    description: "Required scope, timeline and approx. price will be included",
   },
   {
     title: "Together we discuss it",
@@ -107,7 +107,7 @@ export default async function ContactPage() {
             <h1 className="font-bold font-helvetica text-3xl tracking-tight sm:text-4xl md:text-5xl">
               {t("header.title")}
             </h1>
-            <p className="max-w-[42rem] text-lg text-muted-foreground">
+            <p className="max-w-2xl text-lg text-muted-foreground">
               {t("header.description")}
             </p>
           </div>
@@ -126,7 +126,7 @@ export default async function ContactPage() {
                   </p>
                 </CardHeader>
                 <CardContent>
-                  <div className="grid size-16 place-content-center rounded-full border border-[oklch(0.9557_0.1104_102.71)] bg-[oklch(0.9101_0.1105_88.94)] to-[oklch(0.9557_0.1104_102.71)] group-first:bg-gradient-to-t group-first:from-[oklch(0.6519_0.1345_77.03)]/50 group-first:shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset_0px_4px_8px_2to-5%] sm:size-20">
+                  <div className="grid size-16 place-content-center rounded-full border border-[oklch(0.9557_0.1104_102.71)] bg-[oklch(0.9101_0.1105_88.94)] to-[oklch(0.9557_0.1104_102.71)] group-first:bg-linear-to-t group-first:from-[oklch(0.6519_0.1345_77.03)]/50 group-first:shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset_0px_4px_8px_2to-5%] sm:size-20">
                     <Icon aria-hidden className="text-primary-foreground" />
                   </div>
                   <div className="mt-4 space-y-3">
@@ -190,11 +190,11 @@ export default async function ContactPage() {
           </p>
           <Separator />
           <ul className="relative flex flex-col justify-start" role="list">
-            {steps.map((_step, index) => {
+            {steps.map((step, index) => {
               return (
                 <li
                   className={cn("mb-4 flex gap-2 text-left")}
-                  key={index}
+                  key={step.title}
                   role="listitem"
                 >
                   <div>

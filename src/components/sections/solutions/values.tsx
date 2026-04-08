@@ -22,8 +22,8 @@ export const Values = async () => {
             {t("oil.title")}
           </p>
         </div>
-        <div className="absolute inset-0 z-1 bg-gradient-to-r from-neutral-50 via-neutral-50 to-transparent" />
-        <IconClock className="-right-5 rtl:-left-5 absolute size-20 text-[#FEC966]" />
+        <div className="absolute inset-0 z-1 bg-linear-to-r from-neutral-50 via-neutral-50 to-transparent" />
+        <IconClock className="absolute -right-5 size-20 text-[#FEC966] rtl:-left-5" />
       </div>
       <div className="relative flex items-center overflow-hidden rounded-sm border border-white bg-neutral-50 py-4 shadow-[0px_4px_4px_0px_hsla(32,94,59,.06),0px_4px_9px_0px_hsla(32,98,14,.08)] md:h-20">
         <div className="z-10 flex items-center gap-3 px-3 pr-2 font-helvetica">
@@ -34,8 +34,8 @@ export const Values = async () => {
             {t("equipment.title")}
           </p>
         </div>
-        <div className="absolute inset-0 z-1 bg-gradient-to-r from-neutral-50 via-neutral-50 to-transparent" />
-        <IconThunder className="-right-10 rtl:-left-10 absolute size-24 text-[#FEC966]" />
+        <div className="absolute inset-0 z-1 bg-linear-to-r from-neutral-50 via-neutral-50 to-transparent" />
+        <IconThunder className="absolute -right-10 size-24 text-[#FEC966] rtl:-left-10" />
       </div>
       <div className="relative flex items-center overflow-hidden rounded-sm border border-white bg-neutral-50 py-4 shadow-[0px_4px_4px_0px_hsla(32,94,59,.06),0px_4px_9px_0px_hsla(32,98,14,.08)] md:h-20">
         <div className="z-10 flex items-center gap-3 px-3 pr-2 font-helvetica">
@@ -45,8 +45,8 @@ export const Values = async () => {
             {t("fuel.title")}
           </p>
         </div>
-        <div className="absolute inset-0 z-1 bg-gradient-to-r from-neutral-50 via-neutral-50 to-transparent" />
-        <IconOdometer className="-right-4 rtl:-left-4 absolute size-20 text-[#FEC966]" />
+        <div className="absolute inset-0 z-1 bg-linear-to-r from-neutral-50 via-neutral-50 to-transparent" />
+        <IconOdometer className="absolute -right-4 size-20 text-[#FEC966] rtl:-left-4" />
       </div>
       <div className="relative flex items-center overflow-hidden rounded-sm border border-white bg-neutral-50 py-4 shadow-[0px_4px_4px_0px_hsla(32,94,59,.06),0px_4px_9px_0px_hsla(32,98,14,.08)] md:h-20">
         <div className="z-10 flex items-center gap-3 px-3 pr-2 font-helvetica">
@@ -58,8 +58,8 @@ export const Values = async () => {
             {t("friction.title")}
           </p>
         </div>
-        <div className="absolute inset-0 z-1 bg-gradient-to-r from-neutral-50 via-neutral-50 to-transparent" />
-        <IconGears className="-right-4 absolute size-20 text-[#FEC966]" />
+        <div className="absolute inset-0 z-1 bg-linear-to-r from-neutral-50 via-neutral-50 to-transparent" />
+        <IconGears className="absolute -right-4 size-20 text-[#FEC966]" />
       </div>
       <div className="relative flex items-center overflow-hidden rounded-sm border border-white bg-neutral-50 py-4 shadow-[0px_4px_4px_0px_hsla(32,94,59,.06),0px_4px_9px_0px_hsla(32,98,14,.08)] md:h-20">
         <div className="z-10 flex items-center gap-3 px-3 pr-2 font-helvetica">
@@ -69,8 +69,8 @@ export const Values = async () => {
             {t("environment.title")}
           </h2>
         </div>
-        <div className="absolute inset-0 z-1 bg-gradient-to-r from-neutral-50 via-neutral-50 to-transparent" />
-        <IconCo2 className="-right-4 absolute size-20 text-[#FEC966]" />
+        <div className="absolute inset-0 z-1 bg-linear-to-r from-neutral-50 via-neutral-50 to-transparent" />
+        <IconCo2 className="absolute -right-4 size-20 text-[#FEC966]" />
       </div>
     </div>
   );

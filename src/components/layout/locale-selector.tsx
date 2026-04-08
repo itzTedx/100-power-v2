@@ -94,7 +94,7 @@ export function LanguageSelector({ className }: Props) {
                 <lang.Icon className="size-5" />
                 {lang.title}
                 {currentLocale === lang.code && (
-                  <span className="-z-1 absolute inset-0 rounded-sm bg-muted" />
+                  <span className="absolute inset-0 -z-1 rounded-sm bg-muted" />
                 )}
               </button>
             </DropdownMenuItem>

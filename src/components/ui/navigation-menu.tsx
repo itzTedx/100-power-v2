@@ -107,7 +107,7 @@ function NavigationMenuViewport({
   return (
     <div
       className={cn(
-        "-translate-x-1/2 absolute top-full left-1/2 isolate z-50 flex justify-center"
+        "absolute top-full left-1/2 isolate z-50 flex -translate-x-1/2 justify-center"
       )}
     >
       <NavigationMenuPrimitive.Viewport
@@ -158,12 +158,12 @@ function NavigationMenuIndicator({
 
 export {
   NavigationMenu,
-  NavigationMenuList,
-  NavigationMenuItem,
   NavigationMenuContent,
-  NavigationMenuTrigger,
-  NavigationMenuLink,
   NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
   NavigationMenuViewport,
   navigationMenuTriggerStyle,
 };

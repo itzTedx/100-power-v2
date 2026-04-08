@@ -47,7 +47,8 @@ export function useOpenPanelTracking() {
   const op = useOpenPanel();
 
   const base = (props?: CommonEventProps) => ({
-    path: typeof window !== "undefined" ? window.location.pathname : props?.path,
+    path:
+      typeof window !== "undefined" ? window.location.pathname : props?.path,
     ...props,
   });
 
@@ -109,4 +110,3 @@ export function useOpenPanelTracking() {
     trackContactSubmit,
   };
 }
-

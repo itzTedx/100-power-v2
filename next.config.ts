@@ -53,7 +53,7 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["lucide-react", "radix-ui"],
     turbopackFileSystemCacheForBuild: true,
-    turbopackFileSystemCacheForDev: true
+    turbopackFileSystemCacheForDev: true,
   },
 
   typescript: {
