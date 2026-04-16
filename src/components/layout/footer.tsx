@@ -258,14 +258,14 @@ export async function Footer() {
             {t("copyright", { year: new Date().getFullYear().toString() })}
           </p>
           <Link
-            className="text-center text-muted/80 text-sm tracking-tight md:text-right"
-            href="https://www.zironmedia.com"
+            className="text-center font-light text-muted-foreground text-xs md:text-right"
+            href="https://www.zironpro.ae?utm_source=maxline&utm_medium=website&utm_campaign=footer_credit&utm_content=designed_by"
             prefetch={false}
             rel="noopener noreferrer"
             target="_blank"
-            title="Ziron Media Website"
+            title={t("designedBy", { agency: t("agencyName") })}
           >
-            {t("developer")}
+            {t("designedBy", { agency: t("agencyName") })}
           </Link>
         </div>
       </div>

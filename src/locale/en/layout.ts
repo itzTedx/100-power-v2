@@ -78,6 +78,7 @@ export default {
       industrial: "Industrial Application",
     },
     copyright: "©{year} Hundred Power LLC, All rights reserved",
-    developer: "Designed & Developed by Ziron Media",
+    agencyName: "Ziron Pro",
+    designedBy: "Designed and developed by {agency}",
   },
 } as const;

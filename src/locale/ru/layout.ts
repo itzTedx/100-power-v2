@@ -79,6 +79,7 @@ export default {
     },
 
     copyright: "©{year} ООО «Сто Пауэр Трейдинг», Все права защищены",
-    developer: "Разработано и создано Ziron Media",
+    agencyName: "Ziron Pro",
+    designedBy: "Дизайн и разработка от {agency}",
   },
 } as const;
